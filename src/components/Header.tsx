@@ -18,10 +18,12 @@ export default function Header() {
   const timeoutRefServices = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnterPatients = () => {
-    if (timeoutRefPatients.current) {
-      clearTimeout(timeoutRefPatients.current);
-      timeoutRefPatients.current = null;
-    }
+    if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+    if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
+    if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+    
+    setIsContactDropdownOpen(false);
+    setIsServicesDropdownOpen(false);
     setIsDropdownOpen(true);
   };
 
@@ -32,10 +34,12 @@ export default function Header() {
   };
 
   const handleMouseEnterContact = () => {
-    if (timeoutRefContact.current) {
-      clearTimeout(timeoutRefContact.current);
-      timeoutRefContact.current = null;
-    }
+    if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+    if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
+    if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+    
+    setIsDropdownOpen(false);
+    setIsServicesDropdownOpen(false);
     setIsContactDropdownOpen(true);
   };
 
@@ -46,10 +50,12 @@ export default function Header() {
   };
 
   const handleMouseEnterServices = () => {
-    if (timeoutRefServices.current) {
-      clearTimeout(timeoutRefServices.current);
-      timeoutRefServices.current = null;
-    }
+    if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+    if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
+    if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+    
+    setIsDropdownOpen(false);
+    setIsContactDropdownOpen(false);
     setIsServicesDropdownOpen(true);
   };
 
@@ -140,7 +146,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium tracking-wide transition-colors ${
+                className={`text-base font-medium tracking-wide transition-colors ${
                   isLinkActive(link.href)
                     ? "text-brand-accent font-semibold"
                     : "text-brand-text/80 hover:text-brand-accent"
@@ -158,7 +164,7 @@ export default function Header() {
             >
               <Link
                 href="/services"
-                className={`flex items-center space-x-1 text-sm font-medium tracking-wide transition-colors cursor-pointer ${
+                className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${
                   pathname.startsWith("/services")
                     ? "text-brand-accent font-semibold"
                     : "text-brand-text/80 hover:text-brand-accent"
@@ -234,16 +240,18 @@ export default function Header() {
               onMouseEnter={handleMouseEnterPatients}
               onMouseLeave={handleMouseLeavePatients}
             >
-              <button
-                className={`flex items-center space-x-1 text-sm font-medium tracking-wide transition-colors ${
+              <Link
+                href="/patients"
+                className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${
                   pathname.startsWith("/patients")
                     ? "text-brand-accent font-semibold"
                     : "text-brand-text/80 hover:text-brand-accent"
                 }`}
+                onClick={() => setIsDropdownOpen(false)}
               >
                 <span>Patients</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-185" : ""}`} />
-              </button>
+              </Link>
 
               {isDropdownOpen && (
                 <div className="absolute left-0 top-full pt-2 w-60 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
@@ -283,7 +291,7 @@ export default function Header() {
             >
               <Link
                 href="/contact"
-                className={`flex items-center space-x-1 text-sm font-medium tracking-wide transition-colors cursor-pointer ${
+                className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${
                   pathname.startsWith("/contact")
                     ? "text-brand-accent font-semibold"
                     : "text-brand-text/80 hover:text-brand-accent"
@@ -295,7 +303,7 @@ export default function Header() {
               </Link>
 
               {isContactDropdownOpen && (
-                <div className="absolute right-0 top-full pt-2 w-52 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute left-0 top-full pt-2 w-52 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="rounded-xl bg-brand-primary border border-brand-secondary/60 shadow-lg py-2">
                     <div className="px-3 py-1 text-xs font-semibold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 mb-1">
                       Locations
