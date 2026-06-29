@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDown, Sparkles, Activity, ShieldCheck, Calendar, Phone, ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ChevronDown, Sparkles, ShieldCheck, Calendar, Phone, ArrowRight } from "lucide-react";
 
 interface Procedure {
   name: string;
@@ -22,126 +22,129 @@ interface ServiceCategory {
 export default function ServicesPage() {
   const categories: ServiceCategory[] = [
     {
-      id: "general",
-      title: "General & Preventive Dentistry",
+      id: "dentistry",
+      title: "Dentistry Services",
       icon: ShieldCheck,
-      tagline: "Preserving your natural smile with gentle, proactive care.",
+      tagline: "Comprehensive dental care delivered with precision and comfort.",
       description:
-        "General dentistry is the foundation of long-term health. We focus on preventive hygiene, early diagnostic detection using digital scanners, and minimally invasive treatments designed to preserve tooth structure.",
+        "Our dentistry services focus on preserving your natural teeth, ensuring optimal hygiene, and restoring function using state-of-the-art procedures and gentle care techniques.",
       procedures: [
         {
-          name: "Comprehensive Exams & Warmed Cleaning",
-          desc: "Thorough visual exam, digital diagnostics, and our gentle Guided Biofilm clean using warm pressurized water.",
-          duration: "60 mins",
-          suitability: "Recommended every 6 months for all patients",
-        },
-        {
-          name: "Tooth-Colored Composite Fillings",
-          desc: "Drill-free laser preparation followed by color-matched composite resin to repair decay invisibly.",
+          name: "General Dentistry",
+          desc: "Complete comprehensive oral examinations, diagnostic scans, and customized preventive treatment plans.",
           duration: "45 mins",
-          suitability: "Patients with mild to moderate cavities",
+          suitability: "Recommended for all patients at least once a year",
         },
         {
-          name: "Ceramic Crowns & Inlays",
-          desc: "Full-coverage porcelain caps to restore strength and function to fractured or heavily treated teeth.",
-          duration: "90 mins (1 visit)",
-          suitability: "Cracked, broken, or severely decayed teeth",
+          name: "Teeth Cleaning",
+          desc: "Gentle Guided Biofilm Therapy using warmed, pressurized water to remove plaque, stains, and tartar comfortably.",
+          duration: "60 mins",
+          suitability: "Recommended every 6 months for optimal gum health",
         },
         {
-          name: "Periodontal (Gum) Health Cleaning",
-          desc: "Ultrasonic and soft-tissue laser treatments to remove deep bacteria pockets and treat early gum disease.",
-          duration: "60 - 90 mins",
-          suitability: "Patients showing signs of bleeding or gum recession",
-        },
-        {
-          name: "Emergency Dental Care",
-          desc: "Same-day triage, pain management, and rapid diagnostics for sudden toothaches, swelling, or trauma.",
-          duration: "Varies",
-          suitability: "Anyone experiencing acute dental pain or injury",
-        },
-      ],
-    },
-    {
-      id: "cosmetic",
-      title: "Cosmetic & Aesthetic Dentistry",
-      icon: Sparkles,
-      tagline: "Enhance your confidence with customized smile design.",
-      description:
-        "Your smile is uniquely yours. We combine clinical art and science to design natural-looking enhancements, using digital mockups so you can preview your results before we start.",
-      procedures: [
-        {
-          name: "Porcelain Veneers & Lumineers",
-          desc: "Ultra-thin, custom-fabricated ceramic shells bonded to the front of teeth to correct spacing, chips, or alignment.",
-          duration: "2 visits",
-          suitability: "For dramatic improvements in shape, color, and spacing",
-        },
-        {
-          name: "Invisalign® Clear Aligners",
-          desc: "Nearly invisible, removable clear plastic trays that gently slide teeth into alignment over several months.",
-          duration: "10 - 18 months",
-          suitability: "Adults and teens wanting straight teeth without metal braces",
-        },
-        {
-          name: "In-Office Zoom Whitening",
-          desc: "Fast, light-activated oxygen gel treatment that brightens teeth up to 8 shades in a single comfortable visit.",
+          name: "Teeth Whitening",
+          desc: "Professional in-office whitening treatments using advanced light-activated gel to brighten your smile rapidly.",
           duration: "90 mins",
-          suitability: "Deep stains, yellowing, or discoloration",
+          suitability: "Patients looking for fast, dramatic shade improvement",
         },
         {
-          name: "Aesthetic Composite Bonding",
-          desc: "Quick, single-visit tooth reshaping using light-cured composite resin to repair small gaps or minor chips.",
-          duration: "30 - 60 mins",
-          suitability: "Minor aesthetic defects, chipped edges, or small gaps",
+          name: "Root Canal",
+          desc: "Minimally invasive therapy to save infected teeth by cleaning, sanitizing, and sealing the root canals comfortably.",
+          duration: "60 - 90 mins",
+          suitability: "Patients experiencing deep decay or severe tooth pain",
+        },
+        {
+          name: "Implants",
+          desc: "3D-guided digital implant placements to replace missing teeth with natural-looking, durable ceramic crowns.",
+          duration: "Varies",
+          suitability: "Patients with one or more missing teeth and good bone support",
+        },
+        {
+          name: "Braces",
+          desc: "Clear aligner therapy (Invisalign) and standard braces designed to align teeth and correct jaw bites.",
+          duration: "12 - 24 months",
+          suitability: "Teens and adults seeking bite correction or straight teeth",
         },
       ],
     },
     {
-      id: "specialty",
-      title: "Specialty Care & Restorations",
-      icon: Activity,
-      tagline: "Advanced treatments for complex dental needs.",
+      id: "aesthetics",
+      title: "Advanced Aesthetics",
+      icon: Sparkles,
+      tagline: "Restore, refine, and rejuvenate your skin and features.",
       description:
-        "When standard care isn't enough, we offer state-of-the-art restorative and endodontic procedures in-house, utilizing 3D CBCT imaging to maximize success rates.",
+        "Our advanced aesthetic treatments combine medical technology and artistry to enhance your natural beauty, refresh your skin texture, and restore youthful contours.",
       procedures: [
         {
-          name: "3D-Guided Dental Implants",
-          desc: "Computer-guided titanium post insertion to replace missing roots, topped with a lifelike custom ceramic crown.",
-          duration: "3 - 6 months total",
-          suitability: "Single or multiple missing teeth with healthy bone support",
+          name: "Injectables",
+          desc: "Dermal fillers and wrinkle-relaxing treatments (such as Botox) custom-tailored to reduce lines and restore youthful volume.",
+          duration: "30 mins",
+          suitability: "Patients looking to soften fine lines or restore volume",
         },
         {
-          name: "Gentle Root Canal Therapy",
-          desc: "Removal of inflamed nerve tissue from inside the root canal, sanitized with lasers, and sealed to save the natural tooth.",
-          duration: "60 - 90 mins",
-          suitability: "Deep cavities or trauma causing severe, throbbing toothaches",
+          name: "Laser Therapies",
+          desc: "Skin rejuvenation, hyperpigmentation correction, and texture refinement using advanced medical laser technology.",
+          duration: "45 mins",
+          suitability: "Patients with sun damage, acne scars, or texture concerns",
         },
         {
-          name: "Wisdom Teeth Extraction",
-          desc: "Safe, comfortable extraction of impacted or poorly positioned third molars under local anesthesia.",
-          duration: "45 - 90 mins",
-          suitability: "Teenagers or adults experiencing wisdom tooth pain or crowding",
+          name: "Facial Treatments",
+          desc: "Medical-grade facials, chemical peels, and customized skin health therapies to cleanse, nourish, and protect your skin.",
+          duration: "60 mins",
+          suitability: "Anyone seeking a deep skin cleanse and instant glow",
         },
         {
-          name: "TMJ Treatment & Nightguards",
-          desc: "Custom-molded acrylic dental guards to prevent night grinding (bruxism), relieve headaches, and protect joints.",
-          duration: "1 visit (plus lab)",
-          suitability: "Chronic jaw clenching, morning headaches, or enamel wear",
+          name: "Body Contouring",
+          desc: "Non-invasive body sculpting treatments targeting localized fat cells and skin laxity for toned results.",
+          duration: "60 mins per area",
+          suitability: "Individuals seeking localized fat reduction and skin tightening",
         },
       ],
     },
   ];
 
-  const [activeCategory, setActiveCategory] = useState<string>("general");
+  const [activeCategory, setActiveCategory] = useState<string>("dentistry");
 
   const toggleCategory = (id: string) => {
-    // If it's already active, we toggle it off (or we keep it open, but user specified "only one open at a time"
-    // so let's allow toggling off, meaning 0 or 1 is open. Or we can just set it.)
     setActiveCategory(activeCategory === id ? "" : id);
   };
 
   const triggerBooking = () => {
     window.dispatchEvent(new Event("open-booking"));
   };
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const targetId = decodeURIComponent(hash.replace("#", ""));
+        
+        // Find which category has this procedure name matching the targetId
+        const foundCategory = categories.find((cat) =>
+          cat.procedures.some((proc) => proc.name.toLowerCase().replace(/\s+/g, "-") === targetId)
+        );
+
+        if (foundCategory) {
+          setActiveCategory(foundCategory.id);
+          
+          // Small delay for Next.js rendering then scroll to target
+          setTimeout(() => {
+            const el = document.getElementById(targetId);
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+          }, 150);
+        }
+      }
+    };
+
+    // Run on initial mount
+    handleHashChange();
+
+    // Listen to hash changes (in case of in-page navigations)
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   return (
     <div className="flex flex-col w-full bg-brand-primary">
@@ -156,7 +159,7 @@ export default function ServicesPage() {
           </h1>
           <div className="w-12 h-1 bg-brand-accent/40 mx-auto rounded-full" />
           <p className="text-sm sm:text-base text-brand-text/75 max-w-xl mx-auto leading-relaxed">
-            We provide a complete range of dental services with a focus on preventative wellness, visual education, and absolute comfort.
+            We provide a complete range of dental services and advanced aesthetics with a focus on preventative wellness, visual education, and absolute comfort.
           </p>
         </div>
       </section>
@@ -175,7 +178,7 @@ export default function ServicesPage() {
                 {/* Accordion Trigger */}
                 <button
                   onClick={() => toggleCategory(category.id)}
-                  className="w-full flex items-center justify-between p-6 sm:p-8 text-left focus:outline-none hover:bg-brand-secondary/10 transition-colors"
+                  className="w-full flex items-center justify-between p-6 sm:p-8 text-left focus:outline-none hover:bg-brand-secondary/10 transition-colors cursor-pointer"
                 >
                   <div className="flex items-center space-x-4">
                     <div className="w-10 h-10 rounded-xl bg-brand-primary flex items-center justify-center">
@@ -216,37 +219,41 @@ export default function ServicesPage() {
                         Detailed Treatments:
                       </h4>
                       <div className="space-y-4">
-                        {category.procedures.map((proc, idx) => (
-                          <div
-                            key={idx}
-                            className="bg-white border border-brand-secondary/20 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:shadow-xs transition-shadow"
-                          >
-                            <div className="space-y-1.5 max-w-xl">
-                              <h5 className="text-sm sm:text-base font-bold font-heading text-brand-text">
-                                {proc.name}
-                              </h5>
-                              <p className="text-xs sm:text-sm text-brand-text/70 leading-relaxed">
-                                {proc.desc}
-                              </p>
-                              <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1 text-[11px] text-brand-text/55">
-                                <span>
-                                  <strong>Duration:</strong> {proc.duration}
-                                </span>
-                                <span className="hidden sm:inline">&middot;</span>
-                                <span>
-                                  <strong>Ideal For:</strong> {proc.suitability}
-                                </span>
-                              </div>
-                            </div>
-                            <button
-                              onClick={triggerBooking}
-                              className="btn-secondary py-2 px-4 text-xs font-semibold self-start sm:self-center flex items-center space-x-1"
+                        {category.procedures.map((proc, idx) => {
+                          const anchorId = proc.name.toLowerCase().replace(/\s+/g, "-");
+                          return (
+                            <div
+                              key={idx}
+                              id={anchorId}
+                              className="bg-white border border-brand-secondary/20 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:shadow-xs transition-shadow scroll-mt-24"
                             >
-                              <span>Book Care</span>
-                              <ArrowRight className="w-3.5 h-3.5" />
-                            </button>
-                          </div>
-                        ))}
+                              <div className="space-y-1.5 max-w-xl">
+                                <h5 className="text-sm sm:text-base font-bold font-heading text-brand-text">
+                                  {proc.name}
+                                </h5>
+                                <p className="text-xs sm:text-sm text-brand-text/70 leading-relaxed">
+                                  {proc.desc}
+                                </p>
+                                <div className="flex flex-wrap gap-x-4 gap-y-1 pt-1 text-[11px] text-brand-text/55">
+                                  <span>
+                                    <strong>Duration:</strong> {proc.duration}
+                                  </span>
+                                  <span className="hidden sm:inline">&middot;</span>
+                                  <span>
+                                    <strong>Ideal For:</strong> {proc.suitability}
+                                  </span>
+                                </div>
+                              </div>
+                              <button
+                                onClick={triggerBooking}
+                                className="btn-secondary py-2 px-4 text-xs font-semibold self-start sm:self-center flex items-center space-x-1"
+                              >
+                                <span>Book Care</span>
+                                <ArrowRight className="w-3.5 h-3.5" />
+                              </button>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>

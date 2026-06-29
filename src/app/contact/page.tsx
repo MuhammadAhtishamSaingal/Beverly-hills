@@ -45,26 +45,42 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col w-full bg-brand-primary">
-      {/* 1. Page Header */}
-      <section className="bg-brand-secondary/20 border-b border-brand-secondary/40 py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-5">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
-            Get In Touch
+      {/* 1. Page Header Hero Banner */}
+      <section className="relative w-full py-28 md:py-36 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-studio.png"
+            alt="Dental clinic space background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#f6ede7]/85 md:bg-[#f6ede7]/80 mix-blend-normal z-10" />
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6">
+          <span className="text-xs font-bold uppercase tracking-widest text-brand-accent block">
+            CONTACT
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-heading text-brand-text">
-            We are here when you need us.
+          
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light font-heading text-brand-text leading-tight">
+            Let's get <br className="sm:hidden" />
+            <span className="font-heading italic font-normal text-[#3d2e2a]/95 text-5xl sm:text-6xl md:text-7xl block sm:inline mt-1 sm:mt-0">booked</span>
           </h1>
-          <div className="w-12 h-1 bg-brand-accent/40 mx-auto rounded-full" />
-          <p className="text-sm sm:text-base text-brand-text/75 max-w-xl mx-auto leading-relaxed">
-            Ready to book your visit or have specific questions about treatments? Tap below to open our digital scheduling request.
+          
+          <p className="text-sm sm:text-base text-brand-text/80 max-w-md mx-auto leading-relaxed">
+            Choose your preferred studio and schedule your visit.
           </p>
+          
           <div className="pt-2">
             <button
               onClick={triggerBooking}
-              className="btn-primary py-3 px-8 text-sm flex items-center justify-center space-x-2 mx-auto"
+              className="btn-primary py-3.5 px-8 text-sm font-semibold tracking-wide uppercase shadow-md shadow-[#3d2e2a]/15 hover:shadow-lg transition-all"
             >
-              <Calendar className="w-4.5 h-4.5" />
-              <span>Book a Visit</span>
+              BOOK A VISIT
             </button>
           </div>
         </div>
@@ -76,7 +92,8 @@ export default function ContactPage() {
           {studios.map((studio, idx) => (
             <div
               key={idx}
-              className="bg-white border border-brand-secondary/40 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-8"
+              id={studio.city.toLowerCase().replace(/\s+/g, "-")}
+              className="bg-white border border-brand-secondary/40 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-8 scroll-mt-24"
             >
               {/* Studio Info Header */}
               <div className="space-y-6">

@@ -10,9 +10,13 @@ export default function Footer() {
           
           {/* Column 1: Logo & Tagline (5/12 width) */}
           <div className="md:col-span-5 flex flex-col space-y-4">
-            <span className="text-3xl font-semibold font-heading tracking-wide text-white">
-              Beverly Hills Clinic
-            </span>
+            <Link href="/" className="inline-block">
+              <img
+                src="/images/logo.png"
+                alt="Beverly Hills Clinic Logo"
+                className="h-36 w-36 sm:h-48 sm:w-48 object-contain mix-blend-screen invert transition-all duration-300"
+              />
+            </Link>
             <p className="text-sm text-[#e8ceb1]/80 italic font-light pt-1">
               Dentistry, reimagined.
             </p>
