@@ -46,7 +46,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full bg-brand-primary">
       {/* 1. Page Header Hero Banner */}
-      <section className="relative w-full py-28 md:py-36 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
+      <section className="relative w-full pt-40 pb-20 md:pt-52 md:pb-28 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -93,54 +93,81 @@ export default function ContactPage() {
             <div
               key={idx}
               id={studio.city.toLowerCase().replace(/\s+/g, "-")}
-              className="bg-white border border-brand-secondary/40 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col justify-between space-y-8 scroll-mt-24"
+              className="bg-white border border-[#e8ceb1]/40 rounded-3xl overflow-hidden shadow-xs flex flex-col justify-between scroll-mt-24"
             >
-              {/* Studio Info Header */}
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="relative w-20 h-20 rounded-xl overflow-hidden border border-brand-secondary/30">
-                    <Image
-                      src={studio.image}
-                      alt={`Beverly Hills Clinic ${studio.city}`}
-                      fill
-                      sizes="80px"
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-brand-accent uppercase tracking-wider block">
-                      Location Studio
-                    </span>
-                    <h2 className="text-2xl font-bold font-heading text-brand-text">
-                      {studio.city}
-                    </h2>
-                  </div>
+              {/* Card Header (Image with Text Overlay) */}
+              <div className="relative w-full h-64 sm:h-72">
+                <Image
+                  src={studio.image}
+                  alt={`Beverly Hills Clinic ${studio.city}`}
+                  fill
+                  priority={idx === 0}
+                  sizes="(max-w-7xl) 50vw, 100vw"
+                  className="object-cover"
+                />
+                {/* Dark overlay at bottom to ensure text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
+                
+                {/* Overlay Text */}
+                <div className="absolute left-6 bottom-6 right-6 z-20 text-left space-y-1">
+                  <div className="w-8 h-[1.5px] bg-[#ab7f51]" />
+                  <h2 className="text-2xl sm:text-3xl font-normal font-heading text-white">
+                    {studio.city}
+                  </h2>
+                  <span className="text-[10px] font-bold text-[#f6ede7]/90 uppercase tracking-widest block">
+                    BEVERLY HILLS CLINIC
+                  </span>
                 </div>
+              </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
-                  {/* Address, Phone, Email */}
-                  <div className="space-y-3.5">
-                    <div className="flex items-start">
-                      <MapPin className="w-4.5 h-4.5 text-brand-accent mr-2.5 mt-0.5 flex-shrink-0" />
-                      <div className="flex flex-col text-brand-text/80 leading-relaxed">
-                        <span className="font-semibold text-xs leading-normal">{studio.address}</span>
-                        <span className="text-xs">{studio.zip}</span>
-                      </div>
+              {/* Card Body */}
+              <div className="p-6 sm:p-8 flex-grow flex flex-col justify-between">
+                <div className="space-y-6">
+                  {/* Address */}
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#f5eae2] flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-[#ab7f51]" />
                     </div>
-                    <div className="flex items-center">
-                      <Phone className="w-4.5 h-4.5 text-brand-accent mr-2.5 flex-shrink-0" />
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-bold tracking-widest text-[#ab7f51] block uppercase">
+                        ADDRESS
+                      </span>
+                      <p className="text-sm text-brand-text/80 leading-relaxed">
+                        {studio.address}, {studio.zip}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Phone */}
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#f5eae2] flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-[#ab7f51]" />
+                    </div>
+                    <div className="space-y-1 flex-grow">
+                      <span className="text-[10px] font-bold tracking-widest text-[#ab7f51] block uppercase">
+                        PHONE
+                      </span>
                       <a
                         href={`tel:${studio.phoneRaw}`}
-                        className="text-brand-text/85 hover:text-brand-accent transition-colors font-medium"
+                        className="text-sm text-brand-text/80 hover:text-[#ab7f51] transition-colors leading-relaxed block"
                       >
                         {studio.phone}
                       </a>
                     </div>
-                    <div className="flex items-center">
-                      <Mail className="w-4.5 h-4.5 text-brand-accent mr-2.5 flex-shrink-0" />
+                  </div>
+
+                  {/* Email */}
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#f5eae2] flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-[#ab7f51]" />
+                    </div>
+                    <div className="space-y-1 flex-grow">
+                      <span className="text-[10px] font-bold tracking-widest text-[#ab7f51] block uppercase">
+                        EMAIL
+                      </span>
                       <a
                         href={`mailto:${studio.email}`}
-                        className="text-brand-text/85 hover:text-brand-accent transition-colors text-xs"
+                        className="text-sm text-brand-text/80 hover:text-[#ab7f51] transition-colors leading-relaxed block"
                       >
                         {studio.email}
                       </a>
@@ -148,56 +175,47 @@ export default function ContactPage() {
                   </div>
 
                   {/* Hours */}
-                  <div className="space-y-2 bg-brand-primary/20 border border-brand-secondary/35 rounded-xl p-4">
-                    <div className="flex items-center space-x-1.5 text-brand-accent mb-2">
-                      <Clock className="w-4 h-4" />
-                      <span className="text-xs font-bold uppercase tracking-wider">Studio Hours</span>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-[#f5eae2] flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-[#ab7f51]" />
                     </div>
-                    <div className="space-y-1.5 text-xs text-brand-text/80">
-                      {studio.hours.map((h, i) => (
-                        <div key={i} className="flex justify-between">
-                          <span className="font-medium">{h.days}:</span>
-                          <span>{h.time}</span>
-                        </div>
-                      ))}
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-bold tracking-widest text-[#ab7f51] block uppercase">
+                        HOURS
+                      </span>
+                      <div className="text-sm text-brand-text/80 leading-relaxed space-y-1">
+                        {studio.hours.map((h, i) => (
+                          <div key={i} className="flex space-x-2">
+                            <span className="font-medium">{h.days}:</span>
+                            <span>{h.time}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Action Buttons */}
-              <div className="grid grid-cols-2 gap-4">
-                <button
-                  onClick={triggerBooking}
-                  className="btn-primary py-2.5 text-sm flex items-center justify-center space-x-1.5"
-                >
-                  <Calendar className="w-4 h-4" />
-                  <span>Book Now</span>
-                </button>
-                <a
-                  href={studio.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary py-2.5 text-sm flex items-center justify-center space-x-1.5"
-                >
-                  <span>Get Directions</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-              </div>
+                {/* Divider Line */}
+                <hr className="border-t border-[#e8ceb1]/40 my-6" />
 
-              {/* Google Map Embed */}
-              <div className="w-full h-72 rounded-xl overflow-hidden border border-brand-secondary/40 shadow-inner relative bg-brand-secondary/10">
-                <iframe
-                  src={studio.mapEmbedUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title={`Google Maps embed location for Beverly Hills Clinic ${studio.city}`}
-                  className="absolute inset-0"
-                />
+                {/* Card Footer Actions */}
+                <div className="flex items-center space-x-4">
+                  <button
+                    onClick={triggerBooking}
+                    className="bg-[#c39f75] hover:bg-[#b08b62] text-white font-semibold text-xs tracking-wider uppercase py-3 px-6 rounded-full transition-all duration-300 hover:scale-105 cursor-pointer"
+                  >
+                    BOOK NOW
+                  </button>
+                  <a
+                    href={studio.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-[#c39f75]/60 hover:border-[#c39f75] text-[#ab7f51] hover:bg-[#f6ede7]/40 font-semibold text-xs tracking-wider uppercase py-3 px-6 rounded-full flex items-center space-x-1.5 transition-all duration-300 hover:scale-105"
+                  >
+                    <span>GET DIRECTIONS</span>
+                    <span className="text-xs leading-none">↗</span>
+                  </a>
+                </div>
               </div>
             </div>
           ))}

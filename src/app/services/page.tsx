@@ -149,7 +149,7 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full bg-brand-primary">
       {/* 1. Hero Banner */}
-      <section className="bg-brand-secondary/20 border-b border-brand-secondary/40 py-20">
+      <section className="bg-brand-secondary/20 border-b border-brand-secondary/40 pt-36 pb-20 sm:pt-48 sm:pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
             Our Services & Treatments
