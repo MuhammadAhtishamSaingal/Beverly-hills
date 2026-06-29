@@ -97,6 +97,18 @@ export default function Header() {
     };
   }, []);
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   const triggerBooking = () => {
     window.dispatchEvent(new Event("open-booking"));
   };
@@ -118,7 +130,8 @@ export default function Header() {
   };
 
   return (
-    <header
+    <>
+      <header
       className={`w-full z-50 transition-all duration-300 ${
         isScrolled || isMobileMenuOpen
           ? "fixed top-0 left-0 backdrop-blur-md bg-brand-primary/90 border-b border-brand-secondary/40 shadow-sm py-3"
@@ -134,8 +147,8 @@ export default function Header() {
               alt="Beverly Hills Clinic Logo"
               className={`object-contain mix-blend-multiply transition-all duration-300 ${
                 isScrolled
-                  ? "h-16 w-16 sm:h-24 sm:w-24"
-                  : "h-24 w-24 sm:h-36 sm:w-36"
+                  ? "h-20 w-20 sm:h-24 sm:w-24"
+                  : "h-32 w-32 sm:h-36 sm:w-36"
               }`}
             />
           </Link>
@@ -365,164 +378,152 @@ export default function Header() {
           </div>
         </div>
       </div>
+    </header>
 
        {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-brand-primary border-b border-brand-secondary shadow-md px-4 pt-2 pb-6 space-y-3 z-50 animate-in slide-in-from-top duration-300">
-          <nav className="flex flex-col space-y-3">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`px-3 py-2 rounded-lg text-base font-medium ${
-                  isLinkActive(link.href)
-                    ? "bg-brand-secondary/40 text-brand-accent"
-                    : "text-brand-text hover:bg-brand-secondary/20"
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+        <div className="fixed inset-0 bg-[#2d221f] z-50 overflow-y-auto flex flex-col justify-between p-4 sm:p-6 animate-in fade-in duration-300">
+          {/* Drawer Header */}
+          <div className="flex items-center justify-between w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <Link href="/" className="flex items-center group" onClick={() => setIsMobileMenuOpen(false)}>
+              <img
+                src="/images/logo.png"
+                alt="Beverly Hills Clinic Logo"
+                className="h-32 w-32 object-contain invert mix-blend-screen"
+              />
+            </Link>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-[#f6ede7] hover:text-[#e8ceb1] p-2 focus:outline-none cursor-pointer"
+              aria-label="Close menu"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
 
-            {/* Services mobile section */}
-            <div className="border-t border-brand-secondary/40 pt-2 mt-2">
+          {/* Drawer Menu Items */}
+          <div className="flex-grow flex flex-col items-center justify-center py-8 space-y-8 text-center">
+            {/* Top decorative line */}
+            <div className="w-[1.5px] h-12 bg-[#ab7f51]/30" />
+
+            {/* Services Section */}
+            <div className="space-y-2">
               <Link
                 href="/services"
-                className="px-3 py-1 text-xs font-semibold text-brand-text/40 uppercase tracking-wider block hover:text-brand-accent transition-colors"
+                className="text-3xl font-normal font-heading text-[#f6ede7] hover:text-[#e8ceb1] transition-colors tracking-wide block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services
               </Link>
-              <div className="pl-3 mt-1 flex flex-col space-y-3">
-                {/* Dentistry Group */}
-                <div>
-                  <span className="text-[11px] font-bold text-brand-accent/80 uppercase tracking-wider block mb-1">
-                    Dentistry Services
-                  </span>
-                  <div className="pl-2 flex flex-col space-y-1">
-                    {[
-                      "General Dentistry",
-                      "Teeth Cleaning",
-                      "Teeth Whitening",
-                      "Root Canal",
-                      "Implants",
-                      "Braces",
-                    ].map((srv) => (
-                      <Link
-                        key={srv}
-                        href={`/services#${srv.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="px-2 py-1 text-sm text-brand-text/80 hover:text-brand-accent transition-colors"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        &bull; {srv}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                {/* Aesthetics Group */}
-                <div>
-                  <span className="text-[11px] font-bold text-brand-accent/80 uppercase tracking-wider block mb-1.5">
-                    Advanced Aesthetics
-                  </span>
-                  <div className="pl-2 grid grid-cols-2 gap-2">
-                    {[
-                      "Injectables",
-                      "Laser Therapies",
-                      "Facial Treatments",
-                      "Body Contouring",
-                    ].map((srv) => (
-                      <Link
-                        key={srv}
-                        href={`/services#${srv.toLowerCase().replace(/\s+/g, "-")}`}
-                        className="px-2 py-2 text-center text-[10px] font-bold uppercase tracking-wider text-brand-text bg-brand-secondary/25 border border-brand-secondary/40 rounded-lg hover:bg-brand-secondary/45"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {srv}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Patients section nested in mobile menu */}
-            <div className="border-t border-brand-secondary/40 pt-2 mt-2">
-              <span className="px-3 py-1 text-xs font-semibold text-brand-text/40 uppercase tracking-wider block">
-                Patients
-              </span>
-              <div className="pl-3 mt-1 flex flex-col space-y-1">
-                {patientResources.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="px-3 py-2 text-sm text-brand-text hover:text-brand-accent hover:bg-brand-secondary/20 rounded-md transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 max-w-xs mx-auto">
                 <Link
-                  href="/patients"
-                  className="px-3 py-2 text-sm font-semibold text-brand-accent hover:bg-brand-secondary/20 rounded-md transition-colors"
+                  href="/services#dentistry"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Patient Dashboard Overview
+                  Dentistry
+                </Link>
+                <span className="text-[#ab7f51]/40 text-xs">&middot;</span>
+                <Link
+                  href="/services#aesthetics"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Aesthetics
                 </Link>
               </div>
             </div>
 
-            {/* Contact section nested in mobile menu */}
-            <div className="border-t border-brand-secondary/40 pt-2 mt-2">
+            {/* Patients Section */}
+            <div className="space-y-2">
               <Link
-                href="/contact"
-                className="px-3 py-1 text-xs font-semibold text-brand-text/40 uppercase tracking-wider block hover:text-brand-accent transition-colors"
+                href="/patients"
+                className="text-3xl font-normal font-heading text-[#f6ede7] hover:text-[#e8ceb1] transition-colors tracking-wide block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact & Locations
+                Patients
               </Link>
-              <div className="pl-3 mt-1 flex flex-col space-y-1">
+              <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1.5 max-w-sm mx-auto px-4">
                 <Link
-                  href="/contact"
-                  className="px-3 py-2 text-sm text-brand-text hover:text-brand-accent hover:bg-brand-secondary/20 rounded-md transition-colors"
+                  href="/patients#insurance"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Contact Overview
+                  Insurance
                 </Link>
+                <span className="text-[#ab7f51]/40 text-xs">&middot;</span>
                 <Link
-                  href="/contact#sharfabad"
-                  className="px-3 py-2 text-sm text-brand-text hover:text-brand-accent hover:bg-brand-secondary/20 rounded-md transition-colors"
+                  href="/patients#membership"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Sharfabad Studio
+                  Membership Plan
                 </Link>
+                <span className="text-[#ab7f51]/40 text-xs">&middot;</span>
                 <Link
-                  href="/contact#badar-commercial"
-                  className="px-3 py-2 text-sm text-brand-text hover:text-brand-accent hover:bg-brand-secondary/20 rounded-md transition-colors"
+                  href="/patients#new-patients"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Badar Commercial Studio
+                  New Patients
+                </Link>
+                <span className="text-[#ab7f51]/40 text-xs">&middot;</span>
+                <Link
+                  href="/patients#faq"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQ
                 </Link>
               </div>
             </div>
-          </nav>
 
-          <div className="border-t border-brand-secondary/40 pt-4 flex flex-col space-y-3">
-            <a
-              href="tel:03070984307"
-              className="btn-secondary w-full flex items-center justify-center space-x-2 py-2.5"
-            >
-              <Phone className="w-5 h-5" />
-              <span>Call Now</span>
-            </a>
-            <button
-              onClick={triggerBooking}
-              className="btn-primary w-full flex items-center justify-center space-x-2 py-2.5"
-            >
-              <Calendar className="w-5 h-5" />
-              <span>Book Now</span>
-            </button>
+            {/* Contact Section */}
+            <div className="space-y-2">
+              <Link
+                href="/contact"
+                className="text-3xl font-normal font-heading text-[#f6ede7] hover:text-[#e8ceb1] transition-colors tracking-wide block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 max-w-xs mx-auto">
+                <Link
+                  href="/contact#sharfabad"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Sharfabad
+                </Link>
+                <span className="text-[#ab7f51]/40 text-xs">&middot;</span>
+                <Link
+                  href="/contact#badar-commercial"
+                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Badar Commercial
+                </Link>
+              </div>
+            </div>
+
+            {/* Book Now Button */}
+            <div className="pt-4">
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  triggerBooking();
+                }}
+                className="bg-[#c39f75] hover:bg-[#b08b62] text-white font-semibold text-xs tracking-wider uppercase py-3.5 px-8 rounded-full transition-all hover:scale-105 shadow-md shadow-black/15 cursor-pointer"
+              >
+                BOOK NOW
+              </button>
+            </div>
+
+            {/* Bottom decorative line */}
+            <div className="w-[1.5px] h-12 bg-[#ab7f51]/30" />
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
