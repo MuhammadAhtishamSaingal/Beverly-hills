@@ -142,7 +142,14 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center group">
+            <Link
+              href="/"
+              className={`flex items-center group transition-all duration-300 ${
+                !isScrolled && !isMobileMenuOpen
+                  ? "bg-[radial-gradient(circle,rgba(246,237,231,0.85)_0%,rgba(246,237,231,0)_70%)] px-4 py-3 md:bg-transparent md:p-0"
+                  : ""
+              }`}
+            >
               <img
                 src="/images/logo.png"
                 alt="Beverly Hills Clinic Logo"
