@@ -26,18 +26,18 @@ export default function Hero() {
         {/* Mobile Hero Image */}
         <div className="block md:hidden absolute inset-0 bg-brand-primary">
           <picture>
-            <source media="(max-width: 767px)" srcSet="/images/mobile banners.webp" />
+            <source media="(max-width: 767px)" srcSet="/images/mobile-banner.JPG" />
             <img
-              src="/images/mobile banners.webp"
+              src="/images/mobile-banner.JPG"
               alt="Beverly Hills Clinic Reception Mobile"
               className="w-full h-full object-cover object-center"
             />
           </picture>
         </div>
         {/* Left-side sand/white gradient overlay for text and header legibility */}
-        <div className="absolute inset-x-0 bottom-0 h-[65%] md:h-full md:inset-y-0 md:left-0 md:w-[65%] lg:w-[55%] bg-gradient-to-t from-[#f6ede7]/85 via-[#f6ede7]/50 to-transparent md:bg-gradient-to-r md:from-[#f6ede7] md:via-[#f6ede7]/85 z-10" />
+        <div className="absolute inset-x-0 bottom-0 h-[65%] md:h-full md:inset-y-0 md:left-0 md:w-[65%] lg:w-[55%] bg-gradient-to-t from-[#f6ede7]/60 via-[#f6ede7]/20 to-transparent md:bg-gradient-to-r md:from-[#f6ede7] md:via-[#f6ede7]/85 z-10" />
         {/* Top-to-bottom sand/white gradient overlay for header navigation links legibility */}
-        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#f6ede7]/75 via-[#f6ede7]/25 to-transparent md:from-[#f6ede7]/90 md:via-[#f6ede7]/40 z-10 pointer-events-none" />
+        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#f6ede7]/65 via-[#f6ede7]/15 to-transparent md:from-[#f6ede7]/90 md:via-[#f6ede7]/40 z-10 pointer-events-none" />
       </div>
 
       {/* Hero Content */}
