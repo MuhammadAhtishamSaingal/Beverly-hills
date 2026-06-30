@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { Phone, Calendar } from "lucide-react";
+import { trackPixelEvent } from "@/utils/pixel";
 
 export default function Hero() {
   const triggerBooking = () => {
+    trackPixelEvent("InitiateCheckout", { content_name: "Hero Book a Visit" });
     window.dispatchEvent(new Event("open-booking"));
   };
 
@@ -31,9 +33,9 @@ export default function Hero() {
           className="block md:hidden object-cover object-center"
         />
         {/* Left-side sand/white gradient overlay for text and header legibility */}
-        <div className="absolute inset-y-0 left-0 w-full md:w-[65%] lg:w-[55%] bg-gradient-to-r from-[#f6ede7] via-[#f6ede7]/85 to-transparent z-10" />
+        <div className="absolute inset-y-0 left-0 w-full md:w-[65%] lg:w-[55%] bg-gradient-to-r from-[#f6ede7]/65 via-[#f6ede7]/30 to-transparent md:from-[#f6ede7] md:via-[#f6ede7]/85 z-10" />
         {/* Top-to-bottom sand/white gradient overlay for header navigation links legibility */}
-        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#f6ede7]/90 via-[#f6ede7]/40 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#f6ede7]/60 via-[#f6ede7]/20 to-transparent md:from-[#f6ede7]/90 md:via-[#f6ede7]/40 z-10 pointer-events-none" />
       </div>
 
       {/* Hero Content */}
@@ -75,6 +77,7 @@ export default function Hero() {
 
             <a
               href="tel:03070984307"
+              onClick={() => trackPixelEvent("Contact", { content_name: "Hero Call Now" })}
               className="btn-secondary py-3.5 px-8 text-base font-medium flex items-center justify-center space-x-2.5 !text-brand-text !border-[#3d2e2a] hover:!bg-[#3d2e2a]/10"
             >
               <Phone className="w-5 h-5" />

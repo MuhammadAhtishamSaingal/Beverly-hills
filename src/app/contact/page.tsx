@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { Phone, Calendar, MapPin, Clock, Mail, ExternalLink } from "lucide-react";
+import { trackPixelEvent } from "@/utils/pixel";
 
 export default function ContactPage() {
   const triggerBooking = () => {
+    trackPixelEvent("InitiateCheckout", { content_name: "Contact Page Book Visit" });
     window.dispatchEvent(new Event("open-booking"));
   };
 
@@ -149,6 +151,7 @@ export default function ContactPage() {
                       </span>
                       <a
                         href={`tel:${studio.phoneRaw}`}
+                        onClick={() => trackPixelEvent("Contact", { content_name: `Contact Page Call ${studio.city}` })}
                         className="text-sm text-brand-text/80 hover:text-[#ab7f51] transition-colors leading-relaxed block"
                       >
                         {studio.phone}

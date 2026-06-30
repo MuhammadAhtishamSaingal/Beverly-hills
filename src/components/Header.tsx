@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Calendar, Phone } from "lucide-react";
+import { trackPixelEvent } from "@/utils/pixel";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -110,6 +111,7 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   const triggerBooking = () => {
+    trackPixelEvent("InitiateCheckout", { content_name: "Header Book Now" });
     window.dispatchEvent(new Event("open-booking"));
   };
 
@@ -347,6 +349,7 @@ export default function Header() {
             <div className="hidden md:flex items-center space-x-4">
               <a
                 href="tel:03070984307"
+                onClick={() => trackPixelEvent("Contact", { content_name: "Header Call Now" })}
                 className="btn-secondary flex items-center space-x-2 text-sm py-2.5 px-5"
               >
                 <Phone className="w-4 h-4" />

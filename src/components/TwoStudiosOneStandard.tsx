@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MapPin, Phone, Calendar } from "lucide-react";
+import { trackPixelEvent } from "@/utils/pixel";
 
 export default function TwoStudiosOneStandard() {
   const cards = [
@@ -24,6 +25,7 @@ export default function TwoStudiosOneStandard() {
   ];
 
   const triggerBooking = () => {
+    trackPixelEvent("InitiateCheckout", { content_name: "Two Studios Book Visit" });
     window.dispatchEvent(new Event("open-booking"));
   };
 
@@ -86,6 +88,7 @@ export default function TwoStudiosOneStandard() {
                       <Phone className="w-4 h-4 text-brand-accent mr-2.5 flex-shrink-0" />
                       <a
                         href={`tel:${card.phoneRaw}`}
+                        onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call ${card.studio}` })}
                         className="hover:text-brand-accent transition-colors font-medium"
                       >
                         {card.phone}
@@ -105,6 +108,7 @@ export default function TwoStudiosOneStandard() {
 
                   <a
                     href={`tel:${card.phoneRaw}`}
+                    onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call CTA ${card.studio}` })}
                     className="text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
                   >
                     <span>CALL STUDIO</span>
