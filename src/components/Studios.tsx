@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export default function Studios() {
   const leftImages = [
-    "/images/hero-studio.png",
-    "/images/studio-sf.png",
-    "/images/studio-mv.png",
+    "/images/hero-studio.webp",
+    "/images/studio-sf.webp",
+    "/images/studio-mvss.webp",
   ];
 
   const rightImages = [
-    "/images/studio-hallway.png",
-    "/images/studio-mv.png",
-    "/images/hero-studio.png",
+    "/images/studio-hallway.webp",
+    "/images/studio-mvss.webp",
+    "/images/hero-studio.webp",
   ];
 
   // Duplicate items to ensure seamless infinite looping scroll

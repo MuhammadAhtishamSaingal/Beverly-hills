@@ -16,7 +16,7 @@ export default function ContactPage() {
       phone: "0307-0984307",
       phoneRaw: "03070984307",
       email: "sharfabad@beverlyhillsclinic.com",
-      image: "/images/studio-sf.png",
+      image: "/images/studio-sf.webp",
       hours: [
         { days: "Monday - Friday", time: "9:00 AM - 6:00 PM" },
         { days: "Saturday - Sunday", time: "Closed" },
@@ -32,7 +32,7 @@ export default function ContactPage() {
       phone: "0307-0984307",
       phoneRaw: "03070984307",
       email: "badar@beverlyhillsclinic.com",
-      image: "/images/studio-mv.png",
+      image: "/images/studio-mvss.webp",
       hours: [
         { days: "Monday - Saturday", time: "9:00 AM - 6:00 PM" },
         { days: "Sunday", time: "Closed" },
@@ -50,7 +50,7 @@ export default function ContactPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-studio.png"
+            src="/images/hero-studio.webp"
             alt="Dental clinic space background"
             fill
             priority

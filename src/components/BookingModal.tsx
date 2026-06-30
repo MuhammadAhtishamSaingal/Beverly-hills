@@ -8,13 +8,13 @@ const studios = [
   {
     id: "Sharfabad",
     name: "Sharfabad Studio",
-    image: "/images/studio-sf.png",
+    image: "/images/studio-sf.webp",
     address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad, Karachi",
   },
   {
     id: "Badar Commercial",
     name: "Badar Commercial Studio",
-    image: "/images/studio-mv.png",
+    image: "/images/studio-mvss.webp",
     address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial, Karachi",
   },
 ];

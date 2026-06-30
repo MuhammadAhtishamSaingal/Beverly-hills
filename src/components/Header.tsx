@@ -21,7 +21,7 @@ export default function Header() {
     if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
     if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
-    
+
     setIsContactDropdownOpen(false);
     setIsServicesDropdownOpen(false);
     setIsDropdownOpen(true);
@@ -37,7 +37,7 @@ export default function Header() {
     if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
     if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
-    
+
     setIsDropdownOpen(false);
     setIsServicesDropdownOpen(false);
     setIsContactDropdownOpen(true);
@@ -53,7 +53,7 @@ export default function Header() {
     if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
     if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
-    
+
     setIsDropdownOpen(false);
     setIsContactDropdownOpen(false);
     setIsServicesDropdownOpen(true);
@@ -132,255 +132,250 @@ export default function Header() {
   return (
     <>
       <header
-      className={`w-full z-50 transition-all duration-300 ${
-        isScrolled || isMobileMenuOpen
+        className={`w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
           ? "fixed top-0 left-0 backdrop-blur-md bg-brand-primary/90 border-b border-brand-secondary/40 shadow-sm py-3"
           : "absolute top-0 left-0 bg-transparent py-5"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center group">
-            <img
-              src="/images/logo.png"
-              alt="Beverly Hills Clinic Logo"
-              className={`object-contain mix-blend-multiply transition-all duration-300 ${
-                isScrolled
+          }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link href="/" className="flex items-center group">
+              <img
+                src="/images/logo.png"
+                alt="Beverly Hills Clinic Logo"
+                className={`object-contain mix-blend-multiply transition-all duration-300 ${isScrolled
                   ? "h-20 w-20 sm:h-24 sm:w-24"
                   : "h-32 w-32 sm:h-36 sm:w-36"
-              }`}
-            />
-          </Link>
+                  }`}
+              />
+            </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-base font-medium tracking-wide transition-colors ${
-                  isLinkActive(link.href)
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-base font-medium tracking-wide transition-colors ${isLinkActive(link.href)
                     ? "text-brand-accent font-semibold"
                     : "text-brand-text/80 hover:text-brand-accent"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
 
-            {/* Services Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={handleMouseEnterServices}
-              onMouseLeave={handleMouseLeaveServices}
-            >
-              <Link
-                href="/services"
-                className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${
-                  pathname.startsWith("/services")
+              {/* Services Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={handleMouseEnterServices}
+                onMouseLeave={handleMouseLeaveServices}
+              >
+                <Link
+                  href="/services"
+                  className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${pathname.startsWith("/services")
                     ? "text-brand-accent font-semibold"
                     : "text-brand-text/80 hover:text-brand-accent"
-                }`}
-                onClick={() => setIsServicesDropdownOpen(false)}
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesDropdownOpen ? "rotate-185" : ""}`} />
-              </Link>
+                    }`}
+                  onClick={() => setIsServicesDropdownOpen(false)}
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesDropdownOpen ? "rotate-185" : ""}`} />
+                </Link>
 
-              {isServicesDropdownOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 mt-0 top-full pt-2 w-[480px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="rounded-2xl bg-brand-primary border border-brand-secondary/60 shadow-xl p-6 grid grid-cols-2 gap-6">
-                    {/* Column 1: Dentistry Services */}
-                    <div className="space-y-4">
-                      <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
-                        Dentistry Services
+                {isServicesDropdownOpen && (
+                  <div className="absolute left-1/2 -translate-x-1/2 mt-0 top-full pt-2 w-[480px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="rounded-2xl bg-brand-primary border border-brand-secondary/60 shadow-xl p-6 grid grid-cols-2 gap-6">
+                      {/* Column 1:  Comprehensive Dental Services */}
+                      <div className="space-y-4">
+                        <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
+                          Comprehensive Dental Services
+                        </div>
+                        <ul className="space-y-2.5">
+                          {[
+                            "General Dentistry",
+                            "Cosmetic Treatments",
+                            "Specialty Care",
+                            "Teeth Cleaning",
+                            "Teeth Whitening",
+                            "Root Canal",
+
+                          ].map((srv) => (
+                            <li key={srv}>
+                              <Link
+                                href={`/services#${srv.toLowerCase().replace(/\s+/g, "-")}`}
+                                className="group/item flex items-center text-sm font-medium text-brand-text hover:text-brand-accent transition-colors"
+                                onClick={() => setIsServicesDropdownOpen(false)}
+                              >
+                                <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2.5 transition-colors" />
+                                <span>{srv}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-2.5">
-                        {[
-                          "General Dentistry",
-                          "Teeth Cleaning",
-                          "Teeth Whitening",
-                          "Root Canal",
-                          "Implants",
-                          "Braces",
-                        ].map((srv) => (
-                          <li key={srv}>
+
+                      {/* Column 2: Advanced Aesthetics */}
+                      <div className="space-y-4">
+                        <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
+                          Advanced Aesthetics
+                        </div>
+                        <div className="flex flex-col space-y-2">
+                          {[
+                            "Injectables",
+                            "Laser Therapies",
+                            "Facial Treatments",
+                            "Body Contouring",
+                          ].map((srv) => (
                             <Link
+                              key={srv}
                               href={`/services#${srv.toLowerCase().replace(/\s+/g, "-")}`}
-                              className="group/item flex items-center text-sm font-medium text-brand-text hover:text-brand-accent transition-colors"
+                              className="block px-4 py-2.5 text-xs font-bold text-center uppercase tracking-wider text-brand-text bg-brand-secondary/25 border border-brand-secondary/40 rounded-xl hover:bg-brand-secondary/45 hover:text-brand-accent transition-all duration-200 shadow-xs hover:shadow-sm"
                               onClick={() => setIsServicesDropdownOpen(false)}
                             >
-                              <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2.5 transition-colors" />
-                              <span>{srv}</span>
+                              {srv}
                             </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Column 2: Advanced Aesthetics */}
-                    <div className="space-y-4">
-                      <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
-                        Advanced Aesthetics
-                      </div>
-                      <div className="flex flex-col space-y-2">
-                        {[
-                          "Injectables",
-                          "Laser Therapies",
-                          "Facial Treatments",
-                          "Body Contouring",
-                        ].map((srv) => (
-                          <Link
-                            key={srv}
-                            href={`/services#${srv.toLowerCase().replace(/\s+/g, "-")}`}
-                            className="block px-4 py-2.5 text-xs font-bold text-center uppercase tracking-wider text-brand-text bg-brand-secondary/25 border border-brand-secondary/40 rounded-xl hover:bg-brand-secondary/45 hover:text-brand-accent transition-all duration-200 shadow-xs hover:shadow-sm"
-                            onClick={() => setIsServicesDropdownOpen(false)}
-                          >
-                            {srv}
-                          </Link>
-                        ))}
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
 
-            {/* Patients Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={handleMouseEnterPatients}
-              onMouseLeave={handleMouseLeavePatients}
-            >
-              <Link
-                href="/patients"
-                className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${
-                  pathname.startsWith("/patients")
+              {/* Patients Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={handleMouseEnterPatients}
+                onMouseLeave={handleMouseLeavePatients}
+              >
+                <Link
+                  href="/patients"
+                  className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${pathname.startsWith("/patients")
                     ? "text-brand-accent font-semibold"
                     : "text-brand-text/80 hover:text-brand-accent"
-                }`}
-                onClick={() => setIsDropdownOpen(false)}
-              >
-                <span>Patients</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-185" : ""}`} />
-              </Link>
+                    }`}
+                  onClick={() => setIsDropdownOpen(false)}
+                >
+                  <span>Patients</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-185" : ""}`} />
+                </Link>
 
-              {isDropdownOpen && (
-                <div className="absolute left-0 top-full pt-2 w-60 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="rounded-xl bg-brand-primary border border-brand-secondary/60 shadow-lg py-2">
-                    <div className="px-3 py-1 text-xs font-semibold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 mb-1">
-                      Resources
+                {isDropdownOpen && (
+                  <div className="absolute left-0 top-full pt-2 w-60 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="rounded-xl bg-brand-primary border border-brand-secondary/60 shadow-lg py-2">
+                      <div className="px-3 py-1 text-xs font-semibold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 mb-1">
+                        Resources
+                      </div>
+                      {patientResources.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                      <div className="border-t border-brand-secondary/30 mt-1 pt-1">
+                        <Link
+                          href="/patients"
+                          className="block px-4 py-2.5 text-sm font-medium text-brand-accent hover:bg-brand-secondary/20 transition-colors"
+                          onClick={() => setIsDropdownOpen(false)}
+                        >
+                          View Patient Dashboard
+                        </Link>
+                      </div>
                     </div>
-                    {patientResources.map((item) => (
+                  </div>
+                )}
+              </div>
+
+              {/* Contact Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={handleMouseEnterContact}
+                onMouseLeave={handleMouseLeaveContact}
+              >
+                <Link
+                  href="/contact"
+                  className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${pathname.startsWith("/contact")
+                    ? "text-brand-accent font-semibold"
+                    : "text-brand-text/80 hover:text-brand-accent"
+                    }`}
+                  onClick={() => setIsContactDropdownOpen(false)}
+                >
+                  <span>Contact</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isContactDropdownOpen ? "rotate-185" : ""}`} />
+                </Link>
+
+                {isContactDropdownOpen && (
+                  <div className="absolute left-0 top-full pt-2 w-52 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="rounded-xl bg-brand-primary border border-brand-secondary/60 shadow-lg py-2">
+                      <div className="px-3 py-1 text-xs font-semibold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 mb-1">
+                        Locations
+                      </div>
                       <Link
-                        key={item.href}
-                        href={item.href}
+                        href="/contact"
                         className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
+                        onClick={() => setIsContactDropdownOpen(false)}
                       >
-                        {item.name}
+                        Contact Overview
                       </Link>
-                    ))}
-                    <div className="border-t border-brand-secondary/30 mt-1 pt-1">
                       <Link
-                        href="/patients"
-                        className="block px-4 py-2.5 text-sm font-medium text-brand-accent hover:bg-brand-secondary/20 transition-colors"
-                        onClick={() => setIsDropdownOpen(false)}
+                        href="/contact#sharfabad"
+                        className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
+                        onClick={() => setIsContactDropdownOpen(false)}
                       >
-                        View Patient Dashboard
+                        Sharfabad Studio
+                      </Link>
+                      <Link
+                        href="/contact#badar-commercial"
+                        className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
+                        onClick={() => setIsContactDropdownOpen(false)}
+                      >
+                        Badar Commercial Studio
                       </Link>
                     </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            </nav>
 
-            {/* Contact Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={handleMouseEnterContact}
-              onMouseLeave={handleMouseLeaveContact}
-            >
-              <Link
-                href="/contact"
-                className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${
-                  pathname.startsWith("/contact")
-                    ? "text-brand-accent font-semibold"
-                    : "text-brand-text/80 hover:text-brand-accent"
-                }`}
-                onClick={() => setIsContactDropdownOpen(false)}
+            {/* CTAs */}
+            <div className="hidden md:flex items-center space-x-4">
+              <a
+                href="tel:03070984307"
+                className="btn-secondary flex items-center space-x-2 text-sm py-2.5 px-5"
               >
-                <span>Contact</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isContactDropdownOpen ? "rotate-185" : ""}`} />
-              </Link>
-
-              {isContactDropdownOpen && (
-                <div className="absolute left-0 top-full pt-2 w-52 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="rounded-xl bg-brand-primary border border-brand-secondary/60 shadow-lg py-2">
-                    <div className="px-3 py-1 text-xs font-semibold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 mb-1">
-                      Locations
-                    </div>
-                    <Link
-                      href="/contact"
-                      className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
-                      onClick={() => setIsContactDropdownOpen(false)}
-                    >
-                      Contact Overview
-                    </Link>
-                    <Link
-                      href="/contact#sharfabad"
-                      className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
-                      onClick={() => setIsContactDropdownOpen(false)}
-                    >
-                      Sharfabad Studio
-                    </Link>
-                    <Link
-                      href="/contact#badar-commercial"
-                      className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
-                      onClick={() => setIsContactDropdownOpen(false)}
-                    >
-                      Badar Commercial Studio
-                    </Link>
-                  </div>
-                </div>
-              )}
+                <Phone className="w-4 h-4" />
+                <span>Call Now</span>
+              </a>
+              <button
+                onClick={triggerBooking}
+                className="btn-primary flex items-center space-x-2 text-sm py-2.5 px-5"
+              >
+                <Calendar className="w-4 h-4" />
+                <span>Book Now</span>
+              </button>
             </div>
-          </nav>
 
-          {/* CTAs */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="tel:03070984307"
-              className="btn-secondary flex items-center space-x-2 text-sm py-2.5 px-5"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Call Now</span>
-            </a>
-            <button
-              onClick={triggerBooking}
-              className="btn-primary flex items-center space-x-2 text-sm py-2.5 px-5"
-            >
-              <Calendar className="w-4 h-4" />
-              <span>Book Now</span>
-            </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-brand-text hover:text-brand-accent p-2 focus:outline-none"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-brand-text hover:text-brand-accent p-2 focus:outline-none"
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-       {/* Mobile Drawer Overlay */}
+      {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 bg-[#2d221f] z-50 overflow-y-auto flex flex-col justify-between p-4 sm:p-6 animate-in fade-in duration-300">
           {/* Drawer Header */}

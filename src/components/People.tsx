@@ -26,9 +26,9 @@ export default function People() {
             {/* Ambient background accent block */}
             <div className="absolute -inset-4 bg-brand-secondary/40 rounded-3xl -rotate-2 scale-98" />
             
-            <div className="relative aspect-square w-full rounded-2xl overflow-hidden shadow-xl border border-brand-secondary/50">
+            <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl border border-brand-secondary/50">
               <Image
-                src="/images/people-team.png"
+                src="/images/people-team.webp"
                 alt="Zen Dental Studio Staff - Dr. Sarah Jenkins & Team"
                 fill
                 sizes="(max-w-728px) 100vw, 50vw"

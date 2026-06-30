@@ -11,7 +11,7 @@ export default function Philosophy() {
           Comprehensive<br />care
         </>
       ),
-      description: "Evidence-based dentistry, delivered by a team that genuinely listens.",
+      description: "Personalized treatment plans that combine advanced dentistry and aesthetic medicine for complete facial wellness.",
     },
     {
       icon: Leaf,
@@ -49,29 +49,26 @@ export default function Philosophy() {
     <section className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Heading Copy (5/12 width) */}
           <div className="lg:col-span-5 space-y-6 text-left">
             {/* Tagline label with horizontal line prefix */}
             <div className="flex items-center space-x-3">
               <div className="w-8 h-[1px] bg-[#ab7f51]" />
               <span className="text-xs font-bold uppercase tracking-widest text-[#ab7f51]">
-                OUR PHILOSOPHY
+                OUR COMMITMENT
               </span>
             </div>
 
             {/* Large Serif Stacked Heading */}
             <h2 className="text-4xl sm:text-5xl font-semibold leading-[1.15] font-heading text-brand-text max-w-sm">
-              Exceptional<br />
-              comprehensive<br />
-              care, delivered<br />
-              with care<br />
-              and calm.
+              Enhancing Natural Beauty,Elevating Everyday Confidence.
+
             </h2>
 
             {/* Brand Subtext */}
             <p className="text-sm text-brand-text/70 leading-relaxed max-w-xs pt-1">
-              Beverly Hills Clinic is built for people who value both.
+              Every treatment is thoughtfully tailored using advanced dental care, aesthetic medicine, and modern technology to deliver refined, natural-looking results in a calm, luxurious environment.
             </p>
           </div>
 
@@ -80,7 +77,7 @@ export default function Philosophy() {
             {/* Rounded outer box container with exact gradient, borders, and drop shadow */}
             <div className="bg-gradient-to-b from-[#efe6df] to-[#e4d3c6] border border-[#e5d4c8]/30 rounded-3xl p-6 sm:p-8 shadow-[0_25px_50px_rgba(45,34,31,0.12)] max-w-[460px] w-full">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-start">
-                
+
                 {/* Column 1 (Left): Starts immediately */}
                 <div className="space-y-5">
                   {column1.map((card, idx) => {
@@ -94,7 +91,7 @@ export default function Philosophy() {
                         <div className="w-9 h-9 rounded-lg bg-[#fdfbf9] border border-[#f0e6dd] flex items-center justify-center mb-4">
                           <IconComp className="w-4.5 h-4.5 text-[#ab7f51]" />
                         </div>
-                        
+
                         {/* Title (stacked) */}
                         <h3 className="text-base font-bold font-heading text-brand-text leading-tight mb-2">
                           {card.title}
@@ -122,7 +119,7 @@ export default function Philosophy() {
                         <div className="w-9 h-9 rounded-lg bg-[#fdfbf9] border border-[#f0e6dd] flex items-center justify-center mb-4">
                           <IconComp className="w-4.5 h-4.5 text-[#ab7f51]" />
                         </div>
-                        
+
                         {/* Title (stacked) */}
                         <h3 className="text-base font-bold font-heading text-brand-text leading-tight mb-2">
                           {card.title}

@@ -23,7 +23,7 @@ export default function ServicesPage() {
   const categories: ServiceCategory[] = [
     {
       id: "dentistry",
-      title: "Dentistry Services",
+      title: "Comprehensive Dental Services",
       icon: ShieldCheck,
       tagline: "Comprehensive dental care delivered with precision and comfort.",
       description:
@@ -34,6 +34,18 @@ export default function ServicesPage() {
           desc: "Complete comprehensive oral examinations, diagnostic scans, and customized preventive treatment plans.",
           duration: "45 mins",
           suitability: "Recommended for all patients at least once a year",
+        },
+        {
+          name: "Cosmetic Treatments",
+          desc: "Enhance your appearance with our advanced cosmetic dental treatments, including teeth whitening, veneers, and smile makeovers.",
+          duration: "Varies",
+          suitability: "Patients with one or more missing teeth and good bone support",
+        },
+        {
+          name: "Specialty Care",
+          desc: "Our specialists provide comprehensive care for issues like TMJ, sleep apnea, and orthodontic needs, tailored to your unique requirements.",
+          duration: "12 - 24 months",
+          suitability: "Teens and adults seeking bite correction or straight teeth",
         },
         {
           name: "Teeth Cleaning",
@@ -53,18 +65,7 @@ export default function ServicesPage() {
           duration: "60 - 90 mins",
           suitability: "Patients experiencing deep decay or severe tooth pain",
         },
-        {
-          name: "Implants",
-          desc: "3D-guided digital implant placements to replace missing teeth with natural-looking, durable ceramic crowns.",
-          duration: "Varies",
-          suitability: "Patients with one or more missing teeth and good bone support",
-        },
-        {
-          name: "Braces",
-          desc: "Clear aligner therapy (Invisalign) and standard braces designed to align teeth and correct jaw bites.",
-          duration: "12 - 24 months",
-          suitability: "Teens and adults seeking bite correction or straight teeth",
-        },
+
       ],
     },
     {
@@ -77,25 +78,25 @@ export default function ServicesPage() {
       procedures: [
         {
           name: "Injectables",
-          desc: "Dermal fillers and wrinkle-relaxing treatments (such as Botox) custom-tailored to reduce lines and restore youthful volume.",
+          desc: "Our expert injectors provide safe and effective treatments with Botox and dermal fillers to smooth wrinkles and enhance facial features.",
           duration: "30 mins",
           suitability: "Patients looking to soften fine lines or restore volume",
         },
         {
           name: "Laser Therapies",
-          desc: "Skin rejuvenation, hyperpigmentation correction, and texture refinement using advanced medical laser technology.",
+          desc: "State-of-the-art laser technology allows us to offer advanced skin rejuvenation, hair removal, and scar treatment services.",
           duration: "45 mins",
           suitability: "Patients with sun damage, acne scars, or texture concerns",
         },
         {
           name: "Facial Treatments",
-          desc: "Medical-grade facials, chemical peels, and customized skin health therapies to cleanse, nourish, and protect your skin.",
+          desc: "Indulge in our luxurious facials, Chemical peels, and other advanced skin care treatments for a radiant, youthful Complexion.Indulge in our luxurious facials, chemical peels, and other advanced skin Care treatments for a radiant, youthful Complexion.",
           duration: "60 mins",
           suitability: "Anyone seeking a deep skin cleanse and instant glow",
         },
         {
           name: "Body Contouring",
-          desc: "Non-invasive body sculpting treatments targeting localized fat cells and skin laxity for toned results.",
+          desc: "Achieve your desired silhouette with our non-invasive body sculpting procedures that target stubborn fat and tighten the skin.",
           duration: "60 mins per area",
           suitability: "Individuals seeking localized fat reduction and skin tightening",
         },
@@ -118,7 +119,7 @@ export default function ServicesPage() {
       const hash = window.location.hash;
       if (hash) {
         const targetId = decodeURIComponent(hash.replace("#", ""));
-        
+
         // Find which category has this procedure name matching the targetId
         const foundCategory = categories.find((cat) =>
           cat.procedures.some((proc) => proc.name.toLowerCase().replace(/\s+/g, "-") === targetId)
@@ -126,7 +127,7 @@ export default function ServicesPage() {
 
         if (foundCategory) {
           setActiveCategory(foundCategory.id);
-          
+
           // Small delay for Next.js rendering then scroll to target
           setTimeout(() => {
             const el = document.getElementById(targetId);
@@ -194,9 +195,8 @@ export default function ServicesPage() {
                     </div>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-brand-accent transition-transform duration-300 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 text-brand-accent transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
 

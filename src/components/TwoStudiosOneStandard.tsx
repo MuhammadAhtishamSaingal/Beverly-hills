@@ -7,7 +7,7 @@ export default function TwoStudiosOneStandard() {
   const cards = [
     {
       studio: "Sharfabad",
-      image: "/images/studio-sf.png",
+      image: "/images/studio-sf.webp",
       address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad",
       city: "Karachi",
       phone: "0307-0984307",
@@ -15,7 +15,7 @@ export default function TwoStudiosOneStandard() {
     },
     {
       studio: "Badar Commercial",
-      image: "/images/studio-mv.png",
+      image: "/images/studio-mvss.webp",
       address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial",
       city: "Karachi",
       phone: "0307-0984307",
@@ -30,7 +30,7 @@ export default function TwoStudiosOneStandard() {
   return (
     <section className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-left max-w-3xl space-y-4 mb-16">
           <div className="flex items-center space-x-3">
@@ -39,7 +39,7 @@ export default function TwoStudiosOneStandard() {
               OUR STUDIOS
             </span>
           </div>
-          
+
           <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-brand-text leading-tight">
             Two studios, one standard
           </h2>
@@ -65,7 +65,7 @@ export default function TwoStudiosOneStandard() {
 
               {/* Details Block */}
               <div className="p-6 sm:p-8 flex-grow flex flex-col justify-between bg-[#fcf8f6] space-y-6">
-                
+
                 <div className="space-y-4 text-left">
                   {/* Location Title */}
                   <h3 className="text-xl sm:text-2xl font-bold font-heading text-brand-text">
@@ -102,7 +102,7 @@ export default function TwoStudiosOneStandard() {
                   >
                     BOOK A VISIT
                   </button>
-                  
+
                   <a
                     href={`tel:${card.phoneRaw}`}
                     className="text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
