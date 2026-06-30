@@ -1,18 +1,18 @@
 "use client";
 
-import Image from "next/image";
+
 
 export default function Studios() {
   const leftImages = [
-    "/images/DESKTOP1_MARQE_1200.webp",
-    "/images/DESKTOP2_MARQE_1200.jpg",
-    "/images/DESKTOP3_MARQE_1200.webp",
+    { desktop: "/images/DESKTOP1_MARQE_1200.webp", mobile: "/images/MOBILE1_MARQE.webp" },
+    { desktop: "/images/DESKTOP2_MARQE_1200.jpg", mobile: "/images/MOBILE2_MARQE.jpg" },
+    { desktop: "/images/DESKTOP3_MARQE_1200.webp", mobile: "/images/MOBILE3_MARQE.webp" },
   ];
 
   const rightImages = [
-    "/images/DESKTOP4_MARQE_1200.webp",
-    "/images/DESKTOP1_MARQE_1200.webp",
-    "/images/DESKTOP2_MARQE_1200.jpg",
+    { desktop: "/images/DESKTOP4_MARQE_1200.webp", mobile: "/images/MOBILE4_MARQE.webp" },
+    { desktop: "/images/DESKTOP1_MARQE_1200.webp", mobile: "/images/MOBILE1_MARQE.webp" },
+    { desktop: "/images/DESKTOP2_MARQE_1200.jpg", mobile: "/images/MOBILE2_MARQE.jpg" },
   ];
 
   // Duplicate items to ensure seamless infinite looping scroll
@@ -51,7 +51,7 @@ export default function Studios() {
           {/* Left Column Marquee: Scrolls UP, Pauses on Hover */}
           <div className="flex flex-col h-full overflow-hidden relative">
             <div className="animate-marquee-up hover:[animation-play-state:paused] flex flex-col space-y-6">
-              {leftMarqueeItems.map((src, idx) => {
+              {leftMarqueeItems.map((item, idx) => {
                 // Alternating aspect ratios for a organic staggered look
                 const isTall = idx % 2 === 1;
                 return (
@@ -61,13 +61,15 @@ export default function Studios() {
                       isTall ? "h-80 sm:h-[440px]" : "h-48 sm:h-64"
                     }`}
                   >
-                    <Image
-                      src={src}
-                      alt="Beverly Hills Clinic Calming Space Left"
-                      fill
-                      sizes="(max-w-728px) 50vw, 33vw"
-                      className="object-cover hover:scale-102 transition-transform duration-500"
-                    />
+                    <picture className="absolute inset-0">
+                      <source media="(max-width: 767px)" srcSet={item.mobile} />
+                      <img
+                        src={item.desktop}
+                        alt="Beverly Hills Clinic Calming Space Left"
+                        className="w-full h-full object-cover hover:scale-102 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                 );
               })}
@@ -77,7 +79,7 @@ export default function Studios() {
           {/* Right Column Marquee: Scrolls DOWN, Pauses on Hover */}
           <div className="hidden md:flex flex-col h-full overflow-hidden relative">
             <div className="animate-marquee-down hover:[animation-play-state:paused] flex flex-col space-y-6">
-              {rightMarqueeItems.map((src, idx) => {
+              {rightMarqueeItems.map((item, idx) => {
                 const isTall = idx % 2 === 1;
                 return (
                   <div
@@ -86,13 +88,15 @@ export default function Studios() {
                       isTall ? "h-80 sm:h-[440px]" : "h-48 sm:h-64"
                     }`}
                   >
-                    <Image
-                      src={src}
-                      alt="Beverly Hills Clinic Calming Space Right"
-                      fill
-                      sizes="(max-w-728px) 50vw, 33vw"
-                      className="object-cover hover:scale-102 transition-transform duration-500"
-                    />
+                    <picture className="absolute inset-0">
+                      <source media="(max-width: 767px)" srcSet={item.mobile} />
+                      <img
+                        src={item.desktop}
+                        alt="Beverly Hills Clinic Calming Space Right"
+                        className="w-full h-full object-cover hover:scale-102 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </picture>
                   </div>
                 );
               })}
