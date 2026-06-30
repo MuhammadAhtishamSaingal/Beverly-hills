@@ -4,15 +4,15 @@ import Image from "next/image";
 
 export default function Studios() {
   const leftImages = [
-    "/images/hero-studio.webp",
-    "/images/studio-sf.webp",
-    "/images/studio-mvss.webp",
+    "/images/DESKTOP1_MARQE_1200.webp",
+    "/images/DESKTOP2_MARQE_1200.jpg",
+    "/images/DESKTOP3_MARQE_1200.webp",
   ];
 
   const rightImages = [
-    "/images/studio-hallway.webp",
-    "/images/studio-mvss.webp",
-    "/images/hero-studio.webp",
+    "/images/DESKTOP4_MARQE_1200.webp",
+    "/images/DESKTOP1_MARQE_1200.webp",
+    "/images/DESKTOP2_MARQE_1200.jpg",
   ];
 
   // Duplicate items to ensure seamless infinite looping scroll
@@ -42,7 +42,7 @@ export default function Studios() {
         </div>
 
         {/* Dual Vertical Marquee Gallery */}
-        <div className="relative h-[650px] overflow-hidden rounded-3xl border border-brand-secondary/35 bg-white/40 p-6 sm:p-10 max-w-4xl mx-auto grid grid-cols-2 gap-6 items-stretch">
+        <div className="relative h-[650px] overflow-hidden rounded-3xl border border-brand-secondary/35 bg-white/40 p-6 sm:p-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           
           {/* Top & Bottom Blur Overlays for Faded Screen Look */}
           <div className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-brand-primary to-transparent z-10 pointer-events-none" />
@@ -75,7 +75,7 @@ export default function Studios() {
           </div>
 
           {/* Right Column Marquee: Scrolls DOWN, Pauses on Hover */}
-          <div className="flex flex-col h-full overflow-hidden relative">
+          <div className="hidden md:flex flex-col h-full overflow-hidden relative">
             <div className="animate-marquee-down hover:[animation-play-state:paused] flex flex-col space-y-6">
               {rightMarqueeItems.map((src, idx) => {
                 const isTall = idx % 2 === 1;
