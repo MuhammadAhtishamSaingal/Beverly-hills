@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Subheading */}
           <p className="hidden md:block text-base sm:text-lg text-brand-text/90 leading-relaxed max-w-xl font-light">
             Experience expert cosmetic dentistry, facial aesthetics, laser therapies,
-            Botox, dermal fillers, skin rejuvenation, and body contouring—
+            Botox, dermal fillers, skin rejuvenation, and body contouring
             all tailored to help you look and feel your absolute best.</p>
 
           {/* CTA Buttons */}

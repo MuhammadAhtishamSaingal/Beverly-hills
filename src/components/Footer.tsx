@@ -22,7 +22,8 @@ export default function Footer() {
             </p>
             <div className="w-16 h-[1px] bg-[#ab7f51]/40 my-2" />
             {/* Social Media Links */}
-            <div className="flex items-center space-x-3 pt-1">
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              {/* Instagram */}
               <a
                 href="https://www.instagram.com/beverlyhillskhi"
                 target="_blank"
@@ -47,8 +48,59 @@ export default function Footer() {
                   <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                 </svg>
               </a>
+
+              {/* WhatsApp */}
               <a
-                href="https://facebook.com"
+                href="https://tr.ee/5Dkvjf5Uez"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-[#ab7f51]/40 flex items-center justify-center text-[#f6ede7]/70 hover:text-[#e8ceb1] hover:border-[#e8ceb1] hover:scale-105 transition-all duration-300"
+                aria-label="WhatsApp"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-4.5 h-4.5"
+                >
+                  <path d="M3 21l1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z" />
+                </svg>
+              </a>
+
+              {/* YouTube */}
+              <a
+                href="https://www.youtube.com/@beverlyhillsclinic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-[#ab7f51]/40 flex items-center justify-center text-[#f6ede7]/70 hover:text-[#e8ceb1] hover:border-[#e8ceb1] hover:scale-105 transition-all duration-300"
+                aria-label="YouTube"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-4.5 h-4.5"
+                >
+                  <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17z" />
+                  <polygon points="10 15 15 12 10 9 10 15" />
+                </svg>
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61591669100210"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full border border-[#ab7f51]/40 flex items-center justify-center text-[#f6ede7]/70 hover:text-[#e8ceb1] hover:border-[#e8ceb1] hover:scale-105 transition-all duration-300"
@@ -67,6 +119,54 @@ export default function Footer() {
                   className="w-4.5 h-4.5"
                 >
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+
+              {/* TikTok */}
+              <a
+                href="https://www.tiktok.com/@beverlyhills_clinic"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-[#ab7f51]/40 flex items-center justify-center text-[#f6ede7]/70 hover:text-[#e8ceb1] hover:border-[#e8ceb1] hover:scale-105 transition-all duration-300"
+                aria-label="TikTok"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-4.5 h-4.5"
+                >
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                </svg>
+              </a>
+
+              {/* Pinterest */}
+              <a
+                href="https://www.pinterest.com/beverlyhillsclinic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-[#ab7f51]/40 flex items-center justify-center text-[#f6ede7]/70 hover:text-[#e8ceb1] hover:border-[#e8ceb1] hover:scale-105 transition-all duration-300"
+                aria-label="Pinterest"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-4.5 h-4.5"
+                >
+                  <path d="M8 22a9 9 0 0 1-1.91-8.39c.53-2.18 1.83-7.1 1.83-7.1S7.5 5.67 7.5 4.67c0-1.57.91-2.75 2.05-2.75.97 0 1.44.73 1.44 1.6 0 1.97-1.25 4.91-1.9 7.64-.27 1.13.56 2.05 1.68 2.05 2.02 0 3.57-2.13 3.57-5.2 0-2.72-1.96-4.62-4.74-4.62-3.23 0-5.13 2.42-5.13 4.93 0 .98.38 2.02.85 2.59.09.11.1.2.08.31l-.32 1.3c-.05.2-.17.25-.39.15-1.45-.67-2.35-2.79-2.35-4.49 0-3.66 2.66-7.02 7.66-7.02 4.02 0 7.15 2.87 7.15 6.7 0 4-2.52 7.22-6 7.22-1.17 0-2.28-.61-2.66-1.33l-.73 2.76c-.26 1.01-.98 2.28-1.46 3.06" />
                 </svg>
               </a>
             </div>

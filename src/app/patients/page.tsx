@@ -100,18 +100,26 @@ export default function PatientsPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/hero-studios.webp"
+            src="/images/patient_ banner.webp"
             alt="Beverly Hills Clinic Reception Background"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="hidden md:block object-cover object-center"
+          />
+          <Image
+            src="/images/space4.webp"
+            alt="Beverly Hills Clinic Reception Background Mobile"
+            fill
+            priority
+            sizes="100vw"
+            className="block md:hidden object-cover object-center"
           />
           <div className="absolute inset-0 bg-[#f6ede7]/45 md:bg-[#f6ede7]/40 mix-blend-normal z-10" />
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 md:mt-[150px]">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-accent block">
             Patient Dashboard
           </span>
