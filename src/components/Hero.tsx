@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full h-[580px] md:h-auto md:min-h-screen flex items-end md:items-center justify-start overflow-hidden bg-brand-primary pb-10 md:pb-0 pt-[140px] md:pt-0">
+    <section className="relative w-full h-screen md:min-h-screen flex items-center justify-start overflow-hidden bg-brand-primary pb-10 md:pb-0 pt-[120px] md:pt-0">
       {/* Hero image container */}
       <div className="absolute inset-0 z-10">
         {/* Desktop Hero Image */}
@@ -42,7 +42,7 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-brand-text font-sans mt-8 md:mt-0">
-        <div className="max-w-2xl space-y-6">
+        <div className="max-w-2xl space-y-6 mt-[217px] md:mt-0">
           {/* Location Label with preceding line */}
           <div className="flex items-center space-x-3">
             <div className="w-10 h-[1.5px] bg-[#3d2e2a]" />
