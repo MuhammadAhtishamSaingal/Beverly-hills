@@ -1,6 +1,34 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import { Headphones, Tv, Coffee, Wind, Cloud, Heart, RefreshCw, Sun } from "lucide-react";
 
 export default function Amenities() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const amenitiesList = [
     {
       icon: Headphones,
@@ -45,10 +73,12 @@ export default function Amenities() {
   ];
 
   return (
-    <section className="py-20 bg-brand-primary border-t border-brand-secondary/40">
+    <section ref={sectionRef} className="py-20 bg-brand-primary border-t border-brand-secondary/40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
+        <div className={`text-center max-w-2xl mx-auto space-y-4 mb-16 transform transition-all duration-1000 ease-out ${
+          isVisible ? "opacity-100 translate-y-0 filter-none" : "opacity-0 -translate-y-8 blur-[1px]"
+        }`}>
           <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
             Designed for Comfort
           </span>
@@ -65,18 +95,23 @@ export default function Amenities() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {amenitiesList.map((amenity, idx) => {
             const IconComp = amenity.icon;
+            // stagger items in 4 columns
+            const delayMs = (idx % 4) * 100 + 150;
             return (
               <div
                 key={idx}
-                className="bg-white border border-brand-secondary/30 rounded-xl p-6 shadow-xs hover:shadow-sm hover:border-brand-accent/30 transition-all duration-300"
+                style={{ transitionDelay: isVisible ? `${delayMs}ms` : "0ms" }}
+                className={`bg-[#faf6f3] border border-[#e9ded5]/70 rounded-xl p-6 shadow-xs hover:shadow-sm hover:border-brand-accent/30 transition-all duration-1000 ease-out transform ${
+                  isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-6 scale-[0.98]"
+                }`}
               >
                 <div className="w-10 h-10 rounded-lg bg-brand-primary flex items-center justify-center mb-4">
                   <IconComp className="w-5 h-5 text-brand-accent" />
                 </div>
-                <h3 className="text-base font-bold font-heading text-brand-text mb-2">
+                <h3 className="text-base font-normal font-heading text-brand-text mb-2">
                   {amenity.title}
                 </h3>
-                <p className="text-xs text-brand-text/70 leading-relaxed">
+                <p className="text-xs text-brand-text/75 leading-relaxed font-light">
                   {amenity.description}
                 </p>
               </div>

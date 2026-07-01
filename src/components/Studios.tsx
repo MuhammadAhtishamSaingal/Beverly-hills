@@ -1,18 +1,44 @@
 "use client";
 
-
+import { useState, useEffect, useRef } from "react";
 
 export default function Studios() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
   const leftImages = [
-    { desktop: "/images/DESKTOP1_MARQE_1200.webp", mobile: "/images/MOBILE1_MARQE.webp" },
-    { desktop: "/images/DESKTOP2_MARQE_1200.jpg", mobile: "/images/MOBILE2_MARQE.jpg" },
-    { desktop: "/images/DESKTOP3_MARQE_1200.webp", mobile: "/images/MOBILE3_MARQE.webp" },
+    { desktop: "/images/space1.webp", mobile: "/images/space1.webp" },
+    { desktop: "/images/space2.webp", mobile: "/images/space2.webp" },
+    { desktop: "/images/space3.webp", mobile: "/images/space3.webp" },
+    { desktop: "/images/space4.webp", mobile: "/images/space4.webp" },
   ];
 
   const rightImages = [
-    { desktop: "/images/DESKTOP4_MARQE_1200.webp", mobile: "/images/MOBILE4_MARQE.webp" },
-    { desktop: "/images/DESKTOP1_MARQE_1200.webp", mobile: "/images/MOBILE1_MARQE.webp" },
-    { desktop: "/images/DESKTOP2_MARQE_1200.jpg", mobile: "/images/MOBILE2_MARQE.jpg" },
+    { desktop: "/images/space4.webp", mobile: "/images/space4.webp" },
+    { desktop: "/images/space3.webp", mobile: "/images/space3.webp" },
+    { desktop: "/images/space2.webp", mobile: "/images/space2.webp" },
+    { desktop: "/images/space1.webp", mobile: "/images/space1.webp" },
   ];
 
   // Duplicate items to ensure seamless infinite looping scroll
@@ -20,15 +46,17 @@ export default function Studios() {
   const rightMarqueeItems = [...rightImages, ...rightImages, ...rightImages];
 
   return (
-    <section className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans">
+    <section ref={sectionRef} className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-left max-w-3xl space-y-4 mb-16">
+        <div className={`text-left max-w-3xl space-y-4 mb-16 transform transition-all duration-1000 ease-out ${
+          isVisible ? "opacity-100 translate-y-0 filter-none" : "opacity-0 -translate-y-8 blur-[1px]"
+        }`}>
           <div className="flex items-center space-x-3">
             <div className="w-8 h-[1px] bg-brand-accent" />
             <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
-              THE STUDIOS
+              THE CLINICS
             </span>
           </div>
           
@@ -37,12 +65,14 @@ export default function Studios() {
           </h2>
           
           <p className="text-sm sm:text-base text-brand-text/75 max-w-2xl leading-relaxed">
-            Warm light, natural materials, and quiet detail &mdash; every studio is shaped to calm the nervous system the moment you step inside.
+            Warm light, natural materials, and quiet detail &mdash; every clinic is shaped to calm the nervous system the moment you step inside.
           </p>
         </div>
 
         {/* Dual Vertical Marquee Gallery */}
-        <div className="relative h-[650px] overflow-hidden rounded-3xl border border-brand-secondary/35 bg-white/40 p-6 sm:p-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+        <div className={`relative h-[650px] overflow-hidden rounded-3xl border border-brand-secondary/35 bg-white/40 p-6 sm:p-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch transform transition-all duration-1000 delay-[250ms] ease-out ${
+          isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-6 scale-[0.99]"
+        }`}>
           
           {/* Top & Bottom Blur Overlays for Faded Screen Look */}
           <div className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-brand-primary to-transparent z-10 pointer-events-none" />

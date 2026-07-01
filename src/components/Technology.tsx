@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Scan, HardDrive, Printer, Brain, Shield, Zap, Printer as PrintIcon, ArrowRight } from "lucide-react";
 
@@ -112,6 +112,30 @@ export default function Technology() {
 
   const [activeStep, setActiveStep] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const handleStepClick = (index: number) => {
     if (index === activeStep) return;
@@ -127,13 +151,15 @@ export default function Technology() {
   const ActiveIcon = activeTech.icon;
 
   return (
-    <section className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans">
+    <section ref={sectionRef} className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Header & Image Split */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
           {/* Header Copy */}
-          <div className="lg:col-span-5 space-y-4 text-left">
+          <div className={`lg:col-span-5 space-y-4 text-left transform transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0 filter-none" : "opacity-0 -translate-y-8 blur-[1px]"
+          }`}>
             <div className="flex items-center space-x-3">
               <div className="w-8 h-[1px] bg-brand-accent" />
               <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
@@ -158,7 +184,9 @@ export default function Technology() {
           </div>
 
           {/* Header Visual Image */}
-          <div className="lg:col-span-7 relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden shadow-md border border-brand-secondary/40">
+          <div className={`lg:col-span-7 relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden shadow-md border border-brand-secondary/40 transform transition-all duration-1000 delay-[200ms] ease-out ${
+            isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-6 scale-[0.98]"
+          }`}>
             <Image
               src="/images/studio-sf.webp"
               alt="Beverly Hills Clinic Technology Screens"
@@ -172,7 +200,9 @@ export default function Technology() {
         </div>
 
         {/* Lower Steps & Content Area Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        <div className={`grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch transform transition-all duration-1000 delay-[350ms] ease-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}>
           
           {/* Left Column: Numbered Clickable Steps (5/12 width) */}
           <div className="lg:col-span-5 flex flex-col justify-center space-y-3">
@@ -184,8 +214,8 @@ export default function Technology() {
                   onClick={() => handleStepClick(idx)}
                   className={`w-full flex items-center justify-between p-4 rounded-xl border text-left transition-all duration-300 focus:outline-none ${
                     isActive
-                      ? "bg-white border-[#D6A840]/30 shadow-sm"
-                      : "bg-transparent border-transparent hover:bg-white/40"
+                      ? "bg-[#faf6f3] border-[#e9ded5]/70 shadow-sm"
+                      : "bg-transparent border-transparent hover:bg-[#faf6f3]/40"
                   }`}
                 >
                   <div className="flex items-center space-x-4">
@@ -225,7 +255,7 @@ export default function Technology() {
           <div className="lg:col-span-7 flex flex-col justify-center">
             {/* White card with animative state */}
             <div
-              className={`bg-white border border-brand-secondary/40 rounded-2xl p-8 sm:p-10 shadow-xs flex flex-col justify-between space-y-6 relative overflow-hidden transition-all duration-300 ${
+              className={`bg-[#faf6f3] border border-[#e9ded5]/70 rounded-2xl p-8 sm:p-10 shadow-xs flex flex-col justify-between space-y-6 relative overflow-hidden transition-all duration-300 ${
                 isTransitioning
                   ? "opacity-0 translate-y-2 scale-[0.99]"
                   : "opacity-100 translate-y-0 scale-100"
@@ -234,29 +264,29 @@ export default function Technology() {
               {/* Header inside the card */}
               <div className="flex items-start justify-between">
                 <div className="space-y-1">
-                  <span className="text-[10px] font-bold tracking-widest text-[#012c70]/60 block uppercase">
+                  <span className="text-[10px] font-bold tracking-widest text-brand-text/60 block uppercase">
                     {activeTech.category}
                   </span>
-                  <h3 className="text-2xl font-bold font-heading text-[#012c70]">
+                  <h3 className="text-2xl font-normal font-heading text-brand-text">
                     {activeTech.heading}
                   </h3>
                 </div>
                 
                 {/* Custom round icon */}
                 <div className="w-10 h-10 rounded-full bg-[#f6ede7] flex items-center justify-center border border-brand-secondary/30">
-                  <ActiveIcon className="w-4.5 h-4.5 text-[#012c70]" />
+                  <ActiveIcon className="w-4.5 h-4.5 text-brand-accent" />
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-sm text-[#012c70] leading-relaxed">
+              <p className="text-sm text-brand-text/80 leading-relaxed font-light">
                 {activeTech.description}
               </p>
 
               {/* Bullets List with Gold bullet accents */}
               <div className="space-y-3 pt-2">
                 {activeTech.bullets.map((bullet, idx) => (
-                  <div key={idx} className="flex items-start text-xs sm:text-sm text-[#012c70]">
+                  <div key={idx} className="flex items-start text-xs sm:text-sm text-brand-text/80 font-light">
                     {/* Circle dot marker */}
                     <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#D6A840] mt-1.5 mr-3" />
                     <span>{bullet}</span>
@@ -266,7 +296,7 @@ export default function Technology() {
 
               {/* Bottom text */}
               <div className="border-t border-[#f0e6dd] pt-6 flex items-center justify-between">
-                <span className="text-[10px] font-bold tracking-widest text-[#012c70]/50 uppercase">
+                <span className="text-[10px] font-bold tracking-widest text-brand-text/50 uppercase">
                   {activeTech.bottomText}
                 </span>
                 

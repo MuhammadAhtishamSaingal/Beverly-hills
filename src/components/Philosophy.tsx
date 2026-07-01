@@ -34,7 +34,7 @@ export default function Philosophy() {
       icon: Heart,
       title: (
         <>
-          Comprehensive<br />care
+          Comprehensive<br className="hidden sm:block" /> care
         </>
       ),
       description: "Personalized treatment plans that combine advanced dentistry and aesthetic medicine for complete facial wellness.",
@@ -43,7 +43,7 @@ export default function Philosophy() {
       icon: Leaf,
       title: (
         <>
-          Calm, restful<br />spaces
+          Calm, restful<br className="hidden sm:block" /> spaces
         </>
       ),
       description: "Designed by us to put you at ease from the moment you arrive.",
@@ -55,7 +55,7 @@ export default function Philosophy() {
       icon: Sparkles,
       title: (
         <>
-          The latest<br />technology
+          The latest<br className="hidden sm:block" /> technology
         </>
       ),
       description: "Modern tools, used with precision and the time to do it well.",
@@ -64,7 +64,7 @@ export default function Philosophy() {
       icon: Compass,
       title: (
         <>
-          Decisions<br />that are yours
+          Decisions<br className="hidden sm:block" /> that are yours
         </>
       ),
       description: "We help you understand your health and your options, then leave the choice to you.",
@@ -77,12 +77,16 @@ export default function Philosophy() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
           {/* Left Column: Heading Copy (5/12 width) */}
-          <div className="lg:col-span-5 space-y-6 text-left">
+          <div className={`lg:col-span-5 space-y-6 text-left transform transition-all duration-1000 ease-out ${
+            isVisible
+              ? "opacity-100 translate-y-0 filter-none"
+              : "opacity-0 -translate-y-8 blur-[1px]"
+          }`}>
             {/* Tagline label with horizontal line prefix */}
             <div className="flex items-center space-x-3">
               <div className="w-8 h-[1px] bg-[#ab7f51]" />
               <span className="text-xs font-bold uppercase tracking-widest text-[#ab7f51]">
-                OUR COMMITMENT
+                OUR PHILOSOPHY
               </span>
             </div>
 
@@ -99,36 +103,36 @@ export default function Philosophy() {
 
           {/* Right Column: Staggered Cards Box (7/12 width) */}
           <div className="lg:col-span-7 flex justify-center lg:justify-start lg:pl-10 xl:pl-14 w-full">
-            {/* Rounded outer box container with exact gradient, borders, and drop shadow */}
-            <div className="bg-gradient-to-b from-[#efe6df] to-[#e4d3c6] border border-[#e5d4c8]/30 rounded-3xl p-7 sm:p-10 shadow-[0_25px_50px_rgba(45,34,31,0.12)] max-w-[580px] w-full">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-7 items-start">
+            {/* Rounded outer box container with light sand background matching the reference */}
+            <div className="bg-[#efe6df] border border-[#e5d4c8] rounded-3xl p-6 sm:p-8 shadow-xs max-w-[580px] w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 items-start">
 
                 {/* Column 1 (Left): Starts immediately */}
-                <div className="space-y-6 sm:space-y-7">
+                <div className="space-y-5 sm:space-y-6">
                   {column1.map((card, idx) => {
                     const IconComp = card.icon;
                     const delayClass = idx === 0 ? "delay-[100ms]" : "delay-[400ms]";
                     return (
                       <div
                         key={`col1-${idx}`}
-                        className={`bg-white/95 border border-[#e5d4c8]/20 rounded-2xl p-7 sm:p-8 shadow-[0_8px_20px_rgba(45,34,31,0.04)] hover:shadow-[0_12px_24px_rgba(45,34,31,0.06)] transition-all duration-1000 ease-out transform hover:-translate-y-1 ${
+                        className={`bg-[#faf6f3] border border-[#e9ded5]/70 rounded-2xl p-6 sm:p-7 shadow-[0_4px_12px_rgba(45,34,31,0.02)] hover:shadow-[0_12px_24px_rgba(45,34,31,0.05)] transition-all duration-1000 ease-out transform hover:-translate-y-1 ${
                           isVisible
                             ? "opacity-100 scale-100 translate-y-0 blur-0"
-                            : "opacity-0 scale-110 translate-y-8 blur-[2px]"
+                            : "opacity-0 scale-108 translate-y-6 blur-[1px]"
                         } ${delayClass}`}
                       >
                         {/* Golden Outline Icon Wrapper */}
-                        <div className="w-11 h-11 rounded-xl bg-[#fdfbf9] border border-[#f0e6dd] flex items-center justify-center mb-5">
-                          <IconComp className="w-5 h-5 text-[#ab7f51]" />
+                        <div className="w-10 h-10 rounded-lg bg-[#fdfbf9] border border-[#f0e6dd] flex items-center justify-center mb-4">
+                          <IconComp className="w-4.5 h-4.5 text-[#ab7f51]" />
                         </div>
 
                         {/* Title (stacked) */}
-                        <h3 className="text-lg sm:text-xl font-bold font-heading text-brand-text leading-tight mb-3">
+                        <h3 className="text-lg sm:text-xl font-normal font-heading text-brand-text leading-tight mb-2">
                           {card.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-xs sm:text-sm text-brand-text/75 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-brand-text/75 leading-relaxed font-light">
                           {card.description}
                         </p>
                       </div>
@@ -137,31 +141,31 @@ export default function Philosophy() {
                 </div>
 
                 {/* Column 2 (Right): Staggered Offset downward on desktop */}
-                <div className="space-y-6 sm:space-y-7 sm:pt-14">
+                <div className="space-y-5 sm:space-y-6 sm:pt-14">
                   {column2.map((card, idx) => {
                     const IconComp = card.icon;
                     const delayClass = idx === 0 ? "delay-[250ms]" : "delay-[550ms]";
                     return (
                       <div
                         key={`col2-${idx}`}
-                        className={`bg-white/95 border border-[#e5d4c8]/20 rounded-2xl p-7 sm:p-8 shadow-[0_8px_20px_rgba(45,34,31,0.04)] hover:shadow-[0_12px_24px_rgba(45,34,31,0.06)] transition-all duration-1000 ease-out transform hover:-translate-y-1 ${
+                        className={`bg-[#faf6f3] border border-[#e9ded5]/70 rounded-2xl p-6 sm:p-7 shadow-[0_4px_12px_rgba(45,34,31,0.02)] hover:shadow-[0_12px_24px_rgba(45,34,31,0.05)] transition-all duration-1000 ease-out transform hover:-translate-y-1 ${
                           isVisible
                             ? "opacity-100 scale-100 translate-y-0 blur-0"
-                            : "opacity-0 scale-110 translate-y-8 blur-[2px]"
+                            : "opacity-0 scale-108 translate-y-6 blur-[1px]"
                         } ${delayClass}`}
                       >
                         {/* Golden Outline Icon Wrapper */}
-                        <div className="w-11 h-11 rounded-xl bg-[#fdfbf9] border border-[#f0e6dd] flex items-center justify-center mb-5">
-                          <IconComp className="w-5 h-5 text-[#ab7f51]" />
+                        <div className="w-10 h-10 rounded-lg bg-[#fdfbf9] border border-[#f0e6dd] flex items-center justify-center mb-4">
+                          <IconComp className="w-4.5 h-4.5 text-[#ab7f51]" />
                         </div>
 
                         {/* Title (stacked) */}
-                        <h3 className="text-lg sm:text-xl font-bold font-heading text-brand-text leading-tight mb-3">
+                        <h3 className="text-lg sm:text-xl font-normal font-heading text-brand-text leading-tight mb-2">
                           {card.title}
                         </h3>
 
                         {/* Description */}
-                        <p className="text-xs sm:text-sm text-brand-text/75 leading-relaxed">
+                        <p className="text-xs sm:text-sm text-brand-text/75 leading-relaxed font-light">
                           {card.description}
                         </p>
                       </div>

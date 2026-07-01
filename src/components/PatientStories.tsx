@@ -84,8 +84,34 @@ export default function PatientStories() {
     }, 200);
   };
 
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="bg-[#2d221f] text-[#f6ede7] py-24 border-t border-[#3e322e] overflow-hidden font-sans relative"
@@ -96,7 +122,9 @@ export default function PatientStories() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
           
           {/* Left Column: Title, number, name and controls (5/12 width) */}
-          <div className="md:col-span-5 space-y-8 flex flex-col justify-center text-left">
+          <div className={`md:col-span-5 space-y-8 flex flex-col justify-center text-left transform transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0 filter-none" : "opacity-0 -translate-y-8 blur-[1px]"
+          }`}>
             
             {/* Label */}
             <span className="text-[11px] font-bold uppercase tracking-widest text-[#ab7f51]">
@@ -159,7 +187,9 @@ export default function PatientStories() {
           <div className="hidden md:block col-span-1 h-32 w-[1px] bg-[#3e322e] mx-auto" />
 
           {/* Right Column: Quote contents (6/12 width) */}
-          <div className="md:col-span-6 space-y-4 text-left md:pl-4">
+          <div className={`md:col-span-6 space-y-4 text-left md:pl-4 transform transition-all duration-1000 delay-[250ms] ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          }`}>
             
             {/* Golden Quote Mark */}
             <div className="text-[#ab7f51] text-5xl font-serif leading-none select-none">

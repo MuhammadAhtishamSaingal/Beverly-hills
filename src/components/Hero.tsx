@@ -42,7 +42,7 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-brand-text font-sans mt-8 md:mt-0">
-        <div className="max-w-2xl space-y-6 mt-[217px] md:mt-0">
+        <div className="max-w-2xl space-y-6 mt-[127px] md:mt-0">
           {/* Location Label with preceding line */}
           <div className="flex items-center space-x-3">
             <div className="w-10 h-[1.5px] bg-[#3d2e2a]" />

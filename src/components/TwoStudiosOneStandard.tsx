@@ -1,10 +1,36 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MapPin, Phone, Calendar } from "lucide-react";
 import { trackPixelEvent } from "@/utils/pixel";
 
 export default function TwoStudiosOneStandard() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   const cards = [
     {
       studio: "Sharfabad",
@@ -32,11 +58,13 @@ export default function TwoStudiosOneStandard() {
   };
 
   return (
-    <section className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans">
+    <section ref={sectionRef} className="py-24 bg-brand-primary border-t border-brand-secondary/40 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="text-left max-w-3xl space-y-4 mb-16">
+        <div className={`text-left max-w-3xl space-y-4 mb-16 transform transition-all duration-1000 ease-out ${
+          isVisible ? "opacity-100 translate-y-0 filter-none" : "opacity-0 -translate-y-8 blur-[1px]"
+        }`}>
           <div className="flex items-center space-x-3">
             <div className="w-8 h-[1px] bg-brand-accent" />
             <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
@@ -51,83 +79,88 @@ export default function TwoStudiosOneStandard() {
 
         {/* Side-by-Side Location Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-          {cards.map((card, idx) => (
-            <div
-              key={idx}
-              className="bg-white border border-brand-secondary/30 rounded-2xl overflow-hidden shadow-xs hover:shadow-sm transition-all duration-300 flex flex-col justify-between"
-            >
-              {/* Studio Image */}
-              <div className="relative h-64 sm:h-72 w-full overflow-hidden">
-                <Image
-                  src={card.desktopImage}
-                  alt={`Beverly Hills Clinic ${card.studio}`}
-                  fill
-                  sizes="(max-w-768px) 100vw, 45vw"
-                  className="hidden md:block object-cover"
-                />
-                <Image
-                  src={card.mobileImage}
-                  alt={`Beverly Hills Clinic ${card.studio} Mobile`}
-                  fill
-                  sizes="(max-w-768px) 100vw, 100vw"
-                  className="block md:hidden object-cover"
-                />
-              </div>
+          {cards.map((card, idx) => {
+            const delayClass = idx === 0 ? "delay-[150ms]" : "delay-[350ms]";
+            return (
+              <div
+                key={idx}
+                className={`bg-white border border-brand-secondary/30 rounded-2xl overflow-hidden shadow-xs hover:shadow-sm transition-all duration-1000 ease-out transform ${
+                  isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-6 scale-[0.98]"
+                } ${delayClass} flex flex-col justify-between`}
+              >
+                {/* Studio Image */}
+                <div className="relative h-64 sm:h-72 w-full overflow-hidden">
+                  <Image
+                    src={card.desktopImage}
+                    alt={`Beverly Hills Clinic ${card.studio}`}
+                    fill
+                    sizes="(max-w-768px) 100vw, 45vw"
+                    className="hidden md:block object-cover"
+                  />
+                  <Image
+                    src={card.mobileImage}
+                    alt={`Beverly Hills Clinic ${card.studio} Mobile`}
+                    fill
+                    sizes="(max-w-768px) 100vw, 100vw"
+                    className="block md:hidden object-cover"
+                  />
+                </div>
 
-              {/* Details Block */}
-              <div className="p-6 sm:p-8 flex-grow flex flex-col justify-between bg-[#fcf8f6] space-y-6">
+                {/* Details Block */}
+                <div className="p-6 sm:p-8 flex-grow flex flex-col justify-between bg-[#fcf8f6] space-y-6">
 
-                <div className="space-y-4 text-left">
-                  {/* Location Title */}
-                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-brand-text">
-                    {card.studio}
-                  </h3>
+                  <div className="space-y-4 text-left">
+                    {/* Location Title */}
+                    <h3 className="text-xl sm:text-2xl font-bold font-heading text-brand-text">
+                      {card.studio}
+                    </h3>
 
-                  <div className="space-y-2.5 pt-1 text-xs sm:text-sm text-brand-text/75">
-                    {/* Address Line */}
-                    <div className="flex items-start">
-                      <MapPin className="w-4 h-4 text-brand-accent mr-2.5 mt-0.5 flex-shrink-0" />
-                      <span>
-                        {card.address}, {card.city}
-                      </span>
-                    </div>
+                    <div className="space-y-2.5 pt-1 text-xs sm:text-sm text-brand-text/75">
+                      {/* Address Line */}
+                      <div className="flex items-start">
+                        <MapPin className="w-4 h-4 text-brand-accent mr-2.5 mt-0.5 flex-shrink-0" />
+                        <span>
+                          {card.address}, {card.city}
+                        </span>
+                      </div>
 
-                    {/* Phone Line */}
-                    <div className="flex items-center">
-                      <Phone className="w-4 h-4 text-brand-accent mr-2.5 flex-shrink-0" />
-                      <a
-                        href={`tel:${card.phoneRaw}`}
-                        onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call ${card.studio}` })}
-                        className="hover:text-brand-accent transition-colors font-medium"
-                      >
-                        {card.phone}
-                      </a>
+                      {/* Phone Line */}
+                      <div className="flex items-center">
+                        <Phone className="w-4 h-4 text-brand-accent mr-2.5 flex-shrink-0" />
+                        <a
+                          href={`tel:${card.phoneRaw}`}
+                          onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call ${card.studio}` })}
+                          className="hover:text-brand-accent transition-colors font-medium"
+                        >
+                          {card.phone}
+                        </a>
+                      </div>
                     </div>
                   </div>
+
+                  {/* Card CTAs Row */}
+                  <div className="flex items-center space-x-6 pt-4 border-t border-brand-secondary/20 w-full">
+                    <button
+                      onClick={triggerBooking}
+                      className="btn-primary py-2.5 px-6 rounded-full text-xs font-semibold shadow-xs"
+                    >
+                      BOOK A VISIT
+                    </button>
+
+                    <a
+                      href={`tel:${card.phoneRaw}`}
+                      onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call CTA ${card.studio}` })}
+                      className="text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
+                    >
+                      <span>CALL CLINIC</span>
+                      <span>&rarr;</span>
+                    </a>
+                  </div>
+
                 </div>
-
-                {/* Card CTAs Row */}
-                <div className="flex items-center space-x-6 pt-4 border-t border-brand-secondary/20 w-full">
-                  <button
-                    onClick={triggerBooking}
-                    className="btn-primary py-2.5 px-6 rounded-full text-xs font-semibold shadow-xs"
-                  >
-                    BOOK A VISIT
-                  </button>
-
-                  <a
-                    href={`tel:${card.phoneRaw}`}
-                    onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call CTA ${card.studio}` })}
-                    className="text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
-                  >
-                    <span>CALL CLINIC</span>
-                    <span>&rarr;</span>
-                  </a>
-                </div>
-
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
