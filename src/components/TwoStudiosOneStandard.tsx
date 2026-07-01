@@ -8,7 +8,8 @@ export default function TwoStudiosOneStandard() {
   const cards = [
     {
       studio: "Sharfabad",
-      image: "/images/DESKTOP1_MARQE_1200.webp",
+      desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
+      mobileImage: "/images/MOBILE1_MARQE.webp",
       address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad",
       city: "Karachi",
       phone: "0307-0984307",
@@ -16,7 +17,8 @@ export default function TwoStudiosOneStandard() {
     },
     {
       studio: "Badar Commercial",
-      image: "/images/DESKTOP4_MARQE_1200.webp",
+      desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
+      mobileImage: "/images/MOBILE4_MARQE.webp",
       address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial",
       city: "Karachi",
       phone: "0307-0984307",
@@ -57,11 +59,18 @@ export default function TwoStudiosOneStandard() {
               {/* Studio Image */}
               <div className="relative h-64 sm:h-72 w-full overflow-hidden">
                 <Image
-                  src={card.image}
+                  src={card.desktopImage}
                   alt={`Beverly Hills Clinic ${card.studio}`}
                   fill
-                  sizes="(max-w-728px) 100vw, 45vw"
-                  className="object-cover"
+                  sizes="(max-w-768px) 100vw, 45vw"
+                  className="hidden md:block object-cover"
+                />
+                <Image
+                  src={card.mobileImage}
+                  alt={`Beverly Hills Clinic ${card.studio} Mobile`}
+                  fill
+                  sizes="(max-w-768px) 100vw, 100vw"
+                  className="block md:hidden object-cover"
                 />
               </div>
 

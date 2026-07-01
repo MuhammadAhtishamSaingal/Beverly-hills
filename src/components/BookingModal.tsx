@@ -8,13 +8,15 @@ const studios = [
   {
     id: "Sharfabad",
     name: "Sharfabad Clinic",
-    image: "/images/DESKTOP1_MARQE_1200.webp",
+    desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
+    mobileImage: "/images/MOBILE1_MARQE.webp",
     address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad, Karachi",
   },
   {
     id: "Badar Commercial",
     name: "Badar Commercial Clinic",
-    image: "/images/DESKTOP4_MARQE_1200.webp",
+    desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
+    mobileImage: "/images/MOBILE4_MARQE.webp",
     address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial, Karachi",
   },
 ];
@@ -148,11 +150,18 @@ export default function BookingModal() {
                     {/* Studio Image */}
                     <div className="relative h-36 w-full overflow-hidden bg-brand-secondary/20">
                       <Image
-                        src={studio.image}
+                        src={studio.desktopImage}
                         alt={`${studio.name}`}
                         fill
                         sizes="(max-w-768px) 100vw, 50vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="hidden md:block object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <Image
+                        src={studio.mobileImage}
+                        alt={`${studio.name} Mobile`}
+                        fill
+                        sizes="(max-w-768px) 100vw, 100vw"
+                        className="block md:hidden object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-brand-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </div>

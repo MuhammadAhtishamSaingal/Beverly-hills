@@ -163,8 +163,15 @@ export default function Technology() {
               src="/images/DESKTOP1_MARQE_1200.webp"
               alt="Beverly Hills Clinic Technology Screens"
               fill
-              sizes="(max-w-728px) 100vw, 58vw"
-              className="object-cover"
+              sizes="(max-w-768px) 100vw, 58vw"
+              className="hidden md:block object-cover"
+            />
+            <Image
+              src="/images/MOBILE1_MARQE.webp"
+              alt="Beverly Hills Clinic Technology Screens Mobile"
+              fill
+              sizes="(max-w-768px) 100vw, 100vw"
+              className="block md:hidden object-cover"
             />
             {/* Soft dark-gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-brand-text/20 to-transparent pointer-events-none" />

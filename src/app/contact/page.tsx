@@ -18,7 +18,8 @@ export default function ContactPage() {
       phone: "0307-0984307",
       phoneRaw: "03070984307",
       email: "sharfabad@beverlyhillsclinic.com",
-      image: "/images/DESKTOP1_MARQE_1200.webp",
+      desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
+      mobileImage: "/images/MOBILE1_MARQE.webp",
       hours: [
         { days: "Monday - Friday", time: "9:00 AM - 6:00 PM" },
         { days: "Saturday - Sunday", time: "Closed" },
@@ -34,7 +35,8 @@ export default function ContactPage() {
       phone: "0307-0984307",
       phoneRaw: "03070984307",
       email: "badar@beverlyhillsclinic.com",
-      image: "/images/DESKTOP4_MARQE_1200.webp",
+      desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
+      mobileImage: "/images/MOBILE4_MARQE.webp",
       hours: [
         { days: "Monday - Saturday", time: "9:00 AM - 6:00 PM" },
         { days: "Sunday", time: "Closed" },
@@ -100,12 +102,20 @@ export default function ContactPage() {
               {/* Card Header (Image with Text Overlay) */}
               <div className="relative w-full h-64 sm:h-72">
                 <Image
-                  src={studio.image}
+                  src={studio.desktopImage}
                   alt={`Beverly Hills Clinic ${studio.city}`}
                   fill
                   priority={idx === 0}
-                  sizes="(max-w-7xl) 50vw, 100vw"
-                  className="object-cover"
+                  sizes="(max-w-768px) 50vw, 100vw"
+                  className="hidden md:block object-cover"
+                />
+                <Image
+                  src={studio.mobileImage}
+                  alt={`Beverly Hills Clinic ${studio.city} Mobile`}
+                  fill
+                  priority={idx === 0}
+                  sizes="(max-w-768px) 100vw, 100vw"
+                  className="block md:hidden object-cover"
                 />
                 {/* Dark overlay at bottom to ensure text readability */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
