@@ -271,7 +271,7 @@ export default function ServicesPage() {
             Ready to experience thoughtful care?
           </h2>
           <p className="text-sm text-brand-text/70 max-w-md mx-auto">
-            Schedule an appointment at either our Sharfabad or Badar Commercial studio today.
+            Schedule an appointment at either our Sharfabad or Badar Commercial clinic today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <button
@@ -286,7 +286,7 @@ export default function ServicesPage() {
               className="btn-secondary w-full sm:w-auto py-3 px-6 text-sm bg-white/50"
             >
               <Phone className="w-4.5 h-4.5 mr-2" />
-              <span>Call Studio</span>
+              <span>Call Clinic</span>
             </a>
           </div>
         </div>

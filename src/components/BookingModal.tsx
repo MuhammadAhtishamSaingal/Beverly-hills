@@ -7,14 +7,14 @@ import Image from "next/image";
 const studios = [
   {
     id: "Sharfabad",
-    name: "Sharfabad Studio",
-    image: "/images/studio-sf.webp",
+    name: "Sharfabad Clinic",
+    image: "/images/DESKTOP1_MARQE_1200.webp",
     address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad, Karachi",
   },
   {
     id: "Badar Commercial",
-    name: "Badar Commercial Studio",
-    image: "/images/studio-mvss.webp",
+    name: "Badar Commercial Clinic",
+    image: "/images/DESKTOP4_MARQE_1200.webp",
     address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial, Karachi",
   },
 ];
@@ -201,7 +201,7 @@ export default function BookingModal() {
                   type="button"
                   onClick={() => setModalView("select_studio")}
                   className="text-xs font-medium text-brand-accent/80 hover:text-brand-accent hover:underline flex items-center space-x-1 transition-colors"
-                  aria-label="Back to studio selection"
+                  aria-label="Back to clinic selection"
                 >
                   <ArrowLeft className="w-3 h-3" />
                   <span>Change Location</span>
@@ -273,7 +273,7 @@ export default function BookingModal() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="location" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
-                      Select Studio Location
+                      Select Clinic Location
                     </label>
                     <div className="relative">
                       <MapPin className="absolute left-3 top-3 w-4 h-4 text-brand-text/40 pointer-events-none" />
@@ -284,8 +284,8 @@ export default function BookingModal() {
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
                       >
-                        <option value="Sharfabad">Sharfabad Studio</option>
-                        <option value="Badar Commercial">Badar Commercial Studio</option>
+                        <option value="Sharfabad">Sharfabad Clinic</option>
+                        <option value="Badar Commercial">Badar Commercial Clinic</option>
                       </select>
                       <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
                     </div>
@@ -402,7 +402,7 @@ export default function BookingModal() {
               Appointment Requested!
             </h3>
             <p className="text-sm text-brand-text/70 max-w-sm">
-              Thank you, <strong className="text-brand-text">{formData.name}</strong>. We have received your request for <strong>{formData.service}</strong> at our <strong>{formData.location}</strong> studio on <strong>{formData.date} ({formData.timeSlot})</strong>.
+              Thank you, <strong className="text-brand-text">{formData.name}</strong>. We have received your request for <strong>{formData.service}</strong> at our <strong>{formData.location}</strong> clinic on <strong>{formData.date} ({formData.timeSlot})</strong>.
             </p>
             <p className="text-xs text-brand-text/50">
               A member of our team will contact you shortly via email ({formData.email}) or phone ({formData.phone}) to finalize your appointment time.

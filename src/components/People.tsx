@@ -29,7 +29,7 @@ export default function People() {
             <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl border border-brand-secondary/50">
               <Image
                 src="/images/people-team.webp"
-                alt="Zen Dental Studio Staff - Dr. Sarah Jenkins & Team"
+                alt="Beverly Hills Clinic Staff - Dr. Sarah Jenkins & Team"
                 fill
                 sizes="(max-w-728px) 100vw, 50vw"
                 className="object-cover hover:scale-102 transition-transform duration-700"
@@ -56,7 +56,7 @@ export default function People() {
             </div>
 
             <p className="text-sm sm:text-base text-brand-text/85 leading-relaxed">
-              At Zen Dental Studio, we believe that the best clinical care is rooted in warmth, active listening, and unconditional comfort. Our dental clinicians, hygienists, and coordinators are dedicated to helping you feel safe, relaxed, and heard.
+              At Beverly Hills Clinic, we believe that the best clinical care is rooted in warmth, active listening, and unconditional comfort. Our dental clinicians, hygienists, and coordinators are dedicated to helping you feel safe, relaxed, and heard.
             </p>
 
             <p className="text-sm text-brand-text/75 leading-relaxed">

@@ -160,7 +160,7 @@ export default function Technology() {
           {/* Header Visual Image */}
           <div className="lg:col-span-7 relative h-64 sm:h-80 w-full rounded-2xl overflow-hidden shadow-md border border-brand-secondary/40">
             <Image
-              src="/images/studio-sf.webp"
+              src="/images/DESKTOP1_MARQE_1200.webp"
               alt="Beverly Hills Clinic Technology Screens"
               fill
               sizes="(max-w-728px) 100vw, 58vw"

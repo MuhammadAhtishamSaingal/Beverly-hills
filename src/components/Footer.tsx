@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-[#2d221f] text-[#f6ede7] border-t border-[#3e322e] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-          
+
           {/* Column 1: Logo & Tagline (5/12 width) */}
           <div className="md:col-span-5 flex flex-col space-y-4">
             <Link href="/" className="inline-block">
@@ -18,7 +18,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-[#e8ceb1]/80 italic font-light pt-1">
-              Dentistry, reimagined.
+              AESTHETIC & DENTAL
             </p>
             <div className="w-16 h-[1px] bg-[#ab7f51]/40 my-2" />
             {/* Social Media Links */}
@@ -93,9 +93,9 @@ export default function Footer() {
           {/* Column 3: Studios Addresses (4/12 width) */}
           <div className="md:col-span-4 flex flex-col space-y-6">
             <h4 className="text-xs font-bold uppercase tracking-widest text-[#ab7f51]">
-              STUDIOS
+              CLINICS
             </h4>
-            
+
             <div className="space-y-4 text-sm text-[#f6ede7]/85">
               {/* Studio 1: Sharfabad */}
               <div className="space-y-1">

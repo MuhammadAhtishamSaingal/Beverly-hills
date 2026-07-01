@@ -16,7 +16,7 @@ export default function PatientStories() {
     },
     {
       name: "MARCUS V.",
-      text: "The layout of the studio is gorgeous and looks like a boutique hotel lobby. They walked me through every scan and explained why I needed a filling without any sales pressure.",
+      text: "The layout of the clinic is gorgeous and looks like a boutique hotel lobby. They walked me through every scan and explained why I needed a filling without any sales pressure.",
     },
     {
       name: "SOPHIA L.",

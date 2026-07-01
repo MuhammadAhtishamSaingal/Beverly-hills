@@ -136,7 +136,7 @@ export default function Header() {
       <header
         className={`w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
           ? "fixed top-0 left-0 backdrop-blur-md bg-brand-primary/90 border-b border-brand-secondary/40 shadow-sm py-3"
-          : "absolute top-0 left-0 bg-transparent py-5"
+          : "absolute top-0 left-0 bg-gradient-to-b from-brand-primary/95 via-brand-primary/70 to-transparent py-5"
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,14 +330,14 @@ export default function Header() {
                         className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
                         onClick={() => setIsContactDropdownOpen(false)}
                       >
-                        Sharfabad Studio
+                        Sharfabad Clinic
                       </Link>
                       <Link
                         href="/contact#badar-commercial"
                         className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
                         onClick={() => setIsContactDropdownOpen(false)}
                       >
-                        Badar Commercial Studio
+                        Badar Commercial Clinic
                       </Link>
                     </div>
                   </div>

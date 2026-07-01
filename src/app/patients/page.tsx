@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronDown, Calendar, CreditCard, Shield, UserPlus, HelpCircle, Check, ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function PatientsPage() {
   const [activeSection, setActiveSection] = useState<string>("new-patients");
@@ -50,7 +51,7 @@ export default function PatientsPage() {
     {
       step: "01",
       title: "Book Your Appointment",
-      desc: "Use our 2-minute online booking tool to choose your studio, treatment, and slot. No account creation needed.",
+      desc: "Use our 2-minute online booking tool to choose your clinic, treatment, and slot. No account creation needed.",
     },
     {
       step: "02",
@@ -87,24 +88,38 @@ export default function PatientsPage() {
       a: "Anxiety management is our specialty. We provide noise-canceling headphones, ceiling TVs with Netflix, cozy weighted blankets, and aromatherapy. Clinically, we practice slow-dentistry—explaining every step and taking breaks whenever you raise your hand.",
     },
     {
-      q: "What parking options are available at the studios?",
+      q: "What parking options are available at the clinics?",
       a: "At Sharfabad, street parking is available right behind Alkhaleej Tower. At Badar Commercial, street parking is available along Main Saba Avenue and in nearby designated commercial parking lanes.",
     },
   ];
 
   return (
     <div className="flex flex-col w-full bg-brand-primary">
-      {/* 1. Page Header */}
-      <section className="bg-brand-secondary/20 border-b border-brand-secondary/40 pt-36 pb-20 sm:pt-48 sm:pb-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
+      {/* 1. Page Header Hero Banner */}
+      <section className="relative w-full pt-40 pb-20 md:pt-52 md:pb-28 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-studios.webp"
+            alt="Beverly Hills Clinic Reception Background"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-[#f6ede7]/45 md:bg-[#f6ede7]/40 mix-blend-normal z-10" />
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
+          <span className="text-xs font-bold uppercase tracking-widest text-brand-accent block">
             Patient Dashboard
           </span>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-heading text-brand-text">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-heading text-brand-text leading-tight">
             Everything you need, in one place.
           </h1>
           <div className="w-12 h-1 bg-brand-accent/40 mx-auto rounded-full" />
-          <p className="text-sm sm:text-base text-brand-text/75 max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-brand-text/85 max-w-xl mx-auto leading-relaxed font-medium text-[#3d2e2a]">
             From new patient forms to membership pricing and insurance details, select a resource below to learn more.
           </p>
         </div>
@@ -186,7 +201,7 @@ export default function PatientsPage() {
               </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-bold font-heading text-brand-text">
-                  Zen Membership Plan
+                  Beverly Hills Membership Plan
                 </h3>
                 <span className="text-xs text-brand-text/60 font-medium">
                   Transparent Dental Care, No Insurance Required

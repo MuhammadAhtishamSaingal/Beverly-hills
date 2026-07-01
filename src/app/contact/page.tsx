@@ -18,7 +18,7 @@ export default function ContactPage() {
       phone: "0307-0984307",
       phoneRaw: "03070984307",
       email: "sharfabad@beverlyhillsclinic.com",
-      image: "/images/studio-sf.webp",
+      image: "/images/DESKTOP1_MARQE_1200.webp",
       hours: [
         { days: "Monday - Friday", time: "9:00 AM - 6:00 PM" },
         { days: "Saturday - Sunday", time: "Closed" },
@@ -34,7 +34,7 @@ export default function ContactPage() {
       phone: "0307-0984307",
       phoneRaw: "03070984307",
       email: "badar@beverlyhillsclinic.com",
-      image: "/images/studio-mvss.webp",
+      image: "/images/DESKTOP4_MARQE_1200.webp",
       hours: [
         { days: "Monday - Saturday", time: "9:00 AM - 6:00 PM" },
         { days: "Sunday", time: "Closed" },
@@ -59,7 +59,7 @@ export default function ContactPage() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-[#f6ede7]/85 md:bg-[#f6ede7]/80 mix-blend-normal z-10" />
+          <div className="absolute inset-0 bg-[#f6ede7]/45 md:bg-[#f6ede7]/40 mix-blend-normal z-10" />
         </div>
 
         {/* Hero Content */}
@@ -73,8 +73,8 @@ export default function ContactPage() {
             <span className="font-heading italic font-normal text-[#3d2e2a]/95 text-5xl sm:text-6xl md:text-7xl block sm:inline mt-1 sm:mt-0">booked</span>
           </h1>
           
-          <p className="text-sm sm:text-base text-brand-text/80 max-w-md mx-auto leading-relaxed">
-            Choose your preferred studio and schedule your visit.
+          <p className="text-sm sm:text-base text-brand-text/85 max-w-md mx-auto leading-relaxed font-medium text-[#3d2e2a]">
+            Choose your preferred clinic and schedule your visit.
           </p>
           
           <div className="pt-2">

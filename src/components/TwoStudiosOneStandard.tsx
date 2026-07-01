@@ -8,7 +8,7 @@ export default function TwoStudiosOneStandard() {
   const cards = [
     {
       studio: "Sharfabad",
-      image: "/images/studio-sf.webp",
+      image: "/images/DESKTOP1_MARQE_1200.webp",
       address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad",
       city: "Karachi",
       phone: "0307-0984307",
@@ -16,7 +16,7 @@ export default function TwoStudiosOneStandard() {
     },
     {
       studio: "Badar Commercial",
-      image: "/images/studio-mvss.webp",
+      image: "/images/DESKTOP4_MARQE_1200.webp",
       address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial",
       city: "Karachi",
       phone: "0307-0984307",
@@ -38,12 +38,12 @@ export default function TwoStudiosOneStandard() {
           <div className="flex items-center space-x-3">
             <div className="w-8 h-[1px] bg-brand-accent" />
             <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
-              OUR STUDIOS
+              OUR CLINICS
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-brand-text leading-tight">
-            Two studios, one standard
+            Two clinics, one standard
           </h2>
         </div>
 
@@ -111,7 +111,7 @@ export default function TwoStudiosOneStandard() {
                     onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call CTA ${card.studio}` })}
                     className="text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
                   >
-                    <span>CALL STUDIO</span>
+                    <span>CALL CLINIC</span>
                     <span>&rarr;</span>
                   </a>
                 </div>
