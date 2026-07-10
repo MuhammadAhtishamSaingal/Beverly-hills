@@ -82,7 +82,7 @@ export async function POST(request: Request) {
                   <tr>
                     <td style="padding: 12px 15px;">
                       <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Studio Location</span>
-                      <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px;">${location} Studio</span>
+                      <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px;">${location.includes("Consultation") ? location : `${location} Studio`}</span>
                     </td>
                   </tr>
                 </table>

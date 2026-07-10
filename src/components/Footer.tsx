@@ -213,11 +213,10 @@ export default function Footer() {
                 </a>
               </div>
 
-              {/* Studio 2: Badar Commercial */}
               <div className="space-y-1 pt-2 border-t border-[#3e322e]">
-                <h5 className="font-bold font-heading text-[#e8ceb1] text-base">Badar Commercial</h5>
+                <h5 className="font-bold font-heading text-[#e8ceb1] text-base">DHA Karachi</h5>
                 <p className="leading-relaxed text-xs">
-                  2nd floor, Main Saba Avenue, Phase 5, Badar Commercial Area, Above Ocean Pharmacy
+                  2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy
                 </p>
                 <a
                   href="tel:03070984307"
@@ -245,7 +244,7 @@ export default function Footer() {
           <div className="flex space-x-6 tracking-wide text-[11px]">
             <span>Sharfabad</span>
             <span>&middot;</span>
-            <span>Badar Commercial</span>
+            <span>DHA Karachi</span>
           </div>
         </div>
       </div>

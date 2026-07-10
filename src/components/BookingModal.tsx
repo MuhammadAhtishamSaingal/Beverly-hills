@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, Calendar, MapPin, Sparkles, CheckCircle2, User, Phone, Mail, ArrowLeft, ChevronDown } from "lucide-react";
+import { X, Calendar, MapPin, Sparkles, CheckCircle2, User, Phone, Mail, ArrowLeft, ChevronDown, Video } from "lucide-react";
 import Image from "next/image";
+import { trackPixelEvent } from "@/utils/pixel";
 
 const studios = [
   {
@@ -11,13 +12,24 @@ const studios = [
     desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
     mobileImage: "/images/MOBILE1_MARQE.webp",
     address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad, Karachi",
+    buttonText: "BOOK NOW",
   },
   {
-    id: "Badar Commercial",
-    name: "Badar Commercial Clinic",
+    id: "DHA Karachi",
+    name: "DHA Karachi Clinic",
     desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
     mobileImage: "/images/MOBILE4_MARQE.webp",
-    address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial, Karachi",
+    address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Karachi, Karachi",
+    buttonText: "BOOK NOW",
+  },
+  {
+    id: "Online Consultation",
+    name: "Online Consultation",
+    desktopImage: "/images/people-team.webp",
+    mobileImage: "/images/people-team.webp",
+    address: "Consult with our specialists online from the comfort of your home",
+    buttonText: "ONLINE CONSULTATION",
+    imageClass: "object-cover object-top",
   },
 ];
 
@@ -80,6 +92,13 @@ export default function BookingModal() {
       const data = await response.json();
       if (response.ok && data.success) {
         setIsSubmitted(true);
+        trackPixelEvent("Lead", {
+          content_name: "Appointment Form Submission",
+          location: formData.location,
+          service: formData.service,
+          date: formData.date,
+          time_slot: formData.timeSlot,
+        });
       } else {
         alert(data.error || "Failed to submit request. Please try again.");
       }
@@ -110,7 +129,7 @@ export default function BookingModal() {
 
       {/* Modal Content */}
       <div className={`relative w-full max-h-[95vh] sm:max-h-[90vh] flex flex-col transition-all duration-300 ease-out bg-brand-primary border border-brand-secondary/60 rounded-2xl shadow-2xl overflow-hidden z-10 animate-in zoom-in-95 duration-200 ${
-        isOpen && !isSubmitted && modalView === "select_studio" ? "max-w-2xl" : "max-w-lg"
+        isOpen && !isSubmitted && modalView === "select_studio" ? "max-w-4xl" : "max-w-lg"
       }`}>
         {/* Header decoration */}
         <div className="absolute top-0 inset-x-0 h-1.5 bg-brand-accent" />
@@ -136,11 +155,11 @@ export default function BookingModal() {
 
               {/* Title */}
               <h3 className="text-2xl sm:text-3xl font-normal font-heading text-center text-brand-text mb-8">
-                Please select the location<br />you'd like to visit
+                Please select the option<br />you'd like to book
               </h3>
 
               {/* Studios Cards Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto">
                 {studios.map((studio) => (
                   <div
                     key={studio.id}
@@ -148,32 +167,36 @@ export default function BookingModal() {
                     className="group cursor-pointer bg-[#fcf8f6] border border-brand-secondary/40 rounded-2xl overflow-hidden shadow-xs hover:shadow-md hover:border-brand-accent/50 transition-all duration-300 flex flex-col justify-between"
                   >
                     {/* Studio Image */}
-                    <div className="relative h-36 w-full overflow-hidden bg-brand-secondary/20">
+                    <div className="relative h-48 w-full overflow-hidden bg-brand-secondary/20">
                       <Image
                         src={studio.desktopImage}
                         alt={`${studio.name}`}
                         fill
-                        sizes="(max-w-768px) 100vw, 50vw"
-                        className="hidden md:block object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-w-768px) 100vw, 33vw"
+                        className={`hidden md:block group-hover:scale-105 transition-transform duration-500 ${studio.imageClass || "object-cover"}`}
                       />
                       <Image
                         src={studio.mobileImage}
                         alt={`${studio.name} Mobile`}
                         fill
                         sizes="(max-w-768px) 100vw, 100vw"
-                        className="block md:hidden object-cover group-hover:scale-105 transition-transform duration-500"
+                        className={`block md:hidden group-hover:scale-105 transition-transform duration-500 ${studio.imageClass || "object-cover"}`}
                       />
                       <div className="absolute inset-0 bg-brand-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </div>
 
                     {/* Studio details */}
-                    <div className="p-5 flex-grow flex flex-col items-center text-center space-y-4">
-                      {/* Badge pin icon */}
-                      <div className="w-9 h-9 rounded-full bg-brand-primary flex items-center justify-center border border-brand-secondary/20 shadow-xs">
-                        <MapPin className="w-4 h-4 text-brand-accent" />
+                    <div className="p-5 flex-grow flex flex-col items-center text-center justify-between space-y-4">
+                      {/* Badge pin/video icon */}
+                      <div className="w-9 h-9 rounded-full bg-brand-primary flex items-center justify-center border border-brand-secondary/20 shadow-xs flex-shrink-0">
+                        {studio.id === "Online Consultation" ? (
+                          <Video className="w-4 h-4 text-brand-accent" />
+                        ) : (
+                          <MapPin className="w-4 h-4 text-brand-accent" />
+                        )}
                       </div>
 
-                      <div className="space-y-1.5">
+                      <div className="space-y-1.5 flex-grow flex flex-col justify-center">
                         <h4 className="text-lg font-bold font-heading text-brand-text">
                           {studio.name}
                         </h4>
@@ -188,9 +211,9 @@ export default function BookingModal() {
                           e.stopPropagation();
                           handleSelectStudio(studio.id);
                         }}
-                        className="w-full py-2.5 rounded-full text-xs font-semibold bg-brand-accent text-white uppercase tracking-wider transition-all duration-300 hover:bg-[#936b42] group-hover:scale-102"
+                        className="w-full py-2.5 px-2 rounded-full text-[10px] sm:text-xs font-semibold bg-brand-accent text-white uppercase tracking-wider transition-all duration-300 hover:bg-[#936b42] group-hover:scale-102 min-h-[40px] flex items-center justify-center"
                       >
-                        BOOK NOW
+                        {studio.buttonText}
                       </button>
                     </div>
                   </div>
@@ -294,7 +317,8 @@ export default function BookingModal() {
                         className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
                       >
                         <option value="Sharfabad">Sharfabad Clinic</option>
-                        <option value="Badar Commercial">Badar Commercial Clinic</option>
+                        <option value="DHA Karachi">DHA Karachi Clinic</option>
+                        <option value="Online Consultation">Online Consultation</option>
                       </select>
                       <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
                     </div>

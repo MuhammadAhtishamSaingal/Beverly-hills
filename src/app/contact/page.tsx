@@ -29,8 +29,8 @@ export default function ContactPage() {
         "https://maps.google.com/maps?q=Al%20Khaleej%20Tower%2C%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed",
     },
     {
-      city: "Badar Commercial",
-      address: "2nd floor, Main Saba Avenue, Phase 5, Badar Commercial Area, Above Ocean Pharmacy",
+      city: "DHA Karachi",
+      address: "2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy",
       zip: "Karachi",
       phone: "0307-0984307",
       phoneRaw: "03070984307",
@@ -50,7 +50,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full bg-brand-primary">
       {/* 1. Page Header Hero Banner */}
-      <section className="relative w-full pt-40 pb-20 md:pt-52 md:pb-28 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
+      <section className="relative w-full h-screen md:h-auto md:min-h-[500px] pt-[120px] pb-10 md:pt-52 md:pb-28 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -73,7 +73,7 @@ export default function ContactPage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6 md:mt-[140px]">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-6 mt-[60px] md:mt-[140px]">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-accent block">
             CONTACT
           </span>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles, ShieldCheck, Calendar, Phone, ArrowRight } from "lucide-react";
+import { trackCustomPixelEvent } from "@/utils/pixel";
 
 interface Procedure {
   name: string;
@@ -107,7 +108,12 @@ export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState<string>("dentistry");
 
   const toggleCategory = (id: string) => {
+    const isExpanding = activeCategory !== id;
     setActiveCategory(activeCategory === id ? "" : id);
+    trackCustomPixelEvent(isExpanding ? "AccordionExpand" : "AccordionCollapse", {
+      category: "Services Page Procedures",
+      section: id,
+    });
   };
 
   const triggerBooking = () => {
@@ -271,7 +277,7 @@ export default function ServicesPage() {
             Ready to experience thoughtful care?
           </h2>
           <p className="text-sm text-brand-text/70 max-w-md mx-auto">
-            Schedule an appointment at either our Sharfabad or Badar Commercial clinic today.
+            Schedule an appointment at either our Sharfabad or DHA Karachi clinic today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <button

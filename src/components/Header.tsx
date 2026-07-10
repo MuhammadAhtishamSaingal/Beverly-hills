@@ -333,11 +333,11 @@ export default function Header() {
                         Sharfabad Clinic
                       </Link>
                       <Link
-                        href="/contact#badar-commercial"
+                        href="/contact#dha-karachi"
                         className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
                         onClick={() => setIsContactDropdownOpen(false)}
                       >
-                        Badar Commercial Clinic
+                        DHA Karachi Clinic
                       </Link>
                     </div>
                   </div>
@@ -495,11 +495,11 @@ export default function Header() {
                 </Link>
                 <span className="text-[#ab7f51]/40 text-xs">&middot;</span>
                 <Link
-                  href="/contact#badar-commercial"
+                  href="/contact#dha-karachi"
                   className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Badar Commercial
+                  DHA Karachi
                 </Link>
               </div>
             </div>

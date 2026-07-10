@@ -42,10 +42,10 @@ export default function TwoStudiosOneStandard() {
       phoneRaw: "03070984307",
     },
     {
-      studio: "Badar Commercial",
+      studio: "DHA Karachi",
       desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
       mobileImage: "/images/MOBILE4_MARQE.webp",
-      address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Badar Commercial",
+      address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Karachi",
       city: "Karachi",
       phone: "0307-0984307",
       phoneRaw: "03070984307",

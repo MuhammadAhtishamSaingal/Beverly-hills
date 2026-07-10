@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
 import MetaPixel from "@/components/MetaPixel";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const headingFont = Playfair_Display({
   variable: "--font-heading",
@@ -35,6 +36,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-brand-primary text-brand-text">
         <MetaPixel />
+        <GoogleAnalytics />
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

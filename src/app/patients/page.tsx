@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ChevronDown, Calendar, CreditCard, Shield, UserPlus, HelpCircle, Check, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { trackCustomPixelEvent } from "@/utils/pixel";
 
 export default function PatientsPage() {
   const [activeSection, setActiveSection] = useState<string>("new-patients");
@@ -40,7 +41,12 @@ export default function PatientsPage() {
   }, []);
 
   const toggleSection = (id: string) => {
+    const isExpanding = activeSection !== id;
     setActiveSection(activeSection === id ? "" : id);
+    trackCustomPixelEvent(isExpanding ? "AccordionExpand" : "AccordionCollapse", {
+      category: "Patients Page Resources",
+      section: id,
+    });
   };
 
   const triggerBooking = () => {
@@ -77,7 +83,7 @@ export default function PatientsPage() {
     },
     {
       q: "Do you accept dental emergencies?",
-      a: "Yes! We block out same-day emergency slots at both our Sharfabad and Badar Commercial offices for cracked teeth, acute toothaches, or abscesses. Call us immediately for triage support.",
+      a: "Yes! We block out same-day emergency slots at both our Sharfabad and DHA Karachi offices for cracked teeth, acute toothaches, or abscesses. Call us immediately for triage support.",
     },
     {
       q: "What is your appointment cancellation policy?",
@@ -89,14 +95,14 @@ export default function PatientsPage() {
     },
     {
       q: "What parking options are available at the clinics?",
-      a: "At Sharfabad, street parking is available right behind Alkhaleej Tower. At Badar Commercial, street parking is available along Main Saba Avenue and in nearby designated commercial parking lanes.",
+      a: "At Sharfabad, street parking is available right behind Alkhaleej Tower. At DHA Karachi, street parking is available along Main Saba Avenue and in nearby designated commercial parking lanes.",
     },
   ];
 
   return (
     <div className="flex flex-col w-full bg-brand-primary">
       {/* 1. Page Header Hero Banner */}
-      <section className="relative w-full pt-40 pb-20 md:pt-52 md:pb-28 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
+      <section className="relative w-full h-screen md:h-auto md:min-h-[500px] pt-[120px] pb-10 md:pt-52 md:pb-28 flex items-center justify-center overflow-hidden border-b border-brand-secondary/40 bg-brand-primary">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -119,7 +125,7 @@ export default function PatientsPage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 md:mt-[150px]">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 mt-[60px] md:mt-[150px]">
           <span className="text-xs font-bold uppercase tracking-widest text-brand-accent block">
             Patient Dashboard
           </span>
