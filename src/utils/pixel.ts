@@ -4,14 +4,20 @@
  * @param options Additional properties to pass with the event
  */
 export const trackPixelEvent = (eventName: string, options = {}) => {
-  if (typeof window !== "undefined" && (window as any).fbq) {
-    (window as any).fbq("track", eventName, options);
-    console.log(`[Meta Pixel] Tracked standard event: ${eventName}`, options);
-  }
+  if (typeof window !== "undefined") {
+    // 1. Meta Pixel
+    const fbq = (window as any).fbq;
+    if (typeof fbq === "function") {
+      fbq("track", eventName, options);
+      console.log(`[Meta Pixel] Tracked standard event: ${eventName}`, options);
+    }
 
-  if (typeof window !== "undefined" && (window as any).gtag) {
-    (window as any).gtag("event", eventName, options);
-    console.log(`[Google Analytics] Tracked standard event: ${eventName}`, options);
+    // 2. Google Analytics (GA4)
+    const gtag = (window as any).gtag;
+    if (typeof gtag === "function") {
+      gtag("event", eventName, options);
+      console.log(`[Google Analytics] Tracked standard event: ${eventName}`, options);
+    }
   }
 };
 
@@ -21,13 +27,19 @@ export const trackPixelEvent = (eventName: string, options = {}) => {
  * @param options Additional properties to pass with the event
  */
 export const trackCustomPixelEvent = (eventName: string, options = {}) => {
-  if (typeof window !== "undefined" && (window as any).fbq) {
-    (window as any).fbq("trackCustom", eventName, options);
-    console.log(`[Meta Pixel] Tracked custom event: ${eventName}`, options);
-  }
+  if (typeof window !== "undefined") {
+    // 1. Meta Pixel
+    const fbq = (window as any).fbq;
+    if (typeof fbq === "function") {
+      fbq("trackCustom", eventName, options);
+      console.log(`[Meta Pixel] Tracked custom event: ${eventName}`, options);
+    }
 
-  if (typeof window !== "undefined" && (window as any).gtag) {
-    (window as any).gtag("event", eventName, options);
-    console.log(`[Google Analytics] Tracked custom event: ${eventName}`, options);
+    // 2. Google Analytics (GA4)
+    const gtag = (window as any).gtag;
+    if (typeof gtag === "function") {
+      gtag("event", eventName, options);
+      console.log(`[Google Analytics] Tracked custom event: ${eventName}`, options);
+    }
   }
 };

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackPixelEvent } from "@/utils/pixel";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -201,6 +204,7 @@ export default function Footer() {
                 </p>
                 <a
                   href="tel:03070984307"
+                  onClick={() => trackPixelEvent("Contact", { content_name: "Footer Call Sharfabad" })}
                   className="block hover:underline text-xs text-[#ab7f51] hover:text-[#e8ceb1] pt-1"
                 >
                   0307-0984307
@@ -220,6 +224,7 @@ export default function Footer() {
                 </p>
                 <a
                   href="tel:03070984307"
+                  onClick={() => trackPixelEvent("Contact", { content_name: "Footer Call DHA Karachi" })}
                   className="block hover:underline text-xs text-[#ab7f51] hover:text-[#e8ceb1] pt-1"
                 >
                   0307-0984307

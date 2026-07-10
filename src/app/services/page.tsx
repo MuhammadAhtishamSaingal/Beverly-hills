@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronDown, Sparkles, ShieldCheck, Calendar, Phone, ArrowRight } from "lucide-react";
-import { trackCustomPixelEvent } from "@/utils/pixel";
+import { trackPixelEvent, trackCustomPixelEvent } from "@/utils/pixel";
 
 interface Procedure {
   name: string;
@@ -289,6 +289,7 @@ export default function ServicesPage() {
             </button>
             <a
               href="tel:03070984307"
+              onClick={() => trackPixelEvent("Contact", { content_name: "Services Page Call Clinic" })}
               className="btn-secondary w-full sm:w-auto py-3 px-6 text-sm bg-white/50"
             >
               <Phone className="w-4.5 h-4.5 mr-2" />
