@@ -402,7 +402,7 @@ export default function PatientsPage() {
             Still have questions?
           </h3>
           <p className="text-xs sm:text-sm text-brand-text/70 leading-relaxed">
-            Our friendly care coordinators are happy to assist. Give us a call at 0307-0984307 or email hello@beverlyhillsclinic.com.
+            Our friendly care coordinators are happy to assist. Give us a call at 0307-0984307 or email clinicbeverlyhills@gmail.com.
           </p>
           <button
             onClick={triggerBooking}

@@ -17,7 +17,7 @@ export default function ContactPage() {
       zip: "Karachi",
       phone: "0307-0984307",
       phoneRaw: "03070984307",
-      email: "sharfabad@beverlyhillsclinic.com",
+      email: "clinicbeverlyhills@gmail.com",
       desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
       mobileImage: "/images/MOBILE1_MARQE.webp",
       hours: [
@@ -34,7 +34,7 @@ export default function ContactPage() {
       zip: "Karachi",
       phone: "0307-0984307",
       phoneRaw: "03070984307",
-      email: "badar@beverlyhillsclinic.com",
+      email: "clinicbeverlyhills@gmail.com",
       desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
       mobileImage: "/images/MOBILE4_MARQE.webp",
       hours: [

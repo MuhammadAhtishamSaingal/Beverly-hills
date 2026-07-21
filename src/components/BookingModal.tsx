@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { X, Calendar, MapPin, Sparkles, CheckCircle2, User, Phone, Mail, ArrowLeft, ChevronDown, Video } from "lucide-react";
 import Image from "next/image";
-import { trackPixelEvent } from "@/utils/pixel";
+import { trackPixelEvent, trackFormSubmission } from "@/utils/pixel";
 
 const studios = [
   {
@@ -91,15 +91,20 @@ export default function BookingModal() {
 
       const data = await response.json();
       if (response.ok && data.success) {
+        console.log("✅ Booking request submitted and email sent successfully:", data);
         setIsSubmitted(true);
-        trackPixelEvent("Lead", {
-          content_name: "Appointment Form Submission",
+        
+        // Trigger Meta Pixel "Lead" event and GA4 "form_submission" event on successful submission
+        trackFormSubmission({
+          formType: "Booking Form",
+          page: typeof window !== "undefined" ? window.location.pathname : "Booking",
           location: formData.location,
           service: formData.service,
           date: formData.date,
-          time_slot: formData.timeSlot,
+          timeSlot: formData.timeSlot,
         });
       } else {
+        console.error("❌ Booking request failed:", data.error);
         alert(data.error || "Failed to submit request. Please try again.");
       }
     } catch (error) {

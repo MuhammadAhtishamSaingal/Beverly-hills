@@ -210,10 +210,10 @@ export default function Footer() {
                   0307-0984307
                 </a>
                 <a
-                  href="mailto:sharfabad@beverlyhillsclinic.com"
+                  href="mailto:clinicbeverlyhills@gmail.com"
                   className="block text-[11px] text-[#f6ede7]/60 hover:text-[#e8ceb1]"
                 >
-                  sharfabad@beverlyhillsclinic.com
+                  clinicbeverlyhills@gmail.com
                 </a>
               </div>
 
@@ -230,10 +230,10 @@ export default function Footer() {
                   0307-0984307
                 </a>
                 <a
-                  href="mailto:badar@beverlyhillsclinic.com"
+                  href="mailto:clinicbeverlyhills@gmail.com"
                   className="block text-[11px] text-[#f6ede7]/60 hover:text-[#e8ceb1]"
                 >
-                  badar@beverlyhillsclinic.com
+                  clinicbeverlyhills@gmail.com
                 </a>
               </div>
             </div>
