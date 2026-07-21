@@ -21,11 +21,6 @@ function NavigationEvents() {
 
 export default function MetaPixel() {
   return (
-<<<<<<< HEAD
-    <Suspense fallback={null}>
-      <NavigationEvents />
-    </Suspense>
-=======
     <>
       {/* Meta Pixel Base Code */}
       <Script
@@ -41,10 +36,7 @@ export default function MetaPixel() {
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-<<<<<<< HEAD
             fbq('set', 'autoConfig', false, '${PIXEL_ID}');
-=======
->>>>>>> 6bcd51f05173ad2ee72b54140af4c7d6c218494c
             fbq('init', '${PIXEL_ID}');
             fbq('track', 'PageView');
           `,
@@ -65,6 +57,5 @@ export default function MetaPixel() {
         <NavigationEvents />
       </Suspense>
     </>
->>>>>>> origin/main
   );
 }
