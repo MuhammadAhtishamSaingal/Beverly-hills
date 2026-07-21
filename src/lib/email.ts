@@ -17,6 +17,8 @@ export interface BookingEmailPayload {
 function getTransporter() {
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
+  const host = process.env.EMAIL_HOST || "smtp.gmail.com";
+  const port = process.env.EMAIL_PORT ? parseInt(process.env.EMAIL_PORT, 10) : 465;
 
   if (!user || !pass) {
     console.error("❌ NodeMailer Error: EMAIL_USER or EMAIL_PASS environment variables are missing.");
@@ -27,7 +29,9 @@ function getTransporter() {
   const sanitizedPass = pass.replace(/\s+/g, "");
 
   return nodemailer.createTransport({
-    service: "gmail",
+    host: host,
+    port: port,
+    secure: port === 465,
     auth: {
       user: user,
       pass: sanitizedPass,

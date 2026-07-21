@@ -4,7 +4,7 @@ import { useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 function NavigationEvents() {
   const pathname = usePathname();
@@ -24,7 +24,7 @@ function NavigationEvents() {
 
 export default function GoogleAnalytics() {
   if (!GA_ID) {
-    console.warn("[Google Analytics] NEXT_PUBLIC_GA_MEASUREMENT_ID is not configured. Analytics will be inactive.");
+    console.warn("[Google Analytics] NEXT_PUBLIC_GA4_MEASUREMENT_ID or NEXT_PUBLIC_GA_MEASUREMENT_ID is not configured. Analytics will be inactive.");
     return null;
   }
 
