@@ -58,8 +58,8 @@ export default function People() {
             
             <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl border border-brand-secondary/50">
               <Image
-                src="/images/people-team.webp"
-                alt="Beverly Hills Clinic Staff - Dr. Sarah Jenkins & Team"
+                src="/images/image2.webp"
+                alt="Beverly Hills Clinic Practitioner standing next to Ultraformer III treatment equipment"
                 fill
                 sizes="(max-w-728px) 100vw, 50vw"
                 className="object-cover hover:scale-102 transition-transform duration-700"

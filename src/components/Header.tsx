@@ -187,56 +187,79 @@ export default function Header() {
                 </Link>
 
                 {isServicesDropdownOpen && (
-                  <div className="absolute left-1/2 -translate-x-1/2 mt-0 top-full pt-2 w-[480px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="rounded-2xl bg-brand-primary border border-brand-secondary/60 shadow-xl p-6 grid grid-cols-2 gap-6">
-                      {/* Column 1:  Comprehensive Dental Services */}
-                      <div className="space-y-4">
+                  <div className="absolute left-1/2 -translate-x-1/2 mt-0 top-full pt-2 w-[900px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="rounded-2xl bg-brand-primary border border-brand-secondary/60 shadow-xl p-8 grid grid-cols-4 gap-6">
+                      {/* Columns 1 & 2: Dental Services */}
+                      <div className="col-span-2 space-y-4">
                         <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
                           Comprehensive Dental Services
                         </div>
-                        <ul className="space-y-2.5">
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
                           {[
-                            "General Dentistry",
-                            "Cosmetic Treatments",
-                            "Specialty Care",
-                            "Teeth Cleaning",
-                            "Teeth Whitening",
-                            "Root Canal",
-
-                          ].map((srv) => (
-                            <li key={srv}>
-                              <Link
-                                href={`/services#${srv.toLowerCase().replace(/\s+/g, "-")}`}
-                                className="group/item flex items-center text-sm font-medium text-brand-text hover:text-brand-accent transition-colors"
-                                onClick={() => setIsServicesDropdownOpen(false)}
-                              >
-                                <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2.5 transition-colors" />
-                                <span>{srv}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Column 2: Advanced Aesthetics */}
-                      <div className="space-y-4">
-                        <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
-                          Advanced Aesthetics
-                        </div>
-                        <div className="flex flex-col space-y-2">
-                          {[
-                            "Injectables",
-                            "Laser Therapies",
-                            "Facial Treatments",
-                            "Body Contouring",
+                            "Hollywood Smile Makeover",
+                            "Laser Teeth Whitening",
+                            "Clear Aligner Treatments",
+                            "Braces Treatment",
+                            "Dental Implants",
+                            "Dental Fillings",
+                            "Dental Veneers, Crowns, Bridges",
+                            "Root Canal Treatment",
+                            "Complete Denture",
+                            "Night Guards",
+                            "Dental Retainers",
+                            "Pediatric Dentistry",
+                            "Tooth Extraction",
+                            "Wisdom Tooth Extraction",
+                            "Fixed Dentures",
+                            "Gummy Smile Treatment",
+                            "Depigmentation of the Gums",
                           ].map((srv) => (
                             <Link
                               key={srv}
-                              href={`/services#${srv.toLowerCase().replace(/\s+/g, "-")}`}
-                              className="block px-4 py-2.5 text-xs font-bold text-center uppercase tracking-wider text-brand-text bg-brand-secondary/25 border border-brand-secondary/40 rounded-xl hover:bg-brand-secondary/45 hover:text-brand-accent transition-all duration-200 shadow-xs hover:shadow-sm"
+                              href={`/services#${srv.toLowerCase().replace(/[(),]/g, "").replace(/\s+/g, "-")}`}
+                              className="group/item flex items-center text-xs font-medium text-brand-text hover:text-brand-accent transition-colors py-0.5"
                               onClick={() => setIsServicesDropdownOpen(false)}
                             >
-                              {srv}
+                              <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2 flex-shrink-0 transition-colors" />
+                              <span className="truncate">{srv}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Columns 3 & 4: Advanced Aesthetics */}
+                      <div className="col-span-2 space-y-4">
+                        <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
+                          Advanced Aesthetics
+                        </div>
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                          {[
+                            "CO2 Fractional Laser (Fotona)",
+                            "HIFU (Ultraformer III)",
+                            "Laser Hair Removal (Alma)",
+                            "Plasma Fibroblast Treatment",
+                            "Fillers: Face, Lips, Hair, Body",
+                            "Botox: Face, Neck, Anti-Wrinkles",
+                            "PRP: Face, Hair, TMJ Joint, Arthritis",
+                            "Acne & Acne Scars Treatments",
+                            "PDO Threads Lift: Face, Neck, Body",
+                            "Chemical Peel: Face, Neck, Body",
+                            "Skin Brightening Therapy",
+                            "Weight Loss Treatment",
+                            "Body Fat Lipo",
+                            "Red Carpet Facial",
+                            "BH Exfoliating Facial",
+                            "Micro-Needling with Stem Cells",
+                            "Exosomes Therapy",
+                          ].map((srv) => (
+                            <Link
+                              key={srv}
+                              href={`/services#${srv.toLowerCase().replace(/[(),]/g, "").replace(/\s+/g, "-").replace(/&/g, "and")}`}
+                              className="group/item flex items-center text-xs font-medium text-brand-text hover:text-brand-accent transition-colors py-0.5"
+                              onClick={() => setIsServicesDropdownOpen(false)}
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2 flex-shrink-0 transition-colors" />
+                              <span className="truncate">{srv}</span>
                             </Link>
                           ))}
                         </div>

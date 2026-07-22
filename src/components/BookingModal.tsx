@@ -43,7 +43,7 @@ export default function BookingModal() {
     email: "",
     phone: "",
     location: "Sharfabad",
-    service: "General Dentistry",
+    service: "Hollywood Smile Makeover",
     date: "",
     timeSlot: "Morning",
     notes: "",
@@ -341,19 +341,43 @@ export default function BookingModal() {
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
                       >
-                        <optgroup label="Dentistry Services">
-                          <option value="General Dentistry">General Dentistry</option>
-                          <option value="Teeth Cleaning">Teeth Cleaning</option>
-                          <option value="Teeth Whitening">Teeth Whitening</option>
-                          <option value="Root Canal">Root Canal</option>
-                          <option value="Implants">Implants</option>
-                          <option value="Braces">Braces</option>
+                        <optgroup label="Dental Services">
+                          <option value="Hollywood Smile Makeover">Hollywood Smile Makeover</option>
+                          <option value="Laser Teeth Whitening">Laser Teeth Whitening</option>
+                          <option value="Clear Aligner Treatments">Clear Aligner Treatments</option>
+                          <option value="Braces Treatment">Braces Treatment</option>
+                          <option value="Dental Implants">Dental Implants</option>
+                          <option value="Dental Fillings">Dental Fillings</option>
+                          <option value="Dental Veneers, Crowns, Bridges">Dental Veneers, Crowns, Bridges</option>
+                          <option value="Root Canal Treatment">Root Canal Treatment</option>
+                          <option value="Complete Denture">Complete Denture</option>
+                          <option value="Night Guards">Night Guards</option>
+                          <option value="Dental Retainers">Dental Retainers</option>
+                          <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+                          <option value="Tooth Extraction">Tooth Extraction</option>
+                          <option value="Wisdom Tooth Extraction">Wisdom Tooth Extraction</option>
+                          <option value="Fixed Dentures">Fixed Dentures</option>
+                          <option value="Gummy Smile Treatment">Gummy Smile Treatment</option>
+                          <option value="Depigmentation of the Gums">Depigmentation of the Gums</option>
                         </optgroup>
-                        <optgroup label="Advanced Aesthetics">
-                          <option value="Injectables">Injectables</option>
-                          <option value="Laser Therapies">Laser Therapies</option>
-                          <option value="Facial Treatments">Facial Treatments</option>
-                          <option value="Body Contouring">Body Contouring</option>
+                        <optgroup label="Aesthetic Services">
+                          <option value="CO2 Fractional Laser (Fotona)">CO2 Fractional Laser (Fotona)</option>
+                          <option value="HIFU (Ultraformer III)">HIFU (Ultraformer III)</option>
+                          <option value="Laser Hair Removal (Alma)">Laser Hair Removal (Alma)</option>
+                          <option value="Plasma Fibroblast Treatment">Plasma Fibroblast Treatment</option>
+                          <option value="Fillers: Face, Lips, Hair, Body">Fillers: Face, Lips, Hair, Body</option>
+                          <option value="Botox: Face, Neck, Anti-wrinkles">Botox: Face, Neck, Anti-wrinkles</option>
+                          <option value="PRP: Face, Hair, TMJ Joint, Arthritis">PRP: Face, Hair, TMJ Joint, Arthritis</option>
+                          <option value="Acne and Acne Scars Treatments">Acne and Acne Scars Treatments</option>
+                          <option value="PDO Threads Lift: Face, Neck, Body">PDO Threads Lift: Face, Neck, Body</option>
+                          <option value="Chemical Peel: Face, Neck, Body">Chemical Peel: Face, Neck, Body</option>
+                          <option value="Skin Brightening Therapy">Skin Brightening Therapy</option>
+                          <option value="Weight Loss Treatment">Weight Loss Treatment</option>
+                          <option value="Body Fat Lipo">Body Fat Lipo</option>
+                          <option value="Red Carpet Facial">Red Carpet Facial</option>
+                          <option value="BH Exfoliating Facial">BH Exfoliating Facial</option>
+                          <option value="Micro-Needling with Stem Cells">Micro-Needling with Stem Cells</option>
+                          <option value="Exosomes Therapy">Exosomes Therapy</option>
                         </optgroup>
                       </select>
                       <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
