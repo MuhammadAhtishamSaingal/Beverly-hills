@@ -364,12 +364,13 @@ export default function BookingModal() {
                           <option value="CO2 Fractional Laser (Fotona)">CO2 Fractional Laser (Fotona)</option>
                           <option value="HIFU (Ultraformer III)">HIFU (Ultraformer III)</option>
                           <option value="Laser Hair Removal (Alma)">Laser Hair Removal (Alma)</option>
-                          <option value="Plasma Fibroblast Treatment">Plasma Fibroblast Treatment</option>
+                          <option value="Plasma Fibroblast">Plasma Fibroblast</option>
+                          <option value="Polynucleotide Face and Eyes">Polynucleotide Face and Eyes</option>
                           <option value="Fillers: Face, Lips, Hair, Body">Fillers: Face, Lips, Hair, Body</option>
-                          <option value="Botox: Face, Neck, Anti-wrinkles">Botox: Face, Neck, Anti-wrinkles</option>
-                          <option value="PRP: Face, Hair, TMJ Joint, Arthritis">PRP: Face, Hair, TMJ Joint, Arthritis</option>
+                          <option value="Full Face Botox Rejuvenation">Full Face Botox Rejuvenation</option>
+                          <option value="PRP & Exosomes / Stem Cells">PRP & Exosomes / Stem Cells</option>
                           <option value="Acne and Acne Scars Treatments">Acne and Acne Scars Treatments</option>
-                          <option value="PDO Threads Lift: Face, Neck, Body">PDO Threads Lift: Face, Neck, Body</option>
+                          <option value="PDO Threads">PDO Threads</option>
                           <option value="Chemical Peel: Face, Neck, Body">Chemical Peel: Face, Neck, Body</option>
                           <option value="Skin Brightening Therapy">Skin Brightening Therapy</option>
                           <option value="Weight Loss Treatment">Weight Loss Treatment</option>
@@ -377,7 +378,6 @@ export default function BookingModal() {
                           <option value="Red Carpet Facial">Red Carpet Facial</option>
                           <option value="BH Exfoliating Facial">BH Exfoliating Facial</option>
                           <option value="Micro-Needling with Stem Cells">Micro-Needling with Stem Cells</option>
-                          <option value="Exosomes Therapy">Exosomes Therapy</option>
                         </optgroup>
                       </select>
                       <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />

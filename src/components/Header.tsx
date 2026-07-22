@@ -237,12 +237,13 @@ export default function Header() {
                             "CO2 Fractional Laser (Fotona)",
                             "HIFU (Ultraformer III)",
                             "Laser Hair Removal (Alma)",
-                            "Plasma Fibroblast Treatment",
+                            "Plasma Fibroblast",
+                            "Polynucleotide Face and Eyes",
                             "Fillers: Face, Lips, Hair, Body",
-                            "Botox: Face, Neck, Anti-Wrinkles",
-                            "PRP: Face, Hair, TMJ Joint, Arthritis",
+                            "Full Face Botox Rejuvenation",
+                            "PRP & Exosomes / Stem Cells",
                             "Acne & Acne Scars Treatments",
-                            "PDO Threads Lift: Face, Neck, Body",
+                            "PDO Threads",
                             "Chemical Peel: Face, Neck, Body",
                             "Skin Brightening Therapy",
                             "Weight Loss Treatment",
@@ -250,11 +251,10 @@ export default function Header() {
                             "Red Carpet Facial",
                             "BH Exfoliating Facial",
                             "Micro-Needling with Stem Cells",
-                            "Exosomes Therapy",
                           ].map((srv) => (
                             <Link
                               key={srv}
-                              href={`/services#${srv.toLowerCase().replace(/[(),]/g, "").replace(/\s+/g, "-").replace(/&/g, "and")}`}
+                              href={`/services#${srv.toLowerCase().replace(/[(),/&]/g, "").replace(/\s+/g, "-")}`}
                               className="group/item flex items-center text-xs font-medium text-brand-text hover:text-brand-accent transition-colors py-0.5"
                               onClick={() => setIsServicesDropdownOpen(false)}
                             >

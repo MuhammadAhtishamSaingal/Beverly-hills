@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Scan, HardDrive, Printer, Brain, Shield, Zap, Printer as PrintIcon, ArrowRight } from "lucide-react";
+import { Sparkles, Scan, Brain, Zap, Shield, ArrowRight } from "lucide-react";
 
 interface TechStep {
   number: string;
@@ -20,93 +20,78 @@ export default function Technology() {
   const steps: TechStep[] = [
     {
       number: "01",
-      name: "CBCT Imaging",
-      subname: "Three-dimensional clarity",
-      category: "01 / ADVANCED DIAGNOSTICS",
-      heading: "3D Cone Beam CT Scanning",
-      description: "Our 3D Cone Beam Computed Tomography captures highly detailed three-dimensional scans of your dental structure, bone, and nerve pathways in seconds. This provides complete anatomical views for ultra-precise implant placement, root canals, and structural diagnosis.",
+      name: "Plasma Fibroblast",
+      subname: "Skin Rejuvenation & Lift",
+      category: "01 / PLASMA ENERGY THERAPY",
+      heading: "Plasma Fibroblast Treatment",
+      description: "Innovative skin rejuvenation therapy that tightens, smooths, and restores elasticity using plasma energy. This technique triggers instant tissue shrinkage and long-term collagen synthesis, offering a highly effective non-surgical lifting solution.",
       bullets: [
-        "Provides unmatched anatomical accuracy for dental implants",
-        "Uses significantly less radiation than traditional medical CT scans",
-        "Supports precise, guided surgical planning to ensure safety"
+        "Physically tightens and smooths delicate skin around the eyes, lips, and neck",
+        "Triggers natural collagen and elastin fiber production for lasting firmness",
+        "A highly effective, minimally invasive alternative to traditional cosmetic surgery"
       ],
-      icon: Scan,
-      bottomText: "FOR FASTER, MORE PRECISE DIAGNOSTICS",
+      icon: Sparkles,
+      bottomText: "FOR NON-SURGICAL SKIN TIGHTENING",
     },
     {
       number: "02",
-      name: "3D Scanners",
-      subname: "Comfortable digital impressions",
-      category: "02 / DIGITAL IMPRESSIONS",
-      heading: "Intraoral 3D Digital Scanner",
-      description: "Say goodbye to sticky impression putty and cold metal trays. Our intraoral scanner sweeps over your teeth, capturing thousands of high-definition color images per second to map your mouth in real-time on a screen.",
+      name: "Polynucleotide Face & Eyes",
+      subname: "Cellular Regeneration",
+      category: "02 / REGENERATIVE MEDICINE",
+      heading: "Polynucleotide Face and Eyes",
+      description: "Regenerative treatment using polynucleotides to improve skin texture, hydration, and reduce fine lines around the eyes and face. These clinical-grade biopolymers work at a cellular level to repair damaged tissue and restore youthfulness.",
       bullets: [
-        "Comfortable, fast, and completely gag-free oral mapping",
-        "Creates highly accurate crowns, veneers, and Invisalign aligners",
-        "Speeds up laboratory preparation and cuts down appointment times"
+        "Promotes rapid cell renewal, tissue healing, and deep cellular hydration",
+        "Significantly reduces fine lines, crepiness, and dark circles under the eyes",
+        "Restores natural skin elasticity, thickness, and overall complexion glow"
       ],
-      icon: HardDrive,
-      bottomText: "FOR COMFORTABLE DIGITAL MAPPING",
+      icon: Scan,
+      bottomText: "FOR ADVANCED CELLULAR REPAIR",
     },
     {
       number: "03",
-      name: "3D Printing",
-      subname: "Made here, in-house",
-      category: "03 / IN-HOUSE FABRICATION",
-      heading: "In-House 3D Printing",
-      description: "We print models, surgical guides, and select dental appliances right here in the studio. Keeping it in-house means we control the fit and the timing — so more of your care happens under one roof, on a schedule that works for you.",
+      name: "Full Face Botox Rejuvenation",
+      subname: "Comprehensive Anti-Aging",
+      category: "03 / WRINKLE PREVENTATIVE CARE",
+      heading: "Full Face Botox Rejuvenation",
+      description: "Comprehensive anti-aging solution targeting facial wrinkles and lines to restore a youthful appearance. By precisely relaxing targeted muscle groups, this treatment smooths existing lines while preventing new ones from forming.",
       bullets: [
-        "Precise guides for surgical implant and restorative placements",
-        "Can significantly shorten the wait time between treatment steps",
-        "Fully managed in-house where we inspect every clinical detail"
+        "Effectively targets forehead lines, frown creases, and dynamic crow's feet",
+        "Softens neck bands and defines jawlines for a balanced, lifted look",
+        "Tailored dosing ensures natural expressions with a refreshed appearance"
       ],
-      icon: Printer,
-      bottomText: "FOR FASTER, MORE PRECISE CARE",
+      icon: Brain,
+      bottomText: "FOR SMOOTH, REFRESHED CONTOURS",
     },
     {
       number: "04",
-      name: "AI-Assisted Diagnostics",
-      subname: "A second set of eyes",
-      category: "04 / SOFTWARE & INTELLIGENCE",
-      heading: "AI-Assisted Diagnostics",
-      description: "We integrate cutting-edge machine learning diagnostic models that analyze your digital radiographs alongside our clinical team. This provides an objective second opinion on bone density, early-stage decay, and periodontal health.",
+      name: "PDO Threads",
+      subname: "Minimally Invasive Lifting",
+      category: "04 / COLLAGEN INDUCTION LIFT",
+      heading: "PDO Threads Lift",
+      description: "Minimally invasive thread lifting technique for the face and neck, stimulating collagen production for natural tightening and lift. Absorbable polydioxanone (PDO) threads provide instant structural support while rebuilding your skin's collagen matrix.",
       bullets: [
-        "Helps detect early-stage cavities before they spread",
-        "Objective, data-driven analysis of jawbone levels and density",
-        "Improves patient trust and clarifies clinical decision mapping"
+        "Provides immediate physical lift to sagging cheeks, jawlines, and eyebrows",
+        "Sustains collagen synthesis for months as threads naturally absorb",
+        "Clinically proven, fully absorbable sutures ensure high patient safety"
       ],
-      icon: Brain,
-      bottomText: "FOR SCIENTIFIC SECOND OPINIONS",
+      icon: Zap,
+      bottomText: "FOR IMMEDIATE STRUCTURAL TENSION",
     },
     {
       number: "05",
-      name: "Digital X-Rays",
-      subname: "Detailed, and right away",
-      category: "05 / RADIATION-SAFE RADIOGRAPHY",
-      heading: "Low-Radiation Digital X-Rays",
-      description: "Our digital radiography systems produce immediate, high-contrast imagery on monitors directly above your chair, allowing us to zoom, contrast, and discuss your oral health immediately with complete transparency.",
+      name: "PRP & Exosomes / Stem Cells",
+      subname: "Biological Rejuvenation",
+      category: "05 / REGENERATIVE BIOLOGICS",
+      heading: "PRP & Exosomes / Stem Cells",
+      description: "Advanced regenerative therapy using platelets, exosomes, and stem cells to repair, rejuvenate, and revitalize skin for a youthful glow. This clinical combination supercharges tissue repair and cellular communication for ultimate skin renewal.",
       bullets: [
-        "Reduces diagnostic radiation exposure by up to 80%",
-        "Instant visual results with zero chemical processing wait times",
-        "High-definition scans allow for early pathology detection"
+        "Harnesses highly concentrated growth factors and exosomes to repair damaged tissue",
+        "Accelerates skin healing, reduces redness, and fades superficial scarring",
+        "Dramatically improves overall facial skin texture, tone, and hair density"
       ],
       icon: Shield,
-      bottomText: "FOR ABSOLUTE DIAGNOSTIC SAFETY",
-    },
-    {
-      number: "06",
-      name: "Laser Dentistry",
-      subname: "A gentler touch",
-      category: "06 / SOFT TISSUE TREATMENTS",
-      heading: "Soft Tissue Laser Dentistry",
-      description: "Our soft-tissue laser provides gentle gum reshaping, advanced pocket sterilization, and minor surgical treatments. The laser energy sanitizes and seals tissue instantly, resulting in minimal bleeding and quick recovery.",
-      bullets: [
-        "Often eliminates the need for local anesthesia injections or sutures",
-        "Minimizes bleeding and reduces post-operative swelling",
-        "Significantly gentler than traditional mechanical dental tools"
-      ],
-      icon: Zap,
-      bottomText: "FOR GENTLE, SCALPEL-FREE GUM TREATMENT",
+      bottomText: "FOR INTENSIVE CELLULAR REVITALIZATION",
     },
   ];
 
@@ -140,7 +125,6 @@ export default function Technology() {
   const handleStepClick = (index: number) => {
     if (index === activeStep) return;
     setIsTransitioning(true);
-    // Trigger transition delay
     setTimeout(() => {
       setActiveStep(index);
       setIsTransitioning(false);
@@ -163,22 +147,22 @@ export default function Technology() {
             <div className="flex items-center space-x-3">
               <div className="w-8 h-[1px] bg-brand-accent" />
               <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
-                TECHNOLOGY
+                TREATMENTS
               </span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-brand-text leading-tight">
-              Technology in service of better care
+              Advanced treatments for exceptional results
             </h2>
             
             <p className="text-sm text-brand-text/75 leading-relaxed">
-              We invest in advanced tools not for their own sake, but because they lead to more accurate diagnoses, gentler treatments, and better outcomes.
+              We invest in state-of-the-art aesthetic and regenerative medicine to deliver noticeable, natural-looking results while ensuring maximum clinical safety and comfort.
             </p>
 
             <div className="flex items-center space-x-2 pt-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#D6A840]" />
               <span className="text-xs font-bold uppercase tracking-wider text-brand-text/60">
-                SIX IN-HOUSE TECHNOLOGIES
+                FIVE TOP-SELLING SERVICES
               </span>
             </div>
           </div>
@@ -194,7 +178,6 @@ export default function Technology() {
               sizes="(max-w-728px) 100vw, 58vw"
               className="object-cover"
             />
-            {/* Soft dark-gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-brand-text/20 to-transparent pointer-events-none" />
           </div>
         </div>
@@ -219,7 +202,6 @@ export default function Technology() {
                   }`}
                 >
                   <div className="flex items-center space-x-4">
-                    {/* Circle badge */}
                     <div
                       className={`w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all duration-300 ${
                         isActive
@@ -253,7 +235,6 @@ export default function Technology() {
 
           {/* Right Column: White Content Card (7/12 width) */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* White card with animative state */}
             <div
               className={`bg-[#faf6f3] border border-[#e9ded5]/70 rounded-2xl p-8 sm:p-10 shadow-xs flex flex-col justify-between space-y-6 relative overflow-hidden transition-all duration-300 ${
                 isTransitioning
@@ -272,7 +253,6 @@ export default function Technology() {
                   </h3>
                 </div>
                 
-                {/* Custom round icon */}
                 <div className="w-10 h-10 rounded-full bg-[#f6ede7] flex items-center justify-center border border-brand-secondary/30">
                   <ActiveIcon className="w-4.5 h-4.5 text-brand-accent" />
                 </div>
@@ -283,11 +263,10 @@ export default function Technology() {
                 {activeTech.description}
               </p>
 
-              {/* Bullets List with Gold bullet accents */}
+              {/* Bullets List */}
               <div className="space-y-3 pt-2">
                 {activeTech.bullets.map((bullet, idx) => (
                   <div key={idx} className="flex items-start text-xs sm:text-sm text-brand-text/80 font-light">
-                    {/* Circle dot marker */}
                     <div className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[#D6A840] mt-1.5 mr-3" />
                     <span>{bullet}</span>
                   </div>
