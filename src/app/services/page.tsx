@@ -244,6 +244,12 @@ export default function ServicesPage() {
           duration: "60 mins",
           suitability: "Dull skin, fine lines, or superficial scarring",
         },
+        {
+          name: "Exosomes Therapy",
+          desc: "Cutting-edge regenerative therapy utilizing clinical exosomes to dramatically speed skin healing.",
+          duration: "45 mins",
+          suitability: "Intensive tissue repair, collagen boosting, and anti-aging",
+        },
       ],
     },
   ];

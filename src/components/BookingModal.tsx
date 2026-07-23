@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { X, Calendar, MapPin, Sparkles, CheckCircle2, User, Phone, Mail, ArrowLeft, ChevronDown, Video } from "lucide-react";
 import Image from "next/image";
 import { trackPixelEvent, trackFormSubmission } from "@/utils/pixel";
@@ -33,6 +33,47 @@ const studios = [
   },
 ];
 
+const dentalServices = [
+  "Hollywood Smile Makeover",
+  "Laser Teeth Whitening",
+  "Clear Aligner Treatments",
+  "Braces Treatment",
+  "Dental Implants",
+  "Dental Fillings",
+  "Dental Veneers, Crowns, Bridges",
+  "Root Canal Treatment",
+  "Complete Denture",
+  "Night Guards",
+  "Dental Retainers",
+  "Pediatric Dentistry",
+  "Tooth Extraction",
+  "Wisdom Tooth Extraction",
+  "Fixed Dentures",
+  "Gummy Smile Treatment",
+  "Depigmentation of the Gums"
+];
+
+const aestheticServices = [
+  "CO2 Fractional Laser (Fotona)",
+  "HIFU (Ultraformer III)",
+  "Laser Hair Removal (Alma)",
+  "Plasma Fibroblast",
+  "Polynucleotide Face and Eyes",
+  "Fillers: Face, Lips, Hair, Body",
+  "Full Face Botox Rejuvenation",
+  "PRP & Exosomes / Stem Cells",
+  "Acne and Acne Scars Treatments",
+  "PDO Threads",
+  "Chemical Peel: Face, Neck, Body",
+  "Skin Brightening Therapy",
+  "Weight Loss Treatment",
+  "Body Fat Lipo",
+  "Red Carpet Facial",
+  "BH Exfoliating Facial",
+  "Micro-Needling with Stem Cells",
+  "Exosomes Therapy"
+];
+
 export default function BookingModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -48,6 +89,31 @@ export default function BookingModal() {
     timeSlot: "Morning",
     notes: "",
   });
+
+  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
+  const [serviceSearch, setServiceSearch] = useState("");
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsServiceDropdownOpen(false);
+      }
+    };
+    if (isServiceDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isServiceDropdownOpen]);
+
+  const filteredDental = dentalServices.filter(srv =>
+    srv.toLowerCase().includes(serviceSearch.toLowerCase())
+  );
+  const filteredAesthetics = aestheticServices.filter(srv =>
+    srv.toLowerCase().includes(serviceSearch.toLowerCase())
+  );
 
   useEffect(() => {
     const handleOpen = () => {
@@ -260,7 +326,7 @@ export default function BookingModal() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Jane Doe"
+                      placeholder="Hashim Iqbal"
                       className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                     />
                   </div>
@@ -281,7 +347,7 @@ export default function BookingModal() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="jane@example.com"
+                        placeholder="info@clinicbeverlyhills.com"
                         className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                       />
                     </div>
@@ -299,7 +365,7 @@ export default function BookingModal() {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="(415) 555-0100"
+                        placeholder="+92307-0984307"
                         className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                       />
                     </div>
@@ -328,59 +394,84 @@ export default function BookingModal() {
                       <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
                     </div>
                   </div>
-                  <div>
-                    <label htmlFor="service" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
+                  <div ref={dropdownRef}>
+                    <label className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
                       Select Treatment / Service
                     </label>
                     <div className="relative">
-                      <Sparkles className="absolute left-3 top-3 w-4 h-4 text-brand-text/40 pointer-events-none" />
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
+                      <Sparkles className="absolute left-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none z-10" />
+                      
+                      <button
+                        type="button"
+                        onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
+                        className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent text-left flex items-center justify-between cursor-pointer"
                       >
-                        <optgroup label="Dental Services">
-                          <option value="Hollywood Smile Makeover">Hollywood Smile Makeover</option>
-                          <option value="Laser Teeth Whitening">Laser Teeth Whitening</option>
-                          <option value="Clear Aligner Treatments">Clear Aligner Treatments</option>
-                          <option value="Braces Treatment">Braces Treatment</option>
-                          <option value="Dental Implants">Dental Implants</option>
-                          <option value="Dental Fillings">Dental Fillings</option>
-                          <option value="Dental Veneers, Crowns, Bridges">Dental Veneers, Crowns, Bridges</option>
-                          <option value="Root Canal Treatment">Root Canal Treatment</option>
-                          <option value="Complete Denture">Complete Denture</option>
-                          <option value="Night Guards">Night Guards</option>
-                          <option value="Dental Retainers">Dental Retainers</option>
-                          <option value="Pediatric Dentistry">Pediatric Dentistry</option>
-                          <option value="Tooth Extraction">Tooth Extraction</option>
-                          <option value="Wisdom Tooth Extraction">Wisdom Tooth Extraction</option>
-                          <option value="Fixed Dentures">Fixed Dentures</option>
-                          <option value="Gummy Smile Treatment">Gummy Smile Treatment</option>
-                          <option value="Depigmentation of the Gums">Depigmentation of the Gums</option>
-                        </optgroup>
-                        <optgroup label="Aesthetic Services">
-                          <option value="CO2 Fractional Laser (Fotona)">CO2 Fractional Laser (Fotona)</option>
-                          <option value="HIFU (Ultraformer III)">HIFU (Ultraformer III)</option>
-                          <option value="Laser Hair Removal (Alma)">Laser Hair Removal (Alma)</option>
-                          <option value="Plasma Fibroblast">Plasma Fibroblast</option>
-                          <option value="Polynucleotide Face and Eyes">Polynucleotide Face and Eyes</option>
-                          <option value="Fillers: Face, Lips, Hair, Body">Fillers: Face, Lips, Hair, Body</option>
-                          <option value="Full Face Botox Rejuvenation">Full Face Botox Rejuvenation</option>
-                          <option value="PRP & Exosomes / Stem Cells">PRP & Exosomes / Stem Cells</option>
-                          <option value="Acne and Acne Scars Treatments">Acne and Acne Scars Treatments</option>
-                          <option value="PDO Threads">PDO Threads</option>
-                          <option value="Chemical Peel: Face, Neck, Body">Chemical Peel: Face, Neck, Body</option>
-                          <option value="Skin Brightening Therapy">Skin Brightening Therapy</option>
-                          <option value="Weight Loss Treatment">Weight Loss Treatment</option>
-                          <option value="Body Fat Lipo">Body Fat Lipo</option>
-                          <option value="Red Carpet Facial">Red Carpet Facial</option>
-                          <option value="BH Exfoliating Facial">BH Exfoliating Facial</option>
-                          <option value="Micro-Needling with Stem Cells">Micro-Needling with Stem Cells</option>
-                        </optgroup>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
+                        <span className="truncate">{formData.service || "Select Treatment / Service"}</span>
+                        <ChevronDown className={`w-4 h-4 text-brand-text/40 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} />
+                      </button>
+
+                      {isServiceDropdownOpen && (
+                        <div className="absolute z-50 left-0 right-0 mt-1 bg-white border border-brand-secondary/60 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                          {/* Search box */}
+                          <div className="p-2 border-b border-brand-secondary/30 bg-[#faf6f3]">
+                            <input
+                              type="text"
+                              placeholder="Search services..."
+                              value={serviceSearch}
+                              onChange={(e) => setServiceSearch(e.target.value)}
+                              className="w-full px-3 py-1.5 text-xs bg-white border border-brand-secondary/40 rounded focus:outline-none focus:border-brand-accent text-brand-text"
+                              autoFocus
+                            />
+                          </div>
+
+                          {/* Scrollable Options List */}
+                          <div className="max-h-60 overflow-y-auto divide-y divide-brand-secondary/20">
+                            {filteredDental.length > 0 && (
+                              <div>
+                                <div className="px-3 py-1 text-[10px] font-bold text-brand-text/40 tracking-wider uppercase bg-brand-primary/5">Dental Services</div>
+                                {filteredDental.map((srv) => (
+                                  <button
+                                    key={srv}
+                                    type="button"
+                                    onClick={() => {
+                                      setFormData(prev => ({ ...prev, service: srv }));
+                                      setIsServiceDropdownOpen(false);
+                                      setServiceSearch("");
+                                    }}
+                                    className="w-full text-left px-4 py-2 text-xs text-brand-text hover:bg-brand-secondary/30 transition-colors block truncate cursor-pointer"
+                                  >
+                                    {srv}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+
+                            {filteredAesthetics.length > 0 && (
+                              <div>
+                                <div className="px-3 py-1 text-[10px] font-bold text-brand-text/40 tracking-wider uppercase bg-brand-primary/5">Aesthetic Services</div>
+                                {filteredAesthetics.map((srv) => (
+                                  <button
+                                    key={srv}
+                                    type="button"
+                                    onClick={() => {
+                                      setFormData(prev => ({ ...prev, service: srv }));
+                                      setIsServiceDropdownOpen(false);
+                                      setServiceSearch("");
+                                    }}
+                                    className="w-full text-left px-4 py-2 text-xs text-brand-text hover:bg-brand-secondary/30 transition-colors block truncate cursor-pointer"
+                                  >
+                                    {srv}
+                                  </button>
+                                ))}
+                              </div>
+                            )}
+
+                            {filteredDental.length === 0 && filteredAesthetics.length === 0 && (
+                              <div className="px-4 py-3 text-xs text-brand-text/50 text-center">No services found</div>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

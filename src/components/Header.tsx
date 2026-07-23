@@ -251,6 +251,7 @@ export default function Header() {
                             "Red Carpet Facial",
                             "BH Exfoliating Facial",
                             "Micro-Needling with Stem Cells",
+                            "Exosomes Therapy",
                           ].map((srv) => (
                             <Link
                               key={srv}
