@@ -349,7 +349,7 @@ export default function BookingModal() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="Hasim@gmail.com"
+                        placeholder="Hashim@gmail.com"
                         className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                       />
                     </div>
