@@ -50,7 +50,8 @@ const dentalServices = [
   "Wisdom Tooth Extraction",
   "Fixed Dentures",
   "Gummy Smile Treatment",
-  "Depigmentation of the Gums"
+  "Depigmentation of the Gums",
+  "Other"
 ];
 
 const aestheticServices = [
@@ -71,7 +72,8 @@ const aestheticServices = [
   "Red Carpet Facial",
   "BH Exfoliating Facial",
   "Micro-Needling with Stem Cells",
-  "Exosomes Therapy"
+  "Exosomes Therapy",
+  "Other"
 ];
 
 export default function BookingModal() {
@@ -347,7 +349,7 @@ export default function BookingModal() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="info@clinicbeverlyhills.com"
+                        placeholder="Hasim@gmail.com"
                         className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                       />
                     </div>
@@ -365,7 +367,7 @@ export default function BookingModal() {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+92307-0984307"
+                        placeholder="+923070984307"
                         className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                       />
                     </div>
@@ -431,7 +433,7 @@ export default function BookingModal() {
                                 <div className="px-3 py-1 text-[10px] font-bold text-brand-text/40 tracking-wider uppercase bg-brand-primary/5">Dental Services</div>
                                 {filteredDental.map((srv) => (
                                   <button
-                                    key={srv}
+                                    key={`dental-${srv}`}
                                     type="button"
                                     onClick={() => {
                                       setFormData(prev => ({ ...prev, service: srv }));
@@ -451,7 +453,7 @@ export default function BookingModal() {
                                 <div className="px-3 py-1 text-[10px] font-bold text-brand-text/40 tracking-wider uppercase bg-brand-primary/5">Aesthetic Services</div>
                                 {filteredAesthetics.map((srv) => (
                                   <button
-                                    key={srv}
+                                    key={`aesthetic-${srv}`}
                                     type="button"
                                     onClick={() => {
                                       setFormData(prev => ({ ...prev, service: srv }));
