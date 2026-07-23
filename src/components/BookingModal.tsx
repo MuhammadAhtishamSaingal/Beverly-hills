@@ -92,6 +92,36 @@ export default function BookingModal() {
     notes: "",
   });
 
+  const [bookingLink, setBookingLink] = useState("");
+  const originalUrlRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (isOpen) {
+      if (!originalUrlRef.current && typeof window !== "undefined") {
+        originalUrlRef.current = window.location.pathname + window.location.search + window.location.hash;
+      }
+      
+      const origin = typeof window !== "undefined" ? window.location.origin : "https://www.beverlyhills.clinic";
+      const params = new URLSearchParams();
+      params.set("clinic_location", formData.location);
+      params.set("treatment_service", formData.service);
+      if (formData.date) {
+        params.set("preselected_date", formData.date);
+      }
+      
+      const newUrl = `${origin}/booking?${params.toString()}`;
+      if (typeof window !== "undefined") {
+        window.history.pushState(null, "", newUrl);
+      }
+      setBookingLink(newUrl);
+    } else {
+      if (originalUrlRef.current && typeof window !== "undefined") {
+        window.history.pushState(null, "", originalUrlRef.current);
+        originalUrlRef.current = null;
+      }
+    }
+  }, [isOpen, formData.location, formData.service, formData.date]);
+
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const [serviceSearch, setServiceSearch] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -349,7 +379,7 @@ export default function BookingModal() {
                         required
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="Hashim@gmail.com"
+                        placeholder="info@clinicbeverlyhills.com"
                         className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                       />
                     </div>
@@ -535,6 +565,7 @@ export default function BookingModal() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
+                    data-booking-link={bookingLink}
                     className="btn-primary w-full py-3 text-sm font-semibold tracking-wide flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
