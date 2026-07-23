@@ -243,8 +243,15 @@ export default function Footer() {
 
         {/* Bottom Line */}
         <div className="border-t border-[#3e322e] mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#f6ede7]/50 space-y-4 sm:space-y-0">
-          <div>
-            &copy; {currentYear} Beverly Hills Clinic
+          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
+            <span>&copy; {currentYear} Beverly Hills Clinic</span>
+            <span className="hidden sm:inline text-[#f6ede7]/30">&middot;</span>
+            <Link
+              href="/privacy-policy"
+              className="hover:text-[#e8ceb1] transition-colors text-[11px] font-medium tracking-wide"
+            >
+              Privacy & Policy
+            </Link>
           </div>
           <div className="flex space-x-6 tracking-wide text-[11px]">
             <span>Sharfabad</span>
