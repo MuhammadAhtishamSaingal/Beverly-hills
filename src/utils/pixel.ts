@@ -74,8 +74,23 @@ export const trackFormSubmission = (payload: FormSubmissionPayload = {}) => {
     // 1. Meta Pixel - Lead event
     const fbq = (window as any).fbq;
     if (typeof fbq !== "undefined" && typeof fbq === "function") {
-      fbq("track", "Lead", leadParameters);
-      console.log("[Meta Pixel] Tracked 'Lead' event:", leadParameters);
+      const hostname = window.location.hostname;
+      if (hostname === "www.beverlyhills.clinic" || hostname === "beverlyhills.clinic") {
+        fbq("track", "Lead", {
+          value: 1.0,
+          currency: "USD",
+          content_name: "Booking Form Submission",
+          formType: payload.formType || "Booking Form",
+          page: payload.page || pageLocation,
+          location: payload.location || "Sharfabad",
+          service: payload.service || "",
+          date: payload.date || "",
+          time_slot: payload.timeSlot || "",
+        });
+        console.log("[Meta Pixel] Tracked 'Lead' event on production domain:", leadParameters);
+      } else {
+        console.log(`[Meta Pixel] Skipped tracking 'Lead' event on non-production domain: ${hostname}`);
+      }
     }
 
     // 2. Google Analytics (GA4) - form_submission event
