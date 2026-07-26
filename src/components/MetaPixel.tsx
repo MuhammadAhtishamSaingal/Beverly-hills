@@ -1,25 +1,41 @@
 "use client";
 
-import { useEffect, Suspense } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "998442089761373";
 
-function NavigationEvents() {
+function NavigationEvents({ isProd }: { isProd: boolean }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (typeof window !== "undefined" && (window as any).fbq && PIXEL_ID) {
+    if (isProd && typeof window !== "undefined" && (window as any).fbq && PIXEL_ID) {
       (window as any).fbq("track", "PageView");
     }
-  }, [pathname, searchParams]);
+  }, [pathname, searchParams, isProd]);
 
   return null;
 }
 
 export default function MetaPixel() {
+  const [isProd, setIsProd] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    if (typeof window !== "undefined") {
+      const hostname = window.location.hostname;
+      const isProdDomain = hostname === "www.beverlyhills.clinic" || hostname === "beverlyhills.clinic";
+      setIsProd(isProdDomain);
+    }
+  }, []);
+
+  if (!mounted || !isProd) {
+    return null;
+  }
+
   return (
     <>
       {/* Meta Pixel Base Code */}
@@ -54,7 +70,7 @@ export default function MetaPixel() {
       </noscript>
       {/* Route Navigation Event Listener */}
       <Suspense fallback={null}>
-        <NavigationEvents />
+        <NavigationEvents isProd={isProd} />
       </Suspense>
     </>
   );
