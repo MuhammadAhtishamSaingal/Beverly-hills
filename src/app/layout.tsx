@@ -22,6 +22,9 @@ const bodyFont = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Beverly Hills Clinic | Modern Dental Care, Thoughtfully Delivered",
   description: "Comprehensive dentistry in calm, well-designed spaces across Karachi.",
+  other: {
+    "facebook-domain-verification": "60pcjbqki5024g90oqys05a5dvg784",
+  },
 };
 
 export default function RootLayout({
