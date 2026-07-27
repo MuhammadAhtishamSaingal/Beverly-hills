@@ -78,9 +78,10 @@ export default function Hero() {
             </button>
 
             <a
+              id="hero-call-now"
               href="tel:03070984307"
               onClick={() => trackPixelEvent("Contact", { content_name: "Hero Call Now" })}
-              className="w-full sm:w-auto btn-secondary py-3.5 px-8 text-base font-medium flex items-center justify-center space-x-2.5 !text-brand-text !border-[#3d2e2a] hover:!bg-[#3d2e2a]/10"
+              className="meta-track-call w-full sm:w-auto btn-secondary py-3.5 px-8 text-base font-medium flex items-center justify-center space-x-2.5 !text-brand-text !border-[#3d2e2a] hover:!bg-[#3d2e2a]/10"
             >
               <Phone className="w-5 h-5" />
               <span>Call Now</span>

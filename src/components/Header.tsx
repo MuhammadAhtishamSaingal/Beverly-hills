@@ -372,9 +372,10 @@ export default function Header() {
             {/* CTAs */}
             <div className="hidden md:flex items-center space-x-4">
               <a
+                id="header-call-now"
                 href="tel:03070984307"
                 onClick={() => trackPixelEvent("Contact", { content_name: "Header Call Now" })}
-                className="btn-secondary flex items-center space-x-2 text-sm py-2.5 px-5"
+                className="meta-track-call btn-secondary flex items-center space-x-2 text-sm py-2.5 px-5"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call Now</span>

@@ -168,9 +168,10 @@ export default function ContactPage() {
                         PHONE
                       </span>
                       <a
+                        id={`contact-call-${studio.city.toLowerCase().replace(/\s+/g, '-')}`}
                         href={`tel:${studio.phoneRaw}`}
                         onClick={() => trackPixelEvent("Contact", { content_name: `Contact Page Call ${studio.city}` })}
-                        className="text-sm text-brand-text/80 hover:text-[#ab7f51] transition-colors leading-relaxed block"
+                        className="meta-track-call text-sm text-brand-text/80 hover:text-[#ab7f51] transition-colors leading-relaxed block"
                       >
                         {studio.phone}
                       </a>

@@ -437,9 +437,10 @@ export default function ServicesPage() {
               <span>Book a Visit</span>
             </button>
             <a
+              id="services-call-now"
               href="tel:03070984307"
               onClick={() => trackPixelEvent("Contact", { content_name: "Services Page Call Clinic" })}
-              className="btn-secondary w-full sm:w-auto py-3 px-6 text-sm bg-white/50"
+              className="meta-track-call btn-secondary w-full sm:w-auto py-3 px-6 text-sm bg-white/50"
             >
               <Phone className="w-4.5 h-4.5 mr-2" />
               <span>Call Clinic</span>

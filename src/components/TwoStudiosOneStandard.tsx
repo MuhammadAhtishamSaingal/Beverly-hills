@@ -128,9 +128,10 @@ export default function TwoStudiosOneStandard() {
                       <div className="flex items-center">
                         <Phone className="w-4 h-4 text-brand-accent mr-2.5 flex-shrink-0" />
                         <a
+                          id={`two-studios-call-${card.studio.toLowerCase().replace(/\s+/g, '-')}`}
                           href={`tel:${card.phoneRaw}`}
                           onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call ${card.studio}` })}
-                          className="hover:text-brand-accent transition-colors font-medium"
+                          className="meta-track-call hover:text-brand-accent transition-colors font-medium"
                         >
                           {card.phone}
                         </a>
@@ -148,9 +149,10 @@ export default function TwoStudiosOneStandard() {
                     </button>
 
                     <a
+                      id={`two-studios-call-cta-${card.studio.toLowerCase().replace(/\s+/g, '-')}`}
                       href={`tel:${card.phoneRaw}`}
                       onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call CTA ${card.studio}` })}
-                      className="text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
+                      className="meta-track-call text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
                     >
                       <span>CALL CLINIC</span>
                       <span>&rarr;</span>

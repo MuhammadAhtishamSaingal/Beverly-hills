@@ -203,9 +203,10 @@ export default function Footer() {
                   15/36 house number road no.03 right behind Alkhaleej tower BMCHS sharfabad Karachi
                 </p>
                 <a
+                  id="footer-call-sharfabad"
                   href="tel:03070984307"
                   onClick={() => trackPixelEvent("Contact", { content_name: "Footer Call Sharfabad" })}
-                  className="block hover:underline text-xs text-[#ab7f51] hover:text-[#e8ceb1] pt-1"
+                  className="meta-track-call block hover:underline text-xs text-[#ab7f51] hover:text-[#e8ceb1] pt-1"
                 >
                   0307-0984307
                 </a>
@@ -223,9 +224,10 @@ export default function Footer() {
                   2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy
                 </p>
                 <a
+                  id="footer-call-dha"
                   href="tel:03070984307"
                   onClick={() => trackPixelEvent("Contact", { content_name: "Footer Call DHA Karachi" })}
-                  className="block hover:underline text-xs text-[#ab7f51] hover:text-[#e8ceb1] pt-1"
+                  className="meta-track-call block hover:underline text-xs text-[#ab7f51] hover:text-[#e8ceb1] pt-1"
                 >
                   0307-0984307
                 </a>

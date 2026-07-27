@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
@@ -9,8 +9,14 @@ const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "998442089761373";
 function NavigationEvents() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
     if (typeof window !== "undefined") {
       const hostname = window.location.hostname;
       const isProd = hostname === "www.beverlyhills.clinic" || hostname === "beverlyhills.clinic";
@@ -24,15 +30,6 @@ function NavigationEvents() {
 }
 
 export default function MetaPixel() {
-  const [isProd, setIsProd] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const hostname = window.location.hostname;
-      setIsProd(hostname === "www.beverlyhills.clinic" || hostname === "beverlyhills.clinic");
-    }
-  }, []);
-
   return (
     <>
       {/* Meta Pixel Base Code */}
@@ -53,12 +50,15 @@ export default function MetaPixel() {
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('set', 'autoConfig', false, '${PIXEL_ID}');
               fbq('init', '${PIXEL_ID}');
+              fbq('track', 'PageView');
+            } else {
+              console.log("[Meta Pixel] Initialization skipped on non-production domain: " + hostname);
             }
           `,
         }}
       />
       {/* Noscript Fallback */}
-      {isProd && (
+      {process.env.NODE_ENV === "production" && (
         <noscript>
           <img
             height="1"
@@ -76,3 +76,4 @@ export default function MetaPixel() {
     </>
   );
 }
+

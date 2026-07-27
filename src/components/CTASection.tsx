@@ -39,9 +39,10 @@ export default function CTASection() {
           </button>
           
           <a
+            id="cta-section-call-now"
             href="tel:03070984307"
             onClick={() => trackPixelEvent("Contact", { content_name: "CTA Section Call Now" })}
-            className="btn-secondary w-full sm:w-auto py-3.5 px-8 text-base font-medium flex items-center justify-center space-x-2.5 bg-white/50"
+            className="meta-track-call btn-secondary w-full sm:w-auto py-3.5 px-8 text-base font-medium flex items-center justify-center space-x-2.5 bg-white/50"
           >
             <Phone className="w-5 h-5" />
             <span>Call Now</span>
