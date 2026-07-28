@@ -4,7 +4,12 @@
 const isProductionDomain = (): boolean => {
   if (typeof window !== "undefined") {
     const hostname = window.location.hostname;
-    return hostname === "www.beverlyhills.clinic" || hostname === "beverlyhills.clinic";
+    return (
+      hostname === "www.beverlyhills.clinic" ||
+      hostname === "beverlyhills.clinic" ||
+      hostname === "www.beverlyhillsclinic.com.pk" ||
+      hostname === "beverlyhillsclinic.com.pk"
+    );
   }
   return false;
 };

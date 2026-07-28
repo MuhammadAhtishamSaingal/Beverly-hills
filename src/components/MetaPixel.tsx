@@ -19,7 +19,11 @@ function NavigationEvents() {
 
     if (typeof window !== "undefined") {
       const hostname = window.location.hostname;
-      const isProd = hostname === "www.beverlyhills.clinic" || hostname === "beverlyhills.clinic";
+      const isProd =
+        hostname === "www.beverlyhills.clinic" ||
+        hostname === "beverlyhills.clinic" ||
+        hostname === "www.beverlyhillsclinic.com.pk" ||
+        hostname === "beverlyhillsclinic.com.pk";
       if (isProd && (window as any).fbq && PIXEL_ID) {
         (window as any).fbq("track", "PageView");
       }
@@ -39,7 +43,12 @@ export default function MetaPixel() {
         dangerouslySetInnerHTML={{
           __html: `
             var hostname = window.location.hostname;
-            if (hostname === 'www.beverlyhills.clinic' || hostname === 'beverlyhills.clinic') {
+            if (
+              hostname === 'www.beverlyhills.clinic' ||
+              hostname === 'beverlyhills.clinic' ||
+              hostname === 'www.beverlyhillsclinic.com.pk' ||
+              hostname === 'beverlyhillsclinic.com.pk'
+            ) {
               !function(f,b,e,v,n,t,s)
               {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
