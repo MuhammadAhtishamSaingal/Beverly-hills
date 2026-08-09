@@ -92,7 +92,7 @@ export const trackFormSubmission = (payload: FormSubmissionPayload = {}) => {
       event_source_url: window.location.href, // Automatically maps the exact page URL dynamically
       formType: payload.formType || "Booking Form",
       page: payload.page || pageLocation,
-      location: payload.location || "Sharfabad",
+      location: payload.location || "DHA Karachi",
       service: payload.service || "",
       date: payload.date || "",
       time_slot: payload.timeSlot || "",
@@ -115,7 +115,7 @@ export const trackFormSubmission = (payload: FormSubmissionPayload = {}) => {
       gtag("event", "form_submission", {
         form_name: payload.formType || "Booking Form",
         page_location: window.location.href || pageLocation,
-        location: payload.location || "Sharfabad",
+        location: payload.location || "DHA Karachi",
         service: payload.service || "",
         date: payload.date || "",
         time_slot: payload.timeSlot || "",

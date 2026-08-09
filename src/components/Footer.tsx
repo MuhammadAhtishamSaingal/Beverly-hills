@@ -196,29 +196,7 @@ export default function Footer() {
             </h4>
 
             <div className="space-y-4 text-sm text-[#f6ede7]/85">
-              {/* Studio 1: Sharfabad */}
               <div className="space-y-1">
-                <h5 className="font-bold font-heading text-[#e8ceb1] text-base">Sharfabad</h5>
-                <p className="leading-relaxed text-xs">
-                  15/36 house number road no.03 right behind Alkhaleej tower BMCHS sharfabad Karachi
-                </p>
-                <a
-                  id="footer-call-sharfabad"
-                  href="tel:03070984307"
-                  onClick={() => trackPixelEvent("Contact", { content_name: "Footer Call Sharfabad" })}
-                  className="meta-track-call block hover:underline text-xs text-[#ab7f51] hover:text-[#e8ceb1] pt-1"
-                >
-                  0307-0984307
-                </a>
-                <a
-                  href="mailto:clinicbeverlyhills@gmail.com"
-                  className="block text-[11px] text-[#f6ede7]/60 hover:text-[#e8ceb1]"
-                >
-                  clinicbeverlyhills@gmail.com
-                </a>
-              </div>
-
-              <div className="space-y-1 pt-2 border-t border-[#3e322e]">
                 <h5 className="font-bold font-heading text-[#e8ceb1] text-base">DHA Karachi</h5>
                 <p className="leading-relaxed text-xs">
                   2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy
@@ -256,8 +234,6 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex space-x-6 tracking-wide text-[11px]">
-            <span>Sharfabad</span>
-            <span>&middot;</span>
             <span>DHA Karachi</span>
           </div>
         </div>

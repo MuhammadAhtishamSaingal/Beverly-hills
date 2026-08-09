@@ -33,15 +33,6 @@ export default function TwoStudiosOneStandard() {
 
   const cards = [
     {
-      studio: "Sharfabad",
-      desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
-      mobileImage: "/images/MOBILE1_MARQE.webp",
-      address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad",
-      city: "Karachi",
-      phone: "0307-0984307",
-      phoneRaw: "03070984307",
-    },
-    {
       studio: "DHA Karachi",
       desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
       mobileImage: "/images/MOBILE4_MARQE.webp",
@@ -68,17 +59,17 @@ export default function TwoStudiosOneStandard() {
           <div className="flex items-center space-x-3">
             <div className="w-8 h-[1px] bg-brand-accent" />
             <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
-              OUR CLINICS
+              OUR CLINIC
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-brand-text leading-tight">
-            Two clinics, one standard
+            Visit Our Clinic
           </h2>
         </div>
 
         {/* Side-by-Side Location Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 gap-10 max-w-xl mx-auto">
           {cards.map((card, idx) => {
             const delayClass = idx === 0 ? "delay-[150ms]" : "delay-[350ms]";
             return (

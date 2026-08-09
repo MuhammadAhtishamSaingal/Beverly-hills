@@ -349,13 +349,7 @@ export default function Header() {
                       >
                         Contact Overview
                       </Link>
-                      <Link
-                        href="/contact#sharfabad"
-                        className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
-                        onClick={() => setIsContactDropdownOpen(false)}
-                      >
-                        Sharfabad Clinic
-                      </Link>
+
                       <Link
                         href="/contact#dha-karachi"
                         className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
@@ -511,14 +505,7 @@ export default function Header() {
                 Contact
               </Link>
               <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 max-w-xs mx-auto">
-                <Link
-                  href="/contact#sharfabad"
-                  className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Sharfabad
-                </Link>
-                <span className="text-[#ab7f51]/40 text-xs">&middot;</span>
+
                 <Link
                   href="/contact#dha-karachi"
                   className="text-[10px] font-bold text-[#e8ceb1]/80 hover:text-[#f6ede7] uppercase tracking-widest transition-colors"

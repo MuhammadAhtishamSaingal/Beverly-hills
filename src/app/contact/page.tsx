@@ -12,23 +12,6 @@ export default function ContactPage() {
 
   const studios = [
     {
-      city: "Sharfabad",
-      address: "15/36 house number road no.03 right behind Alkhaleej tower BMCHS sharfabad",
-      zip: "Karachi",
-      phone: "0307-0984307",
-      phoneRaw: "03070984307",
-      email: "clinicbeverlyhills@gmail.com",
-      desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
-      mobileImage: "/images/MOBILE1_MARQE.webp",
-      hours: [
-        { days: "Monday - Friday", time: "9:00 AM - 6:00 PM" },
-        { days: "Saturday - Sunday", time: "Closed" },
-      ],
-      mapUrl: "https://maps.google.com/?q=Al+Khaleej+Tower+Karachi",
-      mapEmbedUrl:
-        "https://maps.google.com/maps?q=Al%20Khaleej%20Tower%2C%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed",
-    },
-    {
       city: "DHA Karachi",
       address: "2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy",
       zip: "Karachi",
@@ -100,12 +83,12 @@ export default function ContactPage() {
 
       {/* 2. Studios Details & Maps Grid */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+        <div className="grid grid-cols-1 gap-16 max-w-2xl mx-auto">
           {studios.map((studio, idx) => (
             <div
               key={idx}
               id={studio.city.toLowerCase().replace(/\s+/g, "-")}
-              className="bg-white border border-[#e8ceb1]/40 rounded-3xl overflow-hidden shadow-xs flex flex-col justify-between scroll-mt-24"
+              className="bg-white border border-[#e8ceb1]/40 rounded-3xl overflow-hidden shadow-xs flex flex-col justify-between scroll-mt-24 w-full"
             >
               {/* Card Header (Image with Text Overlay) */}
               <div className="relative w-full h-64 sm:h-72">

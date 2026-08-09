@@ -83,7 +83,7 @@ export default function PatientsPage() {
     },
     {
       q: "Do you accept dental emergencies?",
-      a: "Yes! We block out same-day emergency slots at both our Sharfabad and DHA Karachi offices for cracked teeth, acute toothaches, or abscesses. Call us immediately for triage support.",
+      a: "Yes! We block out same-day emergency slots at our DHA Karachi office for cracked teeth, acute toothaches, or abscesses. Call us immediately for triage support.",
     },
     {
       q: "What is your appointment cancellation policy?",
@@ -94,8 +94,8 @@ export default function PatientsPage() {
       a: "Anxiety management is our specialty. We provide noise-canceling headphones, ceiling TVs with Netflix, cozy weighted blankets, and aromatherapy. Clinically, we practice slow-dentistry—explaining every step and taking breaks whenever you raise your hand.",
     },
     {
-      q: "What parking options are available at the clinics?",
-      a: "At Sharfabad, street parking is available right behind Alkhaleej Tower. At DHA Karachi, street parking is available along Main Saba Avenue and in nearby designated commercial parking lanes.",
+      q: "What parking options are available at the clinic?",
+      a: "At our DHA Karachi clinic, street parking is available along Main Saba Avenue and in nearby designated commercial parking lanes.",
     },
   ];
 

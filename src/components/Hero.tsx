@@ -47,7 +47,7 @@ export default function Hero() {
           <div className="flex items-center space-x-3">
             <div className="w-10 h-[1.5px] bg-[#3d2e2a]" />
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-[#3d2e2a]/95">
-              SHARFABAD &middot; DHA KARACHI
+              DHA KARACHI
             </span>
           </div>
 

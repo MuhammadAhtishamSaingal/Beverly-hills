@@ -426,7 +426,7 @@ export default function ServicesPage() {
             Ready to experience thoughtful care?
           </h2>
           <p className="text-sm text-brand-text/70 max-w-md mx-auto">
-            Schedule an appointment at either our Sharfabad or DHA Karachi clinic today.
+            Schedule an appointment at our DHA Karachi clinic today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <button

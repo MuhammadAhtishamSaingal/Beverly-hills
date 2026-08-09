@@ -7,14 +7,6 @@ import { trackPixelEvent, trackFormSubmission } from "@/utils/pixel";
 
 const studios = [
   {
-    id: "Sharfabad",
-    name: "Sharfabad Clinic",
-    desktopImage: "/images/DESKTOP1_MARQE_1200.webp",
-    mobileImage: "/images/MOBILE1_MARQE.webp",
-    address: "15/36 Road 03, Behind Alkhaleej Tower, BMCHS Sharfabad, Karachi",
-    buttonText: "BOOK NOW",
-  },
-  {
     id: "DHA Karachi",
     name: "DHA Karachi Clinic",
     desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
@@ -85,7 +77,7 @@ export default function BookingModal() {
     name: "",
     email: "",
     phone: "",
-    location: "Sharfabad",
+    location: "DHA Karachi",
     service: "Hollywood Smile Makeover",
     date: "",
     timeSlot: "Morning",
@@ -419,7 +411,6 @@ export default function BookingModal() {
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
                       >
-                        <option value="Sharfabad">Sharfabad Clinic</option>
                         <option value="DHA Karachi">DHA Karachi Clinic</option>
                         <option value="Online Consultation">Online Consultation</option>
                       </select>
