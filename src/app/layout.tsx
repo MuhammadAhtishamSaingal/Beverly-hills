@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import BookingModal from "@/components/BookingModal";
 import PixelTracker from "@/components/PixelTracker";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const headingFont = Playfair_Display({
   variable: "--font-heading",
@@ -75,6 +76,7 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
         <Footer />
         <BookingModal />
+        <WhatsAppButton />
       </body>
     </html>
   );
