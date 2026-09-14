@@ -58,8 +58,8 @@ export default function People() {
             
             <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-xl border border-brand-secondary/50">
               <Image
-                src="/images/image2.webp"
-                alt="Beverly Hills Clinic Practitioner standing next to Ultraformer III treatment equipment"
+                src="/images/image 2s.webp"
+                alt="Beverly Hills Clinic Dental Team"
                 fill
                 sizes="(max-w-728px) 100vw, 50vw"
                 className="object-cover hover:scale-102 transition-transform duration-700"

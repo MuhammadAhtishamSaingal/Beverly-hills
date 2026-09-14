@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef, Suspense } from "react";
+import { useEffect, useRef, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
+import { trackPageView, isAllowedDomain } from "@/utils/pixel";
 
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID || "998442089761373";
 
@@ -12,21 +13,15 @@ function NavigationEvents() {
   const isFirstRender = useRef(true);
 
   useEffect(() => {
+    // Skip firing PageView on initial render since script tag handles initial PageView
     if (isFirstRender.current) {
       isFirstRender.current = false;
       return;
     }
 
-    if (typeof window !== "undefined") {
-      const hostname = window.location.hostname;
-      const isProd =
-        hostname === "www.beverlyhills.clinic" ||
-        hostname === "beverlyhills.clinic" ||
-        hostname === "www.beverlyhillsclinic.com.pk" ||
-        hostname === "beverlyhillsclinic.com.pk";
-      if (isProd && (window as any).fbq && PIXEL_ID) {
-        (window as any).fbq("track", "PageView");
-      }
+    if (typeof window !== "undefined" && isAllowedDomain()) {
+      const pageType = pathname === "/" ? "homepage" : pathname.startsWith("/services/") ? "service_detail" : "page";
+      trackPageView(pageType);
     }
   }, [pathname, searchParams]);
 
@@ -36,19 +31,22 @@ function NavigationEvents() {
 export default function MetaPixel() {
   return (
     <>
-      {/* Meta Pixel Base Code */}
+      {/* Meta Pixel Base Code - Single Initialization */}
       <Script
         id="fb-pixel"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             var hostname = window.location.hostname;
-            if (
+            var isAllowed =
               hostname === 'www.beverlyhills.clinic' ||
               hostname === 'beverlyhills.clinic' ||
               hostname === 'www.beverlyhillsclinic.com.pk' ||
-              hostname === 'beverlyhillsclinic.com.pk'
-            ) {
+              hostname === 'beverlyhillsclinic.com.pk' ||
+              hostname === 'localhost' ||
+              hostname === '127.0.0.1';
+
+            if (isAllowed) {
               !function(f,b,e,v,n,t,s)
               {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
               n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -59,25 +57,24 @@ export default function MetaPixel() {
               'https://connect.facebook.net/en_US/fbevents.js');
               fbq('set', 'autoConfig', false, '${PIXEL_ID}');
               fbq('init', '${PIXEL_ID}');
-              fbq('track', 'PageView');
+              fbq('track', 'PageView', { page_type: window.location.pathname === '/' ? 'homepage' : 'page' });
+              console.log('Meta Pixel Event Fired: PageView', { page_type: window.location.pathname });
             } else {
-              console.log("[Meta Pixel] Initialization skipped on non-production domain: " + hostname);
+              console.log("[Meta Pixel] Initialization skipped on non-allowed domain: " + hostname);
             }
           `,
         }}
       />
       {/* Noscript Fallback */}
-      {process.env.NODE_ENV === "production" && (
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`}
-            alt=""
-          />
-        </noscript>
-      )}
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src={`https://www.facebook.com/tr?id=${PIXEL_ID}&ev=PageView&noscript=1`}
+          alt=""
+        />
+      </noscript>
       {/* Route Navigation Event Listener */}
       <Suspense fallback={null}>
         <NavigationEvents />
@@ -85,4 +82,3 @@ export default function MetaPixel() {
     </>
   );
 }
-

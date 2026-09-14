@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { Phone, Calendar } from "lucide-react";
-import { trackPixelEvent } from "@/utils/pixel";
+import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
 
 export default function Hero() {
   const triggerBooking = () => {
-    trackPixelEvent("InitiateCheckout", { content_name: "Hero Book a Visit" });
+    trackInitiateBooking("Hero Book a Visit");
     window.dispatchEvent(new Event("open-booking"));
   };
 

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MapPin, Phone, Calendar } from "lucide-react";
-import { trackPixelEvent } from "@/utils/pixel";
+import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
 
 export default function TwoStudiosOneStandard() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -44,7 +44,7 @@ export default function TwoStudiosOneStandard() {
   ];
 
   const triggerBooking = () => {
-    trackPixelEvent("InitiateCheckout", { content_name: "Two Studios Book Visit" });
+    trackInitiateBooking("Two Studios Book Visit");
     window.dispatchEvent(new Event("open-booking"));
   };
 

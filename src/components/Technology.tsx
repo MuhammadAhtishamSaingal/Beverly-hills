@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Sparkles, Scan, Brain, Zap, Shield, ArrowRight } from "lucide-react";
+import { trackInitiateBooking } from "@/utils/pixel";
 
 interface TechStep {
   number: string;
@@ -280,8 +281,15 @@ export default function Technology() {
                 </span>
                 
                 <button
-                  onClick={() => window.dispatchEvent(new Event("open-booking"))}
-                  className="text-xs font-bold text-[#ab7f51] hover:text-[#936b42] hover:underline flex items-center space-x-1"
+                  onClick={() => {
+                    trackInitiateBooking(activeTech.name);
+                    window.dispatchEvent(
+                      new CustomEvent("open-booking", {
+                        detail: { service: activeTech.name }
+                      })
+                    );
+                  }}
+                  className="text-xs font-bold text-[#ab7f51] hover:text-[#936b42] hover:underline flex items-center space-x-1 cursor-pointer"
                 >
                   <span>Experience this care</span>
                   <ArrowRight className="w-3.5 h-3.5" />

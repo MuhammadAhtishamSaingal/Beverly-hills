@@ -1,10 +1,11 @@
 "use client";
 
 import { Phone, Calendar } from "lucide-react";
-import { trackPixelEvent } from "@/utils/pixel";
+import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
 
 export default function CTASection() {
   const triggerBooking = () => {
+    trackInitiateBooking("Reserve Your Visit");
     window.dispatchEvent(new Event("open-booking"));
   };
 

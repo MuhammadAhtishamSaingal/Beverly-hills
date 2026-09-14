@@ -84,36 +84,6 @@ export default function BookingModal() {
     notes: "",
   });
 
-  const [bookingLink, setBookingLink] = useState("");
-  const originalUrlRef = useRef<string | null>(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      if (!originalUrlRef.current && typeof window !== "undefined") {
-        originalUrlRef.current = window.location.pathname + window.location.search + window.location.hash;
-      }
-      
-      const origin = typeof window !== "undefined" ? window.location.origin : "https://www.beverlyhills.clinic";
-      const params = new URLSearchParams();
-      params.set("clinic_location", formData.location);
-      params.set("treatment_service", formData.service);
-      if (formData.date) {
-        params.set("preselected_date", formData.date);
-      }
-      
-      const newUrl = `${origin}/booking?${params.toString()}`;
-      if (typeof window !== "undefined") {
-        window.history.pushState(null, "", newUrl);
-      }
-      setBookingLink(newUrl);
-    } else {
-      if (originalUrlRef.current && typeof window !== "undefined") {
-        window.history.pushState(null, "", originalUrlRef.current);
-        originalUrlRef.current = null;
-      }
-    }
-  }, [isOpen, formData.location, formData.service, formData.date]);
-
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const [serviceSearch, setServiceSearch] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -140,7 +110,11 @@ export default function BookingModal() {
   );
 
   useEffect(() => {
-    const handleOpen = () => {
+    const handleOpen = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      if (customEvent && customEvent.detail && customEvent.detail.service) {
+        setFormData((prev) => ({ ...prev, service: customEvent.detail.service }));
+      }
       setIsOpen(true);
       setIsSubmitted(false);
       setModalView("select_studio");
@@ -192,6 +166,7 @@ export default function BookingModal() {
           service: formData.service,
           date: formData.date,
           timeSlot: formData.timeSlot,
+          content_category: "Service Booking",
         });
       } else {
         console.error("❌ Booking request failed:", data.error);
@@ -556,7 +531,6 @@ export default function BookingModal() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    data-booking-link={bookingLink}
                     className="btn-primary w-full py-3 text-sm font-semibold tracking-wide flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
