@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { ChevronDown, Calendar, CreditCard, Shield, UserPlus, HelpCircle, Check, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { trackCustomPixelEvent } from "@/utils/pixel";
+import { trackInitiateBooking } from "@/lib/metaPixel";
 
 export default function PatientsPage() {
   const [activeSection, setActiveSection] = useState<string>("new-patients");
@@ -50,7 +51,8 @@ export default function PatientsPage() {
   };
 
   const triggerBooking = () => {
-    window.dispatchEvent(new Event("open-booking"));
+    trackInitiateBooking("Patients Page Book Visit");
+    window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
   const onboardingSteps = [

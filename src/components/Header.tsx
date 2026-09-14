@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Calendar, Phone } from "lucide-react";
-import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -122,8 +122,8 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   const triggerBooking = () => {
-    trackInitiateBooking("Header Booking Consultation");
-    window.dispatchEvent(new Event("open-booking"));
+    trackInitiateBooking("Header Book Now");
+    window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
   const navLinks = [
@@ -266,7 +266,7 @@ export default function Header() {
 
                       {/* Columns 3 & 4: Advanced Aesthetics */}
                       <div className="col-span-2 space-y-4">
-                        <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
+                        <div className="text-xs font-bold text-[#c39f75] tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
                           Advanced Aesthetics
                         </div>
                         <div className="grid grid-cols-2 gap-x-4 gap-y-2">
@@ -386,7 +386,7 @@ export default function Header() {
               <a
                 id="header-call-now"
                 href="tel:03070984307"
-                onClick={() => trackPixelEvent("Contact", { content_name: "Header Call Now" })}
+                onClick={() => trackContact("Header Phone Call")}
                 className="meta-track-call btn-secondary flex items-center space-x-2 text-sm py-2.5 px-5"
               >
                 <Phone className="w-4 h-4" />
@@ -646,7 +646,7 @@ export default function Header() {
               href="tel:03070984307"
               onClick={() => {
                 setIsMobileMenuOpen(false);
-                trackPixelEvent("Contact", { content_name: "Mobile Drawer Call Now" });
+                trackContact("Mobile Drawer Phone Call");
               }}
               className="w-full bg-white/5 hover:bg-white/10 text-[#e8ceb1] font-medium text-xs tracking-wider uppercase py-2.5 px-4 rounded-xl border border-[#ab7f51]/30 transition-all flex items-center justify-center space-x-2"
             >

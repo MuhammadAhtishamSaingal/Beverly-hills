@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Sparkles, ShieldCheck, Calendar, Phone, ArrowRight, Clock } from "lucide-react";
 import { getServicesByCategory, ServiceData } from "@/data/services";
-import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 export default function ServicesListingPage() {
   const [activeTab, setActiveTab] = useState<"all" | "dentistry" | "aesthetics">("all");
@@ -206,7 +206,7 @@ export default function ServicesListingPage() {
             <a
               id="services-listing-call-now"
               href="tel:03070984307"
-              onClick={() => trackPixelEvent("Contact", { content_name: "Services Listing Call Clinic" })}
+              onClick={() => trackContact("Services Listing Call Clinic")}
               className="meta-track-call btn-secondary w-full sm:w-auto py-3.5 px-8 text-xs sm:text-sm uppercase font-semibold tracking-wider bg-white/60 flex items-center justify-center space-x-2"
             >
               <Phone className="w-4 h-4" />

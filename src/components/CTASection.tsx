@@ -1,12 +1,12 @@
 "use client";
 
 import { Phone, Calendar } from "lucide-react";
-import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 export default function CTASection() {
   const triggerBooking = () => {
-    trackInitiateBooking("Reserve Your Visit");
-    window.dispatchEvent(new Event("open-booking"));
+    trackInitiateBooking("CTA Section Book Now");
+    window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
   return (
@@ -42,7 +42,7 @@ export default function CTASection() {
           <a
             id="cta-section-call-now"
             href="tel:03070984307"
-            onClick={() => trackPixelEvent("Contact", { content_name: "CTA Section Call Now" })}
+            onClick={() => trackContact("CTA Section Phone Call")}
             className="meta-track-call btn-secondary w-full sm:w-auto py-3.5 px-8 text-base font-medium flex items-center justify-center space-x-2.5 bg-white/50"
           >
             <Phone className="w-5 h-5" />

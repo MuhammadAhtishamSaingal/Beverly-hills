@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Sparkles, Scan, Brain, Zap, Shield, ArrowRight } from "lucide-react";
-import { trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking } from "@/lib/metaPixel";
 
 interface TechStep {
   number: string;

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MapPin, Phone, Calendar } from "lucide-react";
-import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 export default function TwoStudiosOneStandard() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -45,7 +45,7 @@ export default function TwoStudiosOneStandard() {
 
   const triggerBooking = () => {
     trackInitiateBooking("Two Studios Book Visit");
-    window.dispatchEvent(new Event("open-booking"));
+    window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
   return (
@@ -121,7 +121,7 @@ export default function TwoStudiosOneStandard() {
                         <a
                           id={`two-studios-call-${card.studio.toLowerCase().replace(/\s+/g, '-')}`}
                           href={`tel:${card.phoneRaw}`}
-                          onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call ${card.studio}` })}
+                          onClick={() => trackContact(`Two Studios Call ${card.studio}`)}
                           className="meta-track-call hover:text-brand-accent transition-colors font-medium"
                         >
                           {card.phone}
@@ -142,7 +142,7 @@ export default function TwoStudiosOneStandard() {
                     <a
                       id={`two-studios-call-cta-${card.studio.toLowerCase().replace(/\s+/g, '-')}`}
                       href={`tel:${card.phoneRaw}`}
-                      onClick={() => trackPixelEvent("Contact", { content_name: `Two Studios Call CTA ${card.studio}` })}
+                      onClick={() => trackContact(`Two Studios Call CTA ${card.studio}`)}
                       className="meta-track-call text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
                     >
                       <span>CALL CLINIC</span>

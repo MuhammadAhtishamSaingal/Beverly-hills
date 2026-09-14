@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { Phone, Calendar } from "lucide-react";
-import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 export default function Hero() {
   const triggerBooking = () => {
     trackInitiateBooking("Hero Book a Visit");
-    window.dispatchEvent(new Event("open-booking"));
+    window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
   return (
@@ -80,7 +80,7 @@ export default function Hero() {
             <a
               id="hero-call-now"
               href="tel:03070984307"
-              onClick={() => trackPixelEvent("Contact", { content_name: "Hero Call Now" })}
+              onClick={() => trackContact("Hero Phone Call")}
               className="meta-track-call w-full sm:w-auto btn-secondary py-3.5 px-8 text-base font-medium flex items-center justify-center space-x-2.5 !text-brand-text !border-[#3d2e2a] hover:!bg-[#3d2e2a]/10"
             >
               <Phone className="w-5 h-5" />

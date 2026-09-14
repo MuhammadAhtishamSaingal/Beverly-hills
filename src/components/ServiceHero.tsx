@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Home } from "lucide-react";
 import { ServiceData } from "@/data/services";
-import { trackViewContent } from "@/utils/pixel";
+import { trackViewContent } from "@/lib/metaPixel";
 
 interface ServiceHeroProps {
   service: ServiceData;
@@ -13,7 +13,10 @@ interface ServiceHeroProps {
 
 export default function ServiceHero({ service }: ServiceHeroProps) {
   useEffect(() => {
-    trackViewContent(service);
+    trackViewContent({
+      title: service.title,
+      category: service.category === "aesthetics" ? "Aesthetic Treatment" : "Dental Service",
+    });
   }, [service]);
   // Fallback image in case specific webp asset is loading
   const heroImageSrc = service.heroImage || "/images/DESKTOP1_MARQE_1200.webp";

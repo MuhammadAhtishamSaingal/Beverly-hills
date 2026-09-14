@@ -14,16 +14,15 @@ import {
   Smile,
   Zap,
 } from "lucide-react";
-import { trackPageView, trackViewContent, trackInitiateBooking } from "@/utils/pixel";
+import { trackViewContent, trackInitiateBooking } from "@/lib/metaPixel";
 
 export default function ClinicTourClient() {
   useEffect(() => {
-    trackPageView("clinic-tour");
     trackViewContent({ title: "Clinic Tour", category: "Clinic Information" });
   }, []);
 
   const handleOpenBooking = () => {
-    trackInitiateBooking("Clinic Tour Page CTA");
+    trackInitiateBooking("Clinic Tour CTA");
     window.dispatchEvent(new CustomEvent("open-booking"));
   };
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 import {
   MapPin,
   Phone,
@@ -253,7 +253,7 @@ export default function Footer() {
                   <a
                     id="footer-call-dha"
                     href="tel:03070984307"
-                    onClick={() => trackPixelEvent("Contact", { content_name: "Footer Call DHA Karachi" })}
+                    onClick={() => trackContact("Footer Phone Call")}
                     className="meta-track-call flex items-center space-x-2 text-xs text-[#c39f75] hover:text-[#e8ceb1] transition-colors"
                   >
                     <Phone className="w-3.5 h-3.5 shrink-0" />

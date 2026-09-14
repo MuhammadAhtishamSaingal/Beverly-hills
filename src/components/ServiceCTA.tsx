@@ -1,7 +1,7 @@
 "use client";
 
 import { Calendar, Phone, MapPin } from "lucide-react";
-import { trackPixelEvent, trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 interface ServiceCTAProps {
   serviceTitle: string;
@@ -9,7 +9,7 @@ interface ServiceCTAProps {
 
 export default function ServiceCTA({ serviceTitle }: ServiceCTAProps) {
   const triggerBooking = () => {
-    trackInitiateBooking(serviceTitle);
+    trackInitiateBooking(`Service Page Consultation CTA - ${serviceTitle}`);
     window.dispatchEvent(
       new CustomEvent("open-booking", {
         detail: { service: serviceTitle }
@@ -49,9 +49,7 @@ export default function ServiceCTA({ serviceTitle }: ServiceCTAProps) {
             id="service-cta-call-now"
             href="tel:03070984307"
             onClick={() =>
-              trackPixelEvent("Contact", {
-                content_name: `Service Page Call - ${serviceTitle}`
-              })
+              trackContact(`Service Page Call - ${serviceTitle}`)
             }
             className="meta-track-call w-full sm:w-auto bg-transparent border border-[#e8ceb1]/50 hover:bg-[#e8ceb1]/10 text-[#f6ede7] font-semibold text-xs tracking-wider uppercase py-4 px-8 rounded-full transition-all flex items-center justify-center space-x-2"
           >

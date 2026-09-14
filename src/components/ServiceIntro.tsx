@@ -2,7 +2,7 @@
 
 import { Calendar, Clock, UserCheck } from "lucide-react";
 import { ServiceData } from "@/data/services";
-import { trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking } from "@/lib/metaPixel";
 
 interface ServiceIntroProps {
   service: ServiceData;
@@ -10,7 +10,7 @@ interface ServiceIntroProps {
 
 export default function ServiceIntro({ service }: ServiceIntroProps) {
   const triggerBooking = () => {
-    trackInitiateBooking(service.title);
+    trackInitiateBooking(`Service Page Consultation CTA - ${service.title}`);
     window.dispatchEvent(
       new CustomEvent("open-booking", {
         detail: { service: service.title }

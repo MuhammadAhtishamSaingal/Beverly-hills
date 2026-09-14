@@ -3,7 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import { X, Calendar, MapPin, Sparkles, CheckCircle2, User, Phone, Mail, ArrowLeft, ChevronDown, Video } from "lucide-react";
 import Image from "next/image";
-import { trackPixelEvent, trackFormSubmission } from "@/utils/pixel";
+import { trackLead } from "@/lib/metaPixel";
+import { trackFormSubmission } from "@/utils/pixel";
 
 const studios = [
   {

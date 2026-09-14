@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ServiceData } from "@/data/services";
-import { trackInitiateBooking } from "@/utils/pixel";
+import { trackInitiateBooking } from "@/lib/metaPixel";
 
 interface ServiceSectionsProps {
   service: ServiceData;
@@ -14,7 +14,7 @@ export default function ServiceSections({ service }: ServiceSectionsProps) {
   const [imageErrorMap, setImageErrorMap] = useState<Record<number, boolean>>({});
 
   const triggerBooking = () => {
-    trackInitiateBooking(service.title);
+    trackInitiateBooking(`Service Page Consultation CTA - ${service.title}`);
     window.dispatchEvent(
       new CustomEvent("open-booking", {
         detail: { service: service.title }

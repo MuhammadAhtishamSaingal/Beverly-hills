@@ -12,16 +12,15 @@ import {
   CheckCircle2,
   Stethoscope,
 } from "lucide-react";
-import { trackPageView, trackViewContent, trackInitiateBooking } from "@/utils/pixel";
+import { trackViewContent, trackInitiateBooking } from "@/lib/metaPixel";
 
 export default function DoctorsClient() {
   useEffect(() => {
-    trackPageView("doctors");
-    trackViewContent({ title: "Doctors", category: "Clinic Information" });
+    trackViewContent({ title: "Dentists", category: "Clinic Information" });
   }, []);
 
   const handleOpenBooking = (doctorName?: string) => {
-    trackInitiateBooking(doctorName ? `Doctor Consultation - ${doctorName}` : "Doctors Page CTA");
+    trackInitiateBooking(doctorName ? `Doctor Consultation - ${doctorName}` : "Dentists Page CTA");
     window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
