@@ -71,28 +71,28 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#2d221f] text-[#f6ede7] border-t border-[#3e322e] pt-16 pb-8" aria-label="Site Footer">
+    <footer className="bg-[#2d221f] text-[#f6ede7] border-t border-[#3e322e] pt-6 md:pt-16 pb-8" aria-label="Site Footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 5-Column Grid Layout (Desktop & Tablet) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-[#3e322e]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-2 md:gap-10 lg:gap-8 pb-6 md:pb-12 border-b border-[#3e322e]">
           
           {/* Column 1: Brand Section */}
-          <div className="lg:col-span-1 flex flex-col space-y-4 lg:-mt-10">
+          <div className="lg:col-span-1 flex flex-col space-y-2 md:space-y-4 lg:-mt-10 mb-2 md:mb-0">
             <Link href="/" aria-label="Beverly Hills Clinic Homepage" className="inline-block">
               <img
                 src="/images/logo.png"
                 alt="Beverly Hills Clinic Logo"
-                className="w-[175px] sm:w-[180px] h-auto object-contain mix-blend-screen invert transition-all duration-300 hover:opacity-90"
+                className="w-[160px] sm:w-[180px] h-auto object-contain mix-blend-screen invert transition-all duration-300 hover:opacity-90"
                 loading="lazy"
               />
             </Link>
-            <p className="text-xs text-[#e8ceb1]/90 leading-relaxed font-light">
+            <p className="hidden md:block text-xs text-[#e8ceb1]/90 leading-relaxed font-light">
               Beverly Hills Clinic is a premium dental and aesthetic clinic in DHA Karachi providing advanced dental treatments, cosmetic dentistry, implants, orthodontics, and aesthetic procedures with modern technology and experienced specialists.
             </p>
             
             {/* Trust Highlights */}
-            <div className="pt-2 space-y-2 text-[11px] text-[#f6ede7]/70 border-t border-[#3e322e]/60">
+            <div className="hidden md:block pt-2 space-y-2 text-[11px] text-[#f6ede7]/70 border-t border-[#3e322e]/60">
               <div className="flex items-center space-x-2">
                 <Award className="w-3.5 h-3.5 text-[#c39f75] shrink-0" />
                 <span>UK & US Trained Specialists</span>
@@ -245,7 +245,7 @@ export default function Footer() {
                   </h3>
                   <div className="flex items-start space-x-2 text-[#f6ede7]/75">
                     <MapPin className="w-4 h-4 text-[#c39f75] shrink-0 mt-0.5" />
-                    <span>2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy</span>
+                    <span>Above Ocean Supermart & Pharmacy 2nd floor, Main Saba Avenue, Phase 5, DHA Karachi</span>
                   </div>
                 </div>
 

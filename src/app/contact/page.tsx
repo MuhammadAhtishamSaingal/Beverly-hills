@@ -13,7 +13,7 @@ export default function ContactPage() {
   const studios = [
     {
       city: "DHA Karachi",
-      address: "2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy",
+      address: "Above Ocean Supermart & Pharmacy 2nd floor, Main Saba Avenue, Phase 5, DHA Karachi",
       zip: "Karachi",
       phone: "0307-0984307",
       phoneRaw: "03070984307",

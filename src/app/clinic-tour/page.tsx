@@ -46,7 +46,7 @@ export default function ClinicTourPage() {
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2nd floor, Main Saba Avenue, Phase 5, DHA Karachi, Above Ocean Pharmacy",
+      "streetAddress": "Above Ocean Supermart & Pharmacy 2nd floor, Main Saba Avenue, Phase 5, DHA Karachi",
       "addressLocality": "Karachi",
       "addressRegion": "Sindh",
       "postalCode": "75500",
