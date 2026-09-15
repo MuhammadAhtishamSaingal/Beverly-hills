@@ -3,7 +3,7 @@
 import { trackContact } from "@/lib/metaPixel";
 
 export default function WhatsAppButton() {
-  const whatsappNumber = "923070984307";
+  const whatsappNumber = "923002271299";
   const message = encodeURIComponent("Hello Beverly Hills Clinic, I would like to inquire about your services.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
@@ -32,7 +32,7 @@ export default function WhatsAppButton() {
 
       {/* Tooltip on Hover */}
       <span className="absolute right-16 sm:right-20 bg-[#2d221f] text-[#f6ede7] text-xs font-semibold px-3 py-1.5 rounded-lg shadow-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none border border-[#ab7f51]/30">
-        Chat on WhatsApp (+92 307 0984307)
+        Chat on WhatsApp (+92 300 2271299)
       </span>
     </a>
   );

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Calendar, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Calendar, Phone, Search, ArrowRight, Sparkles, Stethoscope } from "lucide-react";
 import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 export default function Header() {
@@ -12,9 +12,14 @@ export default function Header() {
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
-  // Mobile Accordion States
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileDentalOpen, setMobileDentalOpen] = useState(true);
+  // Search Modal States
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Mobile Search & Accordion States
+  const [mobileSearchQuery, setMobileSearchQuery] = useState("");
+  const [mobileDentalOpen, setMobileDentalOpen] = useState(false);
   const [mobileAestheticOpen, setMobileAestheticOpen] = useState(false);
   const [mobilePatientsOpen, setMobilePatientsOpen] = useState(false);
 
@@ -85,16 +90,43 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Keyboard shortcut for Search Modal (Cmd+K / Ctrl+K & Esc)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setIsSearchModalOpen((prev) => !prev);
+      }
+      if (e.key === "Escape") {
+        setIsSearchModalOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  // Auto focus search input when modal opens
+  useEffect(() => {
+    if (isSearchModalOpen) {
+      setTimeout(() => {
+        searchInputRef.current?.focus();
+      }, 50);
+    } else {
+      setSearchQuery("");
+    }
+  }, [isSearchModalOpen]);
+
   // Close menus when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsSearchModalOpen(false);
     setIsDropdownOpen(false);
     setIsContactDropdownOpen(false);
     setIsServicesDropdownOpen(false);
-    setMobileServicesOpen(false);
     setMobilePatientsOpen(false);
-    setMobileDentalOpen(true);
+    setMobileDentalOpen(false);
     setMobileAestheticOpen(false);
+    setMobileSearchQuery("");
     if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
     if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
@@ -109,9 +141,9 @@ export default function Header() {
     };
   }, []);
 
-  // Lock scroll when mobile menu is open
+  // Lock scroll when mobile menu or search modal is open
   useEffect(() => {
-    if (isMobileMenuOpen) {
+    if (isMobileMenuOpen || isSearchModalOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -119,7 +151,7 @@ export default function Header() {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen, isSearchModalOpen]);
 
   const triggerBooking = () => {
     trackInitiateBooking("Header Book Now");
@@ -130,7 +162,6 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "Clinic Tour", href: "/clinic-tour" },
     { name: "Dentists", href: "/doctors" },
-    { name: "Blogs", href: "/blog" },
   ];
 
   const dentalServicesList = [
@@ -181,18 +212,48 @@ export default function Header() {
     { name: "Frequently Asked Questions", href: "/patients#faq" },
   ];
 
+  const sitePages = [
+    { name: "Home Page", href: "/" },
+    { name: "Clinic Tour", href: "/clinic-tour" },
+    { name: "Our Doctors & Specialists", href: "/doctors" },
+    { name: "Services Overview", href: "/services" },
+    { name: "Patient Portal", href: "/patients" },
+    { name: "Blogs & Articles", href: "/blog" },
+    { name: "Contact Us & Locations", href: "/contact" },
+  ];
+
   const isLinkActive = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
+  // Filter lists for Global Search Modal
+  const filteredDentalModal = dentalServicesList.filter((s) =>
+    s.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  const filteredAestheticModal = aestheticServicesList.filter((s) =>
+    s.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  const filteredPagesModal = sitePages.filter((p) =>
+    p.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Filter lists for Mobile Menu Search Input
+  const filteredDentalMobile = dentalServicesList.filter((s) =>
+    s.name.toLowerCase().includes(mobileSearchQuery.toLowerCase())
+  );
+  const filteredAestheticMobile = aestheticServicesList.filter((s) =>
+    s.name.toLowerCase().includes(mobileSearchQuery.toLowerCase())
+  );
+
   return (
     <>
       <header
-        className={`w-full z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
-          ? "fixed top-0 left-0 backdrop-blur-md bg-brand-primary/90 border-b border-brand-secondary/40 shadow-sm py-3"
-          : "absolute top-0 left-0 bg-gradient-to-b from-brand-primary/95 via-brand-primary/70 to-transparent py-5"
-          }`}
+        className={`w-full z-50 transition-all duration-300 ${
+          isScrolled || isMobileMenuOpen
+            ? "fixed top-0 left-0 backdrop-blur-md bg-brand-primary/90 border-b border-brand-secondary/40 shadow-sm py-3"
+            : "absolute top-0 left-0 bg-gradient-to-b from-brand-primary/95 via-brand-primary/70 to-transparent py-5"
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
@@ -201,23 +262,25 @@ export default function Header() {
               <img
                 src="/images/logo.png"
                 alt="Beverly Hills Clinic Logo"
-                className={`object-contain mix-blend-multiply transition-all duration-300 ${isScrolled
-                  ? "h-20 w-20 sm:h-24 sm:w-24"
-                  : "h-32 w-32 sm:h-36 sm:w-36"
-                  }`}
+                className={`object-contain mix-blend-multiply transition-all duration-300 ${
+                  isScrolled
+                    ? "h-20 w-20 sm:h-24 sm:w-24"
+                    : "h-32 w-32 sm:h-36 sm:w-36"
+                }`}
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-5 lg:space-x-8 xl:space-x-10">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-base font-medium tracking-wide transition-colors ${isLinkActive(link.href)
-                    ? "text-brand-accent font-semibold"
-                    : "text-brand-text/80 hover:text-brand-accent"
-                    }`}
+                  className={`text-sm lg:text-base font-medium tracking-wide whitespace-nowrap transition-colors ${
+                    isLinkActive(link.href)
+                      ? "text-brand-accent font-semibold"
+                      : "text-brand-text/80 hover:text-brand-accent"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -231,10 +294,11 @@ export default function Header() {
               >
                 <Link
                   href="/services"
-                  className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${pathname.startsWith("/services")
-                    ? "text-brand-accent font-semibold"
-                    : "text-brand-text/80 hover:text-brand-accent"
-                    }`}
+                  className={`flex items-center space-x-1 text-sm lg:text-base font-medium tracking-wide whitespace-nowrap transition-colors cursor-pointer ${
+                    pathname.startsWith("/services")
+                      ? "text-brand-accent font-semibold"
+                      : "text-brand-text/80 hover:text-brand-accent"
+                  }`}
                   onClick={() => setIsServicesDropdownOpen(false)}
                 >
                   <span>Services</span>
@@ -296,10 +360,11 @@ export default function Header() {
               >
                 <Link
                   href="/patients"
-                  className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${pathname.startsWith("/patients")
-                    ? "text-brand-accent font-semibold"
-                    : "text-brand-text/80 hover:text-brand-accent"
-                    }`}
+                  className={`flex items-center space-x-1 text-sm lg:text-base font-medium tracking-wide whitespace-nowrap transition-colors cursor-pointer ${
+                    pathname.startsWith("/patients")
+                      ? "text-brand-accent font-semibold"
+                      : "text-brand-text/80 hover:text-brand-accent"
+                  }`}
                   onClick={() => setIsDropdownOpen(false)}
                 >
                   <span>Patients</span>
@@ -344,10 +409,11 @@ export default function Header() {
               >
                 <Link
                   href="/contact"
-                  className={`flex items-center space-x-1 text-base font-medium tracking-wide transition-colors cursor-pointer ${pathname.startsWith("/contact")
-                    ? "text-brand-accent font-semibold"
-                    : "text-brand-text/80 hover:text-brand-accent"
-                    }`}
+                  className={`flex items-center space-x-1 text-sm lg:text-base font-medium tracking-wide whitespace-nowrap transition-colors cursor-pointer ${
+                    pathname.startsWith("/contact")
+                      ? "text-brand-accent font-semibold"
+                      : "text-brand-text/80 hover:text-brand-accent"
+                  }`}
                   onClick={() => setIsContactDropdownOpen(false)}
                 >
                   <span>Contact</span>
@@ -381,28 +447,36 @@ export default function Header() {
               </div>
             </nav>
 
-            {/* CTAs */}
-            <div className="hidden md:flex items-center space-x-4">
+            {/* Header Right Actions (CTAs) */}
+            <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
+
               <a
                 id="header-call-now"
                 href="tel:03070984307"
                 onClick={() => trackContact("Header Phone Call")}
-                className="meta-track-call btn-secondary flex items-center space-x-2 text-sm py-2.5 px-5"
+                className="meta-track-call btn-secondary flex items-center space-x-2 text-sm py-2.5 px-4 lg:px-5"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call Now</span>
               </a>
               <button
                 onClick={triggerBooking}
-                className="btn-primary flex items-center space-x-2 text-sm py-2.5 px-5"
+                className="btn-primary flex items-center space-x-2 text-sm py-2.5 px-4 lg:px-5"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Book Now</span>
               </button>
             </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
+            {/* Mobile Header Actions (Search Icon + Menu Button) */}
+            <div className="md:hidden flex items-center space-x-1">
+              <button
+                onClick={() => setIsSearchModalOpen(true)}
+                className="text-brand-text hover:text-brand-accent p-2 focus:outline-none cursor-pointer"
+                aria-label="Search treatments"
+              >
+                <Search className="w-5.5 h-5.5 text-brand-accent" />
+              </button>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-brand-text hover:text-brand-accent p-2 focus:outline-none cursor-pointer"
@@ -415,11 +489,170 @@ export default function Header() {
         </div>
       </header>
 
+      {/* Global Search Modal */}
+      {isSearchModalOpen && (
+        <div className="fixed inset-0 z-[60] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/75 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl bg-[#2d221f] text-[#f6ede7] rounded-2xl border border-[#ab7f51]/40 shadow-2xl overflow-hidden flex flex-col max-h-[80vh]">
+            {/* Modal Header & Search Bar */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-[#3e322e] bg-[#231a18]">
+              <div className="flex items-center space-x-3 flex-1">
+                <Search className="w-5 h-5 text-[#c39f75] shrink-0" />
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search treatments, dental, aesthetic services, or pages..."
+                  className="w-full bg-transparent text-sm sm:text-base text-[#f6ede7] placeholder-[#f6ede7]/50 focus:outline-none"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="text-[#f6ede7]/60 hover:text-white p-1"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                )}
+              </div>
+              <button
+                onClick={() => setIsSearchModalOpen(false)}
+                className="ml-3 text-[#c39f75] hover:text-white p-1.5 sm:px-2.5 sm:py-1 rounded-lg border border-[#ab7f51]/40 hover:bg-white/10 transition-colors flex items-center justify-center shrink-0 cursor-pointer"
+                aria-label="Close search"
+              >
+                <X className="w-5 h-5 sm:hidden" />
+                <span className="hidden sm:inline text-xs font-semibold uppercase tracking-wider">ESC</span>
+              </button>
+            </div>
+
+            {/* Modal Search Content / Results */}
+            <div className="flex-1 overflow-y-auto p-5 space-y-6">
+              {!searchQuery ? (
+                <div className="space-y-4">
+                  <div className="text-xs font-bold text-[#ab7f51] uppercase tracking-wider">
+                    Popular Treatments & Quick Searches
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { name: "Dental Implants", slug: "dental-implants" },
+                      { name: "Teeth Whitening", slug: "teeth-whitening" },
+                      { name: "Full Face Botox", slug: "botox-treatment" },
+                      { name: "Clear Aligners", slug: "clear-aligners" },
+                      { name: "Dermal Fillers", slug: "dermal-fillers" },
+                      { name: "HIFU Treatment", slug: "hifu-treatment" },
+                      { name: "Hollywood Smile", slug: "hollywood-smile-makeover" },
+                      { name: "Root Canal", slug: "root-canal-treatment" },
+                    ].map((quick) => (
+                      <Link
+                        key={quick.slug}
+                        href={`/services/${quick.slug}`}
+                        onClick={() => setIsSearchModalOpen(false)}
+                        className="text-xs font-medium bg-[#3e322e]/60 hover:bg-[#ab7f51] text-[#f6ede7] hover:text-[#2d221f] px-3 py-1.5 rounded-full transition-all duration-200 border border-[#ab7f51]/30 flex items-center space-x-1.5"
+                      >
+                        <span>{quick.name}</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : filteredDentalModal.length === 0 &&
+                filteredAestheticModal.length === 0 &&
+                filteredPagesModal.length === 0 ? (
+                <div className="text-center py-10 space-y-2">
+                  <p className="text-sm font-medium text-[#f6ede7]/80">
+                    No services or pages found matching "{searchQuery}"
+                  </p>
+                  <p className="text-xs text-[#f6ede7]/50">
+                    Try searching for terms like "Implants", "Whitening", "Botox", or "Doctors".
+                  </p>
+                </div>
+              ) : (
+                <div className="space-y-6">
+                  {/* Dental Services Results */}
+                  {filteredDentalModal.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="text-xs font-bold text-[#c39f75] uppercase tracking-wider border-b border-[#3e322e] pb-1 flex justify-between">
+                        <span>Comprehensive Dental Services</span>
+                        <span className="text-[10px] text-[#f6ede7]/50">{filteredDentalModal.length} matches</span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {filteredDentalModal.map((srv) => (
+                          <Link
+                            key={srv.slug}
+                            href={`/services/${srv.slug}`}
+                            onClick={() => setIsSearchModalOpen(false)}
+                            className="flex items-center justify-between p-2.5 rounded-xl bg-[#231a18] hover:bg-[#3e322e] border border-[#ab7f51]/20 hover:border-[#c39f75]/60 transition-all group"
+                          >
+                            <span className="text-xs font-medium text-[#f6ede7] group-hover:text-[#e8ceb1]">
+                              {srv.name}
+                            </span>
+                            <ArrowRight className="w-3.5 h-3.5 text-[#c39f75] opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Aesthetic Services Results */}
+                  {filteredAestheticModal.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="text-xs font-bold text-[#e8ceb1] uppercase tracking-wider border-b border-[#3e322e] pb-1 flex justify-between">
+                        <span>Advanced Aesthetic Treatments</span>
+                        <span className="text-[10px] text-[#f6ede7]/50">{filteredAestheticModal.length} matches</span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {filteredAestheticModal.map((srv) => (
+                          <Link
+                            key={srv.slug}
+                            href={`/services/${srv.slug}`}
+                            onClick={() => setIsSearchModalOpen(false)}
+                            className="flex items-center justify-between p-2.5 rounded-xl bg-[#231a18] hover:bg-[#3e322e] border border-[#ab7f51]/20 hover:border-[#c39f75]/60 transition-all group"
+                          >
+                            <span className="text-xs font-medium text-[#f6ede7] group-hover:text-[#e8ceb1]">
+                              {srv.name}
+                            </span>
+                            <ArrowRight className="w-3.5 h-3.5 text-[#c39f75] opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Page Results */}
+                  {filteredPagesModal.length > 0 && (
+                    <div className="space-y-2">
+                      <div className="text-xs font-bold text-[#ab7f51] uppercase tracking-wider border-b border-[#3e322e] pb-1 flex justify-between">
+                        <span>Pages & Navigation</span>
+                        <span className="text-[10px] text-[#f6ede7]/50">{filteredPagesModal.length} matches</span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {filteredPagesModal.map((page) => (
+                          <Link
+                            key={page.href}
+                            href={page.href}
+                            onClick={() => setIsSearchModalOpen(false)}
+                            className="flex items-center justify-between p-2.5 rounded-xl bg-[#231a18] hover:bg-[#3e322e] border border-[#ab7f51]/20 hover:border-[#c39f75]/60 transition-all group"
+                          >
+                            <span className="text-xs font-medium text-[#f6ede7] group-hover:text-[#e8ceb1]">
+                              {page.name}
+                            </span>
+                            <ArrowRight className="w-3.5 h-3.5 text-[#c39f75] opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Luxury Mobile Menu Drawer & Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-50 flex flex-col bg-[#2d221f] text-[#f6ede7] animate-in fade-in duration-200">
           {/* Drawer Top Header (Logo + Close Button) */}
-          <div className="flex items-center justify-between px-5 py-4 min-h-[90px] sm:min-h-[100px] border-b border-[#ab7f51]/25 bg-[#231a18]">
+          <div className="flex items-center justify-between px-5 py-4 min-h-[85px] sm:min-h-[95px] border-b border-[#ab7f51]/25 bg-[#231a18]">
             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center">
               <img
                 src="/images/logo.png"
@@ -429,100 +662,160 @@ export default function Header() {
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-[#f6ede7] hover:text-[#c39f75] p-2.5 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
+              className="text-[#f6ede7] hover:text-[#c39f75] p-2 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
               aria-label="Close menu"
             >
-              <X className="w-6.5 h-6.5" />
+              <X className="w-6 h-6" />
             </button>
           </div>
 
+          {/* Mobile Drawer Dedicated Search Bar */}
+          <div className="px-4 py-3 bg-[#231a18] border-b border-[#ab7f51]/20">
+            <div className="relative">
+              <Search className="w-4 h-4 text-[#c39f75] absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <input
+                type="text"
+                value={mobileSearchQuery}
+                onChange={(e) => setMobileSearchQuery(e.target.value)}
+                placeholder="Search dental & aesthetic services..."
+                className="w-full bg-[#1b1412] text-xs text-[#f6ede7] placeholder-[#f6ede7]/50 pl-10 pr-9 py-2.5 rounded-xl border border-[#ab7f51]/30 focus:outline-none focus:border-[#c39f75] transition-all"
+              />
+              {mobileSearchQuery && (
+                <button
+                  onClick={() => setMobileSearchQuery("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[#f6ede7]/60 hover:text-white"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Main Navigation Scroll Area */}
-          <div className="flex-1 overflow-y-auto px-4 py-4 space-y-1.5">
-            {/* Home */}
-            <Link
-              href="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`flex items-center h-13 px-4 rounded-xl font-medium text-base transition-colors ${
-                isLinkActive("/") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-              }`}
-            >
-              <span>Home</span>
-            </Link>
-
-            {/* Clinic Tour */}
-            <Link
-              href="/clinic-tour"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`flex items-center h-13 px-4 rounded-xl font-medium text-base transition-colors ${
-                isLinkActive("/clinic-tour") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-              }`}
-            >
-              <span>Clinic Tour</span>
-            </Link>
-
-            {/* Dentists */}
-            <Link
-              href="/doctors"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`flex items-center h-13 px-4 rounded-xl font-medium text-base transition-colors ${
-                isLinkActive("/doctors") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-              }`}
-            >
-              <span>Dentists</span>
-            </Link>
-
-            {/* Blogs */}
-            <Link
-              href="/blog"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`flex items-center h-13 px-4 rounded-xl font-medium text-base transition-colors ${
-                isLinkActive("/blog") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-              }`}
-            >
-              <span>Blogs</span>
-            </Link>
-
-            {/* Services Accordion */}
-            <div className="rounded-xl overflow-hidden border border-transparent">
-              <button
-                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className={`w-full flex items-center justify-between h-13 px-4 rounded-xl text-left font-medium text-base transition-colors cursor-pointer ${
-                  pathname.startsWith("/services") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-                }`}
-              >
-                <span>Services</span>
-                <ChevronDown
-                  className={`w-5 h-5 text-[#c39f75] transition-transform duration-300 ${
-                    mobileServicesOpen ? "rotate-180" : ""
+          <div className="flex-1 overflow-y-auto px-4 py-3 space-y-1.5">
+            {/* If user is typing in Mobile Search, show live filtered search results */}
+            {mobileSearchQuery ? (
+              <div className="space-y-4 py-1">
+                <div className="text-xs font-semibold text-[#c39f75] uppercase tracking-wider flex justify-between items-center">
+                  <span>Search Results</span>
+                  <span className="text-[10px] text-[#f6ede7]/50">"{mobileSearchQuery}"</span>
+                </div>
+                {filteredDentalMobile.length === 0 && filteredAestheticMobile.length === 0 ? (
+                  <div className="text-xs text-[#f6ede7]/60 py-6 text-center bg-black/20 rounded-xl border border-[#ab7f51]/20">
+                    No services found matching "{mobileSearchQuery}"
+                  </div>
+                ) : (
+                  <>
+                    {filteredDentalMobile.length > 0 && (
+                      <div className="space-y-1.5">
+                        <div className="text-[11px] font-bold text-[#e8ceb1] uppercase tracking-wider flex items-center space-x-1.5">
+                          <Stethoscope className="w-3.5 h-3.5 text-[#c39f75]" />
+                          <span>Dental Services ({filteredDentalMobile.length})</span>
+                        </div>
+                        <div className="space-y-1 pl-1">
+                          {filteredDentalMobile.map((srv) => (
+                            <Link
+                              key={srv.slug}
+                              href={`/services/${srv.slug}`}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-[#f6ede7] bg-black/25 hover:bg-white/10 rounded-xl border border-[#ab7f51]/20"
+                            >
+                              <span>{srv.name}</span>
+                              <ArrowRight className="w-3.5 h-3.5 text-[#c39f75]" />
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {filteredAestheticMobile.length > 0 && (
+                      <div className="space-y-1.5 pt-2">
+                        <div className="text-[11px] font-bold text-[#e8ceb1] uppercase tracking-wider flex items-center space-x-1.5">
+                          <Sparkles className="w-3.5 h-3.5 text-[#c39f75]" />
+                          <span>Aesthetic Treatments ({filteredAestheticMobile.length})</span>
+                        </div>
+                        <div className="space-y-1 pl-1">
+                          {filteredAestheticMobile.map((srv) => (
+                            <Link
+                              key={srv.slug}
+                              href={`/services/${srv.slug}`}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                              className="flex items-center justify-between px-3.5 py-2.5 text-xs font-medium text-[#f6ede7] bg-black/25 hover:bg-white/10 rounded-xl border border-[#ab7f51]/20"
+                            >
+                              <span>{srv.name}</span>
+                              <ArrowRight className="w-3.5 h-3.5 text-[#c39f75]" />
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            ) : (
+              /* Standard Navigation Menu */
+              <>
+                {/* Home */}
+                <Link
+                  href="/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center h-12 px-4 rounded-xl font-medium text-base transition-colors ${
+                    isLinkActive("/") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
                   }`}
-                />
-              </button>
+                >
+                  <span>Home</span>
+                </Link>
 
-              {mobileServicesOpen && (
-                <div className="mt-1 ml-2 pl-3 pr-2 py-3 space-y-3 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
-                  <Link
-                    href="/services"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-xs font-bold text-[#c39f75] uppercase tracking-wider px-3 py-1 hover:underline"
+                {/* Clinic Tour */}
+                <Link
+                  href="/clinic-tour"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center h-12 px-4 rounded-xl font-medium text-base transition-colors ${
+                    isLinkActive("/clinic-tour") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
+                  }`}
+                >
+                  <span>Clinic Tour</span>
+                </Link>
+
+                {/* Dentists */}
+                <Link
+                  href="/doctors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center h-12 px-4 rounded-xl font-medium text-base transition-colors ${
+                    isLinkActive("/doctors") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
+                  }`}
+                >
+                  <span>Dentists</span>
+                </Link>
+
+                {/* INDIVIDUAL SECTION 1: Dental Services Accordion */}
+                <div className="rounded-xl overflow-hidden border border-transparent">
+                  <button
+                    onClick={() => setMobileDentalOpen(!mobileDentalOpen)}
+                    className={`w-full flex items-center justify-between h-12 px-4 rounded-xl text-left font-medium text-base transition-colors cursor-pointer ${
+                      mobileDentalOpen ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
+                    }`}
                   >
-                    View All Services Overview &rarr;
-                  </Link>
-
-                  {/* Dental Services Sub-Accordion */}
-                  <div className="space-y-1">
-                    <button
-                      onClick={() => setMobileDentalOpen(!mobileDentalOpen)}
-                      className="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-[#e8ceb1] uppercase tracking-wider cursor-pointer hover:text-white"
-                    >
+                    <div className="flex items-center space-x-2">
+                      <Stethoscope className="w-4.5 h-4.5 text-[#c39f75]" />
                       <span>Dental Services</span>
-                      <ChevronDown
-                        className={`w-4 h-4 text-[#c39f75] transition-transform duration-200 ${
-                          mobileDentalOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    {mobileDentalOpen && (
-                      <div className="pl-3 py-1 space-y-0.5 border-l-2 border-[#c39f75]/40 ml-2">
+                    </div>
+                    <ChevronDown
+                      className={`w-4.5 h-4.5 text-[#c39f75] transition-transform duration-300 ${
+                        mobileDentalOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {mobileDentalOpen && (
+                    <div className="mt-1 ml-2 pl-3 pr-2 py-2.5 space-y-1 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
+                      <Link
+                        href="/services#dental"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
+                      >
+                        All Dental Services Overview &rarr;
+                      </Link>
+                      <div className="pl-1 py-1 space-y-0.5 border-l-2 border-[#c39f75]/40 ml-2">
                         {dentalServicesList.map((srv) => (
                           <Link
                             key={srv.slug}
@@ -538,24 +831,39 @@ export default function Header() {
                           </Link>
                         ))}
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
+                </div>
 
-                  {/* Aesthetic Treatments Sub-Accordion */}
-                  <div className="space-y-1 pt-1">
-                    <button
-                      onClick={() => setMobileAestheticOpen(!mobileAestheticOpen)}
-                      className="w-full flex items-center justify-between px-3 py-2 text-xs font-bold text-[#e8ceb1] uppercase tracking-wider cursor-pointer hover:text-white"
-                    >
+                {/* INDIVIDUAL SECTION 2: Aesthetic Treatments Accordion */}
+                <div className="rounded-xl overflow-hidden border border-transparent">
+                  <button
+                    onClick={() => setMobileAestheticOpen(!mobileAestheticOpen)}
+                    className={`w-full flex items-center justify-between h-12 px-4 rounded-xl text-left font-medium text-base transition-colors cursor-pointer ${
+                      mobileAestheticOpen ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
+                    }`}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <Sparkles className="w-4.5 h-4.5 text-[#c39f75]" />
                       <span>Aesthetic Treatments</span>
-                      <ChevronDown
-                        className={`w-4 h-4 text-[#c39f75] transition-transform duration-200 ${
-                          mobileAestheticOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                    {mobileAestheticOpen && (
-                      <div className="pl-3 py-1 space-y-0.5 border-l-2 border-[#c39f75]/40 ml-2">
+                    </div>
+                    <ChevronDown
+                      className={`w-4.5 h-4.5 text-[#c39f75] transition-transform duration-300 ${
+                        mobileAestheticOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {mobileAestheticOpen && (
+                    <div className="mt-1 ml-2 pl-3 pr-2 py-2.5 space-y-1 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
+                      <Link
+                        href="/services#aesthetic"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
+                      >
+                        All Aesthetic Treatments Overview &rarr;
+                      </Link>
+                      <div className="pl-1 py-1 space-y-0.5 border-l-2 border-[#c39f75]/40 ml-2">
                         {aestheticServicesList.map((srv) => (
                           <Link
                             key={srv.slug}
@@ -571,61 +879,72 @@ export default function Header() {
                           </Link>
                         ))}
                       </div>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            {/* Patients Accordion */}
-            <div className="rounded-xl overflow-hidden border border-transparent">
-              <button
-                onClick={() => setMobilePatientsOpen(!mobilePatientsOpen)}
-                className={`w-full flex items-center justify-between h-13 px-4 rounded-xl text-left font-medium text-base transition-colors cursor-pointer ${
-                  pathname.startsWith("/patients") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-                }`}
-              >
-                <span>Patients</span>
-                <ChevronDown
-                  className={`w-5 h-5 text-[#c39f75] transition-transform duration-300 ${
-                    mobilePatientsOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              {mobilePatientsOpen && (
-                <div className="mt-1 ml-2 pl-3 pr-2 py-2 space-y-1 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
-                  <Link
-                    href="/patients"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
+                {/* Patients Accordion */}
+                <div className="rounded-xl overflow-hidden border border-transparent">
+                  <button
+                    onClick={() => setMobilePatientsOpen(!mobilePatientsOpen)}
+                    className={`w-full flex items-center justify-between h-12 px-4 rounded-xl text-left font-medium text-base transition-colors cursor-pointer ${
+                      pathname.startsWith("/patients") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
+                    }`}
                   >
-                    Patient Dashboard &rarr;
-                  </Link>
-                  {patientResources.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block px-3 py-2 text-xs font-medium text-[#f6ede7]/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+                    <span>Patients</span>
+                    <ChevronDown
+                      className={`w-4.5 h-4.5 text-[#c39f75] transition-transform duration-300 ${
+                        mobilePatientsOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
 
-            {/* Contact */}
-            <Link
-              href="/contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`flex items-center h-13 px-4 rounded-xl font-medium text-base transition-colors ${
-                isLinkActive("/contact") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-              }`}
-            >
-              <span>Contact</span>
-            </Link>
+                  {mobilePatientsOpen && (
+                    <div className="mt-1 ml-2 pl-3 pr-2 py-2 space-y-1 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
+                      <Link
+                        href="/patients"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
+                      >
+                        Patient Dashboard &rarr;
+                      </Link>
+                      {patientResources.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="block px-3 py-2 text-xs font-medium text-[#f6ede7]/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Blogs */}
+                <Link
+                  href="/blog"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center h-12 px-4 rounded-xl font-medium text-base transition-colors ${
+                    isLinkActive("/blog") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
+                  }`}
+                >
+                  <span>Blogs</span>
+                </Link>
+
+                {/* Contact */}
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center h-12 px-4 rounded-xl font-medium text-base transition-colors ${
+                    isLinkActive("/contact") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
+                  }`}
+                >
+                  <span>Contact</span>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Drawer Bottom Sticky Booking CTA Area */}
@@ -659,3 +978,4 @@ export default function Header() {
     </>
   );
 }
+

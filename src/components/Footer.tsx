@@ -249,15 +249,30 @@ export default function Footer() {
                   </div>
                 </div>
 
-                <div className="pt-1">
+                <div className="pt-1 space-y-2">
                   <a
                     id="footer-call-dha"
-                    href="tel:03070984307"
+                    href="tel:+923070984307"
                     onClick={() => trackContact("Footer Phone Call")}
                     className="meta-track-call flex items-center space-x-2 text-xs text-[#c39f75] hover:text-[#e8ceb1] transition-colors"
                   >
-                    <Phone className="w-3.5 h-3.5 shrink-0" />
-                    <span>0307-0984307</span>
+                    <Phone className="w-3.5 h-3.5 shrink-0 text-[#c39f75]" />
+                    <span className="font-medium text-[#f6ede7]/80">Phone:</span>
+                    <span className="text-[#e8ceb1] font-semibold">+92 307 0984307</span>
+                  </a>
+
+                  <a
+                    href="https://api.whatsapp.com/send/?phone=923002271299&text&type=phone_number&app_absent=0"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => trackContact("Footer WhatsApp Click")}
+                    className="flex items-center space-x-2 text-xs text-[#25D366] hover:text-[#4ade80] transition-colors"
+                  >
+                    <svg className="w-3.5 h-3.5 shrink-0 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.762.457 3.483 1.328 5.003L2 22l5.14-.1.342-.2c1.472.9 3.184 1.3 4.862 1.3 5.523 0 10-4.48 10-10C22.004 6.48 17.527 2 12.004 2zm5.468 12.382c-.297.149-1.758.867-2.03.967-.273.099-.471.15-.67-.15-.197-.297-.767-.966-.94-1.164-.173-.199-.347-.223-.644-.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    </svg>
+                    <span className="font-medium text-[#f6ede7]/80">WhatsApp:</span>
+                    <span className="text-[#25D366] font-semibold">+92 300 2271299</span>
                   </a>
                 </div>
 
@@ -311,7 +326,7 @@ export default function Footer() {
 
             {/* WhatsApp */}
             <a
-              href="https://api.whatsapp.com/send/?phone=9203352383761&text&type=phone_number&app_absent=0"
+              href="https://api.whatsapp.com/send/?phone=923002271299&text&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 rounded-full border border-[#ab7f51]/40 flex items-center justify-center text-[#f6ede7]/75 hover:text-[#e8ceb1] hover:border-[#e8ceb1] hover:bg-[#ab7f51]/10 hover:scale-105 transition-all duration-300"
