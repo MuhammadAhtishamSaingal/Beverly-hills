@@ -13,17 +13,17 @@ export const metadata: Metadata = {
     "Beverly Hills Clinic Karachi blog",
   ],
   alternates: {
-    canonical: "https://www.beverlyhills.clinic/blog",
+    canonical: "https://beverlyhillsclinic.com.pk/blog",
   },
   openGraph: {
     title: "Dental & Aesthetic Blog | Beverly Hills Clinic DHA Karachi",
     description:
       "Read expert dental care guides, cosmetic dentistry tips, and aesthetic treatment information from Beverly Hills Clinic DHA Karachi.",
-    url: "https://www.beverlyhills.clinic/blog",
+    url: "https://beverlyhillsclinic.com.pk/blog",
     siteName: "Beverly Hills Clinic",
     images: [
       {
-        url: "https://www.beverlyhills.clinic/images/hero-studio.webp",
+        url: "https://beverlyhillsclinic.com.pk/images/hero-studio.webp",
         width: 1200,
         height: 630,
         alt: "Beverly Hills Clinic Dental & Aesthetic Insights",

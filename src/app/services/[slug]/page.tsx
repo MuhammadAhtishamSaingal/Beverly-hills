@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     };
   }
 
-  const pageUrl = `https://www.beverlyhills.clinic/services/${service.slug}`;
+  const pageUrl = `https://beverlyhillsclinic.com.pk/services/${service.slug}`;
 
   return {
     title: service.metaTitle,
@@ -88,9 +88,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Beverly Hills Clinic Karachi",
-    "image": "https://www.beverlyhills.clinic/images/logo.png",
-    "@id": "https://www.beverlyhills.clinic/#dentist",
-    "url": "https://www.beverlyhills.clinic",
+    "image": "https://beverlyhillsclinic.com.pk/images/logo.png",
+    "@id": "https://beverlyhillsclinic.com.pk/#dentist",
+    "url": "https://beverlyhillsclinic.com.pk",
     "telephone": "+923070984307",
     "priceRange": "$$",
     "address": {

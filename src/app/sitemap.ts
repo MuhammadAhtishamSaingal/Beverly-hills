@@ -3,7 +3,7 @@ import { getAllServices } from "@/data/services";
 import { getAllBlogs } from "@/data/blogs";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://www.beverlyhills.clinic";
+  const baseUrl = "https://beverlyhillsclinic.com.pk";
   const services = getAllServices();
   const blogs = getAllBlogs();
   const currentDate = new Date().toISOString();

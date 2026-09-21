@@ -13,17 +13,17 @@ export const metadata: Metadata = {
     "Aesthetic clinic interior Karachi",
   ],
   alternates: {
-    canonical: "https://www.beverlyhills.clinic/clinic-tour",
+    canonical: "https://beverlyhillsclinic.com.pk/clinic-tour",
   },
   openGraph: {
     title: "Clinic Tour | Beverly Hills Clinic DHA Karachi",
     description:
       "Explore Beverly Hills Clinic DHA Karachi through our clinic tour. Discover our modern dental facility, advanced technology, comfortable treatment rooms, and expert care.",
-    url: "https://www.beverlyhills.clinic/clinic-tour",
+    url: "https://beverlyhillsclinic.com.pk/clinic-tour",
     siteName: "Beverly Hills Clinic",
     images: [
       {
-        url: "https://www.beverlyhills.clinic/images/hero-studio.webp",
+        url: "https://beverlyhillsclinic.com.pk/images/hero-studio.webp",
         width: 1200,
         height: 630,
         alt: "Beverly Hills Clinic DHA Karachi Interior",
@@ -39,9 +39,9 @@ export default function ClinicTourPage() {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Beverly Hills Clinic Karachi",
-    "image": "https://www.beverlyhills.clinic/images/hero-studio.webp",
-    "@id": "https://www.beverlyhills.clinic/#clinic",
-    "url": "https://www.beverlyhills.clinic/clinic-tour",
+    "image": "https://beverlyhillsclinic.com.pk/images/hero-studio.webp",
+    "@id": "https://beverlyhillsclinic.com.pk/#clinic",
+    "url": "https://beverlyhillsclinic.com.pk/clinic-tour",
     "telephone": "0307-0984307",
     "priceRange": "$$$",
     "address": {

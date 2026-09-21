@@ -29,25 +29,25 @@ export default function ServiceHero({ service }: ServiceHeroProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.beverlyhills.clinic"
+        "item": "https://beverlyhillsclinic.com.pk"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://www.beverlyhills.clinic/services"
+        "item": "https://beverlyhillsclinic.com.pk/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": service.categoryName,
-        "item": `https://www.beverlyhills.clinic/services#${service.category}`
+        "item": `https://beverlyhillsclinic.com.pk/services#${service.category}`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": service.title,
-        "item": `https://www.beverlyhills.clinic/services/${service.slug}`
+        "item": `https://beverlyhillsclinic.com.pk/services/${service.slug}`
       }
     ]
   };

@@ -22,7 +22,7 @@ const bodyFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.beverlyhills.clinic"),
+  metadataBase: new URL("https://beverlyhillsclinic.com.pk"),
   title: "Beverly Hills Clinic | Modern Dental Care, Thoughtfully Delivered",
   description: "Comprehensive dentistry in calm, well-designed spaces across Karachi.",
   other: {
