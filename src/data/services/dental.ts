@@ -7,7 +7,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Dental Implants",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/dental-implants/hero.webp",
+    "heroImage": "/images/dental-implants-1.jpg",
     "introHeading": "Advanced Dental Implants in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Dental Implants services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Dental Implants in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Dental Implants at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -40,7 +40,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Implants procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/dental-implants/consultation.webp",
+        "image": "/images/dental-implants-1.jpg",
         "imageAlt": "Dental Implants consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -50,7 +50,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/dental-implants/procedure.webp",
+        "image": "/images/dental-implants-2.jpg",
         "imageAlt": "Dental Implants clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -60,7 +60,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/dental-implants/technology.webp",
+        "image": "/images/dental-implants-3.jpg",
         "imageAlt": "Step-by-step Dental Implants procedure at Beverly Hills Clinic"
       },
       {
@@ -70,7 +70,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/dental-implants/results.webp",
+        "image": "/images/dental-implants-4.jpg",
         "imageAlt": "Patient candidate evaluation for Dental Implants in Karachi"
       },
       {
@@ -80,7 +80,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/dental-implants/aftercare.webp",
+        "image": "/images/dental-implants-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Dental Implants"
       }
     ],
@@ -140,7 +140,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Laser Teeth Whitening",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/teeth-whitening/hero.webp",
+    "heroImage": "/images/laser-teeth-whitening-1.jpg",
     "introHeading": "Advanced Laser Teeth Whitening in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Laser Teeth Whitening services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Laser Teeth Whitening in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Laser Teeth Whitening at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -173,7 +173,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Laser Teeth Whitening procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/teeth-whitening/consultation.webp",
+        "image": "/images/laser-teeth-whitening-1.jpg",
         "imageAlt": "Laser Teeth Whitening consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -183,7 +183,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/teeth-whitening/procedure.webp",
+        "image": "/images/laser-teeth-whitening-2.jpg",
         "imageAlt": "Laser Teeth Whitening clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -193,7 +193,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/teeth-whitening/technology.webp",
+        "image": "/images/laser-teeth-whitening-3.jpg",
         "imageAlt": "Step-by-step Laser Teeth Whitening procedure at Beverly Hills Clinic"
       },
       {
@@ -203,7 +203,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/teeth-whitening/results.webp",
+        "image": "/images/laser-teeth-whitening-4.jpg",
         "imageAlt": "Patient candidate evaluation for Laser Teeth Whitening in Karachi"
       },
       {
@@ -213,7 +213,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/teeth-whitening/aftercare.webp",
+        "image": "/images/laser-teeth-whitening-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Laser Teeth Whitening"
       }
     ],
@@ -272,7 +272,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Clear Aligner Treatments",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/clear-aligners/hero.webp",
+    "heroImage": "/images/clear-aligners-1.jpg",
     "introHeading": "Advanced Clear Aligner Treatments in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Clear Aligner Treatments services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Clear Aligners in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Clear Aligner Treatments at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -305,7 +305,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Clear Aligner Treatments procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/clear-aligners/consultation.webp",
+        "image": "/images/clear-aligners-1.jpg",
         "imageAlt": "3D digital smile simulation consultation and clear aligners planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -315,7 +315,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/clear-aligners/procedure.webp",
+        "image": "/images/clear-aligners-2.jpg",
         "imageAlt": "Female dentist fitting custom clear aligner tray into patient's mouth at Beverly Hills Clinic"
       },
       {
@@ -325,7 +325,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/clear-aligners/technology.webp",
+        "image": "/images/clear-aligners-3.jpg",
         "imageAlt": "Specialist analyzing 3D digital teeth scan on high-tech intraoral scanner screen at Beverly Hills Clinic Karachi"
       },
       {
@@ -335,7 +335,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/clear-aligners/results.webp",
+        "image": "/images/clear-aligners-4.jpg",
         "imageAlt": "Doctor explaining clear aligners treatment case and aligner trays to patient at Beverly Hills Clinic"
       },
       {
@@ -345,7 +345,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/clear-aligners/aftercare.webp",
+        "image": "/images/clear-aligners-5.jpg",
         "imageAlt": "Smiling patient enjoying a beautiful, confident smile in luxury clinic environment at Beverly Hills Clinic DHA"
       }
     ],
@@ -404,7 +404,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Braces Treatment",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/braces-treatment/hero.webp",
+    "heroImage": "/images/braces-treatment-1.jpg",
     "introHeading": "Advanced Braces Treatment in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Braces Treatment services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Braces Treatment in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Braces Treatment at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -437,7 +437,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Braces Treatment procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/braces-treatment/consultation.webp",
+        "image": "/images/braces-treatment-1.jpg",
         "imageAlt": "Braces Treatment consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -447,7 +447,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/braces-treatment/procedure.webp",
+        "image": "/images/braces-treatment-2.jpg",
         "imageAlt": "Braces Treatment clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -457,7 +457,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/braces-treatment/technology.webp",
+        "image": "/images/braces-treatment-3.jpg",
         "imageAlt": "Step-by-step Braces Treatment procedure at Beverly Hills Clinic"
       },
       {
@@ -467,7 +467,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/braces-treatment/results.webp",
+        "image": "/images/braces-treatment-4.jpg",
         "imageAlt": "Patient candidate evaluation for Braces Treatment in Karachi"
       },
       {
@@ -477,7 +477,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/braces-treatment/aftercare.webp",
+        "image": "/images/braces-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Braces Treatment"
       }
     ],
@@ -536,7 +536,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Hollywood Smile Makeover",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/hollywood-smile-makeover/hero.webp",
+    "heroImage": "/images/hollywood-smile-makeover-1.jpg",
     "introHeading": "Advanced Hollywood Smile Makeover in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Hollywood Smile Makeover services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Hollywood Smile Makeover in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Hollywood Smile Makeover at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -569,7 +569,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Hollywood Smile Makeover procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/hollywood-smile-makeover/consultation.webp",
+        "image": "/images/hollywood-smile-makeover-1.jpg",
         "imageAlt": "Hollywood Smile Makeover consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -579,7 +579,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/hollywood-smile-makeover/procedure.webp",
+        "image": "/images/hollywood-smile-makeover-2.jpg",
         "imageAlt": "Hollywood Smile Makeover clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -589,7 +589,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/hollywood-smile-makeover/technology.webp",
+        "image": "/images/hollywood-smile-makeover-3.jpg",
         "imageAlt": "Step-by-step Hollywood Smile Makeover procedure at Beverly Hills Clinic"
       },
       {
@@ -599,7 +599,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/hollywood-smile-makeover/results.webp",
+        "image": "/images/hollywood-smile-makeover-4.jpg",
         "imageAlt": "Patient candidate evaluation for Hollywood Smile Makeover in Karachi"
       },
       {
@@ -609,7 +609,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/hollywood-smile-makeover/aftercare.webp",
+        "image": "/images/hollywood-smile-makeover-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Hollywood Smile Makeover"
       }
     ],
@@ -668,7 +668,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Dental Fillings",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/dental-fillings/hero.webp",
+    "heroImage": "/images/dental-fillings-1.jpg",
     "introHeading": "Advanced Dental Fillings in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Dental Fillings services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Dental Fillings in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Dental Fillings at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -701,7 +701,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Fillings procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/dental-fillings/consultation.webp",
+        "image": "/images/dental-fillings-1.jpg",
         "imageAlt": "Dental Fillings consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -711,7 +711,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/dental-fillings/procedure.webp",
+        "image": "/images/dental-fillings-2.jpg",
         "imageAlt": "Dental Fillings clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -721,7 +721,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/dental-fillings/technology.webp",
+        "image": "/images/dental-fillings-3.jpg",
         "imageAlt": "Step-by-step Dental Fillings procedure at Beverly Hills Clinic"
       },
       {
@@ -731,7 +731,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/dental-fillings/results.webp",
+        "image": "/images/dental-fillings-4.jpg",
         "imageAlt": "Patient candidate evaluation for Dental Fillings in Karachi"
       },
       {
@@ -741,7 +741,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/dental-fillings/aftercare.webp",
+        "image": "/images/dental-fillings-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Dental Fillings"
       }
     ],
@@ -800,7 +800,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Dental Veneers, Crowns & Bridges",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/dental-veneers-crowns-bridges/hero.webp",
+    "heroImage": "/images/dental-veneers-crowns-bridges-1.jpg",
     "introHeading": "Advanced Dental Veneers, Crowns & Bridges in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Dental Veneers, Crowns & Bridges services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Dental Veneers, Crowns & Bridges in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Dental Veneers, Crowns & Bridges at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -833,7 +833,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Veneers, Crowns & Bridges procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/dental-veneers-crowns-bridges/consultation.webp",
+        "image": "/images/dental-veneers-crowns-bridges-1.jpg",
         "imageAlt": "Dental Veneers, Crowns & Bridges consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -843,7 +843,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/dental-veneers-crowns-bridges/procedure.webp",
+        "image": "/images/dental-veneers-crowns-bridges-2.jpg",
         "imageAlt": "Dental Veneers, Crowns & Bridges clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -853,7 +853,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/dental-veneers-crowns-bridges/technology.webp",
+        "image": "/images/dental-veneers-crowns-bridges-3.jpg",
         "imageAlt": "Step-by-step Dental Veneers, Crowns & Bridges procedure at Beverly Hills Clinic"
       },
       {
@@ -863,7 +863,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/dental-veneers-crowns-bridges/results.webp",
+        "image": "/images/dental-veneers-crowns-bridges-4.jpg",
         "imageAlt": "Patient candidate evaluation for Dental Veneers, Crowns & Bridges in Karachi"
       },
       {
@@ -873,7 +873,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/dental-veneers-crowns-bridges/aftercare.webp",
+        "image": "/images/dental-veneers-crowns-bridges-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Dental Veneers, Crowns & Bridges"
       }
     ],
@@ -932,7 +932,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Root Canal Treatment",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/root-canal-treatment/hero.webp",
+    "heroImage": "/images/root-canal-treatment-1.jpg",
     "introHeading": "Advanced Root Canal Treatment in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Root Canal Treatment services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Root Canal Treatment in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Root Canal Treatment at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -965,7 +965,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Root Canal Treatment procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/root-canal-treatment/consultation.webp",
+        "image": "/images/root-canal-treatment-1.jpg",
         "imageAlt": "Root Canal Treatment consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -975,7 +975,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/root-canal-treatment/procedure.webp",
+        "image": "/images/root-canal-treatment-2.jpg",
         "imageAlt": "Root Canal Treatment clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -985,7 +985,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/root-canal-treatment/technology.webp",
+        "image": "/images/root-canal-treatment-3.jpg",
         "imageAlt": "Step-by-step Root Canal Treatment procedure at Beverly Hills Clinic"
       },
       {
@@ -995,7 +995,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/root-canal-treatment/results.webp",
+        "image": "/images/root-canal-treatment-4.jpg",
         "imageAlt": "Patient candidate evaluation for Root Canal Treatment in Karachi"
       },
       {
@@ -1005,7 +1005,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/root-canal-treatment/aftercare.webp",
+        "image": "/images/root-canal-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Root Canal Treatment"
       }
     ],
@@ -1064,7 +1064,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Complete Dentures",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/complete-denture/hero.webp",
+    "heroImage": "/images/complete-denture-1.jpg",
     "introHeading": "Advanced Complete Dentures in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Complete Dentures services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Complete Dentures in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Complete Dentures at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -1097,7 +1097,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Complete Dentures procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/complete-denture/consultation.webp",
+        "image": "/images/complete-denture-1.jpg",
         "imageAlt": "Complete Dentures consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -1107,7 +1107,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/complete-denture/procedure.webp",
+        "image": "/images/complete-denture-2.jpg",
         "imageAlt": "Complete Dentures clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1117,7 +1117,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/complete-denture/technology.webp",
+        "image": "/images/complete-denture-3.jpg",
         "imageAlt": "Step-by-step Complete Dentures procedure at Beverly Hills Clinic"
       },
       {
@@ -1127,7 +1127,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/complete-denture/results.webp",
+        "image": "/images/complete-denture-4.jpg",
         "imageAlt": "Patient candidate evaluation for Complete Dentures in Karachi"
       },
       {
@@ -1137,7 +1137,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/complete-denture/aftercare.webp",
+        "image": "/images/complete-denture-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Complete Dentures"
       }
     ],
@@ -1328,7 +1328,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Dental Retainers",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/dental-retainers/hero.webp",
+    "heroImage": "/images/dental-retainers-1.jpg",
     "introHeading": "Advanced Dental Retainers in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Dental Retainers services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Dental Retainers in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Dental Retainers at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -1361,7 +1361,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Retainers procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/dental-retainers/consultation.webp",
+        "image": "/images/dental-retainers-1.jpg",
         "imageAlt": "Dental Retainers consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -1371,7 +1371,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/dental-retainers/procedure.webp",
+        "image": "/images/dental-retainers-2.jpg",
         "imageAlt": "Dental Retainers clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1381,7 +1381,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/dental-retainers/technology.webp",
+        "image": "/images/dental-retainers-3.jpg",
         "imageAlt": "Step-by-step Dental Retainers procedure at Beverly Hills Clinic"
       },
       {
@@ -1391,7 +1391,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/dental-retainers/results.webp",
+        "image": "/images/dental-retainers-4.jpg",
         "imageAlt": "Patient candidate evaluation for Dental Retainers in Karachi"
       },
       {
@@ -1401,7 +1401,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/dental-retainers/aftercare.webp",
+        "image": "/images/dental-retainers-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Dental Retainers"
       }
     ],
@@ -1460,7 +1460,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Pediatric Dentistry",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/pediatric-dentistry/hero.webp",
+    "heroImage": "/images/pediatric-dentistry-1.jpg",
     "introHeading": "Advanced Pediatric Dentistry in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Pediatric Dentistry services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Pediatric Dentistry in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Pediatric Dentistry at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -1493,7 +1493,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Pediatric Dentistry procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/pediatric-dentistry/consultation.webp",
+        "image": "/images/pediatric-dentistry-1.jpg",
         "imageAlt": "Pediatric Dentistry consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -1503,7 +1503,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/pediatric-dentistry/procedure.webp",
+        "image": "/images/pediatric-dentistry-2.jpg",
         "imageAlt": "Pediatric Dentistry clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1513,7 +1513,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/pediatric-dentistry/technology.webp",
+        "image": "/images/pediatric-dentistry-3.jpg",
         "imageAlt": "Step-by-step Pediatric Dentistry procedure at Beverly Hills Clinic"
       },
       {
@@ -1523,7 +1523,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/pediatric-dentistry/results.webp",
+        "image": "/images/pediatric-dentistry-4.jpg",
         "imageAlt": "Patient candidate evaluation for Pediatric Dentistry in Karachi"
       },
       {
@@ -1533,7 +1533,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/pediatric-dentistry/aftercare.webp",
+        "image": "/images/pediatric-dentistry-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Pediatric Dentistry"
       }
     ],
@@ -1592,7 +1592,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Tooth Extraction",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/tooth-extraction/hero.webp",
+    "heroImage": "/images/tooth-extraction-1.jpg",
     "introHeading": "Advanced Tooth Extraction in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Tooth Extraction services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Tooth Extraction in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Tooth Extraction at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -1625,7 +1625,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Tooth Extraction procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/tooth-extraction/consultation.webp",
+        "image": "/images/tooth-extraction-1.jpg",
         "imageAlt": "Tooth Extraction consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -1635,7 +1635,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/tooth-extraction/procedure.webp",
+        "image": "/images/tooth-extraction-2.jpg",
         "imageAlt": "Tooth Extraction clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1645,7 +1645,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/tooth-extraction/technology.webp",
+        "image": "/images/tooth-extraction-3.jpg",
         "imageAlt": "Step-by-step Tooth Extraction procedure at Beverly Hills Clinic"
       },
       {
@@ -1655,7 +1655,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/tooth-extraction/results.webp",
+        "image": "/images/tooth-extraction-4.jpg",
         "imageAlt": "Patient candidate evaluation for Tooth Extraction in Karachi"
       },
       {
@@ -1665,7 +1665,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/tooth-extraction/aftercare.webp",
+        "image": "/images/tooth-extraction-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Tooth Extraction"
       }
     ],
@@ -1988,7 +1988,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Gummy Smile Treatment",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/gummy-smile-treatment/hero.webp",
+    "heroImage": "/images/gummy-smile-treatment-1.jpg",
     "introHeading": "Advanced Gummy Smile Treatment in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Gummy Smile Treatment services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Gummy Smile Treatment in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Gummy Smile Treatment at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -2021,7 +2021,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Gummy Smile Treatment procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/gummy-smile-treatment/consultation.webp",
+        "image": "/images/gummy-smile-treatment-1.jpg",
         "imageAlt": "Gummy Smile Treatment consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -2031,7 +2031,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/gummy-smile-treatment/procedure.webp",
+        "image": "/images/gummy-smile-treatment-2.jpg",
         "imageAlt": "Gummy Smile Treatment clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -2041,7 +2041,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/gummy-smile-treatment/technology.webp",
+        "image": "/images/gummy-smile-treatment-3.jpg",
         "imageAlt": "Step-by-step Gummy Smile Treatment procedure at Beverly Hills Clinic"
       },
       {
@@ -2051,7 +2051,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/gummy-smile-treatment/results.webp",
+        "image": "/images/gummy-smile-treatment-4.jpg",
         "imageAlt": "Patient candidate evaluation for Gummy Smile Treatment in Karachi"
       },
       {
@@ -2061,7 +2061,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/gummy-smile-treatment/aftercare.webp",
+        "image": "/images/gummy-smile-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Gummy Smile Treatment"
       }
     ],
@@ -2120,7 +2120,7 @@ export const dentalServices: ServiceData[] = [
     "title": "Gum Depigmentation",
     "category": "dentistry",
     "categoryName": "Comprehensive Dental Services",
-    "heroImage": "/images/services/depigmentation-of-gums/hero.webp",
+    "heroImage": "/images/depigmentation-of-gums-1.jpg",
     "introHeading": "Advanced Gum Depigmentation in Karachi",
     "introText": "At Beverly Hills Clinic Karachi, we take pride in delivering premier Gum Depigmentation services tailored to restore your oral health, aesthetic balance, and overall quality of life. Situated in the heart of DHA Karachi, our modern clinic combines international medical standards, state-of-the-art diagnostic technology, and a patient-first approach to provide a truly superior clinical experience.\n\nChoosing Gum Depigmentation in Karachi at Beverly Hills Clinic means entrusting your smile to dedicated dental specialists with extensive clinical experience. Whether you require structural rehabilitation, cosmetic enhancement, or pain relief, our team develops customized treatment plans that prioritize your long-term wellness and natural comfort. We understand that visiting a dentist can elicit anxiety; therefore, our DHA Karachi facility is engineered as a calm, luxury space equipped with advanced gentle numbing and atraumatic clinical techniques.\n\nProper dental care is fundamental not only for a confident aesthetic smile but also for essential functional activities such as chewing, clear speech articulation, and maintaining proper facial bone architecture. By choosing professional Gum Depigmentation at Beverly Hills Clinic Karachi, you invest in durable, medically verified solutions designed to protect your natural smile for years to come. We invite you to experience thoughtful care delivered with clinical excellence.",
     "bulletBenefits": [
@@ -2153,7 +2153,7 @@ export const dentalServices: ServiceData[] = [
           "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Gum Depigmentation procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
-        "image": "/images/services/depigmentation-of-gums/consultation.webp",
+        "image": "/images/depigmentation-of-gums-1.jpg",
         "imageAlt": "Gum Depigmentation consultation and digital diagnostic planning at Beverly Hills Clinic Karachi"
       },
       {
@@ -2163,7 +2163,7 @@ export const dentalServices: ServiceData[] = [
           "When dental issues are left unaddressed, minor decay or misalignment can progress into complex structural damage, bone loss, or systemic infections. Our treatments halt disease progression, preserving your natural tooth body and reinforcing surrounding gum tissue.",
           "Our patient outcomes consistently demonstrate high success rates and lasting satisfaction. By utilizing medical-grade ceramic, titanium, and composite materials, we ensure your newly restored teeth resist staining, micro-cracks, and wear over extended periods."
         ],
-        "image": "/images/services/depigmentation-of-gums/procedure.webp",
+        "image": "/images/depigmentation-of-gums-2.jpg",
         "imageAlt": "Gum Depigmentation clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -2173,7 +2173,7 @@ export const dentalServices: ServiceData[] = [
           "The procedure begins with a detailed consultation and gentle preparation. Under profound, painless local anesthesia, our dentists carefully prepare the treatment site, removing damaged tissue or capturing 3D optical impressions without discomfort.",
           "Depending on the complexity of your treatment, sessions typically range from 30 to 90 minutes. Throughout the appointment, our team monitors your comfort continuously, ensuring a stress-free environment from start to finish."
         ],
-        "image": "/images/services/depigmentation-of-gums/technology.webp",
+        "image": "/images/depigmentation-of-gums-3.jpg",
         "imageAlt": "Step-by-step Gum Depigmentation procedure at Beverly Hills Clinic"
       },
       {
@@ -2183,7 +2183,7 @@ export const dentalServices: ServiceData[] = [
           "Ideal candidates are individuals committed to maintaining good daily oral hygiene and attending periodic dental checkups. Even patients with complex dental histories or pre-existing conditions can often become suitable candidates through preliminary therapeutic care.",
           "We encourage anyone experiencing dental pain, functional chewing difficulties, or cosmetic concerns to schedule an exploratory consultation at our DHA Karachi practice. Our specialists will design a clear step-by-step roadmap to achieve your ideal smile."
         ],
-        "image": "/images/services/depigmentation-of-gums/results.webp",
+        "image": "/images/depigmentation-of-gums-4.jpg",
         "imageAlt": "Patient candidate evaluation for Gum Depigmentation in Karachi"
       },
       {
@@ -2193,7 +2193,7 @@ export const dentalServices: ServiceData[] = [
           "Following your procedure, our team provides an individualized aftercare kit, including soft-brushing guidelines, prescribed rinses, and routine pain management advice. Adhering to these simple instructions ensures rapid tissue healing and optimal material bonding.",
           "With routine home maintenance, daily brushing, flossing, and semi-annual clinical hygiene visits at Beverly Hills Clinic, your restored smile will remain functional, radiant, and stable for decades."
         ],
-        "image": "/images/services/depigmentation-of-gums/aftercare.webp",
+        "image": "/images/depigmentation-of-gums-5.jpg",
         "imageAlt": "Post-treatment recovery and long-term care for Gum Depigmentation"
       }
     ],
