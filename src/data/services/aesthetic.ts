@@ -40,7 +40,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/co2-fractional-laser/consultation.webp",
+        "image": "/images/co2-fractional-laser-1.jpg",
         "imageAlt": "CO2 Fractional Laser (Fotona) consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -50,7 +50,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/co2-fractional-laser/procedure.webp",
+        "image": "/images/co2-fractional-laser-2.jpg",
         "imageAlt": "CO2 Fractional Laser (Fotona) clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -60,7 +60,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/co2-fractional-laser/technology.webp",
+        "image": "/images/co2-fractional-laser-3.jpg",
         "imageAlt": "Step-by-step CO2 Fractional Laser (Fotona) procedure at Beverly Hills Clinic"
       },
       {
@@ -70,7 +70,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/co2-fractional-laser/results.webp",
+        "image": "/images/co2-fractional-laser-4.jpg",
         "imageAlt": "Patient candidate assessment for CO2 Fractional Laser (Fotona) in Karachi"
       },
       {
@@ -80,7 +80,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/co2-fractional-laser/aftercare.webp",
+        "image": "/images/co2-fractional-laser-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for CO2 Fractional Laser (Fotona)"
       }
     ],
@@ -173,7 +173,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/hifu-treatment/consultation.webp",
+        "image": "/images/hifu-treatment-1.jpg",
         "imageAlt": "HIFU (Ultraformer III) consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -183,7 +183,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/hifu-treatment/procedure.webp",
+        "image": "/images/hifu-treatment-2.jpg",
         "imageAlt": "HIFU (Ultraformer III) clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -193,7 +193,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/hifu-treatment/technology.webp",
+        "image": "/images/hifu-treatment-3.jpg",
         "imageAlt": "Step-by-step HIFU (Ultraformer III) procedure at Beverly Hills Clinic"
       },
       {
@@ -203,7 +203,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/hifu-treatment/results.webp",
+        "image": "/images/hifu-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for HIFU (Ultraformer III) in Karachi"
       },
       {
@@ -213,7 +213,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/hifu-treatment/aftercare.webp",
+        "image": "/images/hifu-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for HIFU (Ultraformer III)"
       }
     ],
@@ -438,7 +438,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/plasma-fibroblast/consultation.webp",
+        "image": "/images/plasma-fibroblast-treatment-1.jpg",
         "imageAlt": "Plasma Fibroblast consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -448,7 +448,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/plasma-fibroblast/procedure.webp",
+        "image": "/images/plasma-fibroblast-treatment-2.jpg",
         "imageAlt": "Plasma Fibroblast clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -458,7 +458,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/plasma-fibroblast/technology.webp",
+        "image": "/images/plasma-fibroblast-treatment-3.jpg",
         "imageAlt": "Step-by-step Plasma Fibroblast procedure at Beverly Hills Clinic"
       },
       {
@@ -468,7 +468,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/plasma-fibroblast/results.webp",
+        "image": "/images/plasma-fibroblast-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for Plasma Fibroblast in Karachi"
       },
       {
@@ -478,7 +478,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/plasma-fibroblast/aftercare.webp",
+        "image": "/images/plasma-fibroblast-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Plasma Fibroblast"
       }
     ],
@@ -570,7 +570,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/polynucleotide-face-and-eyes/consultation.webp",
+        "image": "/images/polynucleotide-treatment-1.jpg",
         "imageAlt": "Polynucleotides (Face & Eyes) consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -580,7 +580,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/polynucleotide-face-and-eyes/procedure.webp",
+        "image": "/images/polynucleotide-treatment-2.jpg",
         "imageAlt": "Polynucleotides (Face & Eyes) clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -590,7 +590,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/polynucleotide-face-and-eyes/technology.webp",
+        "image": "/images/polynucleotide-treatment-3.jpg",
         "imageAlt": "Step-by-step Polynucleotides (Face & Eyes) procedure at Beverly Hills Clinic"
       },
       {
@@ -600,7 +600,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/polynucleotide-face-and-eyes/results.webp",
+        "image": "/images/polynucleotide-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for Polynucleotides (Face & Eyes) in Karachi"
       },
       {
@@ -610,7 +610,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/polynucleotide-face-and-eyes/aftercare.webp",
+        "image": "/images/polynucleotide-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Polynucleotides (Face & Eyes)"
       }
     ],
@@ -702,7 +702,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/dermal-fillers/consultation.webp",
+        "image": "/images/fillers-1.jpg",
         "imageAlt": "Dermal Fillers consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -712,7 +712,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/dermal-fillers/procedure.webp",
+        "image": "/images/fillers-2.jpg",
         "imageAlt": "Dermal Fillers clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -722,7 +722,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/dermal-fillers/technology.webp",
+        "image": "/images/fillers-3.jpg",
         "imageAlt": "Step-by-step Dermal Fillers procedure at Beverly Hills Clinic"
       },
       {
@@ -732,7 +732,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/dermal-fillers/results.webp",
+        "image": "/images/fillers-4.jpg",
         "imageAlt": "Patient candidate assessment for Dermal Fillers in Karachi"
       },
       {
@@ -742,7 +742,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/dermal-fillers/aftercare.webp",
+        "image": "/images/fillers-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Dermal Fillers"
       }
     ],
@@ -966,7 +966,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/prp-therapy/consultation.webp",
+        "image": "/images/prp-treatment-1.jpg",
         "imageAlt": "PRP & Exosomes Therapy consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -976,7 +976,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/prp-therapy/procedure.webp",
+        "image": "/images/prp-treatment-2.jpg",
         "imageAlt": "PRP & Exosomes Therapy clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -986,7 +986,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/prp-therapy/technology.webp",
+        "image": "/images/prp-treatment-3.jpg",
         "imageAlt": "Step-by-step PRP & Exosomes Therapy procedure at Beverly Hills Clinic"
       },
       {
@@ -996,7 +996,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/prp-therapy/results.webp",
+        "image": "/images/prp-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for PRP & Exosomes Therapy in Karachi"
       },
       {
@@ -1006,7 +1006,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/prp-therapy/aftercare.webp",
+        "image": "/images/prp-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for PRP & Exosomes Therapy"
       }
     ],
@@ -1098,7 +1098,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/acne-scars-treatment/consultation.webp",
+        "image": "/images/acne-acne-scars-treatment-1.jpg",
         "imageAlt": "Acne & Acne Scars Treatments consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -1108,7 +1108,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/acne-scars-treatment/procedure.webp",
+        "image": "/images/acne-acne-scars-treatment-2.jpg",
         "imageAlt": "Acne & Acne Scars Treatments clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1118,7 +1118,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/acne-scars-treatment/technology.webp",
+        "image": "/images/acne-acne-scars-treatment-3.jpg",
         "imageAlt": "Step-by-step Acne & Acne Scars Treatments procedure at Beverly Hills Clinic"
       },
       {
@@ -1128,7 +1128,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/acne-scars-treatment/results.webp",
+        "image": "/images/acne-acne-scars-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for Acne & Acne Scars Treatments in Karachi"
       },
       {
@@ -1138,7 +1138,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/acne-scars-treatment/aftercare.webp",
+        "image": "/images/acne-acne-scars-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Acne & Acne Scars Treatments"
       }
     ],
@@ -1230,7 +1230,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/pdo-threads/consultation.webp",
+        "image": "/images/pdo-threads-1.jpg",
         "imageAlt": "PDO Threads consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -1240,7 +1240,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/pdo-threads/procedure.webp",
+        "image": "/images/pdo-threads-2.jpg",
         "imageAlt": "PDO Threads clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1250,7 +1250,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/pdo-threads/technology.webp",
+        "image": "/images/pdo-threads-3.jpg",
         "imageAlt": "Step-by-step PDO Threads procedure at Beverly Hills Clinic"
       },
       {
@@ -1260,7 +1260,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/pdo-threads/results.webp",
+        "image": "/images/pdo-threads-4.jpg",
         "imageAlt": "Patient candidate assessment for PDO Threads in Karachi"
       },
       {
@@ -1270,7 +1270,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/pdo-threads/aftercare.webp",
+        "image": "/images/pdo-threads-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for PDO Threads"
       }
     ],
@@ -1362,7 +1362,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/chemical-peel/consultation.webp",
+        "image": "/images/chemical-peel-1.jpg",
         "imageAlt": "Chemical Peels (Face, Neck, Body) consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -1372,7 +1372,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/chemical-peel/procedure.webp",
+        "image": "/images/chemical-peel-2.jpg",
         "imageAlt": "Chemical Peels (Face, Neck, Body) clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1382,7 +1382,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/chemical-peel/technology.webp",
+        "image": "/images/chemical-peel-3.jpg",
         "imageAlt": "Step-by-step Chemical Peels (Face, Neck, Body) procedure at Beverly Hills Clinic"
       },
       {
@@ -1392,7 +1392,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/chemical-peel/results.webp",
+        "image": "/images/chemical-peel-4.jpg",
         "imageAlt": "Patient candidate assessment for Chemical Peels (Face, Neck, Body) in Karachi"
       },
       {
@@ -1402,7 +1402,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/chemical-peel/aftercare.webp",
+        "image": "/images/chemical-peel-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Chemical Peels (Face, Neck, Body)"
       }
     ],
@@ -1494,7 +1494,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/skin-brightening-therapy/consultation.webp",
+        "image": "/images/skin-brightening-treatment-1.jpg",
         "imageAlt": "Skin Brightening Therapy consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -1504,7 +1504,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/skin-brightening-therapy/procedure.webp",
+        "image": "/images/skin-brightening-treatment-2.jpg",
         "imageAlt": "Skin Brightening Therapy clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1514,7 +1514,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/skin-brightening-therapy/technology.webp",
+        "image": "/images/skin-brightening-treatment-3.jpg",
         "imageAlt": "Step-by-step Skin Brightening Therapy procedure at Beverly Hills Clinic"
       },
       {
@@ -1524,7 +1524,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/skin-brightening-therapy/results.webp",
+        "image": "/images/skin-brightening-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for Skin Brightening Therapy in Karachi"
       },
       {
@@ -1534,7 +1534,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/skin-brightening-therapy/aftercare.webp",
+        "image": "/images/skin-brightening-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Skin Brightening Therapy"
       }
     ],
@@ -1626,7 +1626,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/weight-loss-treatment/consultation.webp",
+        "image": "/images/weight-loss-treatment-1.jpg",
         "imageAlt": "Medical Weight Loss Treatment consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -1636,7 +1636,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/weight-loss-treatment/procedure.webp",
+        "image": "/images/weight-loss-treatment-2.jpg",
         "imageAlt": "Medical Weight Loss Treatment clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1646,7 +1646,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/weight-loss-treatment/technology.webp",
+        "image": "/images/weight-loss-treatment-3.jpg",
         "imageAlt": "Step-by-step Medical Weight Loss Treatment procedure at Beverly Hills Clinic"
       },
       {
@@ -1656,7 +1656,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/weight-loss-treatment/results.webp",
+        "image": "/images/weight-loss-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for Medical Weight Loss Treatment in Karachi"
       },
       {
@@ -1666,7 +1666,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/weight-loss-treatment/aftercare.webp",
+        "image": "/images/weight-loss-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Medical Weight Loss Treatment"
       }
     ],
@@ -1757,7 +1757,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/body-fat-lipo/consultation.webp",
+        "image": "/images/body-fat-lipo-1.jpg",
         "imageAlt": "Non-Surgical Body Fat Lipo consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -1767,7 +1767,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/body-fat-lipo/procedure.webp",
+        "image": "/images/body-fat-lipo-2.jpg",
         "imageAlt": "Non-Surgical Body Fat Lipo clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1777,7 +1777,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/body-fat-lipo/technology.webp",
+        "image": "/images/body-fat-lipo-3.jpg",
         "imageAlt": "Step-by-step Non-Surgical Body Fat Lipo procedure at Beverly Hills Clinic"
       },
       {
@@ -1787,7 +1787,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/body-fat-lipo/results.webp",
+        "image": "/images/body-fat-lipo-4.jpg",
         "imageAlt": "Patient candidate assessment for Non-Surgical Body Fat Lipo in Karachi"
       },
       {
@@ -1797,7 +1797,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/body-fat-lipo/aftercare.webp",
+        "image": "/images/body-fat-lipo-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Non-Surgical Body Fat Lipo"
       }
     ],
@@ -1888,7 +1888,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/red-carpet-facial/consultation.webp",
+        "image": "/images/red-carpet-treatment-1.jpg",
         "imageAlt": "Red Carpet Facial consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -1898,7 +1898,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/red-carpet-facial/procedure.webp",
+        "image": "/images/red-carpet-treatment-2.jpg",
         "imageAlt": "Red Carpet Facial clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -1908,7 +1908,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/red-carpet-facial/technology.webp",
+        "image": "/images/red-carpet-treatment-3.jpg",
         "imageAlt": "Step-by-step Red Carpet Facial procedure at Beverly Hills Clinic"
       },
       {
@@ -1918,7 +1918,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/red-carpet-facial/results.webp",
+        "image": "/images/red-carpet-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for Red Carpet Facial in Karachi"
       },
       {
@@ -1928,7 +1928,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/red-carpet-facial/aftercare.webp",
+        "image": "/images/red-carpet-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Red Carpet Facial"
       }
     ],
@@ -2019,7 +2019,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/bh-exfoliating-facial/consultation.webp",
+        "image": "/images/bh-exfoliating-facial-1.jpg",
         "imageAlt": "Beverly Hills Exfoliating Facial consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -2029,7 +2029,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/bh-exfoliating-facial/procedure.webp",
+        "image": "/images/bh-exfoliating-facial-2.jpg",
         "imageAlt": "Beverly Hills Exfoliating Facial clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -2039,7 +2039,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/bh-exfoliating-facial/technology.webp",
+        "image": "/images/bh-exfoliating-facial-3.jpg",
         "imageAlt": "Step-by-step Beverly Hills Exfoliating Facial procedure at Beverly Hills Clinic"
       },
       {
@@ -2049,7 +2049,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/bh-exfoliating-facial/results.webp",
+        "image": "/images/bh-exfoliating-facial-4.jpg",
         "imageAlt": "Patient candidate assessment for Beverly Hills Exfoliating Facial in Karachi"
       },
       {
@@ -2059,7 +2059,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/bh-exfoliating-facial/aftercare.webp",
+        "image": "/images/bh-exfoliating-facial-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Beverly Hills Exfoliating Facial"
       }
     ],
@@ -2150,7 +2150,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/microneedling-stem-cells/consultation.webp",
+        "image": "/images/microneedling-treatment-1.jpg",
         "imageAlt": "Micro-Needling with Stem Cells consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -2160,7 +2160,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/microneedling-stem-cells/procedure.webp",
+        "image": "/images/microneedling-treatment-2.jpg",
         "imageAlt": "Micro-Needling with Stem Cells clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -2170,7 +2170,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/microneedling-stem-cells/technology.webp",
+        "image": "/images/microneedling-treatment-3.jpg",
         "imageAlt": "Step-by-step Micro-Needling with Stem Cells procedure at Beverly Hills Clinic"
       },
       {
@@ -2180,7 +2180,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/microneedling-stem-cells/results.webp",
+        "image": "/images/microneedling-treatment-4.jpg",
         "imageAlt": "Patient candidate assessment for Micro-Needling with Stem Cells in Karachi"
       },
       {
@@ -2190,7 +2190,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/microneedling-stem-cells/aftercare.webp",
+        "image": "/images/microneedling-treatment-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Micro-Needling with Stem Cells"
       }
     ],
@@ -2281,7 +2281,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/exosomes-therapy/consultation.webp",
+        "image": "/images/exosome-therapy-1.jpg",
         "imageAlt": "Exosomes Therapy consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -2291,7 +2291,7 @@ export const aestheticServices: ServiceData[] = [
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/exosomes-therapy/procedure.webp",
+        "image": "/images/exosome-therapy-2.jpg",
         "imageAlt": "Exosomes Therapy clinical advantages and professional treatment in DHA Karachi"
       },
       {
@@ -2301,7 +2301,7 @@ export const aestheticServices: ServiceData[] = [
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/exosomes-therapy/technology.webp",
+        "image": "/images/exosome-therapy-3.jpg",
         "imageAlt": "Step-by-step Exosomes Therapy procedure at Beverly Hills Clinic"
       },
       {
@@ -2311,7 +2311,7 @@ export const aestheticServices: ServiceData[] = [
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/exosomes-therapy/results.webp",
+        "image": "/images/exosome-therapy-4.jpg",
         "imageAlt": "Patient candidate assessment for Exosomes Therapy in Karachi"
       },
       {
@@ -2321,7 +2321,7 @@ export const aestheticServices: ServiceData[] = [
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/exosomes-therapy/aftercare.webp",
+        "image": "/images/exosome-therapy-5.jpg",
         "imageAlt": "Post-treatment recovery and skin care instructions for Exosomes Therapy"
       }
     ],
