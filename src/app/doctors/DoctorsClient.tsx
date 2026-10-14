@@ -52,7 +52,7 @@ export default function DoctorsClient() {
       expertise: [
         "CO2 Fractional Laser Resurfacing",
         "HIFU Ultraformer III Face Lifting",
-        "Full Face Botox & Dermal Fillers",
+        "Full Face Anti-Wrinkle & Dermal Fillers",
         "Polynucleotides & Exosomes Therapy",
       ],
       education: "Certified Fellow in Aesthetic Medicine",

@@ -54,7 +54,7 @@ const aestheticServices = [
   "Plasma Fibroblast",
   "Polynucleotide Face and Eyes",
   "Fillers: Face, Lips, Hair, Body",
-  "Full Face Botox Rejuvenation",
+  "Full Face Anti-Wrinkle Rejuvenation",
   "PRP & Exosomes / Stem Cells",
   "Acne and Acne Scars Treatments",
   "PDO Threads",

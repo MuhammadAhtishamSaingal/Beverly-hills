@@ -51,10 +51,10 @@ export default function Technology() {
     },
     {
       number: "03",
-      name: "Full Face Botox Rejuvenation",
+      name: "Full Face Anti-Wrinkle Rejuvenation",
       subname: "Comprehensive Anti-Aging",
       category: "03 / WRINKLE PREVENTATIVE CARE",
-      heading: "Full Face Botox Rejuvenation",
+      heading: "Full Face Anti-Wrinkle Rejuvenation",
       description: "Comprehensive anti-aging solution targeting facial wrinkles and lines to restore a youthful appearance. By precisely relaxing targeted muscle groups, this treatment smooths existing lines while preventing new ones from forming.",
       bullets: [
         "Effectively targets forehead lines, frown creases, and dynamic crow's feet",

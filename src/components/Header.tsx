@@ -185,7 +185,7 @@ export default function Header() {
   ];
 
   const aestheticServicesList = [
-    { name: "Full Face Botox Rejuvenation", slug: "botox-treatment" },
+    { name: "Full Face Anti-Wrinkle Rejuvenation", slug: "anti-wrinkle-treatment" },
     { name: "Fillers: Face, Lips, Hair, Body", slug: "dermal-fillers" },
     { name: "Laser Hair Removal (Alma)", slug: "laser-hair-removal" },
     { name: "HIFU (Ultraformer III)", slug: "hifu-treatment" },
@@ -535,7 +535,7 @@ export default function Header() {
                     {[
                       { name: "Dental Implants", slug: "dental-implants" },
                       { name: "Teeth Whitening", slug: "teeth-whitening" },
-                      { name: "Full Face Botox", slug: "botox-treatment" },
+                      { name: "Full Face Anti-Wrinkle", slug: "anti-wrinkle-treatment" },
                       { name: "Clear Aligners", slug: "clear-aligners" },
                       { name: "Dermal Fillers", slug: "dermal-fillers" },
                       { name: "HIFU Treatment", slug: "hifu-treatment" },
@@ -562,7 +562,7 @@ export default function Header() {
                     No services or pages found matching "{searchQuery}"
                   </p>
                   <p className="text-xs text-[#f6ede7]/50">
-                    Try searching for terms like "Implants", "Whitening", "Botox", or "Doctors".
+                    Try searching for terms like "Implants", "Whitening", "Anti-Wrinkle", or "Doctors".
                   </p>
                 </div>
               ) : (

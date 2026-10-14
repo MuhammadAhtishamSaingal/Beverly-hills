@@ -60,7 +60,7 @@ export default function Footer() {
   ];
 
   const aestheticServicesList = [
-    { label: "Botox Treatment", href: "/services/botox-treatment" },
+    { label: "Anti-Wrinkle Treatment", href: "/services/anti-wrinkle-treatment" },
     { label: "Dermal Fillers", href: "/services/dermal-fillers" },
     { label: "Laser Hair Removal", href: "/services/laser-hair-removal" },
     { label: "HIFU Treatment", href: "/services/hifu-treatment" },

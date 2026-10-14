@@ -261,7 +261,7 @@ export const aestheticServices: ServiceData[] = [
     ],
     "relatedSlugs": [
       "pdo-threads",
-      "botox-treatment",
+      "anti-wrinkle-treatment",
       "dermal-fillers",
       "co2-fractional-laser",
       "body-fat-lipo"
@@ -789,21 +789,21 @@ export const aestheticServices: ServiceData[] = [
       }
     ],
     "relatedSlugs": [
-      "botox-treatment",
+      "anti-wrinkle-treatment",
       "hifu-treatment",
       "pdo-threads",
       "polynucleotide-face-and-eyes"
     ]
   },
   {
-    "id": "botox-treatment",
-    "slug": "botox-treatment",
-    "title": "Full Face Botox Rejuvenation",
+    "id": "anti-wrinkle-treatment",
+    "slug": "anti-wrinkle-treatment",
+    "title": "Full Face Anti-Wrinkle Rejuvenation",
     "category": "aesthetics",
     "categoryName": "Advanced Aesthetic Treatments",
-    "heroImage": "/images/services/botox-treatment/hero.webp",
-    "introHeading": "Advanced Full Face Botox Rejuvenation in Karachi",
-    "introText": "At Beverly Hills Clinic Karachi, we offer medical-grade Full Face Botox Rejuvenation procedures designed to rejuvenate your skin, refine facial contours, and restore youthful radiance. Situated in DHA Karachi, our clinic brings Beverly Hills aesthetic standards, internationally certified dermatological equipment, and physician-led precision to Pakistan.\n\nChoosing Botox Treatment in Karachi at Beverly Hills Clinic guarantees individualized care under the guidance of experienced aesthetic physicians. We prioritize biological safety, natural proportions, and subtle enhancements over unnatural artificial volume. Every aesthetic plan begins with a thorough skin analysis, allowing us to select optimal energy wavelengths and active medical serums for your skin type.\n\nMaintaining vibrant, healthy skin requires advanced clinical care that penetrates beyond superficial cosmetics. By opting for professional Full Face Botox Rejuvenation at Beverly Hills Clinic Karachi, you invest in scientifically proven regenerative treatments that stimulate long-term collagen remodeling and cell renewal.",
+    "heroImage": "/images/services/anti-wrinkle-treatment/hero.webp",
+    "introHeading": "Advanced Full Face Anti-Wrinkle Rejuvenation in Karachi",
+    "introText": "At Beverly Hills Clinic Karachi, we offer medical-grade Full Face Anti-Wrinkle Rejuvenation procedures designed to rejuvenate your skin, refine facial contours, and restore youthful radiance. Situated in DHA Karachi, our clinic brings Beverly Hills aesthetic standards, internationally certified dermatological equipment, and physician-led precision to Pakistan.\n\nChoosing Anti-Wrinkle Treatment in Karachi at Beverly Hills Clinic guarantees individualized care under the guidance of experienced aesthetic physicians. We prioritize biological safety, natural proportions, and subtle enhancements over unnatural artificial volume. Every aesthetic plan begins with a thorough skin analysis, allowing us to select optimal energy wavelengths and active medical serums for your skin type.\n\nMaintaining vibrant, healthy skin requires advanced clinical care that penetrates beyond superficial cosmetics. By opting for professional Full Face Anti-Wrinkle Rejuvenation at Beverly Hills Clinic Karachi, you invest in scientifically proven regenerative treatments that stimulate long-term collagen remodeling and cell renewal.",
     "bulletBenefits": [
       "Medical-grade non-surgical skin rejuvenation and facial refinement",
       "Stimulates deep collagen, elastin, and cellular regeneration",
@@ -813,110 +813,110 @@ export const aestheticServices: ServiceData[] = [
       "Minimal to zero recovery downtime with comfortable treatment protocols",
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
-    "candidateInfo": "Suitable candidates for Full Face Botox Rejuvenation at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
+    "candidateInfo": "Suitable candidates for Full Face Anti-Wrinkle Rejuvenation at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
     "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
     "duration": "15 - 30 minutes",
     "suitability": "Prevention and smoothing of forehead wrinkles, frown lines, and eye crows feet",
-    "metaTitle": "Botox Treatment in Karachi | Beverly Hills Clinic DHA",
-    "metaDescription": "Smooth forehead lines, frown furrows, and crow's feet with expert Botox treatment at Beverly Hills Clinic Karachi. Natural facial rejuvenation in DHA Karachi.",
+    "metaTitle": "Anti-Wrinkle Treatment in Karachi | Beverly Hills Clinic DHA",
+    "metaDescription": "Smooth forehead lines, frown furrows, and crow's feet with expert anti-wrinkle treatment at Beverly Hills Clinic Karachi. Natural facial rejuvenation in DHA Karachi.",
     "keywords": [
-      "Botox Karachi",
+      "Anti-wrinkle treatment Karachi",
       "Anti wrinkle injection DHA Karachi",
-      "Botox doctor Karachi",
-      "Forehead botox Karachi",
+      "Anti-wrinkle doctor Karachi",
+      "Forehead wrinkle treatment Karachi",
       "Beverly Hills Clinic Karachi"
     ],
     "sections": [
       {
         "title": "Treatment Overview & Advanced Aesthetic Technology",
         "content": [
-          "Full Face Botox Rejuvenation represents the pinnacle of modern non-surgical aesthetic science. At Beverly Hills Clinic Karachi, we combine biological skin knowledge with state-of-the-art medical energy devices to achieve transformative results.",
+          "Full Face Anti-Wrinkle Rejuvenation represents the pinnacle of modern non-surgical aesthetic science. At Beverly Hills Clinic Karachi, we combine biological skin knowledge with state-of-the-art medical energy devices to achieve transformative results.",
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/botox-treatment/consultation.webp",
-        "imageAlt": "Full Face Botox Rejuvenation consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
+        "image": "/images/services/anti-wrinkle-treatment/consultation.webp",
+        "imageAlt": "Full Face Anti-Wrinkle Rejuvenation consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
         "title": "Clinical Advantages & Skin Renewal Benefits",
         "content": [
-          "Undergoing professional Full Face Botox Rejuvenation at Beverly Hills Clinic provides cumulative and enduring skin benefits. Unlike superficial salon facials, medical aesthetic therapies restructure the deep dermis where true aging occurs.",
+          "Undergoing professional Full Face Anti-Wrinkle Rejuvenation at Beverly Hills Clinic provides cumulative and enduring skin benefits. Unlike superficial salon facials, medical aesthetic therapies restructure the deep dermis where true aging occurs.",
           "Regular treatments prevent progressive skin laxity, soften stubborn hyperpigmentation, and refine enlarged pores. Patients experience noticeable improvements in skin firmness, hydration levels, and light reflectivity.",
           "Our clinical outcomes demonstrate high patient satisfaction. By using authentic, clinically proven medical devices and bio-resorbable serums, we guarantee biological safety and natural harmony."
         ],
-        "image": "/images/services/botox-treatment/procedure.webp",
-        "imageAlt": "Full Face Botox Rejuvenation clinical advantages and professional treatment in DHA Karachi"
+        "image": "/images/services/anti-wrinkle-treatment/procedure.webp",
+        "imageAlt": "Full Face Anti-Wrinkle Rejuvenation clinical advantages and professional treatment in DHA Karachi"
       },
       {
         "title": "Step-by-Step Clinical Procedure",
         "content": [
-          "Your clinical appointment for Full Face Botox Rejuvenation at Beverly Hills Clinic Karachi is designed for maximum relaxation and safety. Every step is administered by trained medical staff.",
+          "Your clinical appointment for Full Face Anti-Wrinkle Rejuvenation at Beverly Hills Clinic Karachi is designed for maximum relaxation and safety. Every step is administered by trained medical staff.",
           "The treatment begins with a thorough skin cleansing and application of high-potency topical numbing gel when indicated. Once numbed, our aesthetic physician applies targeted laser passes, micro-injections, or gentle energy pulses with high precision.",
           "Sessions last between 30 and 90 minutes. Post-procedure soothing serums and cooling packs are applied immediately to minimize transient redness."
         ],
-        "image": "/images/services/botox-treatment/technology.webp",
-        "imageAlt": "Step-by-step Full Face Botox Rejuvenation procedure at Beverly Hills Clinic"
+        "image": "/images/services/anti-wrinkle-treatment/technology.webp",
+        "imageAlt": "Step-by-step Full Face Anti-Wrinkle Rejuvenation procedure at Beverly Hills Clinic"
       },
       {
         "title": "Candidate Assessment & Skin Suitability",
         "content": [
-          "Evaluating your suitability for Full Face Botox Rejuvenation ensures safety and satisfactory outcomes. At Beverly Hills Clinic Karachi, we conduct detailed skin typing according to the Fitzpatrick scale to customize energy settings safely.",
+          "Evaluating your suitability for Full Face Anti-Wrinkle Rejuvenation ensures safety and satisfactory outcomes. At Beverly Hills Clinic Karachi, we conduct detailed skin typing according to the Fitzpatrick scale to customize energy settings safely.",
           "Ideal candidates are individuals seeking non-invasive or minimally invasive anti-aging, scar correction, or contour refinement without undergoing major surgery or lengthy recovery periods.",
           "We welcome you to schedule a private aesthetic consultation at our DHA Karachi practice, where our physicians will curate a personalized skin transformation roadmap."
         ],
-        "image": "/images/services/botox-treatment/results.webp",
-        "imageAlt": "Patient candidate assessment for Full Face Botox Rejuvenation in Karachi"
+        "image": "/images/services/anti-wrinkle-treatment/results.webp",
+        "imageAlt": "Patient candidate assessment for Full Face Anti-Wrinkle Rejuvenation in Karachi"
       },
       {
         "title": "Recovery, Aftercare & Long-Term Skin Expectations",
         "content": [
-          "Recovery following Full Face Botox Rejuvenation is fast and manageable. Most patients resume daily routines immediately or within 24 to 72 hours depending on treatment intensity.",
+          "Recovery following Full Face Anti-Wrinkle Rejuvenation is fast and manageable. Most patients resume daily routines immediately or within 24 to 72 hours depending on treatment intensity.",
           "Our clinic provides a specialized post-procedure skincare regimen, including barrier repair creams, soothing anti-inflammatory balms, and mandatory broad-spectrum SPF 50 sunscreen.",
           "With proper home maintenance, daily hydration, and periodic maintenance sessions at Beverly Hills Clinic, your skin will retain its youthful elasticity and glow."
         ],
-        "image": "/images/services/botox-treatment/aftercare.webp",
-        "imageAlt": "Post-treatment recovery and skin care instructions for Full Face Botox Rejuvenation"
+        "image": "/images/services/anti-wrinkle-treatment/aftercare.webp",
+        "imageAlt": "Post-treatment recovery and skin care instructions for Full Face Anti-Wrinkle Rejuvenation"
       }
     ],
     "faqs": [
       {
-        "question": "What is Full Face Botox Rejuvenation and how does it work?",
-        "answer": "Full Face Botox Rejuvenation is an advanced medical aesthetic procedure performed at Beverly Hills Clinic Karachi that targets specific skin layers to stimulate collagen, clear blemishes, and refine facial contours."
+        "question": "What is Full Face Anti-Wrinkle Rejuvenation and how does it work?",
+        "answer": "Full Face Anti-Wrinkle Rejuvenation is an advanced medical aesthetic procedure performed at Beverly Hills Clinic Karachi that targets specific skin layers to stimulate collagen, clear blemishes, and refine facial contours."
       },
       {
-        "question": "Is Full Face Botox Rejuvenation safe for all skin types?",
+        "question": "Is Full Face Anti-Wrinkle Rejuvenation safe for all skin types?",
         "answer": "Yes, at Beverly Hills Clinic DHA Karachi, our aesthetic doctors calibrate energy settings and formulations specifically for South Asian skin types to prevent post-inflammatory hyperpigmentation."
       },
       {
-        "question": "How long does a Full Face Botox Rejuvenation session take?",
+        "question": "How long does a Full Face Anti-Wrinkle Rejuvenation session take?",
         "answer": "Sessions typically require 30 to 60 minutes including preparation and topical numbing."
       },
       {
-        "question": "Is Full Face Botox Rejuvenation painful?",
+        "question": "Is Full Face Anti-Wrinkle Rejuvenation painful?",
         "answer": "We apply high-potency topical numbing creams and built-in contact cooling devices, ensuring a virtually painless experience."
       },
       {
-        "question": "Who is suitable for Full Face Botox Rejuvenation?",
+        "question": "Who is suitable for Full Face Anti-Wrinkle Rejuvenation?",
         "answer": "Adults seeking non-surgical solutions for skin aging, texture irregularities, fine lines, or volume loss are ideal candidates."
       },
       {
-        "question": "What results can patients expect after Full Face Botox Rejuvenation?",
+        "question": "What results can patients expect after Full Face Anti-Wrinkle Rejuvenation?",
         "answer": "Patients notice refined skin texture, increased firmness, reduced fine lines, and a radiant glow."
       },
       {
-        "question": "How much downtime is required after Full Face Botox Rejuvenation?",
+        "question": "How much downtime is required after Full Face Anti-Wrinkle Rejuvenation?",
         "answer": "Downtime is minimal. Most patients return to daily work immediately or within 1-3 days for deeper laser treatments."
       },
       {
-        "question": "Why choose Beverly Hills Clinic for Full Face Botox Rejuvenation in Karachi?",
+        "question": "Why choose Beverly Hills Clinic for Full Face Anti-Wrinkle Rejuvenation in Karachi?",
         "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
       },
       {
-        "question": "How much does Full Face Botox Rejuvenation cost in Karachi?",
+        "question": "How much does Full Face Anti-Wrinkle Rejuvenation cost in Karachi?",
         "answer": "The cost varies depending on the number of sessions and areas treated. Contact Beverly Hills Clinic Karachi for a personalized quote."
       },
       {
-        "question": "How do I maintain my skin results after Full Face Botox Rejuvenation?",
+        "question": "How do I maintain my skin results after Full Face Anti-Wrinkle Rejuvenation?",
         "answer": "Maintain results by applying daily broad-spectrum SPF 50 sunscreen, staying hydrated, and scheduling periodic touch-up sessions at Beverly Hills Clinic."
       }
     ],
@@ -1319,7 +1319,7 @@ export const aestheticServices: ServiceData[] = [
     "relatedSlugs": [
       "hifu-treatment",
       "dermal-fillers",
-      "botox-treatment",
+      "anti-wrinkle-treatment",
       "plasma-fibroblast"
     ]
   },
@@ -1478,10 +1478,10 @@ export const aestheticServices: ServiceData[] = [
     "duration": "45 minutes",
     "suitability": "Dull, uneven skin tone, sun damage, and hyperpigmentation seeking luminous glow",
     "metaTitle": "Skin Brightening Therapy Karachi | Beverly Hills Clinic DHA",
-    "metaDescription": "Restore luminous skin tone with medical skin brightening treatments at Beverly Hills Clinic Karachi. Glutathione antioxidant & LED therapies in DHA Karachi.",
+    "metaDescription": "Restore luminous skin tone with medical skin brightening treatments at Beverly Hills Clinic Karachi. Antioxidant & LED therapies in DHA Karachi.",
     "keywords": [
       "Skin brightening Karachi",
-      "Glutathione glow DHA Karachi",
+      "Antioxidant glow DHA Karachi",
       "Skin lightening Karachi",
       "Complexion glow Karachi",
       "Beverly Hills Clinic Karachi"
