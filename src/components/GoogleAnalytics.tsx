@@ -45,7 +45,7 @@ export default function GoogleAnalytics() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             ${GA_ID ? `gtag('config', '${GA_ID}', { page_path: window.location.pathname });` : ""}
-            ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ""}
+            ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}', { allow_ad_personalization_signals: false });` : ""}
           `,
         }}
       />
