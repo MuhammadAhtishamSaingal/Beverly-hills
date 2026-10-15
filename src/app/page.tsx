@@ -1,19 +1,16 @@
 import Hero from "@/components/Hero";
-import Philosophy from "@/components/Philosophy";
-import People from "@/components/People";
-import Technology from "@/components/Technology";
-import Studios from "@/components/Studios";
-import Amenities from "@/components/Amenities";
 import SignatureTreatments from "@/components/SignatureTreatments";
 import SmileMakeoverSpotlight from "@/components/SmileMakeoverSpotlight";
+import People from "@/components/People";
 import GoogleRating from "@/components/GoogleRating";
+import Studios from "@/components/Studios";
 import TwoStudiosOneStandard from "@/components/TwoStudiosOneStandard";
 import CTASection from "@/components/CTASection";
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      {/* 1. Hero Banner */}
+      {/* 1. Hero */}
       <Hero />
 
       {/* 2. Signature dental & aesthetic treatments */}
@@ -22,28 +19,19 @@ export default function Home() {
       {/* 3. Smile makeover: 3 visits, about 10 days */}
       <SmileMakeoverSpotlight />
 
-      {/* 4. The People */}
+      {/* 4. Our doctors */}
       <People />
 
-      {/* 5. Our Philosophy */}
-      <Philosophy />
-
-      {/* 4. Technology Section */}
-      <Technology />
-
-      {/* 5. The Studios */}
-      <Studios />
-
-      {/* 6. Every Detail, Considered */}
-      <Amenities />
-
-      {/* 7. Google rating */}
+      {/* 5. Google rating */}
       <GoogleRating />
 
-      {/* 8. Two Studios, One Standard */}
+      {/* 6. The clinic spaces */}
+      <Studios />
+
+      {/* 7. Our two clinics */}
       <TwoStudiosOneStandard />
 
-      {/* 9. CTA Section */}
+      {/* 8. Final call to action */}
       <CTASection />
     </div>
   );

@@ -4,14 +4,14 @@ import Image from "next/image";
 import { Phone, Calendar } from "lucide-react";
 import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
-export default function Hero() {
+function DesktopHero() {
   const triggerBooking = () => {
     trackInitiateBooking("Hero Book a Visit");
     window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
   return (
-    <section className="relative w-full min-h-[100svh] md:min-h-screen flex items-end md:items-center justify-start overflow-hidden bg-brand-primary pb-24 md:pb-0 pt-[120px] md:pt-0">
+    <section className="hidden md:flex relative w-full min-h-[100svh] md:min-h-screen items-end md:items-center justify-start overflow-hidden bg-brand-primary pb-24 md:pb-0 pt-[120px] md:pt-0">
       {/* Hero image container */}
       <div className="absolute inset-0 z-10">
         {/* Desktop Hero Image */}
@@ -120,5 +120,67 @@ export default function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function MobileHero() {
+  const triggerBooking = () => {
+    trackInitiateBooking("Mobile Hero Book Consultation");
+    window.dispatchEvent(new CustomEvent("open-booking"));
+  };
+
+  return (
+    <section className="md:hidden relative w-full min-h-[100svh] bg-[#1c1412] text-[#f6ede7] overflow-hidden flex flex-col justify-end">
+      <Image
+        src="/images/people-team.webp"
+        alt="Beverly Hills Clinic dentists and aesthetic doctors in Karachi"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-[center_20%]"
+      />
+      <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#f6ede7]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-[72%] bg-gradient-to-t from-[#1c1412] from-35% via-[#1c1412]/85 to-transparent" />
+
+      <div className="relative z-10 px-5 pb-28 pt-10 space-y-5">
+        <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.25em] text-[#e8ceb1] bg-[#1c1412]/55 backdrop-blur-sm px-3 py-1.5 rounded-full">
+          DHA Phase 5 · Bahadurabad · Karachi
+        </span>
+        <h1 className="font-heading text-[2.4rem] leading-[1.05]">
+          Beautiful smiles.
+          <span className="block italic text-[#e8ceb1]">Radiant skin.</span>
+        </h1>
+        <p className="text-sm text-[#f6ede7]/80 leading-relaxed max-w-xs">
+          Premium smile makeovers in about 10 days, dental implants and signature aesthetic treatments.
+        </p>
+        <div className="flex items-center gap-2 text-xs text-[#f6ede7]/85">
+          <span className="text-[#f5b301] tracking-tight">★★★★★</span>
+          <span>4.8 on Google</span>
+        </div>
+        <button
+          type="button"
+          onClick={triggerBooking}
+          className="w-full bg-[#c39f75] active:bg-[#b08b62] text-[#1c1412] font-semibold text-sm uppercase tracking-[0.15em] py-4 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-black/30"
+        >
+          <Calendar className="w-4 h-4" />
+          Book Consultation
+        </button>
+        <a
+          href="#signature-treatments"
+          className="block text-center text-[11px] uppercase tracking-[0.2em] text-[#f6ede7]/70"
+        >
+          Explore signature treatments ↓
+        </a>
+      </div>
+    </section>
+  );
+}
+
+export default function Hero() {
+  return (
+    <>
+      <MobileHero />
+      <DesktopHero />
+    </>
   );
 }

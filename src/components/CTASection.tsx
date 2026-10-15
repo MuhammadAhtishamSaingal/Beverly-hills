@@ -21,11 +21,11 @@ export default function CTASection() {
             Reserve Your Visit
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold font-heading text-brand-text leading-tight">
-            A higher standard of dental care, <br />
-            <span className="text-brand-accent font-medium">designed for you.</span>
+            Your new smile and glowing skin <br />
+            <span className="text-brand-accent font-medium italic">start with one visit.</span>
           </h2>
           <p className="text-sm sm:text-base text-brand-text/75 max-w-xl mx-auto leading-relaxed pt-2">
-            Experience comprehensive, comfortable dentistry in our calming Bay Area spaces. Your first visit includes an HD scan review, exam, clean, and customized planning.
+            Book a consultation at our DHA Phase 5 or Bahadurabad clinic, or online. Your doctor will assess you and plan your smile makeover, implants or aesthetic treatment with you. Consultation PKR 3,000.
           </p>
         </div>
 
