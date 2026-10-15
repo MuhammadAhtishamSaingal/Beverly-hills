@@ -22,8 +22,8 @@ const studios = [
   {
     id: ONLINE_CONSULTATION_ID,
     name: "Online Consultation",
-    desktopImage: "/images/people-team.webp",
-    mobileImage: "/images/people-team.webp",
+    desktopImage: "/images/image 2s.webp",
+    mobileImage: "/images/image 2s.webp",
     address: "Consult with our specialists online from the comfort of your home",
     buttonText: "ONLINE CONSULTATION",
     imageClass: "object-cover object-top" as string | undefined,

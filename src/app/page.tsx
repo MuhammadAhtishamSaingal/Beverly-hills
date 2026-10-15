@@ -4,7 +4,9 @@ import People from "@/components/People";
 import Technology from "@/components/Technology";
 import Studios from "@/components/Studios";
 import Amenities from "@/components/Amenities";
-import PatientStories from "@/components/PatientStories";
+import SignatureTreatments from "@/components/SignatureTreatments";
+import SmileMakeoverSpotlight from "@/components/SmileMakeoverSpotlight";
+import GoogleRating from "@/components/GoogleRating";
 import TwoStudiosOneStandard from "@/components/TwoStudiosOneStandard";
 import CTASection from "@/components/CTASection";
 
@@ -14,11 +16,17 @@ export default function Home() {
       {/* 1. Hero Banner */}
       <Hero />
 
-      {/* 2. Our Philosophy */}
-      <Philosophy />
+      {/* 2. Signature dental & aesthetic treatments */}
+      <SignatureTreatments />
 
-      {/* 3. The People */}
+      {/* 3. Smile makeover: 3 visits, about 10 days */}
+      <SmileMakeoverSpotlight />
+
+      {/* 4. The People */}
       <People />
+
+      {/* 5. Our Philosophy */}
+      <Philosophy />
 
       {/* 4. Technology Section */}
       <Technology />
@@ -29,8 +37,8 @@ export default function Home() {
       {/* 6. Every Detail, Considered */}
       <Amenities />
 
-      {/* 7. Patient Stories Slider */}
-      <PatientStories />
+      {/* 7. Google rating */}
+      <GoogleRating />
 
       {/* 8. Two Studios, One Standard */}
       <TwoStudiosOneStandard />

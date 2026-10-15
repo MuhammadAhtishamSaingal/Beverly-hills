@@ -550,7 +550,7 @@ export const dentalServices: ServiceData[] = [
     ],
     "candidateInfo": "Suitable candidates for Hollywood Smile Makeover at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
     "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
-    "duration": "2 - 3 visits",
+    "duration": "3 visits in about 10 days",
     "suitability": "Patients seeking complete, camera-ready cosmetic smile transformation",
     "metaTitle": "Hollywood Smile Makeover Karachi | Beverly Hills Clinic DHA",
     "metaDescription": "Transform your smile with a custom Hollywood Smile Makeover in Karachi at Beverly Hills Clinic. Ultra-thin E-max porcelain veneers, natural translucency, and celebrity aesthetics in DHA Karachi.",
