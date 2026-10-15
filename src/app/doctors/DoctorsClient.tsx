@@ -39,7 +39,7 @@ export default function DoctorsClient() {
         "Full Mouth Rehabilitation",
         "Atraumatic Tooth Extraction",
       ],
-      education: "US & UK Clinical Training Certification",
+      education: "Cosmetic & Implant Dentistry",
     },
     {
       id: "dr-aesthetician",
