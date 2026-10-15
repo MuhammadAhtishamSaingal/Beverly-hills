@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
+import { locations } from "@/data/locations";
 import {
   MapPin,
   Phone,
@@ -88,7 +89,7 @@ export default function Footer() {
               />
             </Link>
             <p className="hidden md:block text-xs text-[#e8ceb1]/90 leading-relaxed font-light">
-              Beverly Hills Clinic is a premium dental and aesthetic clinic in DHA Karachi providing advanced dental treatments, cosmetic dentistry, implants, orthodontics, and aesthetic procedures with modern technology and experienced specialists.
+              Beverly Hills Clinic is a premium dental and aesthetic clinic with branches in DHA Phase 5 and Bahadurabad, Karachi, providing advanced dental treatments, cosmetic dentistry, implants, orthodontics, and aesthetic procedures with modern technology and experienced specialists.
             </p>
             
             {/* Trust Highlights */}
@@ -239,15 +240,22 @@ export default function Footer() {
             {/* Contact Details & CTA */}
             <div className={`${openSections.info ? "block py-3" : "hidden"} md:block space-y-4`}>
               <address className="not-italic space-y-3 text-xs text-[#f6ede7]/85">
-                <div>
-                  <h3 className="font-bold text-[#e8ceb1] text-sm mb-1 font-heading">
-                    DHA Karachi Clinic
-                  </h3>
-                  <div className="flex items-start space-x-2 text-[#f6ede7]/75">
-                    <MapPin className="w-4 h-4 text-[#c39f75] shrink-0 mt-0.5" />
-                    <span>Above Ocean Supermart & Pharmacy 2nd floor, Main Saba Avenue, Phase 5, DHA Karachi</span>
+                {locations.map((loc) => (
+                  <div key={loc.slug}>
+                    <h3 className="font-bold text-[#e8ceb1] text-sm mb-1 font-heading">
+                      {loc.name}
+                    </h3>
+                    <a
+                      href={loc.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start space-x-2 text-[#f6ede7]/75 hover:text-[#e8ceb1] transition-colors"
+                    >
+                      <MapPin className="w-4 h-4 text-[#c39f75] shrink-0 mt-0.5" />
+                      <span>{loc.address}</span>
+                    </a>
                   </div>
-                </div>
+                ))}
 
                 <div className="pt-1 space-y-2">
                   <a
@@ -396,14 +404,20 @@ export default function Footer() {
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#f6ede7]/60 gap-3">
           <p>&copy; {currentYear} Beverly Hills Clinic. All Rights Reserved.</p>
           
-          <div className="flex items-center space-x-6 text-[11px]">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[11px]">
             <Link href="/privacy-policy" className="hover:text-[#e8ceb1] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/privacy-policy#terms" className="hover:text-[#e8ceb1] transition-colors">
+            <Link href="/terms-and-conditions" className="hover:text-[#e8ceb1] transition-colors">
               Terms & Conditions
             </Link>
-            <span className="text-[#c39f75]">DHA Karachi, Pakistan</span>
+            <Link href="/appointment-policy" className="hover:text-[#e8ceb1] transition-colors">
+              Appointment Policy
+            </Link>
+            <Link href="/medical-disclaimer" className="hover:text-[#e8ceb1] transition-colors">
+              Medical Disclaimer
+            </Link>
+            <span className="text-[#c39f75]">DHA & Bahadurabad, Karachi</span>
           </div>
         </div>
 

@@ -52,12 +52,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/privacy-policy`,
+    ...["privacy-policy", "terms-and-conditions", "appointment-policy", "medical-disclaimer"].map((slug) => ({
+      url: `${baseUrl}/${slug}`,
       lastModified: currentDate,
-      changeFrequency: "yearly",
+      changeFrequency: "yearly" as const,
       priority: 0.3,
-    },
+    })),
   ];
 
   // Dynamic service detail URLs

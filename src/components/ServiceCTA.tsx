@@ -60,7 +60,7 @@ export default function ServiceCTA({ serviceTitle }: ServiceCTAProps) {
 
         <div className="pt-4 flex items-center justify-center space-x-2 text-xs text-[#e8ceb1]/60 font-light">
           <MapPin className="w-3.5 h-3.5 text-[#c39f75]" />
-          <span>2nd Floor, Main Saba Avenue, Phase 5, DHA Karachi</span>
+          <span>DHA Phase 5 &amp; Bahadurabad (Sharfabad), Karachi</span>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Phone, Calendar, MapPin, Clock, Mail, ExternalLink } from "lucide-react";
 import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
+import { locations } from "@/data/locations";
 
 export default function ContactPage() {
   const triggerBooking = () => {
@@ -10,25 +11,7 @@ export default function ContactPage() {
     window.dispatchEvent(new CustomEvent("open-booking"));
   };
 
-  const studios = [
-    {
-      city: "DHA Karachi",
-      address: "Above Ocean Supermart & Pharmacy 2nd floor, Main Saba Avenue, Phase 5, DHA Karachi",
-      zip: "Karachi",
-      phone: "0307-0984307",
-      phoneRaw: "03070984307",
-      email: "clinicbeverlyhills@gmail.com",
-      desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
-      mobileImage: "/images/MOBILE4_MARQE.webp",
-      hours: [
-        { days: "Monday - Saturday", time: "9:00 AM - 6:00 PM" },
-        { days: "Sunday", time: "Closed" },
-      ],
-      mapUrl: "https://maps.google.com/?q=Saba+Avenue+Badar+Commercial+Karachi",
-      mapEmbedUrl:
-        "https://maps.google.com/maps?q=Saba%20Avenue%2C%20Badar%20Commercial%2C%20Karachi&t=&z=15&ie=UTF8&iwloc=&output=embed",
-    },
-  ];
+  const studios = locations;
 
   return (
     <div className="flex flex-col w-full bg-brand-primary">
@@ -67,7 +50,7 @@ export default function ContactPage() {
           </h1>
           
           <p className="text-sm sm:text-base text-brand-text/85 max-w-md mx-auto leading-relaxed font-medium text-[#3d2e2a]">
-            Choose your preferred clinic and schedule your visit.
+            Two clinics in Karachi: DHA Phase 5 and Bahadurabad. Choose your preferred clinic and schedule your visit.
           </p>
           
           <div className="pt-2">
@@ -83,18 +66,18 @@ export default function ContactPage() {
 
       {/* 2. Studios Details & Maps Grid */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
-        <div className="grid grid-cols-1 gap-16 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 max-w-6xl mx-auto">
           {studios.map((studio, idx) => (
             <div
               key={idx}
-              id={studio.city.toLowerCase().replace(/\s+/g, "-")}
+              id={studio.slug}
               className="bg-white border border-[#e8ceb1]/40 rounded-3xl overflow-hidden shadow-xs flex flex-col justify-between scroll-mt-24 w-full"
             >
               {/* Card Header (Image with Text Overlay) */}
               <div className="relative w-full h-64 sm:h-72">
                 <Image
                   src={studio.desktopImage}
-                  alt={`Beverly Hills Clinic ${studio.city}`}
+                  alt={`Beverly Hills Clinic ${studio.name}`}
                   fill
                   priority={idx === 0}
                   sizes="(max-w-768px) 50vw, 100vw"
@@ -102,7 +85,7 @@ export default function ContactPage() {
                 />
                 <Image
                   src={studio.mobileImage}
-                  alt={`Beverly Hills Clinic ${studio.city} Mobile`}
+                  alt={`Beverly Hills Clinic ${studio.name} Mobile`}
                   fill
                   priority={idx === 0}
                   sizes="(max-w-768px) 100vw, 100vw"
@@ -115,7 +98,7 @@ export default function ContactPage() {
                 <div className="absolute left-6 bottom-6 right-6 z-20 text-left space-y-1">
                   <div className="w-8 h-[1.5px] bg-[#ab7f51]" />
                   <h2 className="text-2xl sm:text-3xl font-normal font-heading text-white">
-                    {studio.city}
+                    {studio.shortName}
                   </h2>
                   <span className="text-[10px] font-bold text-[#f6ede7]/90 uppercase tracking-widest block">
                     BEVERLY HILLS CLINIC
@@ -136,7 +119,7 @@ export default function ContactPage() {
                         ADDRESS
                       </span>
                       <p className="text-sm text-brand-text/80 leading-relaxed">
-                        {studio.address}, {studio.zip}
+                        {studio.address}
                       </p>
                     </div>
                   </div>
@@ -151,9 +134,9 @@ export default function ContactPage() {
                         PHONE
                       </span>
                       <a
-                        id={`contact-call-${studio.city.toLowerCase().replace(/\s+/g, '-')}`}
+                        id={`contact-call-${studio.slug}`}
                         href={`tel:${studio.phoneRaw}`}
-                        onClick={() => trackContact(`Contact Page Call ${studio.city}`)}
+                        onClick={() => trackContact(`Contact Page Call ${studio.shortName}`)}
                         className="meta-track-call text-sm text-brand-text/80 hover:text-[#ab7f51] transition-colors leading-relaxed block"
                       >
                         {studio.phone}
@@ -198,6 +181,17 @@ export default function ContactPage() {
                       </div>
                     </div>
                   </div>
+                </div>
+
+                {/* Map */}
+                <div className="mt-6 w-full h-48 rounded-2xl overflow-hidden border border-[#e8ceb1]/40">
+                  <iframe
+                    src={studio.mapEmbedUrl}
+                    title={`Map to Beverly Hills Clinic ${studio.shortName}`}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full border-0"
+                  />
                 </div>
 
                 {/* Divider Line */}

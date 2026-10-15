@@ -1,158 +1,183 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import LegalPage from "@/components/LegalPage";
+import ClinicContactBlock from "@/components/ClinicContactBlock";
+import { CLINIC_EMAIL } from "@/data/locations";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Beverly Hills Dentistry & Aesthetics",
-  description: "Learn how Beverly Hills Dentistry & Aesthetics protects your personal information and online privacy. Read our Privacy Policy.",
+  title: "Privacy Policy | Beverly Hills Clinic Karachi",
+  description:
+    "How Beverly Hills Clinic (DHA Phase 5 & Bahadurabad, Karachi) collects, uses and protects your personal and health information.",
+  alternates: { canonical: "https://beverlyhillsclinic.com.pk/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {
-  const sections = [
-    {
-      id: "introduction",
-      title: "Introduction",
-      content:
-        "At Beverly Hills Dentistry & Aesthetics, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.",
-    },
-    {
-      id: "information-we-collect",
-      title: "Information We Collect",
-      content:
-        "We may collect personal information such as your name, email address, phone number, and appointment details. We may also collect non-personal information through cookies and website analytics.",
-    },
-    {
-      id: "how-we-use-information",
-      title: "How We Use Information",
-      content:
-        "Your information is used to schedule appointments, respond to inquiries, improve our services, and send important notifications. We do not sell or share your personal information with third parties for marketing purposes.",
-    },
-    {
-      id: "cookies-and-tracking",
-      title: "Cookies and Tracking",
-      content:
-        "We use cookies and tracking technologies like Meta Pixel and Google Analytics to improve website functionality and analyze traffic. You can manage your preferences through your browser settings.",
-    },
-    {
-      id: "data-security",
-      title: "Data Security",
-      content:
-        "We implement strict security measures to protect your personal information. Only authorized personnel have access to your data, and we use encryption where applicable.",
-    },
-    {
-      id: "third-party-services",
-      title: "Third-Party Services",
-      content:
-        "Our website may include links to third-party services. We are not responsible for the privacy practices of external websites. Please review their privacy policies separately.",
-    },
-    {
-      id: "your-rights",
-      title: "Your Rights",
-      content:
-        "You have the right to access, update, or request deletion of your personal information. Contact us at info@clinicbeverlyhills.com to exercise your rights.",
-    },
-    {
-      id: "updates",
-      title: "Updates to Privacy Policy",
-      content:
-        "We may update this Privacy Policy from time to time. All changes will be reflected on this page with the date of the last update.",
-    },
-  ];
-
-  const currentDateFormatted = "July 2026"; // Set a current last updated date
-
   return (
-    <div className="flex flex-col w-full bg-brand-primary min-h-screen">
-      {/* 1. Hero / Title Section */}
-      <section className="bg-brand-secondary/20 border-b border-brand-secondary/40 pt-36 pb-16 sm:pt-48 sm:pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#ab7f51] block">
-            Legal Info
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-semibold font-heading text-brand-text leading-tight">
-            Privacy Policy
-          </h1>
-          <div className="w-12 h-1 bg-[#ab7f51]/40 mx-auto rounded-full" />
-          <p className="text-sm sm:text-base text-brand-text/80 max-w-xl mx-auto font-medium">
-            Your privacy is important to us
-          </p>
-        </div>
-      </section>
-
-      {/* 2. Main Content Layout (Responsive Split Grid) */}
-      <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          {/* Sticky Navigation Sidebar for Desktop */}
-          <aside className="lg:col-span-4 sticky top-32 hidden lg:block bg-white border border-[#e8ceb1]/40 p-8 rounded-3xl shadow-xs">
-            <h2 className="text-xs font-bold uppercase tracking-widest text-[#ab7f51] mb-6">
-              Table of Contents
-            </h2>
-            <nav className="flex flex-col space-y-3.5 text-sm text-brand-text/70">
-              {sections.map((sect) => (
-                <a
-                  key={sect.id}
-                  href={`#${sect.id}`}
-                  className="hover:text-[#ab7f51] transition-colors border-l-2 border-transparent hover:border-[#ab7f51]/40 pl-3 font-medium duration-200"
-                >
-                  {sect.title}
+    <LegalPage
+      title="Privacy Policy"
+      subtitle="Your privacy and medical confidentiality are important to us"
+      lastUpdated="October 2026"
+      intro={
+        <p>
+          This Privacy Policy explains how Beverly Hills Clinic (&ldquo;we&rdquo;, &ldquo;us&rdquo;) collects, uses, shares
+          and protects your information when you visit beverlyhillsclinic.com.pk, book an appointment, call or message us,
+          or receive treatment at our DHA Phase 5 or Bahadurabad clinics in Karachi.
+        </p>
+      }
+      sections={[
+        {
+          id: "who-we-are",
+          title: "Who We Are",
+          body: (
+            <>
+              <p>Beverly Hills Clinic is a dental and aesthetic clinic in Karachi, Pakistan. You can reach us at:</p>
+              <ClinicContactBlock />
+            </>
+          ),
+        },
+        {
+          id: "information-we-collect",
+          title: "Information We Collect",
+          body: (
+            <>
+              <p>
+                <strong>Information you give us</strong> when you book online, call, WhatsApp or visit:
+              </p>
+              <ul>
+                <li>Name, phone number, email address (optional) and WhatsApp preference</li>
+                <li>Preferred clinic, treatment, date and time, whether you are a new or existing patient</li>
+                <li>How you heard about us, and any notes or concerns you choose to share</li>
+                <li>
+                  At the clinic: medical and dental history, examination notes, X-rays, photographs and treatment records
+                </li>
+              </ul>
+              <p>
+                <strong>Information collected automatically</strong> when you use our website: pages visited, device and
+                browser type, approximate location, and advertising click identifiers (such as Google Ads &ldquo;gclid&rdquo;
+                and UTM campaign tags) so we know which advert or page led to your enquiry.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "how-we-use-information",
+          title: "How We Use Your Information",
+          body: (
+            <ul>
+              <li>To confirm, schedule and remind you about appointments by phone, WhatsApp or email</li>
+              <li>To assess, plan and provide your dental or aesthetic treatment safely</li>
+              <li>To answer your questions and provide aftercare support</li>
+              <li>To understand which adverts and pages bring patients to us, and to improve our website</li>
+              <li>To meet our legal, professional and record-keeping obligations</li>
+            </ul>
+          ),
+        },
+        {
+          id: "health-information",
+          title: "Health Information & Confidentiality",
+          body: (
+            <>
+              <p>
+                Medical and dental information is treated as strictly confidential. It is only accessed by the clinicians and
+                staff involved in your care, and shared with third parties (for example a dental laboratory making your
+                veneers or crowns, or a specialist you are referred to) only when needed for your treatment, with your
+                consent, or when required by law.
+              </p>
+              <p>
+                We do <strong>not</strong> use your health information for advertising, and we do not create advertising
+                audiences based on health conditions.
+              </p>
+            </>
+          ),
+        },
+        {
+          id: "cookies-and-advertising",
+          title: "Cookies, Analytics & Advertising",
+          body: (
+            <>
+              <p>
+                Our website uses cookies and similar technologies from Google (Google Analytics and Google Ads) and Meta
+                (Facebook/Instagram Pixel) to measure visits, see which adverts lead to calls or bookings, and improve our
+                marketing. These tools may record that you visited our website, but they do not receive your medical
+                details.
+              </p>
+              <p>
+                You can block or delete cookies in your browser settings, manage Google advertising preferences at{" "}
+                <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">
+                  adssettings.google.com
                 </a>
-              ))}
-            </nav>
-            <div className="border-t border-[#e8ceb1]/30 mt-8 pt-6">
-              <p className="text-[11px] text-brand-text/50">
-                Last updated: {currentDateFormatted}
+                , and manage Meta advertising preferences in your Facebook or Instagram settings.
               </p>
-            </div>
-          </aside>
-
-          {/* Main Privacy Policy Text Content */}
-          <article className="lg:col-span-8 space-y-8 bg-white border border-[#e8ceb1]/40 p-6 sm:p-10 md:p-12 rounded-3xl shadow-xs">
-            <div className="prose prose-stone max-w-none text-brand-text/85">
-              <p className="text-sm sm:text-base leading-relaxed mb-8">
-                This document outlines how Beverly Hills Dentistry & Aesthetics handles data protection and your privacy rights. Please review the details below, and do not hesitate to reach out if you have any questions.
-              </p>
-
-              <hr className="border-t border-[#e8ceb1]/30 my-8" />
-
-              <div className="space-y-12">
-                {sections.map((sect) => (
-                  <section key={sect.id} id={sect.id} className="scroll-mt-32 space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <span className="w-1.5 h-6 bg-[#ab7f51] rounded-full inline-block" />
-                      <h2 className="text-xl sm:text-2xl font-bold font-heading text-brand-text">
-                        {sect.title}
-                      </h2>
-                    </div>
-                    
-                    <p className="text-sm sm:text-base leading-relaxed text-brand-text/80 pl-4">
-                      {sect.id === "your-rights" ? (
-                        <>
-                          You have the right to access, update, or request deletion of your personal information. Contact us at{" "}
-                          <a
-                            href="mailto:info@clinicbeverlyhills.com"
-                            className="text-[#ab7f51] hover:underline font-semibold"
-                          >
-                            info@clinicbeverlyhills.com
-                          </a>{" "}
-                          to exercise your rights.
-                        </>
-                      ) : (
-                        sect.content
-                      )}
-                    </p>
-                  </section>
-                ))}
-              </div>
-            </div>
-
-            <div className="lg:hidden border-t border-[#e8ceb1]/30 mt-12 pt-6 text-center">
-              <p className="text-[11px] text-brand-text/50">
-                Last updated: {currentDateFormatted}
-              </p>
-            </div>
-          </article>
-
-        </div>
-      </section>
-    </div>
+            </>
+          ),
+        },
+        {
+          id: "sharing",
+          title: "Who We Share Information With",
+          body: (
+            <>
+              <p>We never sell your personal information. We only share it with:</p>
+              <ul>
+                <li>Service providers who run our website, email and booking systems on our behalf</li>
+                <li>Laboratories, specialists or hospitals involved in your treatment</li>
+                <li>Authorities, regulators or courts when the law requires it</li>
+              </ul>
+            </>
+          ),
+        },
+        {
+          id: "retention",
+          title: "How Long We Keep Information",
+          body: (
+            <p>
+              Online enquiries that do not lead to treatment are kept for up to 24 months and then deleted. Patient
+              treatment records are kept for as long as required by law and professional guidelines for medical records.
+            </p>
+          ),
+        },
+        {
+          id: "data-security",
+          title: "Data Security",
+          body: (
+            <p>
+              Our website uses encrypted (HTTPS) connections. Access to patient records is limited to authorised staff, and
+              we take reasonable technical and organisational measures to protect your information against loss or misuse.
+            </p>
+          ),
+        },
+        {
+          id: "your-rights",
+          title: "Your Rights",
+          body: (
+            <p>
+              You can ask to see, correct or delete the personal information we hold about you, or ask us to stop contacting
+              you for marketing, by emailing <a href={`mailto:${CLINIC_EMAIL}`}>{CLINIC_EMAIL}</a> or calling the clinic.
+              Some medical records must be kept by law even if you ask us to delete them.
+            </p>
+          ),
+        },
+        {
+          id: "children",
+          title: "Children",
+          body: (
+            <p>
+              Appointments for patients under 18 should be booked by a parent or legal guardian, who should also be present
+              for consultations and consent.
+            </p>
+          ),
+        },
+        {
+          id: "updates",
+          title: "Changes to This Policy",
+          body: (
+            <p>
+              We may update this Privacy Policy from time to time. The latest version is always on this page. Please also
+              read our <Link href="/terms-and-conditions">Terms &amp; Conditions</Link> and{" "}
+              <Link href="/appointment-policy">Appointment &amp; Cancellation Policy</Link>.
+            </p>
+          ),
+        },
+      ]}
+    />
   );
 }

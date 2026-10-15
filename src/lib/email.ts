@@ -1,4 +1,5 @@
 import nodemailer from "nodemailer";
+import { getLocationById } from "@/data/locations";
 
 export interface BookingEmailPayload {
   name: string;
@@ -9,6 +10,31 @@ export interface BookingEmailPayload {
   date: string;
   timeSlot: string;
   notes?: string;
+  patientType?: string;
+  source?: string;
+  whatsappOk?: boolean;
+  pageUrl?: string;
+  tracking?: Record<string, string>;
+}
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+function row(label: string, valueHtml: string, color: string) {
+  return `
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid ${color}; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
+                <tr>
+                  <td style="padding: 12px 15px;">
+                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">${label}</span>
+                    <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px; line-height: 1.4;">${valueHtml}</span>
+                  </td>
+                </tr>
+              </table>`;
 }
 
 /**
@@ -43,7 +69,44 @@ function getTransporter() {
  * Sends a booking confirmation email to the clinic owner/admin.
  */
 export async function sendBookingEmail(payload: BookingEmailPayload) {
+  const e = (v?: string) => escapeHtml(v || "");
   const { name, email, phone, location, service, date, timeSlot, notes } = payload;
+  const branch = getLocationById(location);
+  const phoneDigits = phone.replace(/[^\d+]/g, "");
+  const waNumber = phone.replace(/\D/g, "").replace(/^0/, "92");
+  const submittedAt = new Date().toLocaleString("en-GB", { timeZone: "Asia/Karachi" });
+  const trackingText = Object.entries(payload.tracking || {})
+    .map(([k, v]) => `${e(k)}: ${e(v)}`)
+    .join("<br>");
+
+  const rowsHtml = [
+    row("Full Name", e(name), "#10b981"),
+    row(
+      "Phone Number",
+      `<a href="tel:${e(phoneDigits)}" style="color:#2d2a26;text-decoration:none;">${e(phone)}</a>` +
+        (payload.whatsappOk
+          ? ` &nbsp;·&nbsp; <a href="https://wa.me/${e(waNumber)}" style="color:#25D366;">WhatsApp OK</a>`
+          : " &nbsp;·&nbsp; <span style=\"color:#8c766e;\">No WhatsApp</span>"),
+      "#3b82f6"
+    ),
+    row("Email Address", email ? `<a href="mailto:${e(email)}" style="color:#2d2a26;text-decoration:none;">${e(email)}</a>` : "Not provided", "#8b5cf6"),
+    row(
+      "Clinic / Type",
+      branch ? `${e(branch.name)}<br><span style="font-weight:400;font-size:12px;color:#6b5f59;">${e(branch.address)}</span>` : e(location),
+      "#f59e0b"
+    ),
+    row("Requested Treatment", e(service), "#ef4444"),
+    row("Preferred Date & Time", `${e(date)} · ${e(timeSlot)}`, "#06b6d4"),
+    row("Visit Type", e(payload.patientType) || "Not specified", "#14b8a6"),
+    row("Heard About Us From", e(payload.source) || "Not specified", "#a855f7"),
+    row("Special Notes / Concerns", e(notes) || "No special concerns listed.", "#6366f1"),
+    row(
+      "Lead Details",
+      `Submitted: ${e(submittedAt)} (PKT)<br>Page: ${e(payload.pageUrl) || "-"}${trackingText ? `<br>${trackingText}` : ""}`,
+      "#94a3b8"
+    ),
+  ].join("");
+
   const recipientEmail = process.env.EMAIL_USER || "clinicbeverlyhills@gmail.com";
 
   console.log(`📧 [NodeMailer] Preparing appointment email for: ${name} (${email})`);
@@ -53,8 +116,8 @@ export async function sendBookingEmail(payload: BookingEmailPayload) {
   const mailOptions = {
     from: `"Beverly Hills Dental Clinic" <${process.env.EMAIL_USER || "clinicbeverlyhills@gmail.com"}>`,
     to: recipientEmail,
-    replyTo: email,
-    subject: `🦷 New Appointment Request - ${name}`,
+    ...(email ? { replyTo: email } : {}),
+    subject: `🦷 New Appointment: ${name} · ${branch ? branch.shortName : location} · ${service}`,
     html: `
       <!DOCTYPE html>
       <html>
@@ -83,85 +146,7 @@ export async function sendBookingEmail(payload: BookingEmailPayload) {
                 </tr>
               </table>
               
-              <!-- Name -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #10b981; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Full Name</span>
-                    <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px;">${name}</span>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Phone -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #3b82f6; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Phone Number</span>
-                    <a href="tel:${phone}" style="font-size: 14px; font-weight: 600; color: #2d2a26; text-decoration: none; display: block; margin-top: 2px;">${phone}</a>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Email -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #8b5cf6; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Email Address</span>
-                    <a href="mailto:${email}" style="font-size: 14px; font-weight: 600; color: #2d2a26; text-decoration: none; display: block; margin-top: 2px;">${email}</a>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Location -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #f59e0b; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Location / Type</span>
-                    <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px;">${location.includes("Consultation") ? location : `${location} Studio`}</span>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Service -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #ef4444; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Requested Treatment</span>
-                    <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px;">${service}</span>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Date -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #06b6d4; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Preferred Date</span>
-                    <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px;">${date}</span>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Time Slot -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 12px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #ec4899; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Time Preference</span>
-                    <span style="font-size: 14px; font-weight: 600; color: #2d2a26; display: block; margin-top: 2px;">${timeSlot}</span>
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Notes -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 5px; background-color: #ffffff; border-radius: 8px; border-left: 4px solid #6366f1; border-top: 1px solid #f3ebe4; border-right: 1px solid #f3ebe4; border-bottom: 1px solid #f3ebe4;">
-                <tr>
-                  <td style="padding: 12px 15px;">
-                    <span style="font-size: 10px; font-weight: bold; color: #8c766e; text-transform: uppercase; letter-spacing: 0.8px; display: block;">Special Notes / Concerns</span>
-                    <span style="font-size: 13px; color: #4a4542; display: block; margin-top: 4px; line-height: 1.4;">${notes || "No special concerns listed."}</span>
-                  </td>
-                </tr>
-              </table>
+              ${rowsHtml}
             </td>
           </tr>
           <!-- Footer -->

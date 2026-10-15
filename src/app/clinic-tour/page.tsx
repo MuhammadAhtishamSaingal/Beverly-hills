@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ClinicTourClient from "./ClinicTourClient";
+import { clinicSchemaBranches } from "@/data/locations";
 
 export const metadata: Metadata = {
   title: "Clinic Tour | Beverly Hills Clinic DHA Karachi",
@@ -57,6 +58,7 @@ export default function ClinicTourPage() {
       "latitude": 24.8007,
       "longitude": 67.0601,
     },
+    "department": clinicSchemaBranches("https://beverlyhillsclinic.com.pk"),
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],

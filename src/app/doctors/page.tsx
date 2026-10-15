@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import DoctorsClient from "./DoctorsClient";
+import { clinicSchemaBranches } from "@/data/locations";
 
 export const metadata: Metadata = {
   title: "Doctors | Beverly Hills Clinic DHA Karachi",
@@ -49,6 +50,7 @@ export default function DoctorsPage() {
       "postalCode": "75500",
       "addressCountry": "PK",
     },
+    "department": clinicSchemaBranches("https://beverlyhillsclinic.com.pk"),
     "medicalSpecialty": [
       "Cosmetic Dentistry",
       "Implantology",

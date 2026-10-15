@@ -12,6 +12,7 @@ import ServiceTrust from "@/components/ServiceTrust";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import RelatedServices from "@/components/RelatedServices";
 import ServiceCTA from "@/components/ServiceCTA";
+import { clinicSchemaBranches } from "@/data/locations";
 
 interface ServicePageProps {
   params: Promise<{
@@ -116,9 +117,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         "Friday",
         "Saturday"
       ],
-      "opens": "11:00",
-      "closes": "21:00"
+      "opens": "09:00",
+      "closes": "18:00"
     },
+    "department": clinicSchemaBranches("https://beverlyhillsclinic.com.pk"),
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Dental & Aesthetic Services",

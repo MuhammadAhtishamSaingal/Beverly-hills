@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { MapPin, Phone, Calendar } from "lucide-react";
 import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
+import { locations } from "@/data/locations";
 
 export default function TwoStudiosOneStandard() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -31,17 +32,16 @@ export default function TwoStudiosOneStandard() {
     };
   }, []);
 
-  const cards = [
-    {
-      studio: "DHA Karachi",
-      desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
-      mobileImage: "/images/MOBILE4_MARQE.webp",
-      address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Karachi",
-      city: "Karachi",
-      phone: "0307-0984307",
-      phoneRaw: "03070984307",
-    },
-  ];
+  const cards = locations.map((loc) => ({
+    studio: loc.shortName,
+    slug: loc.slug,
+    desktopImage: loc.desktopImage,
+    mobileImage: loc.mobileImage,
+    address: loc.address,
+    phone: loc.phone,
+    phoneRaw: loc.phoneRaw,
+    mapUrl: loc.mapUrl,
+  }));
 
   const triggerBooking = () => {
     trackInitiateBooking("Two Studios Book Visit");
@@ -59,17 +59,17 @@ export default function TwoStudiosOneStandard() {
           <div className="flex items-center space-x-3">
             <div className="w-8 h-[1px] bg-brand-accent" />
             <span className="text-xs font-bold uppercase tracking-widest text-brand-accent">
-              OUR CLINIC
+              OUR CLINICS
             </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-semibold font-heading text-brand-text leading-tight">
-            Visit Our Clinic
+            Visit Our Clinics in Karachi
           </h2>
         </div>
 
         {/* Side-by-Side Location Cards */}
-        <div className="grid grid-cols-1 gap-10 max-w-xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           {cards.map((card, idx) => {
             const delayClass = idx === 0 ? "delay-[150ms]" : "delay-[350ms]";
             return (
@@ -111,7 +111,7 @@ export default function TwoStudiosOneStandard() {
                       <div className="flex items-start">
                         <MapPin className="w-4 h-4 text-brand-accent mr-2.5 mt-0.5 flex-shrink-0" />
                         <span>
-                          {card.address}, {card.city}
+                          {card.address}
                         </span>
                       </div>
 
@@ -119,7 +119,7 @@ export default function TwoStudiosOneStandard() {
                       <div className="flex items-center">
                         <Phone className="w-4 h-4 text-brand-accent mr-2.5 flex-shrink-0" />
                         <a
-                          id={`two-studios-call-${card.studio.toLowerCase().replace(/\s+/g, '-')}`}
+                          id={`two-studios-call-${card.slug}`}
                           href={`tel:${card.phoneRaw}`}
                           onClick={() => trackContact(`Two Studios Call ${card.studio}`)}
                           className="meta-track-call hover:text-brand-accent transition-colors font-medium"
@@ -140,13 +140,23 @@ export default function TwoStudiosOneStandard() {
                     </button>
 
                     <a
-                      id={`two-studios-call-cta-${card.studio.toLowerCase().replace(/\s+/g, '-')}`}
+                      id={`two-studios-call-cta-${card.slug}`}
                       href={`tel:${card.phoneRaw}`}
                       onClick={() => trackContact(`Two Studios Call CTA ${card.studio}`)}
                       className="meta-track-call text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
                     >
                       <span>CALL CLINIC</span>
                       <span>&rarr;</span>
+                    </a>
+
+                    <a
+                      href={card.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-brand-text hover:text-brand-accent hover:underline flex items-center space-x-1"
+                    >
+                      <span>DIRECTIONS</span>
+                      <span>&#8599;</span>
                     </a>
                   </div>
 

@@ -5,26 +5,66 @@ import { X, Calendar, MapPin, Sparkles, CheckCircle2, User, Phone, Mail, ArrowLe
 import Image from "next/image";
 import { trackLead } from "@/lib/metaPixel";
 import { trackFormSubmission } from "@/utils/pixel";
+import Link from "next/link";
+import { locations, getLocationById, ONLINE_CONSULTATION_ID, CONSULTATION_FEE } from "@/data/locations";
 
 const studios = [
+  ...locations.map((loc) => ({
+    id: loc.id,
+    name: loc.name,
+    desktopImage: loc.desktopImage,
+    mobileImage: loc.mobileImage,
+    address: loc.address,
+    buttonText: `BOOK AT ${loc.shortName.toUpperCase()}`,
+    imageClass: undefined as string | undefined,
+  })),
   {
-    id: "DHA Karachi",
-    name: "DHA Karachi Clinic",
-    desktopImage: "/images/DESKTOP4_MARQE_1200.webp",
-    mobileImage: "/images/MOBILE4_MARQE.webp",
-    address: "2nd Floor, Main Saba Avenue, Phase 5, DHA Karachi, Karachi",
-    buttonText: "BOOK NOW",
-  },
-  {
-    id: "Online Consultation",
+    id: ONLINE_CONSULTATION_ID,
     name: "Online Consultation",
     desktopImage: "/images/people-team.webp",
     mobileImage: "/images/people-team.webp",
     address: "Consult with our specialists online from the comfort of your home",
     buttonText: "ONLINE CONSULTATION",
-    imageClass: "object-cover object-top",
+    imageClass: "object-cover object-top" as string | undefined,
   },
 ];
+
+const patientTypes = ["New Patient", "Existing Patient"];
+
+const leadSources = [
+  "Google Search",
+  "Google Maps",
+  "Instagram",
+  "Facebook",
+  "TikTok",
+  "YouTube",
+  "Friend / Family Referral",
+  "Doctor Referral",
+  "Other",
+];
+
+const TRACKING_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
+
+function readTracking(): Record<string, string> {
+  const tracking: Record<string, string> = {};
+  if (typeof window === "undefined") return tracking;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    TRACKING_KEYS.forEach((key) => {
+      const value = params.get(key);
+      if (value) {
+        tracking[key] = value;
+        sessionStorage.setItem(`bh_${key}`, value);
+      } else {
+        const stored = sessionStorage.getItem(`bh_${key}`);
+        if (stored) tracking[key] = stored;
+      }
+    });
+  } catch {
+    // storage can be unavailable (private mode); tracking is optional
+  }
+  return tracking;
+}
 
 const dentalServices = [
   "Hollywood Smile Makeover",
@@ -83,6 +123,10 @@ export default function BookingModal() {
     date: "",
     timeSlot: "Morning",
     notes: "",
+    patientType: "New Patient",
+    source: "",
+    whatsappOk: true,
+    consent: false,
   });
 
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
@@ -109,6 +153,10 @@ export default function BookingModal() {
   const filteredAesthetics = aestheticServices.filter(srv =>
     srv.toLowerCase().includes(serviceSearch.toLowerCase())
   );
+
+  useEffect(() => {
+    readTracking();
+  }, []);
 
   useEffect(() => {
     const handleOpen = (e: Event) => {
@@ -138,8 +186,16 @@ export default function BookingModal() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.phone || !formData.date) {
-      alert("Please fill in all required fields.");
+    if (!formData.name.trim() || !formData.phone.trim() || !formData.date) {
+      alert("Please fill in your name, phone number and preferred date.");
+      return;
+    }
+    if (formData.phone.replace(/\D/g, "").length < 10) {
+      alert("Please enter a valid phone number (e.g. 0300 1234567).");
+      return;
+    }
+    if (!formData.consent) {
+      alert("Please agree to the Privacy Policy and Appointment Policy to continue.");
       return;
     }
     
@@ -151,7 +207,11 @@ export default function BookingModal() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          tracking: readTracking(),
+          pageUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
       });
 
       const data = await response.json();
@@ -183,13 +243,19 @@ export default function BookingModal() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const isCheckbox = e.target instanceof HTMLInputElement && e.target.type === "checkbox";
+    setFormData((prev) => ({
+      ...prev,
+      [name]: isCheckbox ? (e.target as HTMLInputElement).checked : value,
+    }));
   };
 
   const handleSelectStudio = (studioId: string) => {
     setFormData((prev) => ({ ...prev, location: studioId }));
     setModalView("form");
   };
+
+  const selectedLocation = getLocationById(formData.location);
 
   if (!isOpen) return null;
 
@@ -260,7 +326,7 @@ export default function BookingModal() {
                     <div className="p-5 flex-grow flex flex-col items-center text-center justify-between space-y-4">
                       {/* Badge pin/video icon */}
                       <div className="w-9 h-9 rounded-full bg-brand-primary flex items-center justify-center border border-brand-secondary/20 shadow-xs flex-shrink-0">
-                        {studio.id === "Online Consultation" ? (
+                        {studio.id === ONLINE_CONSULTATION_ID ? (
                           <Video className="w-4 h-4 text-brand-accent" />
                         ) : (
                           <MapPin className="w-4 h-4 text-brand-accent" />
@@ -326,32 +392,14 @@ export default function BookingModal() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      placeholder="Hashim Iqbal"
+                      placeholder="Your full name"
                       className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                     />
                   </div>
                 </div>
 
-                {/* Email & Phone */}
+                {/* Phone & Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
-                      Email Address <span className="text-brand-accent">*</span>
-                    </label>
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-3 w-4 h-4 text-brand-text/40" />
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="info@clinicbeverlyhills.com"
-                        className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
-                      />
-                    </div>
-                  </div>
                   <div>
                     <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
                       Phone Number <span className="text-brand-accent">*</span>
@@ -365,7 +413,24 @@ export default function BookingModal() {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+923070984307"
+                        placeholder="0300 1234567"
+                        className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
+                      Email Address <span className="text-brand-text/40 normal-case font-normal">(optional)</span>
+                    </label>
+                    <div className="relative">
+                      <Mail className="absolute left-3 top-3 w-4 h-4 text-brand-text/40" />
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="you@example.com"
                         className="w-full pl-10 pr-4 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent"
                       />
                     </div>
@@ -387,8 +452,11 @@ export default function BookingModal() {
                         onChange={handleInputChange}
                         className="w-full pl-10 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
                       >
-                        <option value="DHA Karachi">DHA Karachi Clinic</option>
-                        <option value="Online Consultation">Online Consultation</option>
+                        {studios.map((studio) => (
+                          <option key={studio.id} value={studio.id}>
+                            {studio.name}
+                          </option>
+                        ))}
                       </select>
                       <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
                     </div>
@@ -512,6 +580,49 @@ export default function BookingModal() {
                   </div>
                 </div>
 
+                {/* Patient Type & Source */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="patientType" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
+                      Visit Type
+                    </label>
+                    <div className="relative">
+                      <select
+                        id="patientType"
+                        name="patientType"
+                        value={formData.patientType}
+                        onChange={handleInputChange}
+                        className="w-full pl-4 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
+                      >
+                        {patientTypes.map((type) => (
+                          <option key={type} value={type}>{type}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="source" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
+                      How Did You Hear About Us?
+                    </label>
+                    <div className="relative">
+                      <select
+                        id="source"
+                        name="source"
+                        value={formData.source}
+                        onChange={handleInputChange}
+                        className="w-full pl-4 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
+                      >
+                        <option value="">Select an option</option>
+                        {leadSources.map((src) => (
+                          <option key={src} value={src}>{src}</option>
+                        ))}
+                      </select>
+                      <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
+                    </div>
+                  </div>
+                </div>
+
                 {/* Notes */}
                 <div>
                   <label htmlFor="notes" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
@@ -527,6 +638,42 @@ export default function BookingModal() {
                     className="w-full px-4 py-2 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent resize-none"
                   />
                 </div>
+
+                {/* Consultation fee, WhatsApp & consent */}
+                <div className="rounded-lg bg-[#fcf8f6] border border-brand-secondary/40 px-4 py-3 text-xs text-brand-text/80 leading-relaxed">
+                  <strong className="text-brand-text">Consultation fee: {CONSULTATION_FEE}</strong>{" "}
+                  (payable at the clinic). Our team will call you to confirm your appointment time
+                  {selectedLocation ? <> at <strong className="text-brand-text">{selectedLocation.name}</strong>, {selectedLocation.address}</> : " for your online consultation"}.
+                </div>
+
+                <label className="flex items-start space-x-2.5 text-xs text-brand-text/80 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="whatsappOk"
+                    checked={formData.whatsappOk}
+                    onChange={handleInputChange}
+                    className="mt-0.5 w-4 h-4 accent-[#ab7f51] cursor-pointer"
+                  />
+                  <span>You can contact me on WhatsApp at this number.</span>
+                </label>
+
+                <label className="flex items-start space-x-2.5 text-xs text-brand-text/80 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="consent"
+                    checked={formData.consent}
+                    onChange={handleInputChange}
+                    required
+                    className="mt-0.5 w-4 h-4 accent-[#ab7f51] cursor-pointer"
+                  />
+                  <span>
+                    I agree to the{" "}
+                    <Link href="/privacy-policy" target="_blank" className="text-brand-accent underline">Privacy Policy</Link>{" "}
+                    and{" "}
+                    <Link href="/appointment-policy" target="_blank" className="text-brand-accent underline">Appointment Policy</Link>
+                    , and confirm the details above are correct. <span className="text-brand-accent">*</span>
+                  </span>
+                </label>
 
                 <div className="pt-2">
                   <button
@@ -554,10 +701,15 @@ export default function BookingModal() {
               Appointment Requested!
             </h3>
             <p className="text-sm text-brand-text/70 max-w-sm">
-              Thank you, <strong className="text-brand-text">{formData.name}</strong>. We have received your request for <strong>{formData.service}</strong> at our <strong>{formData.location}</strong> clinic on <strong>{formData.date} ({formData.timeSlot})</strong>.
+              Thank you, <strong className="text-brand-text">{formData.name}</strong>. We have received your request for <strong>{formData.service}</strong>{" "}
+              {selectedLocation ? <>at our <strong>{selectedLocation.name}</strong></> : <>as an <strong>online consultation</strong></>}{" "}
+              on <strong>{formData.date} ({formData.timeSlot})</strong>.
             </p>
+            {selectedLocation && (
+              <p className="text-xs text-brand-text/60 max-w-sm">{selectedLocation.address}</p>
+            )}
             <p className="text-xs text-brand-text/50">
-              A member of our team will contact you shortly via email ({formData.email}) or phone ({formData.phone}) to finalize your appointment time.
+              Our team will call you{formData.whatsappOk ? " or message you on WhatsApp" : ""} at <strong>{formData.phone}</strong> shortly to confirm your appointment. Consultation fee: {CONSULTATION_FEE}.
             </p>
             <button
               onClick={() => setIsOpen(false)}

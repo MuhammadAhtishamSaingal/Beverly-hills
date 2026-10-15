@@ -441,6 +441,14 @@ export default function Header() {
                       >
                         DHA Karachi Clinic
                       </Link>
+
+                      <Link
+                        href="/contact#bahadurabad"
+                        className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
+                        onClick={() => setIsContactDropdownOpen(false)}
+                      >
+                        Bahadurabad Clinic
+                      </Link>
                     </div>
                   </div>
                 )}
