@@ -20,7 +20,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for CO2 Fractional Laser (Fotona) at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "45 - 60 minutes",
     "suitability": "Deep acne scars, fine lines, skin laxity, and uneven tone/texture requiring laser resurfacing",
     "metaTitle": "CO2 Fractional Laser in Karachi | Beverly Hills Clinic DHA",
@@ -115,7 +115,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for CO2 Fractional Laser (Fotona) in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does CO2 Fractional Laser (Fotona) cost in Karachi?",
@@ -153,7 +153,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for HIFU (Ultraformer III) at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 minutes",
     "suitability": "Mild to moderate facial skin laxity, jowls, and sagging neck contours seeking non-surgical lift",
     "metaTitle": "HIFU Ultraformer III Face Lift Karachi | Beverly Hills Clinic DHA",
@@ -248,7 +248,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for HIFU (Ultraformer III) in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does HIFU (Ultraformer III) cost in Karachi?",
@@ -286,7 +286,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Laser Hair Removal (Alma) at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "15 - 60 minutes",
     "suitability": "Long-term hair reduction for face, underarms, arms, legs, and body across all skin types",
     "metaTitle": "Laser Hair Removal Karachi | Alma Soprano Beverly Hills Clinic DHA",
@@ -306,7 +306,7 @@ export const aestheticServices: ServiceData[] = [
           "Our treatment methodology relies on targeted cellular stimulation. By delivering precise thermal, acoustic, or chemical energy into specific dermal layers, we activate your body natural healing response, clearing damaged micro-tissue and replacing it with fresh, resilient skin cells.",
           "Patients in DHA Karachi choose Beverly Hills Clinic because our treatments are customized. We adjust energy fluence, needle depths, and serum concentrations to match your skin sensitivity and goals accurately."
         ],
-        "image": "/images/services/laser-hair-removal/consultation.webp",
+        "image": "/images/laser-hair-removal-1.jpg",
         "imageAlt": "Laser Hair Removal (Alma) consultation and skin diagnostic analysis at Beverly Hills Clinic Karachi"
       },
       {
@@ -381,7 +381,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Laser Hair Removal (Alma) in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Laser Hair Removal (Alma) cost in Karachi?",
@@ -418,7 +418,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Plasma Fibroblast at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 - 90 minutes",
     "suitability": "Eyelid hooding, upper lip lines, neck wrinkles, and loose skin seeking non-surgical blepharoplasty",
     "metaTitle": "Plasma Fibroblast Tightening Karachi | Beverly Hills Clinic DHA",
@@ -513,7 +513,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Plasma Fibroblast in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Plasma Fibroblast cost in Karachi?",
@@ -550,7 +550,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Polynucleotides (Face & Eyes) at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "45 minutes",
     "suitability": "Under-eye dark circles, hollows, fine wrinkles, and thin dull aging facial skin",
     "metaTitle": "Polynucleotide Treatment Karachi | Beverly Hills Clinic DHA",
@@ -645,7 +645,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Polynucleotides (Face & Eyes) in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Polynucleotides (Face & Eyes) cost in Karachi?",
@@ -682,7 +682,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Dermal Fillers at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "30 - 45 minutes",
     "suitability": "Loss of facial volume, thin lips, hollow cheeks, and deep nasolabial folds",
     "metaTitle": "Best Dermal Fillers in Karachi | Beverly Hills Clinic DHA",
@@ -777,7 +777,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Dermal Fillers in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Dermal Fillers cost in Karachi?",
@@ -814,7 +814,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Full Face Anti-Wrinkle Rejuvenation at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "15 - 30 minutes",
     "suitability": "Prevention and smoothing of forehead wrinkles, frown lines, and eye crows feet",
     "metaTitle": "Anti-Wrinkle Treatment in Karachi | Beverly Hills Clinic DHA",
@@ -909,7 +909,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Full Face Anti-Wrinkle Rejuvenation in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Full Face Anti-Wrinkle Rejuvenation cost in Karachi?",
@@ -946,7 +946,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for PRP & Exosomes Therapy at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 minutes",
     "suitability": "Hair thinning, pattern baldness, skin aging, and dull texture seeking natural growth factor regeneration",
     "metaTitle": "PRP Hair & Skin Treatment Karachi | Beverly Hills Clinic DHA",
@@ -1041,7 +1041,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for PRP & Exosomes Therapy in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does PRP & Exosomes Therapy cost in Karachi?",
@@ -1078,7 +1078,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Acne & Acne Scars Treatments at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "45 - 60 minutes",
     "suitability": "Active acne, rolling scars, boxcar scars, icepick scars, and post-acne pigmentation marks",
     "metaTitle": "Acne Scar Treatment Karachi | Beverly Hills Clinic DHA",
@@ -1173,7 +1173,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Acne & Acne Scars Treatments in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Acne & Acne Scars Treatments cost in Karachi?",
@@ -1210,7 +1210,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for PDO Threads at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 - 90 minutes",
     "suitability": "Sagging jowls, marionette lines, cheek laxity, and neck folds seeking non-surgical lift",
     "metaTitle": "PDO Thread Lift in Karachi | Beverly Hills Clinic DHA",
@@ -1305,7 +1305,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for PDO Threads in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does PDO Threads cost in Karachi?",
@@ -1342,7 +1342,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Chemical Peels (Face, Neck, Body) at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "30 minutes",
     "suitability": "Sun spots, melasma, hyperpigmentation, dull tone, and active acne breakouts",
     "metaTitle": "Chemical Peel Treatment Karachi | Beverly Hills Clinic DHA",
@@ -1437,7 +1437,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Chemical Peels (Face, Neck, Body) in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Chemical Peels (Face, Neck, Body) cost in Karachi?",
@@ -1474,7 +1474,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Skin Brightening Therapy at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "45 minutes",
     "suitability": "Dull, uneven skin tone, sun damage, and hyperpigmentation seeking luminous glow",
     "metaTitle": "Skin Brightening Therapy Karachi | Beverly Hills Clinic DHA",
@@ -1569,7 +1569,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Skin Brightening Therapy in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Skin Brightening Therapy cost in Karachi?",
@@ -1606,7 +1606,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Medical Weight Loss Treatment at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "Custom consultations",
     "suitability": "Patients seeking safe, doctor-supervised structured weight management programs",
     "metaTitle": "Medical Weight Loss Program Karachi | Beverly Hills Clinic DHA",
@@ -1701,7 +1701,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Medical Weight Loss Treatment in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Medical Weight Loss Treatment cost in Karachi?",
@@ -1737,7 +1737,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Non-Surgical Body Fat Lipo at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 minutes per session",
     "suitability": "Localized fat pockets on abdomen, love handles, thighs, and upper arms",
     "metaTitle": "Non Surgical Laser Lipo Karachi | Beverly Hills Clinic DHA",
@@ -1832,7 +1832,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Non-Surgical Body Fat Lipo in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Non-Surgical Body Fat Lipo cost in Karachi?",
@@ -1868,7 +1868,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Red Carpet Facial at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 minutes",
     "suitability": "Perfect before weddings, photo shoots, parties, and special red-carpet events",
     "metaTitle": "Red Carpet Facial Karachi | Event Glow Beverly Hills Clinic DHA",
@@ -1963,7 +1963,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Red Carpet Facial in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Red Carpet Facial cost in Karachi?",
@@ -1999,7 +1999,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Beverly Hills Exfoliating Facial at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 minutes",
     "suitability": "Congested pores, blackheads, oily skin, and routine skin maintenance",
     "metaTitle": "BH Exfoliating Facial Karachi | Beverly Hills Clinic DHA",
@@ -2094,7 +2094,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Beverly Hills Exfoliating Facial in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Beverly Hills Exfoliating Facial cost in Karachi?",
@@ -2130,7 +2130,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Micro-Needling with Stem Cells at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "60 minutes",
     "suitability": "Dull skin, large pores, superficial scar lines, and early aging signs",
     "metaTitle": "Microneedling with Stem Cells Karachi | Beverly Hills Clinic DHA",
@@ -2225,7 +2225,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Micro-Needling with Stem Cells in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Micro-Needling with Stem Cells cost in Karachi?",
@@ -2261,7 +2261,7 @@ export const aestheticServices: ServiceData[] = [
       "Restores youthful skin elasticity, texture clarity, and confidence"
     ],
     "candidateInfo": "Suitable candidates for Exosomes Therapy at Beverly Hills Clinic Karachi include individuals noticing early to advanced signs of skin aging, fine lines, texture irregularities, loss of volume, or dullness. During your consultation in DHA Karachi, our aesthetic doctors evaluate your skin barrier, pigmentation levels, and medical history to design a safe, highly targeted treatment plan.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our DHA Karachi clinic enforces hospital-grade safety standards, comfortable topical anesthesia, and bespoke treatment protocols.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi is a premiere destination for aesthetic medicine in Pakistan. Featuring medical-grade lasers like Fotona CO2, Ultraformer III HIFU, and Alma Soprano Ice, our clinics in DHA Phase 5 and Bahadurabad follow strict sterilization and safety protocols, with comfortable topical anesthesia and bespoke treatment plans.",
     "duration": "45 minutes",
     "suitability": "Intensive skin repair, collagen boosting, anti-aging, and post-laser healing",
     "metaTitle": "Exosomes Therapy in Karachi | Beverly Hills Clinic DHA",
@@ -2356,7 +2356,7 @@ export const aestheticServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Exosomes Therapy in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, world-class laser technology, strict safety standards, and luxurious care."
+        "answer": "Beverly Hills Clinic in DHA Karachi provides certified aesthetic doctors, advanced laser technology, strict safety standards, and luxurious care."
       },
       {
         "question": "How much does Exosomes Therapy cost in Karachi?",

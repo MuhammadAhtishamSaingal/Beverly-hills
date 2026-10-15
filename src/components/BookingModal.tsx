@@ -5,6 +5,7 @@ import { X, Calendar, MapPin, Sparkles, CheckCircle2, User, Phone, Mail, ArrowLe
 import Image from "next/image";
 import { trackLead } from "@/lib/metaPixel";
 import { trackFormSubmission } from "@/utils/pixel";
+import { trackAdsConversion } from "@/lib/googleAds";
 import Link from "next/link";
 import { locations, getLocationById, ONLINE_CONSULTATION_ID, CONSULTATION_FEE } from "@/data/locations";
 
@@ -218,6 +219,11 @@ export default function BookingModal() {
       if (response.ok && data.success) {
         console.log("✅ Booking request submitted and email sent successfully:", data);
         setIsSubmitted(true);
+        trackAdsConversion("booking_submit", {
+          clinic: formData.location,
+          service: formData.service,
+          lead_source: formData.source,
+        });
         
         // Trigger Meta Pixel "Lead" event and GA4 "form_submission" event on successful submission
         trackFormSubmission({

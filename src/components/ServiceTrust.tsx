@@ -12,17 +12,17 @@ export default function ServiceTrust({ candidateInfo, whyChooseClinic }: Service
     {
       icon: Award,
       title: "Experienced Specialists",
-      desc: "Our UK and US trained dental surgeons and aesthetic physicians deliver clinical precision with artful perfection."
+      desc: "Our experienced dental surgeons and aesthetic physicians deliver clinical precision with artful perfection."
     },
     {
       icon: Cpu,
       title: "Advanced 3D Technology",
-      desc: "Equipped with 3D CBCT digital scanners, Fotona laser systems, and Ultraformer III HIFU for pain-free treatment."
+      desc: "Equipped with digital diagnostics, Fotona laser systems, and Ultraformer III HIFU for pain-free treatment."
     },
     {
       icon: ShieldCheck,
       title: "Sterile & Safe Environment",
-      desc: "Adhering strictly to hospital-grade autoclaving protocols for absolute patient health and infection control."
+      desc: "Adhering strictly to autoclave sterilization protocols for absolute patient health and infection control."
     },
     {
       icon: HeartHandshake,

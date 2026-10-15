@@ -8,6 +8,8 @@ import BookingModal from "@/components/BookingModal";
 import PixelTracker from "@/components/PixelTracker";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MobileActionBar from "@/components/MobileActionBar";
+import ConversionClickTracker from "@/components/ConversionClickTracker";
 
 const headingFont = Playfair_Display({
   variable: "--font-heading",
@@ -77,6 +79,8 @@ export default function RootLayout({
         <Footer />
         <BookingModal />
         <WhatsAppButton />
+        <MobileActionBar />
+        <ConversionClickTracker />
       </body>
     </html>
   );

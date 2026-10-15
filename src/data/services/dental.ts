@@ -14,17 +14,17 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Dental Implants at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "2 - 4 months (staged)",
     "suitability": "Ideal for patients with missing single, multiple, or full-arch teeth requiring permanent restoration",
     "metaTitle": "Best Dental Implants in Karachi | Beverly Hills Clinic DHA",
-    "metaDescription": "Restore missing teeth permanently with advanced dental implants at Beverly Hills Clinic Karachi. Painless procedures, top implant specialists, 3D CBCT precision, and natural results in DHA Karachi.",
+    "metaDescription": "Restore missing teeth permanently with advanced dental implants at Beverly Hills Clinic Karachi. Comfortable procedures, experienced implant dentists, precise digital planning, and natural results in DHA Karachi.",
     "keywords": [
       "Dental implants Karachi",
       "Best dental implant clinic Karachi",
@@ -37,7 +37,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Dental Implants represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Implants procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Implants procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/dental-implants-1.jpg",
@@ -111,7 +111,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Dental Implants in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Dental Implants cost in Karachi?",
@@ -147,13 +147,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Laser Teeth Whitening at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "60 minutes",
     "suitability": "Patients seeking immediate, dramatic tooth shade enhancement without enamel damage",
     "metaTitle": "Laser Teeth Whitening in Karachi | Beverly Hills Clinic DHA",
@@ -170,7 +170,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Laser Teeth Whitening represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Laser Teeth Whitening procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Laser Teeth Whitening procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/laser-teeth-whitening-1.jpg",
@@ -244,7 +244,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Laser Teeth Whitening in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Laser Teeth Whitening cost in Karachi?",
@@ -279,13 +279,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Clear Aligner Treatments at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "6 - 18 months",
     "suitability": "Teens and adults seeking discreet orthodontic correction without metal braces",
     "metaTitle": "Clear Aligners in Karachi | Invisible Braces Beverly Hills Clinic",
@@ -302,7 +302,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Clear Aligner Treatments represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Clear Aligner Treatments procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Clear Aligner Treatments procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/clear-aligners-1.jpg",
@@ -376,7 +376,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Clear Aligner Treatments in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Clear Aligner Treatments cost in Karachi?",
@@ -411,13 +411,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Braces Treatment at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "12 - 24 months",
     "suitability": "Patients requiring comprehensive structural bite, crowding, and alignment correction",
     "metaTitle": "Best Braces Treatment in Karachi | Beverly Hills Clinic DHA",
@@ -434,7 +434,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Braces Treatment represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Braces Treatment procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Braces Treatment procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/braces-treatment-1.jpg",
@@ -508,7 +508,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Braces Treatment in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Braces Treatment cost in Karachi?",
@@ -543,13 +543,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Hollywood Smile Makeover at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "2 - 3 visits",
     "suitability": "Patients seeking complete, camera-ready cosmetic smile transformation",
     "metaTitle": "Hollywood Smile Makeover Karachi | Beverly Hills Clinic DHA",
@@ -566,7 +566,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Hollywood Smile Makeover represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Hollywood Smile Makeover procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Hollywood Smile Makeover procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/hollywood-smile-makeover-1.jpg",
@@ -640,7 +640,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Hollywood Smile Makeover in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Hollywood Smile Makeover cost in Karachi?",
@@ -675,13 +675,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Dental Fillings at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "30 - 45 minutes",
     "suitability": "Treatment for minor to moderate tooth decay, small chips, or worn enamel",
     "metaTitle": "Composite Dental Fillings Karachi | Beverly Hills Clinic DHA",
@@ -698,7 +698,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Dental Fillings represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Fillings procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Fillings procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/dental-fillings-1.jpg",
@@ -772,7 +772,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Dental Fillings in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Dental Fillings cost in Karachi?",
@@ -807,13 +807,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Dental Veneers, Crowns & Bridges at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "2 visits",
     "suitability": "Cracked, broken, weakened, heavily filled, or missing teeth needing structural restoration",
     "metaTitle": "Porcelain Veneers, Crowns & Bridges Karachi | Beverly Hills Clinic",
@@ -830,7 +830,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Dental Veneers, Crowns & Bridges represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Veneers, Crowns & Bridges procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Veneers, Crowns & Bridges procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/dental-veneers-crowns-bridges-1.jpg",
@@ -904,7 +904,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Dental Veneers, Crowns & Bridges in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Dental Veneers, Crowns & Bridges cost in Karachi?",
@@ -939,13 +939,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Root Canal Treatment at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "60 - 90 minutes",
     "suitability": "Deep decay causing severe toothache, nerve inflammation, or root abscess",
     "metaTitle": "Painless Root Canal Treatment Karachi | Beverly Hills Clinic DHA",
@@ -962,7 +962,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Root Canal Treatment represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Root Canal Treatment procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Root Canal Treatment procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/root-canal-treatment-1.jpg",
@@ -1036,7 +1036,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Root Canal Treatment in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Root Canal Treatment cost in Karachi?",
@@ -1071,13 +1071,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Complete Dentures at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "3 - 4 visits",
     "suitability": "Fully edentulous patients seeking full-arch aesthetic and functional tooth restoration",
     "metaTitle": "Complete Dentures in Karachi | Beverly Hills Clinic DHA",
@@ -1094,7 +1094,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Complete Dentures represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Complete Dentures procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Complete Dentures procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/complete-denture-1.jpg",
@@ -1168,7 +1168,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Complete Dentures in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Complete Dentures cost in Karachi?",
@@ -1203,13 +1203,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Night Guards at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "1 visit (custom fitting)",
     "suitability": "Patients experiencing nocturnal grinding (bruxism), morning jaw soreness, or TMJ strain",
     "metaTitle": "Custom Night Guards Karachi | TMJ Bruxism Protection Beverly Hills Clinic",
@@ -1226,7 +1226,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Night Guards represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Night Guards procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Night Guards procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/services/night-guards/consultation.webp",
@@ -1300,7 +1300,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Night Guards in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Night Guards cost in Karachi?",
@@ -1335,13 +1335,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Dental Retainers at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "1 visit",
     "suitability": "Post-orthodontic patients preserving straight tooth alignment post-braces or clear aligners",
     "metaTitle": "Dental Retainers Karachi | Clear & Fixed Retainers Beverly Hills Clinic",
@@ -1358,7 +1358,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Dental Retainers represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Retainers procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Dental Retainers procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/dental-retainers-1.jpg",
@@ -1432,7 +1432,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Dental Retainers in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Dental Retainers cost in Karachi?",
@@ -1467,13 +1467,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Pediatric Dentistry at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "30 - 45 minutes",
     "suitability": "Toddlers, children, and young teens requiring preventive checkups and gentle care",
     "metaTitle": "Best Pediatric Dentist in Karachi | Beverly Hills Clinic DHA",
@@ -1490,7 +1490,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Pediatric Dentistry represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Pediatric Dentistry procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Pediatric Dentistry procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/pediatric-dentistry-1.jpg",
@@ -1564,7 +1564,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Pediatric Dentistry in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Pediatric Dentistry cost in Karachi?",
@@ -1599,13 +1599,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Tooth Extraction at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "45 minutes",
     "suitability": "Severely damaged teeth, unrestorable decay, or strategic removal for crowding",
     "metaTitle": "Safe Tooth Extraction in Karachi | Beverly Hills Clinic DHA",
@@ -1622,7 +1622,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Tooth Extraction represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Tooth Extraction procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Tooth Extraction procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/tooth-extraction-1.jpg",
@@ -1696,7 +1696,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Tooth Extraction in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Tooth Extraction cost in Karachi?",
@@ -1731,17 +1731,17 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Wisdom Tooth Extraction at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "60 minutes",
     "suitability": "Patients with impacted, painful, or overcrowded third molars",
     "metaTitle": "Wisdom Tooth Extraction Karachi | Beverly Hills Clinic DHA",
-    "metaDescription": "Expert surgical removal of impacted wisdom teeth in Karachi at Beverly Hills Clinic. 3D CBCT guided oral surgery in DHA Karachi.",
+    "metaDescription": "Expert surgical removal of impacted wisdom teeth in Karachi at Beverly Hills Clinic. Guided oral surgery in Karachi.",
     "keywords": [
       "Wisdom tooth extraction Karachi",
       "Impacted wisdom tooth DHA Karachi",
@@ -1754,7 +1754,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Wisdom Tooth Extraction represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Wisdom Tooth Extraction procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Wisdom Tooth Extraction procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/services/wisdom-tooth-extraction/consultation.webp",
@@ -1828,7 +1828,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Wisdom Tooth Extraction in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Wisdom Tooth Extraction cost in Karachi?",
@@ -1863,13 +1863,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Fixed Dentures at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "Multi-stage (2 - 4 visits)",
     "suitability": "Edentulous patients seeking a non-removable, ultra-stable tooth restoration",
     "metaTitle": "Implant Supported Fixed Dentures Karachi | Beverly Hills Clinic",
@@ -1886,7 +1886,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Fixed Dentures represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Fixed Dentures procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Fixed Dentures procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/services/fixed-dentures/consultation.webp",
@@ -1960,7 +1960,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Fixed Dentures in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Fixed Dentures cost in Karachi?",
@@ -1995,13 +1995,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Gummy Smile Treatment at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "45 minutes",
     "suitability": "Patients showing excessive gum display or short teeth proportions when smiling",
     "metaTitle": "Gummy Smile Treatment Karachi | Beverly Hills Clinic DHA",
@@ -2018,7 +2018,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Gummy Smile Treatment represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Gummy Smile Treatment procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Gummy Smile Treatment procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/gummy-smile-treatment-1.jpg",
@@ -2092,7 +2092,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Gummy Smile Treatment in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Gummy Smile Treatment cost in Karachi?",
@@ -2127,13 +2127,13 @@ export const dentalServices: ServiceData[] = [
       "Restores natural oral health, chewing functionality, and structural integrity",
       "Delivered using advanced 3D digital imaging and painless clinical techniques",
       "Customized to match your unique facial symmetry and natural tooth shade",
-      "Performed in a hospital-grade sterile environment in DHA Karachi",
+      "Performed in a sterile, fully equipped clinic in Karachi",
       "Helps prevent secondary dental complications and preserves surrounding bone",
       "Provides long-lasting, medically verified results with personalized follow-up care",
       "Elevates your personal confidence with a beautifully proportioned smile"
     ],
     "candidateInfo": "Suitable candidates for Gum Depigmentation at Beverly Hills Clinic Karachi include individuals seeking high-quality, durable solutions for compromised, misaligned, or discolored teeth. During your initial consultation in DHA Karachi, our specialists perform a thorough oral examination and 3D diagnostic evaluation to verify that your gums, bone density, and general health are optimal for successful treatment.",
-    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our DHA Karachi clinic features UK and US-trained specialists, 3D CBCT digital scanners, hospital-grade sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
+    "whyChooseClinic": "Beverly Hills Clinic Karachi stands out as a leading center for dentistry and aesthetic care in Pakistan. Our clinics in DHA Phase 5 and Bahadurabad offer experienced dentists, modern digital diagnostics, strict sterilization protocols, and a luxurious, soothing atmosphere designed to redefine your clinical experience.",
     "duration": "45 minutes",
     "suitability": "Patients seeking to lighten dark, brown, or hyperpigmented gum tissue safely",
     "metaTitle": "Laser Gum Depigmentation Karachi | Beverly Hills Clinic DHA",
@@ -2150,7 +2150,7 @@ export const dentalServices: ServiceData[] = [
         "title": "Treatment Overview & Advanced Technology",
         "content": [
           "Gum Depigmentation represents a sophisticated fusion of dental science and aesthetic artistry. At Beverly Hills Clinic Karachi, we employ cutting-edge diagnostic tools and biocompatible materials to ensure every procedure delivers optimal anatomical accuracy and aesthetic harmony.",
-          "Our treatment methodology begins with comprehensive digital diagnostics. Using high-resolution intraoral cameras and 3D CBCT scanning technology, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Gum Depigmentation procedure with millimeter accuracy.",
+          "Our treatment methodology begins with comprehensive digital diagnostics. Using intraoral cameras and digital X-ray imaging, our clinical team maps out the finest structural details of your teeth, jawbone, and nerve pathways. This micro-precision eliminates guesswork, allowing us to plan your Gum Depigmentation procedure with millimeter accuracy.",
           "Patients select Beverly Hills Clinic in DHA Karachi because we reject one-size-fits-all treatments. Every restorative and cosmetic plan is personalized according to your facial structure, tooth color spectrum, and personal goals, resulting in an exceptionally natural clinical outcome."
         ],
         "image": "/images/depigmentation-of-gums-1.jpg",
@@ -2224,7 +2224,7 @@ export const dentalServices: ServiceData[] = [
       },
       {
         "question": "Why choose Beverly Hills Clinic for Gum Depigmentation in Karachi?",
-        "answer": "Beverly Hills Clinic in DHA Karachi features UK/US-trained specialists, 3D CBCT digital technology, hospital-grade sterilization, and luxury patient care."
+        "answer": "Beverly Hills Clinic in DHA Karachi offers experienced dentists, modern digital diagnostics, strict sterilization, and luxury patient care at two Karachi clinics: DHA Phase 5 and Bahadurabad."
       },
       {
         "question": "How much does Gum Depigmentation cost in Karachi?",

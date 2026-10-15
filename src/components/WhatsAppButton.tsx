@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
       rel="noopener noreferrer"
       onClick={handleClick}
       aria-label="Chat on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group"
+      className="hidden md:flex fixed bottom-6 right-6 z-50 items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 group"
     >
       {/* Official FontAwesome 6 / Meta Original WhatsApp Brand Vector Icon */}
       <svg

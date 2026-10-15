@@ -10,9 +10,6 @@ import {
   Mail,
   Calendar,
   ChevronDown,
-  Sparkles,
-  ShieldCheck,
-  Award,
 } from "lucide-react";
 
 export default function Footer() {
@@ -72,7 +69,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#2d221f] text-[#f6ede7] border-t border-[#3e322e] pt-6 md:pt-16 pb-8" aria-label="Site Footer">
+    <footer className="bg-[#2d221f] text-[#f6ede7] border-t border-[#3e322e] pt-6 md:pt-16 pb-24 md:pb-8" aria-label="Site Footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 5-Column Grid Layout (Desktop & Tablet) */}
@@ -92,21 +89,6 @@ export default function Footer() {
               Beverly Hills Clinic is a premium dental and aesthetic clinic with branches in DHA Phase 5 and Bahadurabad, Karachi, providing advanced dental treatments, cosmetic dentistry, implants, orthodontics, and aesthetic procedures with modern technology and experienced specialists.
             </p>
             
-            {/* Trust Highlights */}
-            <div className="hidden md:block pt-2 space-y-2 text-[11px] text-[#f6ede7]/70 border-t border-[#3e322e]/60">
-              <div className="flex items-center space-x-2">
-                <Award className="w-3.5 h-3.5 text-[#c39f75] shrink-0" />
-                <span>UK & US Trained Specialists</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#c39f75] shrink-0" />
-                <span>3D CBCT Digital Scanners</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#c39f75] shrink-0" />
-                <span>Hospital-Grade Sterilization</span>
-              </div>
-            </div>
           </div>
 
           {/* Column 2: Explore Navigation */}

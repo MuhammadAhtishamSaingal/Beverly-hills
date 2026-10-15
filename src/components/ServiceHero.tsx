@@ -3,9 +3,10 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronRight, Home } from "lucide-react";
+import { ChevronRight, Home, Calendar, Phone } from "lucide-react";
 import { ServiceData } from "@/data/services";
-import { trackViewContent } from "@/lib/metaPixel";
+import { trackViewContent, trackInitiateBooking, trackContact } from "@/lib/metaPixel";
+import { CLINIC_PHONE, CLINIC_PHONE_RAW, CONSULTATION_FEE } from "@/data/locations";
 
 interface ServiceHeroProps {
   service: ServiceData;
@@ -113,6 +114,36 @@ export default function ServiceHero({ service }: ServiceHeroProps) {
               {service.title}
             </h1>
             <div className="w-16 sm:w-20 h-1 bg-[#c39f75] rounded-full" />
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-3">
+              <button
+                type="button"
+                onClick={() => {
+                  trackInitiateBooking(`Service Hero Book - ${service.title}`);
+                  window.dispatchEvent(new CustomEvent("open-booking", { detail: { service: service.title } }));
+                }}
+                className="w-full sm:w-auto bg-[#c39f75] hover:bg-[#b08b62] text-white font-semibold text-xs tracking-wider uppercase py-3.5 px-7 rounded-full transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <Calendar className="w-4 h-4" />
+                Book Consultation
+              </button>
+              <a
+                id="service-hero-call"
+                href={`tel:${CLINIC_PHONE_RAW}`}
+                onClick={() => trackContact(`Service Hero Call - ${service.title}`)}
+                className="meta-track-call w-full sm:w-auto border border-[#e8ceb1]/50 hover:bg-[#e8ceb1]/10 text-[#f6ede7] font-semibold text-xs tracking-wider uppercase py-3.5 px-7 rounded-full transition-all flex items-center justify-center gap-2"
+              >
+                <Phone className="w-4 h-4 text-[#e8ceb1]" />
+                Call {CLINIC_PHONE}
+              </a>
+            </div>
+
+            <p className="text-[11px] sm:text-xs text-[#e8ceb1]/85 flex flex-wrap gap-x-3 gap-y-1">
+              <span>★ Rated 4.8 on Google</span>
+              <span>· DHA Phase 5 &amp; Bahadurabad</span>
+              <span>· Consultation {CONSULTATION_FEE}</span>
+              {service.duration && <span>· {service.duration}</span>}
+            </p>
           </div>
         </div>
       </section>

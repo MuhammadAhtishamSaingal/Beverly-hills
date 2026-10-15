@@ -79,7 +79,7 @@ export default function ClinicTourClient() {
     {
       src: "/images/DESKTOP1_MARQE_1200.webp",
       alt: "Beverly Hills Clinic 3D Imaging & Digital Scanner Setup",
-      title: "3D CBCT Digital Diagnostics Lab",
+      title: "Digital Diagnostics",
       category: "Technology",
       span: "col-span-1 md:col-span-2 row-span-1",
     },
@@ -89,7 +89,7 @@ export default function ClinicTourClient() {
     {
       icon: Cpu,
       title: "Advanced Digital Dentistry",
-      desc: "High-definition 3D CBCT scanners and intraoral digital cameras provide ultra-precise 3D diagnostics with micro-millimeter precision, eliminating messy traditional impression molds.",
+      desc: "Digital X-rays and intraoral cameras give clear, precise diagnostics and reduce the need for traditional impression molds.",
     },
     {
       icon: Smile,
@@ -98,13 +98,13 @@ export default function ClinicTourClient() {
     },
     {
       icon: ShieldCheck,
-      title: "Hospital-Grade Sterilization",
+      title: "Strict Sterilization",
       desc: "We follow strict international clinical sterilization protocols using medical Class-B autoclaves, sterile disposable packs, and continuous air purification systems.",
     },
     {
       icon: Award,
       title: "Expert Specialist Care",
-      desc: "Our UK and US-trained dental surgeons and aesthetic physicians curate personalized, multi-disciplinary treatment plans in a soothing, private atmosphere.",
+      desc: "Our experienced dental surgeons and aesthetic physicians curate personalized, multi-disciplinary treatment plans in a soothing, private atmosphere.",
     },
   ];
 
@@ -233,7 +233,7 @@ export default function ClinicTourClient() {
               Advanced Technology & Patient Care
             </h2>
             <p className="text-xs sm:text-sm text-[#f6ede7]/75 font-light">
-              We combine world-class diagnostic equipment with luxury hospitality to make every visit painless and transparent.
+              We combine modern diagnostic equipment with luxury hospitality to make every visit painless and transparent.
             </p>
           </div>
 

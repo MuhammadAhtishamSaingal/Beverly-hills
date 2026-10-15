@@ -32,7 +32,7 @@ export default function DoctorsClient() {
       specialization: "Cosmetic Dentistry & Dental Implants",
       experience: "12+ Years Clinical Experience",
       image: "/images/people-team.webp",
-      bio: "Specializing in 3D CBCT guided dental implants, full-mouth oral rehabilitation, and custom porcelain veneers. Committed to gentle, painless restorative procedures that reconstruct natural tooth architecture.",
+      bio: "Specializing in guided dental implants, full-mouth oral rehabilitation, and custom porcelain veneers. Committed to gentle, painless restorative procedures that reconstruct natural tooth architecture.",
       expertise: [
         "3D Guided Dental Implants",
         "Hollywood Smile Porcelain Veneers",
@@ -100,12 +100,12 @@ export default function DoctorsClient() {
     {
       icon: ShieldCheck,
       title: "Uncompromising Patient Safety",
-      desc: "We enforce hospital-grade infection control protocols, medical Class-B autoclaves, and sterile procedure setups for every appointment.",
+      desc: "We follow strict infection control protocols, autoclave sterilization, and sterile procedure setups for every appointment.",
     },
     {
       icon: Sparkles,
       title: "Advanced 3D Technology",
-      desc: "Equipped with 3D CBCT digital imaging, intraoral scanners, and medical lasers to deliver micro-precise, predictable treatment outcomes.",
+      desc: "Equipped with digital imaging, intraoral scanners, and medical lasers to deliver micro-precise, predictable treatment outcomes.",
     },
     {
       icon: Award,

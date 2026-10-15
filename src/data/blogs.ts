@@ -53,7 +53,7 @@ export const blogsData: BlogArticle[] = [
     author: "Beverly Hills Dental Editorial Team",
     readTime: "6 min read",
     metaTitle: "Dental Implants Karachi Guide | Costs & Benefits | Beverly Hills Clinic",
-    metaDescription: "Comprehensive guide to dental implants in Karachi. Learn about 3D CBCT guided implant surgery, success rates, recovery, and cost in DHA Karachi.",
+    metaDescription: "Comprehensive guide to dental implants in Karachi. Learn about guided implant surgery, success rates, recovery, and cost in DHA Karachi.",
     keywords: [
       "Dental implants Karachi",
       "Best dental implant clinic Karachi",
@@ -80,7 +80,7 @@ export const blogsData: BlogArticle[] = [
         {
           heading: "The 3D Guided Implant Advantage at Beverly Hills Clinic",
           paragraphs: [
-            "At Beverly Hills Clinic Karachi, we reject outdated manual placement techniques. Our DHA Karachi practice utilizes advanced 3D CBCT (Cone Beam Computed Tomography) digital scanners and intraoral optical camera mapping.",
+            "At Beverly Hills Clinic Karachi, we reject outdated manual placement techniques. Our DHA Karachi practice uses digital imaging and intraoral camera mapping.",
             "This micro-precision digital technology allows our dental implant specialists to evaluate bone density in 3 dimensions and pre-plan computer-guided surgical templates. The result is a virtually painless, micro-invasive procedure with minimal recovery downtime.",
           ],
         },
