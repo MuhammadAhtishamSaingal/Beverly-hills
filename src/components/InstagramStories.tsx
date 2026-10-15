@@ -8,7 +8,6 @@ const posts = [
   { type: "reel", id: "DclXSfktqBw" },
   { type: "reel", id: "DclQ_FINbpX" },
   { type: "reel", id: "DcTRrAgNxDn" },
-  { type: "reel", id: "DdoYG4IhbRQ" },
   { type: "p", id: "DdMKQoMv07z" },
 ];
 
