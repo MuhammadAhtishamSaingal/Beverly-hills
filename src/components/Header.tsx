@@ -206,9 +206,9 @@ export default function Header() {
   ];
 
   const patientResources = [
-    { name: "Insurance & Financing", href: "/patients#insurance" },
-    { name: "Membership Plan", href: "/patients#membership" },
-    { name: "New Patients Onboarding", href: "/patients#new-patients" },
+    { name: "Consultation & Payments", href: "/patients#fees" },
+    { name: "Smile Makeover Journey", href: "/patients#smile-makeover" },
+    { name: "Your First Visit", href: "/patients#first-visit" },
     { name: "Frequently Asked Questions", href: "/patients#faq" },
   ];
 

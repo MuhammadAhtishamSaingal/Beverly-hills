@@ -112,7 +112,7 @@ export default function ClinicTourClient() {
     {
       icon: HeartHandshake,
       title: "Patient-Centered Experience",
-      desc: "Every appointment is structured around one patient at a time, ensuring zero rush and complete clinical attention.",
+      desc: "Appointments are planned to give you unhurried time and your doctor's full attention.",
     },
     {
       icon: Sparkles,

@@ -41,7 +41,7 @@ export default function People() {
     },
     {
       icon: Sparkles,
-      text: "Hygienists specializing in warm, gentle dental experiences.",
+      text: "Dentists and aesthetic doctors who explain every step.",
     },
   ];
 
@@ -91,7 +91,7 @@ export default function People() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}>
               <p className="text-sm sm:text-base text-brand-text/85 leading-relaxed">
-                At Beverly Hills Clinic, we believe that the best clinical care is rooted in warmth, active listening, and unconditional comfort. Our dental clinicians, hygienists, and coordinators are dedicated to helping you feel safe, relaxed, and heard.
+                At Beverly Hills Clinic, we believe that the best clinical care is rooted in warmth, active listening, and unconditional comfort. Our dentists, aesthetic doctors and patient coordinators are dedicated to helping you feel safe, relaxed, and heard.
               </p>
 
               <p className="text-sm text-brand-text/75 leading-relaxed">
