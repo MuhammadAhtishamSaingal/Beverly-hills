@@ -106,7 +106,7 @@ export default function BookingModal() {
     email: "",
     phone: "",
     location: "DHA Karachi",
-    service: "Hollywood Smile Makeover",
+    service: "",
     date: "",
     timeSlot: "Morning",
     notes: "",
@@ -146,9 +146,8 @@ export default function BookingModal() {
   useEffect(() => {
     const handleOpen = (e: Event) => {
       const customEvent = e as CustomEvent;
-      if (customEvent && customEvent.detail && customEvent.detail.service) {
-        setFormData((prev) => ({ ...prev, service: customEvent.detail.service }));
-      }
+      const presetService = customEvent?.detail?.service || "";
+      setFormData((prev) => ({ ...prev, service: presetService }));
       setIsOpen(true);
       setIsSubmitted(false);
       setModalView("select_studio");
@@ -173,6 +172,10 @@ export default function BookingModal() {
     e.preventDefault();
     if (!formData.name.trim() || !formData.phone.trim() || !formData.date) {
       alert("Please fill in your name, phone number and preferred date.");
+      return;
+    }
+    if (!formData.service) {
+      alert("Please select the treatment or service you are interested in.");
       return;
     }
     if (formData.phone.replace(/\D/g, "").length < 10) {

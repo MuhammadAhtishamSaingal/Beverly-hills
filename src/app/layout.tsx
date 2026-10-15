@@ -25,8 +25,16 @@ const bodyFont = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://beverlyhillsclinic.com.pk"),
-  title: "Beverly Hills Clinic | Modern Dental Care, Thoughtfully Delivered",
-  description: "Comprehensive dentistry in calm, well-designed spaces across Karachi.",
+  title: "Beverly Hills Clinic Karachi | Smile Makeovers, Implants & Aesthetics",
+  description:
+    "Premium dental and aesthetic clinic in DHA Phase 5 and Bahadurabad, Karachi. Smile makeovers with E-max and Zirconia veneers in about 10 days, dental implants, exosomes, lip fillers and signature facials.",
+  openGraph: {
+    title: "Beverly Hills Clinic Karachi | Smile Makeovers, Implants & Aesthetics",
+    description: "Premium dental and aesthetic clinic in DHA Phase 5 and Bahadurabad, Karachi.",
+    siteName: "Beverly Hills Clinic",
+    locale: "en_PK",
+    type: "website",
+  },
   other: {
     "facebook-domain-verification": "60pcjbqki5024g90oqys05a5dvg784",
   },

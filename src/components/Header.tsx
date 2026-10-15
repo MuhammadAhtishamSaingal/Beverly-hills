@@ -393,7 +393,7 @@ export default function Header() {
                           className="block px-4 py-2.5 text-sm font-medium text-brand-accent hover:bg-brand-secondary/20 transition-colors"
                           onClick={() => setIsDropdownOpen(false)}
                         >
-                          View Patient Dashboard
+                          View Patient Guide
                         </Link>
                       </div>
                     </div>
@@ -914,7 +914,7 @@ export default function Header() {
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
                       >
-                        Patient Dashboard &rarr;
+                        Patient Guide &rarr;
                       </Link>
                       {patientResources.map((item) => (
                         <Link
