@@ -6,6 +6,7 @@ import GoogleRating from "@/components/GoogleRating";
 import Studios from "@/components/Studios";
 import TwoStudiosOneStandard from "@/components/TwoStudiosOneStandard";
 import CTASection from "@/components/CTASection";
+import InstagramStories from "@/components/InstagramStories";
 
 export default function Home() {
   return (
@@ -31,7 +32,10 @@ export default function Home() {
       {/* 7. Our two clinics */}
       <TwoStudiosOneStandard />
 
-      {/* 8. Final call to action */}
+      {/* 8. Real stories from Instagram */}
+      <InstagramStories />
+
+      {/* 9. Final call to action */}
       <CTASection />
     </div>
   );

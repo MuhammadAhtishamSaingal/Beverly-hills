@@ -123,6 +123,13 @@ function DesktopHero() {
   );
 }
 
+const mobileHighlights = [
+  { label: "Smile makeover", detail: "about 10 days" },
+  { label: "E-max & Zirconia", detail: "veneers" },
+  { label: "Dental implants", detail: "permanent" },
+  { label: "Exosomes & fillers", detail: "aesthetics" },
+];
+
 function MobileHero() {
   const triggerBooking = () => {
     trackInitiateBooking("Mobile Hero Book Consultation");
@@ -130,44 +137,58 @@ function MobileHero() {
   };
 
   return (
-    <section className="md:hidden relative w-full min-h-[100svh] bg-[#1c1412] text-[#f6ede7] overflow-hidden flex flex-col justify-end">
-      <Image
-        src="/images/people-team.webp"
-        alt="Beverly Hills Clinic dentists and aesthetic doctors in Karachi"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-[center_20%]"
+    <section className="md:hidden relative w-full min-h-[100svh] bg-[#f6ede7] text-[#1c1412] overflow-hidden flex flex-col justify-center">
+      {/* Soft gold glows and logo watermark */}
+      <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#e8ceb1]/70 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-28 -left-20 w-80 h-80 rounded-full bg-[#c39f75]/25 blur-3xl pointer-events-none" />
+      <img
+        src="/images/logo.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 w-[130%] max-w-none opacity-[0.04] pointer-events-none select-none"
       />
-      <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-[#f6ede7]/80 to-transparent pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-[72%] bg-gradient-to-t from-[#1c1412] from-35% via-[#1c1412]/85 to-transparent" />
 
-      <div className="relative z-10 px-5 pb-28 pt-10 space-y-5">
-        <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.25em] text-[#e8ceb1] bg-[#1c1412]/55 backdrop-blur-sm px-3 py-1.5 rounded-full">
-          DHA Phase 5 · Bahadurabad · Karachi
+      <div className="relative z-10 px-6 pt-32 pb-28 text-center space-y-6">
+        <span className="inline-block text-[10px] font-semibold uppercase tracking-[0.28em] text-[#ab7f51] border border-[#c39f75]/50 px-4 py-1.5 rounded-full">
+          DHA Phase 5 · Bahadurabad
         </span>
-        <h1 className="font-heading text-[2.4rem] leading-[1.05]">
+
+        <h1 className="font-heading text-[2.75rem] leading-[1.02]">
           Beautiful smiles.
-          <span className="block italic text-[#e8ceb1]">Radiant skin.</span>
+          <span className="block italic text-[#ab7f51] mt-1">Radiant skin.</span>
         </h1>
-        <p className="text-sm text-[#f6ede7]/80 leading-relaxed max-w-xs">
-          Premium smile makeovers in about 10 days, dental implants and signature aesthetic treatments.
-        </p>
-        <div className="flex items-center gap-2 text-xs text-[#f6ede7]/85">
-          <span className="text-[#f5b301] tracking-tight">★★★★★</span>
-          <span>4.8 on Google</span>
+
+        <div className="flex items-center justify-center gap-3">
+          <span className="w-10 h-px bg-[#c39f75]" />
+          <span className="text-[10px] uppercase tracking-[0.3em] text-[#1c1412]/60">Dentistry · Aesthetics</span>
+          <span className="w-10 h-px bg-[#c39f75]" />
         </div>
+
+        <ul className="grid grid-cols-2 gap-2.5 text-left">
+          {mobileHighlights.map((h) => (
+            <li key={h.label} className="bg-white/70 border border-[#e8ceb1] rounded-2xl px-3.5 py-3">
+              <span className="block text-[13px] font-semibold leading-tight">{h.label}</span>
+              <span className="block text-[11px] text-[#ab7f51] mt-0.5">{h.detail}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex items-center justify-center gap-2 text-xs text-[#1c1412]/75">
+          <span className="text-[#f5b301]">★★★★★</span>
+          <span>Rated 4.8 on Google</span>
+        </div>
+
         <button
           type="button"
           onClick={triggerBooking}
-          className="w-full bg-[#c39f75] active:bg-[#b08b62] text-[#1c1412] font-semibold text-sm uppercase tracking-[0.15em] py-4 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-black/30"
+          className="w-full bg-[#1c1412] active:bg-[#2d221f] text-[#f6ede7] font-semibold text-sm uppercase tracking-[0.15em] py-4 rounded-full flex items-center justify-center gap-2 shadow-lg shadow-[#1c1412]/25"
         >
-          <Calendar className="w-4 h-4" />
+          <Calendar className="w-4 h-4 text-[#c39f75]" />
           Book Consultation
         </button>
         <a
           href="#signature-treatments"
-          className="block text-center text-[11px] uppercase tracking-[0.2em] text-[#f6ede7]/70"
+          className="block text-[11px] uppercase tracking-[0.22em] text-[#ab7f51]"
         >
           Explore signature treatments ↓
         </a>
