@@ -10,8 +10,6 @@ export interface BookingEmailPayload {
   date: string;
   timeSlot: string;
   notes?: string;
-  patientType?: string;
-  source?: string;
   whatsappOk?: boolean;
   pageUrl?: string;
   tracking?: Record<string, string>;
@@ -97,8 +95,6 @@ export async function sendBookingEmail(payload: BookingEmailPayload) {
     ),
     row("Requested Treatment", e(service), "#ef4444"),
     row("Preferred Date & Time", `${e(date)} · ${e(timeSlot)}`, "#06b6d4"),
-    row("Visit Type", e(payload.patientType) || "Not specified", "#14b8a6"),
-    row("Heard About Us From", e(payload.source) || "Not specified", "#a855f7"),
     row("Special Notes / Concerns", e(notes) || "No special concerns listed.", "#6366f1"),
     row(
       "Lead Details",

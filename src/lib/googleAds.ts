@@ -5,7 +5,7 @@
  * Google Ads > Goals > Conversions once the conversion actions exist.
  * While they are empty, nothing is loaded or sent.
  */
-export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "";
+export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18471753711";
 
 const CONVERSION_LABELS: Record<ConversionKey, string> = {
   booking_submit: process.env.NEXT_PUBLIC_GADS_LABEL_BOOKING || "",

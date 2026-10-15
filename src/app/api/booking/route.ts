@@ -60,8 +60,6 @@ export async function POST(request: Request) {
       date,
       timeSlot: clean(body.timeSlot, 40),
       notes: clean(body.notes, 2000),
-      patientType: clean(body.patientType, 40),
-      source: clean(body.source, 80),
       whatsappOk: body.whatsappOk === true,
       pageUrl: clean(body.pageUrl, 500),
       tracking,

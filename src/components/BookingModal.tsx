@@ -30,20 +30,6 @@ const studios = [
   },
 ];
 
-const patientTypes = ["New Patient", "Existing Patient"];
-
-const leadSources = [
-  "Google Search",
-  "Google Maps",
-  "Instagram",
-  "Facebook",
-  "TikTok",
-  "YouTube",
-  "Friend / Family Referral",
-  "Doctor Referral",
-  "Other",
-];
-
 const TRACKING_KEYS = ["gclid", "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"];
 
 function readTracking(): Record<string, string> {
@@ -124,8 +110,6 @@ export default function BookingModal() {
     date: "",
     timeSlot: "Morning",
     notes: "",
-    patientType: "New Patient",
-    source: "",
     whatsappOk: true,
     consent: false,
   });
@@ -222,7 +206,6 @@ export default function BookingModal() {
         trackAdsConversion("booking_submit", {
           clinic: formData.location,
           service: formData.service,
-          lead_source: formData.source,
         });
         
         // Trigger Meta Pixel "Lead" event and GA4 "form_submission" event on successful submission
@@ -580,49 +563,6 @@ export default function BookingModal() {
                         <option value="Morning">Morning (8:00 AM - 12:00 PM)</option>
                         <option value="Afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
                         <option value="Evening">Evening (4:00 PM - 6:00 PM)</option>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Patient Type & Source */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="patientType" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
-                      Visit Type
-                    </label>
-                    <div className="relative">
-                      <select
-                        id="patientType"
-                        name="patientType"
-                        value={formData.patientType}
-                        onChange={handleInputChange}
-                        className="w-full pl-4 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
-                      >
-                        {patientTypes.map((type) => (
-                          <option key={type} value={type}>{type}</option>
-                        ))}
-                      </select>
-                      <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="source" className="block text-xs font-bold uppercase tracking-wider text-brand-text/75 mb-1.5">
-                      How Did You Hear About Us?
-                    </label>
-                    <div className="relative">
-                      <select
-                        id="source"
-                        name="source"
-                        value={formData.source}
-                        onChange={handleInputChange}
-                        className="w-full pl-4 pr-10 py-2.5 bg-white border border-brand-secondary/60 rounded-lg text-sm text-brand-text focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent appearance-none cursor-pointer"
-                      >
-                        <option value="">Select an option</option>
-                        {leadSources.map((src) => (
-                          <option key={src} value={src}>{src}</option>
-                        ))}
                       </select>
                       <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-brand-text/40 pointer-events-none" />
                     </div>
