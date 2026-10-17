@@ -109,6 +109,12 @@ function DesktopHero() {
               <span>WhatsApp</span>
             </a>
           </div>
+
+          <div className="flex items-center gap-3 pt-2 text-sm text-[#2d221f]">
+            <span className="text-[#2d221f]/60">Explore:</span>
+            <a href="#dental" className="font-semibold border-b border-[#3d2e2a]/40 hover:border-[#3d2e2a]">🦷 Dental treatments</a>
+            <a href="#aesthetic" className="font-semibold border-b border-[#3d2e2a]/40 hover:border-[#3d2e2a]">✨ Aesthetic treatments</a>
+          </div>
         </div>
       </div>
 
@@ -123,11 +129,9 @@ function DesktopHero() {
   );
 }
 
-const mobileHighlights = [
-  { label: "Smile makeover", detail: "about 10 days" },
-  { label: "E-max & Zirconia", detail: "veneers" },
-  { label: "Dental implants", detail: "permanent" },
-  { label: "Exosomes & fillers", detail: "aesthetics" },
+const heroChoices = [
+  { hash: "dental", emoji: "🦷", label: "Dental", detail: "Smile makeover, veneers, implants" },
+  { hash: "aesthetic", emoji: "✨", label: "Aesthetic", detail: "Exosomes, lip fillers, facials" },
 ];
 
 function MobileHero() {
@@ -164,14 +168,23 @@ function MobileHero() {
           <span className="w-10 h-px bg-[#c39f75]" />
         </div>
 
-        <ul className="grid grid-cols-2 gap-2.5 text-left">
-          {mobileHighlights.map((h) => (
-            <li key={h.label} className="bg-white/70 border border-[#e8ceb1] rounded-2xl px-3.5 py-3">
-              <span className="block text-[13px] font-semibold leading-tight">{h.label}</span>
-              <span className="block text-[11px] text-[#ab7f51] mt-0.5">{h.detail}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="space-y-2.5">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#1c1412]/60">What are you looking for?</p>
+          <div className="grid grid-cols-2 gap-2.5 text-left">
+            {heroChoices.map((c) => (
+              <a
+                key={c.hash}
+                href={`#${c.hash}`}
+                className="bg-white border border-[#e8ceb1] rounded-2xl p-4 shadow-[0_10px_25px_-18px_rgba(28,20,18,0.5)] active:scale-[0.98] transition-transform"
+              >
+                <span className="text-2xl" aria-hidden="true">{c.emoji}</span>
+                <span className="block font-heading text-xl leading-tight mt-1.5">{c.label}</span>
+                <span className="block text-[11px] text-[#1c1412]/60 leading-snug mt-1">{c.detail}</span>
+                <span className="block text-[11px] font-semibold text-[#ab7f51] mt-2">See treatments →</span>
+              </a>
+            ))}
+          </div>
+        </div>
 
         <div className="flex items-center justify-center gap-2 text-xs text-[#1c1412]/75">
           <span className="text-[#f5b301]">★★★★★</span>
@@ -186,12 +199,7 @@ function MobileHero() {
           <Calendar className="w-4 h-4 text-[#c39f75]" />
           Book Consultation
         </button>
-        <a
-          href="#signature-treatments"
-          className="block text-[11px] uppercase tracking-[0.22em] text-[#ab7f51]"
-        >
-          Explore signature treatments ↓
-        </a>
+        <p className="text-[11px] text-[#1c1412]/55">Consultation PKR 3,000 · DHA &amp; Bahadurabad</p>
       </div>
     </section>
   );

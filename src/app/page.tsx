@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
-import SignatureTreatments from "@/components/SignatureTreatments";
-import SmileMakeoverSpotlight from "@/components/SmileMakeoverSpotlight";
+import TreatmentExplorer from "@/components/TreatmentExplorer";
 import People from "@/components/People";
 import GoogleRating from "@/components/GoogleRating";
 import Studios from "@/components/Studios";
@@ -14,11 +13,8 @@ export default function Home() {
       {/* 1. Hero */}
       <Hero />
 
-      {/* 2. Signature dental & aesthetic treatments */}
-      <SignatureTreatments />
-
-      {/* 3. Smile makeover: 3 visits, about 10 days */}
-      <SmileMakeoverSpotlight />
+      {/* 2-3. Dental / Aesthetic switcher with top 3 treatments each */}
+      <TreatmentExplorer />
 
       {/* 4. Our doctors */}
       <People />
