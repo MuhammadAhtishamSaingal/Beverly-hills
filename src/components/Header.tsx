@@ -8,9 +8,9 @@ import { trackInitiateBooking, trackContact } from "@/lib/metaPixel";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isAestheticDropdownOpen, setIsAestheticDropdownOpen] = useState(false);
   const [isContactDropdownOpen, setIsContactDropdownOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isDentalDropdownOpen, setIsDentalDropdownOpen] = useState(false);
 
   // Search Modal States
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
@@ -21,38 +21,37 @@ export default function Header() {
   const [mobileSearchQuery, setMobileSearchQuery] = useState("");
   const [mobileDentalOpen, setMobileDentalOpen] = useState(false);
   const [mobileAestheticOpen, setMobileAestheticOpen] = useState(false);
-  const [mobilePatientsOpen, setMobilePatientsOpen] = useState(false);
 
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
-  const timeoutRefPatients = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRefAesthetic = useRef<NodeJS.Timeout | null>(null);
   const timeoutRefContact = useRef<NodeJS.Timeout | null>(null);
-  const timeoutRefServices = useRef<NodeJS.Timeout | null>(null);
+  const timeoutRefDental = useRef<NodeJS.Timeout | null>(null);
 
-  const handleMouseEnterPatients = () => {
-    if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+  const handleMouseEnterAesthetic = () => {
+    if (timeoutRefAesthetic.current) clearTimeout(timeoutRefAesthetic.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
-    if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+    if (timeoutRefDental.current) clearTimeout(timeoutRefDental.current);
 
     setIsContactDropdownOpen(false);
-    setIsServicesDropdownOpen(false);
-    setIsDropdownOpen(true);
+    setIsDentalDropdownOpen(false);
+    setIsAestheticDropdownOpen(true);
   };
 
-  const handleMouseLeavePatients = () => {
-    timeoutRefPatients.current = setTimeout(() => {
-      setIsDropdownOpen(false);
+  const handleMouseLeaveAesthetic = () => {
+    timeoutRefAesthetic.current = setTimeout(() => {
+      setIsAestheticDropdownOpen(false);
     }, 200);
   };
 
   const handleMouseEnterContact = () => {
-    if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+    if (timeoutRefAesthetic.current) clearTimeout(timeoutRefAesthetic.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
-    if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+    if (timeoutRefDental.current) clearTimeout(timeoutRefDental.current);
 
-    setIsDropdownOpen(false);
-    setIsServicesDropdownOpen(false);
+    setIsAestheticDropdownOpen(false);
+    setIsDentalDropdownOpen(false);
     setIsContactDropdownOpen(true);
   };
 
@@ -62,19 +61,19 @@ export default function Header() {
     }, 200);
   };
 
-  const handleMouseEnterServices = () => {
-    if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+  const handleMouseEnterDental = () => {
+    if (timeoutRefAesthetic.current) clearTimeout(timeoutRefAesthetic.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
-    if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+    if (timeoutRefDental.current) clearTimeout(timeoutRefDental.current);
 
-    setIsDropdownOpen(false);
+    setIsAestheticDropdownOpen(false);
     setIsContactDropdownOpen(false);
-    setIsServicesDropdownOpen(true);
+    setIsDentalDropdownOpen(true);
   };
 
-  const handleMouseLeaveServices = () => {
-    timeoutRefServices.current = setTimeout(() => {
-      setIsServicesDropdownOpen(false);
+  const handleMouseLeaveDental = () => {
+    timeoutRefDental.current = setTimeout(() => {
+      setIsDentalDropdownOpen(false);
     }, 200);
   };
 
@@ -120,24 +119,23 @@ export default function Header() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsSearchModalOpen(false);
-    setIsDropdownOpen(false);
+    setIsAestheticDropdownOpen(false);
     setIsContactDropdownOpen(false);
-    setIsServicesDropdownOpen(false);
-    setMobilePatientsOpen(false);
+    setIsDentalDropdownOpen(false);
     setMobileDentalOpen(false);
     setMobileAestheticOpen(false);
     setMobileSearchQuery("");
-    if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+    if (timeoutRefAesthetic.current) clearTimeout(timeoutRefAesthetic.current);
     if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
-    if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+    if (timeoutRefDental.current) clearTimeout(timeoutRefDental.current);
   }, [pathname]);
 
   // Cleanup timeouts on unmount
   useEffect(() => {
     return () => {
-      if (timeoutRefPatients.current) clearTimeout(timeoutRefPatients.current);
+      if (timeoutRefAesthetic.current) clearTimeout(timeoutRefAesthetic.current);
       if (timeoutRefContact.current) clearTimeout(timeoutRefContact.current);
-      if (timeoutRefServices.current) clearTimeout(timeoutRefServices.current);
+      if (timeoutRefDental.current) clearTimeout(timeoutRefDental.current);
     };
   }, []);
 
@@ -164,13 +162,13 @@ export default function Header() {
   ];
 
   const dentalServicesList = [
-    { name: "Dental Implants", slug: "dental-implants" },
+    { name: "Hollywood Smile Makeover", slug: "hollywood-smile-makeover", top: true },
+    { name: "Veneers, Crowns & Bridges", slug: "dental-veneers-crowns-bridges", top: true },
+    { name: "Dental Implants", slug: "dental-implants", top: true },
+    { name: "Root Canal Treatment", slug: "root-canal-treatment" },
     { name: "Laser Teeth Whitening", slug: "teeth-whitening" },
     { name: "Clear Aligner Treatments", slug: "clear-aligners" },
     { name: "Braces Treatment", slug: "braces-treatment" },
-    { name: "Root Canal Treatment", slug: "root-canal-treatment" },
-    { name: "Dental Veneers, Crowns, Bridges", slug: "dental-veneers-crowns-bridges" },
-    { name: "Hollywood Smile Makeover", slug: "hollywood-smile-makeover" },
     { name: "Dental Fillings", slug: "dental-fillings" },
     { name: "Complete Denture", slug: "complete-denture" },
     { name: "Night Guards", slug: "night-guards" },
@@ -184,14 +182,15 @@ export default function Header() {
   ];
 
   const aestheticServicesList = [
+    { name: "Exosomes Therapy", slug: "exosomes-therapy", top: true },
+    { name: "Lip & Face Fillers", slug: "dermal-fillers", top: true },
+    { name: "Red Carpet Facial", slug: "red-carpet-facial", top: true },
     { name: "Full Face Anti-Wrinkle Rejuvenation", slug: "anti-wrinkle-treatment" },
-    { name: "Fillers: Face, Lips, Hair, Body", slug: "dermal-fillers" },
     { name: "Laser Hair Removal (Alma)", slug: "laser-hair-removal" },
     { name: "HIFU (Ultraformer III)", slug: "hifu-treatment" },
     { name: "PRP & Exosomes / Stem Cells", slug: "prp-therapy" },
     { name: "Chemical Peel: Face, Neck, Body", slug: "chemical-peel" },
     { name: "Skin Brightening Therapy", slug: "skin-brightening-therapy" },
-    { name: "Exosomes Therapy", slug: "exosomes-therapy" },
     { name: "CO2 Fractional Laser (Fotona)", slug: "co2-fractional-laser" },
     { name: "Plasma Fibroblast", slug: "plasma-fibroblast" },
     { name: "Polynucleotide Face and Eyes", slug: "polynucleotide-face-and-eyes" },
@@ -199,9 +198,45 @@ export default function Header() {
     { name: "PDO Threads", slug: "pdo-threads" },
     { name: "Weight Loss Treatment", slug: "weight-loss-treatment" },
     { name: "Body Fat Lipo", slug: "body-fat-lipo" },
-    { name: "Red Carpet Facial", slug: "red-carpet-facial" },
     { name: "BH Exfoliating Facial", slug: "bh-exfoliating-facial" },
     { name: "Micro-Needling with Stem Cells", slug: "microneedling-stem-cells" },
+  ];
+
+  type ServiceLink = { name: string; slug: string; top?: boolean };
+
+  const desktopMenus: {
+    key: "dental" | "aesthetic";
+    label: string;
+    icon: typeof Sparkles;
+    items: ServiceLink[];
+    allHref: string;
+    open: boolean;
+    enter: () => void;
+    leave: () => void;
+    close: () => void;
+  }[] = [
+    {
+      key: "dental",
+      label: "Dental Services",
+      icon: Stethoscope,
+      items: dentalServicesList,
+      allHref: "/services#dentistry",
+      open: isDentalDropdownOpen,
+      enter: () => handleMouseEnterDental(),
+      leave: () => handleMouseLeaveDental(),
+      close: () => setIsDentalDropdownOpen(false),
+    },
+    {
+      key: "aesthetic",
+      label: "Aesthetic Services",
+      icon: Sparkles,
+      items: aestheticServicesList,
+      allHref: "/services#aesthetics",
+      open: isAestheticDropdownOpen,
+      enter: () => handleMouseEnterAesthetic(),
+      leave: () => handleMouseLeaveAesthetic(),
+      close: () => setIsAestheticDropdownOpen(false),
+    },
   ];
 
   const patientResources = [
@@ -214,7 +249,7 @@ export default function Header() {
   const sitePages = [
     { name: "Home Page", href: "/" },
     { name: "Clinic Tour", href: "/clinic-tour" },
-    { name: "Services Overview", href: "/services" },
+    { name: "All Dental & Aesthetic Services", href: "/services" },
     { name: "Blogs & Articles", href: "/blog" },
     { name: "Contact Us & Locations", href: "/contact" },
   ];
@@ -268,7 +303,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-5 lg:space-x-8 xl:space-x-10">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-9">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -283,71 +318,85 @@ export default function Header() {
                 </Link>
               ))}
 
-              {/* Services Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={handleMouseEnterServices}
-                onMouseLeave={handleMouseLeaveServices}
-              >
-                <Link
-                  href="/services"
-                  className={`flex items-center space-x-1 text-sm lg:text-base font-medium tracking-wide whitespace-nowrap transition-colors cursor-pointer ${
-                    pathname.startsWith("/services")
-                      ? "text-brand-accent font-semibold"
-                      : "text-brand-text/80 hover:text-brand-accent"
-                  }`}
-                  onClick={() => setIsServicesDropdownOpen(false)}
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesDropdownOpen ? "rotate-185" : ""}`} />
-                </Link>
+              {/* Dental Services & Aesthetic Services Dropdowns */}
+              {desktopMenus.map((menu) => {
+                const Icon = menu.icon;
+                const top = menu.items.filter((i) => i.top);
+                const rest = menu.items.filter((i) => !i.top);
+                const activeHere = menu.items.some((i) => pathname === `/services/${i.slug}`);
+                return (
+                  <div key={menu.key} className="relative" onMouseEnter={menu.enter} onMouseLeave={menu.leave}>
+                    <button
+                      type="button"
+                      onClick={() => (menu.open ? menu.close() : menu.enter())}
+                      aria-expanded={menu.open}
+                      className={`flex items-center space-x-1 text-sm lg:text-base font-medium tracking-wide whitespace-nowrap transition-colors cursor-pointer ${
+                        activeHere || menu.open ? "text-brand-accent font-semibold" : "text-brand-text/80 hover:text-brand-accent"
+                      }`}
+                    >
+                      <span>{menu.label}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${menu.open ? "rotate-180" : ""}`} />
+                    </button>
 
-                {isServicesDropdownOpen && (
-                  <div className="absolute left-1/2 -translate-x-1/2 mt-0 top-full pt-2 w-[900px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="rounded-2xl bg-brand-primary border border-brand-secondary/60 shadow-xl p-8 grid grid-cols-4 gap-6">
-                      {/* Columns 1 & 2: Dental Services */}
-                      <div className="col-span-2 space-y-4">
-                        <div className="text-xs font-bold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
-                          Comprehensive Dental Services
-                        </div>
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                          {dentalServicesList.map((srv) => (
-                            <Link
-                              key={srv.slug}
-                              href={`/services/${srv.slug}`}
-                              className="group/item flex items-center text-xs font-medium text-brand-text hover:text-brand-accent transition-colors py-0.5"
-                              onClick={() => setIsServicesDropdownOpen(false)}
+                    {menu.open && (
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[620px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="rounded-2xl bg-brand-primary border border-brand-secondary/60 shadow-xl overflow-hidden">
+                          <div className="p-6 grid grid-cols-[200px_1fr] gap-6">
+                            <div className="space-y-2">
+                              <div className="flex items-center gap-2 text-[11px] font-bold text-[#ab7f51] tracking-wider uppercase pb-1">
+                                <Icon className="w-4 h-4" /> Most popular
+                              </div>
+                              {top.map((srv) => (
+                                <Link
+                                  key={srv.slug}
+                                  href={`/services/${srv.slug}`}
+                                  onClick={menu.close}
+                                  className="block rounded-xl bg-white/70 hover:bg-white border border-brand-secondary/50 px-3.5 py-3 text-sm font-semibold text-brand-text hover:text-brand-accent transition-colors"
+                                >
+                                  {srv.name}
+                                </Link>
+                              ))}
+                            </div>
+                            <div>
+                              <div className="text-[11px] font-bold text-brand-text/40 tracking-wider uppercase pb-2 mb-2 border-b border-brand-secondary/30">
+                                All {menu.label.toLowerCase()}
+                              </div>
+                              <div className="grid grid-cols-2 gap-x-4 gap-y-1.5">
+                                {rest.map((srv) => (
+                                  <Link
+                                    key={srv.slug}
+                                    href={`/services/${srv.slug}`}
+                                    onClick={menu.close}
+                                    className="group/item flex items-center text-xs font-medium text-brand-text hover:text-brand-accent transition-colors py-1"
+                                  >
+                                    <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2 flex-shrink-0 transition-colors" />
+                                    <span className="truncate">{srv.name}</span>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between bg-[#1c1412] text-[#f6ede7] px-6 py-3.5">
+                            <a href={menu.allHref} className="text-xs font-semibold uppercase tracking-wider text-[#e8ceb1] hover:underline">
+                              View all {menu.label.toLowerCase()} &rarr;
+                            </a>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                menu.close();
+                                triggerBooking();
+                              }}
+                              className="text-xs font-bold uppercase tracking-wider bg-[#c39f75] text-[#1c1412] px-4 py-2 rounded-full cursor-pointer"
                             >
-                              <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2 flex-shrink-0 transition-colors" />
-                              <span className="truncate">{srv.name}</span>
-                            </Link>
-                          ))}
+                              Book Consultation
+                            </button>
+                          </div>
                         </div>
                       </div>
-
-                      {/* Columns 3 & 4: Advanced Aesthetics */}
-                      <div className="col-span-2 space-y-4">
-                        <div className="text-xs font-bold text-[#c39f75] tracking-wider uppercase border-b border-brand-secondary/30 pb-2">
-                          Advanced Aesthetics
-                        </div>
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                          {aestheticServicesList.map((srv) => (
-                            <Link
-                              key={srv.slug}
-                              href={`/services/${srv.slug}`}
-                              className="group/item flex items-center text-xs font-medium text-brand-text hover:text-brand-accent transition-colors py-0.5"
-                              onClick={() => setIsServicesDropdownOpen(false)}
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-brand-secondary group-hover/item:bg-brand-accent mr-2 flex-shrink-0 transition-colors" />
-                              <span className="truncate">{srv.name}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                    )}
                   </div>
-                )}
-              </div>
+                );
+              })}
 
               {/* Contact Dropdown */}
               <div
@@ -404,7 +453,7 @@ export default function Header() {
             </nav>
 
             {/* Header Right Actions (CTAs) */}
-            <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
+            <div className="hidden lg:flex items-center space-x-3 lg:space-x-4">
 
               <a
                 id="header-call-now"
@@ -425,7 +474,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Header Actions (Search Icon + Menu Button) */}
-            <div className="md:hidden flex items-center space-x-1">
+            <div className="lg:hidden flex items-center space-x-1">
               <button
                 onClick={() => setIsSearchModalOpen(true)}
                 className="text-brand-text hover:text-brand-accent p-2 focus:outline-none cursor-pointer"
@@ -753,13 +802,13 @@ export default function Header() {
 
                   {mobileDentalOpen && (
                     <div className="mt-1 ml-2 pl-3 pr-2 py-2.5 space-y-1 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
-                      <Link
-                        href="/services#dental"
+                      <a
+                        href="/services#dentistry"
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
                       >
-                        All Dental Services Overview &rarr;
-                      </Link>
+                        All Dental Services &rarr;
+                      </a>
                       <div className="pl-1 py-1 space-y-0.5 border-l-2 border-[#c39f75]/40 ml-2">
                         {dentalServicesList.map((srv) => (
                           <Link
@@ -790,7 +839,7 @@ export default function Header() {
                   >
                     <div className="flex items-center space-x-2">
                       <Sparkles className="w-4.5 h-4.5 text-[#c39f75]" />
-                      <span>Aesthetic Treatments</span>
+                      <span>Aesthetic Services</span>
                     </div>
                     <ChevronDown
                       className={`w-4.5 h-4.5 text-[#c39f75] transition-transform duration-300 ${
@@ -801,13 +850,13 @@ export default function Header() {
 
                   {mobileAestheticOpen && (
                     <div className="mt-1 ml-2 pl-3 pr-2 py-2.5 space-y-1 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
-                      <Link
-                        href="/services#aesthetic"
+                      <a
+                        href="/services#aesthetics"
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
                       >
-                        All Aesthetic Treatments Overview &rarr;
-                      </Link>
+                        All Aesthetic Services &rarr;
+                      </a>
                       <div className="pl-1 py-1 space-y-0.5 border-l-2 border-[#c39f75]/40 ml-2">
                         {aestheticServicesList.map((srv) => (
                           <Link

@@ -1,5 +1,7 @@
 import Hero from "@/components/Hero";
 import TreatmentExplorer from "@/components/TreatmentExplorer";
+import TreatmentFinder from "@/components/TreatmentFinder";
+import EasyBooking from "@/components/EasyBooking";
 import People from "@/components/People";
 import GoogleRating from "@/components/GoogleRating";
 import Studios from "@/components/Studios";
@@ -16,6 +18,9 @@ export default function Home() {
       {/* 2-3. Dental / Aesthetic switcher with top 3 treatments each */}
       <TreatmentExplorer />
 
+      {/* Find your treatment by problem */}
+      <TreatmentFinder />
+
       {/* 4. Our doctors */}
       <People />
 
@@ -30,6 +35,9 @@ export default function Home() {
 
       {/* 8. Real stories from Instagram */}
       <InstagramStories />
+
+      {/* How to get started + FAQ */}
+      <EasyBooking />
 
       {/* 9. Final call to action */}
       <CTASection />

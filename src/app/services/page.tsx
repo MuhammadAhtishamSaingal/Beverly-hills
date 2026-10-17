@@ -14,8 +14,13 @@ export default function ServicesListingPage() {
 
   // /services#dentistry or /services#aesthetics opens that category directly
   useEffect(() => {
-    const hash = window.location.hash.replace("#", "");
-    if (hash === "dentistry" || hash === "aesthetics") setActiveTab(hash);
+    const applyHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash === "dentistry" || hash === "aesthetics") setActiveTab(hash);
+    };
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    return () => window.removeEventListener("hashchange", applyHash);
   }, []);
 
   const triggerBookingForService = (serviceTitle: string) => {
