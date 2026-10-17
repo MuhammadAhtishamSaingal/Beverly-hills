@@ -39,10 +39,8 @@ export default function Footer() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/patients" },
     { label: "Services", href: "/services" },
-    { label: "Patients", href: "/patients" },
     { label: "Contact Us", href: "/contact" },
     { label: "Clinic Tour", href: "/clinic-tour" },
-    { label: "Dentists", href: "/doctors" },
     { label: "Blogs", href: "/blog" },
   ];
 
