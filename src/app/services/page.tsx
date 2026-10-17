@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Sparkles, ShieldCheck, Calendar, Phone, ArrowRight, Clock } from "lucide-react";
@@ -11,6 +11,12 @@ export default function ServicesListingPage() {
   const [activeTab, setActiveTab] = useState<"all" | "dentistry" | "aesthetics">("all");
   const dentalServices = getServicesByCategory("dentistry");
   const aestheticServices = getServicesByCategory("aesthetics");
+
+  // /services#dentistry or /services#aesthetics opens that category directly
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash === "dentistry" || hash === "aesthetics") setActiveTab(hash);
+  }, []);
 
   const triggerBookingForService = (serviceTitle: string) => {
     trackInitiateBooking(serviceTitle);

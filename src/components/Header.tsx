@@ -161,7 +161,6 @@ export default function Header() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Clinic Tour", href: "/clinic-tour" },
-    { name: "Dentists", href: "/doctors" },
   ];
 
   const dentalServicesList = [
@@ -215,9 +214,7 @@ export default function Header() {
   const sitePages = [
     { name: "Home Page", href: "/" },
     { name: "Clinic Tour", href: "/clinic-tour" },
-    { name: "Our Doctors & Specialists", href: "/doctors" },
     { name: "Services Overview", href: "/services" },
-    { name: "Patient Portal", href: "/patients" },
     { name: "Blogs & Articles", href: "/blog" },
     { name: "Contact Us & Locations", href: "/contact" },
   ];
@@ -346,55 +343,6 @@ export default function Header() {
                             </Link>
                           ))}
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Patients Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={handleMouseEnterPatients}
-                onMouseLeave={handleMouseLeavePatients}
-              >
-                <Link
-                  href="/patients"
-                  className={`flex items-center space-x-1 text-sm lg:text-base font-medium tracking-wide whitespace-nowrap transition-colors cursor-pointer ${
-                    pathname.startsWith("/patients")
-                      ? "text-brand-accent font-semibold"
-                      : "text-brand-text/80 hover:text-brand-accent"
-                  }`}
-                  onClick={() => setIsDropdownOpen(false)}
-                >
-                  <span>Patients</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "rotate-185" : ""}`} />
-                </Link>
-
-                {isDropdownOpen && (
-                  <div className="absolute left-0 top-full pt-2 w-60 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                    <div className="rounded-xl bg-brand-primary border border-brand-secondary/60 shadow-lg py-2">
-                      <div className="px-3 py-1 text-xs font-semibold text-brand-text/40 tracking-wider uppercase border-b border-brand-secondary/30 mb-1">
-                        Resources
-                      </div>
-                      {patientResources.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          className="block px-4 py-2.5 text-sm text-brand-text hover:bg-brand-secondary/40 hover:text-brand-accent transition-colors"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                      <div className="border-t border-brand-secondary/30 mt-1 pt-1">
-                        <Link
-                          href="/patients"
-                          className="block px-4 py-2.5 text-sm font-medium text-brand-accent hover:bg-brand-secondary/20 transition-colors"
-                          onClick={() => setIsDropdownOpen(false)}
-                        >
-                          View Patient Guide
-                        </Link>
                       </div>
                     </div>
                   </div>
@@ -784,17 +732,6 @@ export default function Header() {
                   <span>Clinic Tour</span>
                 </Link>
 
-                {/* Dentists */}
-                <Link
-                  href="/doctors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center h-12 px-4 rounded-xl font-medium text-base transition-colors ${
-                    isLinkActive("/doctors") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-                  }`}
-                >
-                  <span>Dentists</span>
-                </Link>
-
                 {/* INDIVIDUAL SECTION 1: Dental Services Accordion */}
                 <div className="rounded-xl overflow-hidden border border-transparent">
                   <button
@@ -887,45 +824,6 @@ export default function Header() {
                           </Link>
                         ))}
                       </div>
-                    </div>
-                  )}
-                </div>
-
-                {/* Patients Accordion */}
-                <div className="rounded-xl overflow-hidden border border-transparent">
-                  <button
-                    onClick={() => setMobilePatientsOpen(!mobilePatientsOpen)}
-                    className={`w-full flex items-center justify-between h-12 px-4 rounded-xl text-left font-medium text-base transition-colors cursor-pointer ${
-                      pathname.startsWith("/patients") ? "text-[#c39f75] bg-white/5 font-semibold" : "text-[#f6ede7] hover:text-[#c39f75] hover:bg-white/5"
-                    }`}
-                  >
-                    <span>Patients</span>
-                    <ChevronDown
-                      className={`w-4.5 h-4.5 text-[#c39f75] transition-transform duration-300 ${
-                        mobilePatientsOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
-                  {mobilePatientsOpen && (
-                    <div className="mt-1 ml-2 pl-3 pr-2 py-2 space-y-1 bg-black/25 rounded-xl border border-[#ab7f51]/20 animate-in slide-in-from-top-2 duration-200">
-                      <Link
-                        href="/patients"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className="block px-3 py-1.5 text-xs font-bold text-[#c39f75] uppercase tracking-wider hover:underline"
-                      >
-                        Patient Guide &rarr;
-                      </Link>
-                      {patientResources.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setIsMobileMenuOpen(false)}
-                          className="block px-3 py-2 text-xs font-medium text-[#f6ede7]/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
                     </div>
                   )}
                 </div>

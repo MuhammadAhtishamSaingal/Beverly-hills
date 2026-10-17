@@ -36,9 +36,10 @@ interface Treatment {
   note?: string;
 }
 
-const content: Record<Mode, { tab: string; emoji: string; heading: string; intro: string; items: Treatment[] }> = {
+const content: Record<Mode, { tab: string; emoji: string; heading: string; intro: string; more: { label: string; href: string; hint: string }; items: Treatment[] }> = {
   dental: {
     tab: "Dental",
+    more: { label: "Explore more dental treatments", href: "/services#dentistry", hint: "Braces, aligners, whitening, root canal and more." },
     emoji: "🦷",
     heading: "Our top 3 dental treatments",
     intro: "Want whiter, straighter or complete teeth? Start here.",
@@ -121,6 +122,7 @@ const content: Record<Mode, { tab: string; emoji: string; heading: string; intro
   },
   aesthetic: {
     tab: "Aesthetic",
+    more: { label: "Explore more aesthetic treatments", href: "/services#aesthetics", hint: "Laser, chemical peels, HIFU, acne care and more." },
     emoji: "✨",
     heading: "Our top 3 aesthetic treatments",
     intro: "Want glowing skin or softer, fuller lips? Start here.",
@@ -416,6 +418,16 @@ export default function TreatmentExplorer() {
           {active.items.map((t, i) => (
             <TreatmentBlock key={t.id} t={t} index={i} />
           ))}
+        </div>
+
+        <div className="mt-8 text-center space-y-2">
+          <p className="text-sm text-[#1c1412]/65">{active.more.hint}</p>
+          <Link
+            href={active.more.href}
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto border-2 border-[#1c1412] text-[#1c1412] hover:bg-[#1c1412] hover:text-[#f6ede7] font-semibold text-sm uppercase tracking-[0.12em] py-4 px-8 rounded-full transition-colors"
+          >
+            {active.more.label} <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         <div className="mt-10 bg-[#1c1412] text-[#f6ede7] rounded-[28px] p-6 sm:p-10 text-center space-y-4">
