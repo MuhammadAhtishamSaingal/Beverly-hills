@@ -67,7 +67,7 @@ function DesktopHero() {
             lip fillers and signature facials, all under one roof.
           </p>
           <p className="text-xs sm:text-sm font-semibold text-[#3d2e2a]">
-            ★ Rated 4.8 on Google · Consultation PKR 3,000
+            ★ Rated 4.8 on Google · Consultation PKR 5,000
           </p>
 
           {/* CTA Buttons */}
@@ -199,7 +199,7 @@ function MobileHero() {
           <Calendar className="w-4 h-4 text-[#c39f75]" />
           Book Consultation
         </button>
-        <p className="text-[11px] text-[#1c1412]/55">Consultation PKR 3,000 · DHA &amp; Bahadurabad</p>
+        <p className="text-[11px] text-[#1c1412]/55">Consultation PKR 5,000 · DHA &amp; Bahadurabad</p>
       </div>
     </section>
   );

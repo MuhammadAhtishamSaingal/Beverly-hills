@@ -23,7 +23,7 @@ export const CLINIC_PHONE = "0307-0984307";
 export const CLINIC_PHONE_RAW = "03070984307";
 export const CLINIC_PHONE_INTL = "+923070984307";
 export const CLINIC_WHATSAPP = "923002271299";
-export const CONSULTATION_FEE = "PKR 3,000";
+export const CONSULTATION_FEE = "PKR 5,000";
 
 const defaultHours = [
   { days: "Monday - Saturday", time: "9:00 AM - 6:00 PM" },

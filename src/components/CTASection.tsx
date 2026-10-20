@@ -25,7 +25,7 @@ export default function CTASection() {
             <span className="text-brand-accent font-medium italic">start with one visit.</span>
           </h2>
           <p className="text-sm sm:text-base text-brand-text/75 max-w-xl mx-auto leading-relaxed pt-2">
-            Book a consultation at our DHA Phase 5 or Bahadurabad clinic, or online. Your doctor will assess you and plan your smile makeover, implants or aesthetic treatment with you. Consultation PKR 3,000.
+            Book a consultation at our DHA Phase 5 or Bahadurabad clinic, or online. Your doctor will assess you and plan your smile makeover, implants or aesthetic treatment with you. Consultation PKR 5,000.
           </p>
         </div>
 
