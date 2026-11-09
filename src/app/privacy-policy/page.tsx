@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Beverly Hills Clinic Karachi",
   description:
     "How Beverly Hills Clinic (DHA Phase 5 & Bahadurabad, Karachi) collects, uses and protects your personal and health information.",
-  alternates: { canonical: "https://beverlyhillsclinic.com.pk/privacy-policy" },
+  alternates: { canonical: "https://www.beverlyhillsclinic.com.pk/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

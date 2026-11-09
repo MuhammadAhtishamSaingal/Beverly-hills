@@ -27,10 +27,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const pageUrl = `https://beverlyhillsclinic.com.pk/blog/${blog.slug}`;
+  const pageUrl = `https://www.beverlyhillsclinic.com.pk/blog/${blog.slug}`;
   const imageUrl = blog.image.startsWith("http")
     ? blog.image
-    : `https://beverlyhillsclinic.com.pk${blog.image}`;
+    : `https://www.beverlyhillsclinic.com.pk${blog.image}`;
 
   return {
     title: blog.metaTitle,
@@ -73,25 +73,25 @@ export default async function BlogDetailPage({ params }: PageProps) {
     "@type": "BlogPosting",
     "headline": blog.title,
     "description": blog.excerpt,
-    "image": blog.image.startsWith("http") ? blog.image : `https://beverlyhillsclinic.com.pk${blog.image}`,
+    "image": blog.image.startsWith("http") ? blog.image : `https://www.beverlyhillsclinic.com.pk${blog.image}`,
     "datePublished": blog.publishedDate,
     "author": {
       "@type": "Organization",
       "name": blog.author,
-      "url": "https://beverlyhillsclinic.com.pk",
+      "url": "https://www.beverlyhillsclinic.com.pk",
     },
     "publisher": {
       "@type": "MedicalOrganization",
       "name": "Beverly Hills Clinic Karachi",
-      "url": "https://beverlyhillsclinic.com.pk",
+      "url": "https://www.beverlyhillsclinic.com.pk",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://beverlyhillsclinic.com.pk/images/logo.png",
+        "url": "https://www.beverlyhillsclinic.com.pk/images/logo.png",
       },
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://beverlyhillsclinic.com.pk/blog/${blog.slug}`,
+      "@id": `https://www.beverlyhillsclinic.com.pk/blog/${blog.slug}`,
     },
   };
 

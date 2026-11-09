@@ -14,17 +14,17 @@ export const metadata: Metadata = {
     "Implant specialist Karachi",
   ],
   alternates: {
-    canonical: "https://beverlyhillsclinic.com.pk/doctors",
+    canonical: "https://www.beverlyhillsclinic.com.pk/doctors",
   },
   openGraph: {
     title: "Doctors | Beverly Hills Clinic DHA Karachi",
     description:
       "Meet Beverly Hills Clinic dental and aesthetic specialists providing advanced treatments in DHA Karachi.",
-    url: "https://beverlyhillsclinic.com.pk/doctors",
+    url: "https://www.beverlyhillsclinic.com.pk/doctors",
     siteName: "Beverly Hills Clinic",
     images: [
       {
-        url: "https://beverlyhillsclinic.com.pk/images/patient_%20banner.webp",
+        url: "https://www.beverlyhillsclinic.com.pk/images/patient_%20banner.webp",
         width: 1200,
         height: 630,
         alt: "Beverly Hills Clinic Medical Specialists",
@@ -40,8 +40,8 @@ export default function DoctorsPage() {
     "@context": "https://schema.org",
     "@type": "MedicalOrganization",
     "name": "Beverly Hills Clinic Karachi - Specialists & Doctors",
-    "url": "https://beverlyhillsclinic.com.pk/doctors",
-    "logo": "https://beverlyhillsclinic.com.pk/images/logo.png",
+    "url": "https://www.beverlyhillsclinic.com.pk/doctors",
+    "logo": "https://www.beverlyhillsclinic.com.pk/images/logo.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Above Ocean Supermart & Pharmacy 2nd floor, Main Saba Avenue, Phase 5, DHA Karachi",
@@ -50,7 +50,7 @@ export default function DoctorsPage() {
       "postalCode": "75500",
       "addressCountry": "PK",
     },
-    "department": clinicSchemaBranches("https://beverlyhillsclinic.com.pk"),
+    "department": clinicSchemaBranches("https://www.beverlyhillsclinic.com.pk"),
     "medicalSpecialty": [
       "Cosmetic Dentistry",
       "Implantology",

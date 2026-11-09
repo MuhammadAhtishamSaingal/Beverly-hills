@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://beverlyhillsclinic.com.pk/sitemap.xml",
+    sitemap: "https://www.beverlyhillsclinic.com.pk/sitemap.xml",
   };
 }

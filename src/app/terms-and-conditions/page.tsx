@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions | Beverly Hills Clinic Karachi",
   description:
     "Terms for using the Beverly Hills Clinic website and booking dental and aesthetic appointments at our DHA Phase 5 and Bahadurabad clinics.",
-  alternates: { canonical: "https://beverlyhillsclinic.com.pk/terms-and-conditions" },
+  alternates: { canonical: "https://www.beverlyhillsclinic.com.pk/terms-and-conditions" },
 };
 
 export default function TermsPage() {

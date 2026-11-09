@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     };
   }
 
-  const pageUrl = `https://beverlyhillsclinic.com.pk/services/${service.slug}`;
+  const pageUrl = `https://www.beverlyhillsclinic.com.pk/services/${service.slug}`;
 
   return {
     title: service.metaTitle,
@@ -89,9 +89,9 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Beverly Hills Clinic Karachi",
-    "image": "https://beverlyhillsclinic.com.pk/images/logo.png",
-    "@id": "https://beverlyhillsclinic.com.pk/#dentist",
-    "url": "https://beverlyhillsclinic.com.pk",
+    "image": "https://www.beverlyhillsclinic.com.pk/images/logo.png",
+    "@id": "https://www.beverlyhillsclinic.com.pk/#dentist",
+    "url": "https://www.beverlyhillsclinic.com.pk",
     "telephone": "+923070984307",
     "priceRange": "$$",
     "address": {
@@ -120,7 +120,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
       "opens": "09:00",
       "closes": "18:00"
     },
-    "department": clinicSchemaBranches("https://beverlyhillsclinic.com.pk"),
+    "department": clinicSchemaBranches("https://www.beverlyhillsclinic.com.pk"),
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Dental & Aesthetic Services",

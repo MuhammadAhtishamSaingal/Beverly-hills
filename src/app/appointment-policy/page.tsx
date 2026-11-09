@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Appointment & Cancellation Policy | Beverly Hills Clinic Karachi",
   description:
     "How to book, confirm, reschedule or cancel appointments at Beverly Hills Clinic in DHA Phase 5 and Bahadurabad, Karachi.",
-  alternates: { canonical: "https://beverlyhillsclinic.com.pk/appointment-policy" },
+  alternates: { canonical: "https://www.beverlyhillsclinic.com.pk/appointment-policy" },
 };
 
 export default function AppointmentPolicyPage() {

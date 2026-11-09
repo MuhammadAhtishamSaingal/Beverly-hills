@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Medical Disclaimer | Beverly Hills Clinic Karachi",
   description:
     "Information on this website is general and does not replace a consultation. Results of dental and aesthetic treatments vary between patients.",
-  alternates: { canonical: "https://beverlyhillsclinic.com.pk/medical-disclaimer" },
+  alternates: { canonical: "https://www.beverlyhillsclinic.com.pk/medical-disclaimer" },
 };
 
 export default function MedicalDisclaimerPage() {
