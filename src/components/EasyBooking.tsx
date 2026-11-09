@@ -15,7 +15,7 @@ const steps = [
 const faqs = [
   {
     q: "How much is a consultation?",
-    a: `${CONSULTATION_FEE}. Your doctor checks you and gives you a clear plan and price for your treatment.`,
+    a: `${CONSULTATION_FEE}. Your doctor checks you and gives you a clear plan and price. If you go ahead with treatment, this fee is adjusted in your treatment cost.`,
   },
   {
     q: "How long does a smile makeover take?",

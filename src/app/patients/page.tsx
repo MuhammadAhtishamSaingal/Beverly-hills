@@ -125,7 +125,7 @@ export default function PatientsPage() {
   const faqs = [
     {
       q: "How much is a consultation?",
-      a: `The consultation fee is ${CONSULTATION_FEE}. It includes your assessment with the doctor and a personalised treatment plan with costs.`,
+      a: `The consultation fee is ${CONSULTATION_FEE}. It includes your assessment with the doctor and a personalised treatment plan with costs. If you go ahead with treatment, the fee is adjusted in your treatment cost.`,
     },
     {
       q: "How long does a smile makeover take?",
@@ -218,6 +218,7 @@ export default function PatientsPage() {
               <ul className="space-y-2.5">
                 {[
                   "Your consultation includes an assessment with the doctor and a personal treatment plan.",
+                  "If you go ahead with treatment, your consultation fee is adjusted in your treatment cost.",
                   "The cost of your treatment is explained and agreed with you before anything starts.",
                   "Custom-made treatments such as veneers, crowns and implants may need part payment before laboratory work is ordered; we explain this in advance.",
                   "Payments are made at the clinic reception.",

@@ -59,7 +59,8 @@ export default function TermsPage() {
             <>
               <p>
                 The consultation fee is <strong>{CONSULTATION_FEE}</strong>, payable at the clinic (or before an online
-                consultation). Consultations are not free.
+                consultation). Consultations are not free. If you go ahead with treatment, the consultation fee is adjusted in
+                your treatment cost.
               </p>
               <p>
                 The cost of any treatment depends on your clinical assessment. Your clinician will explain the proposed

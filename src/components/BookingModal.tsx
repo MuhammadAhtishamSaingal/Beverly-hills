@@ -591,7 +591,7 @@ export default function BookingModal() {
                 {/* Consultation fee, WhatsApp & consent */}
                 <div className="rounded-lg bg-[#fcf8f6] border border-brand-secondary/40 px-4 py-3 text-xs text-brand-text/80 leading-relaxed">
                   <strong className="text-brand-text">Consultation fee: {CONSULTATION_FEE}</strong>{" "}
-                  (payable at the clinic). Our team will call you to confirm your appointment time
+                  (payable at the clinic, and adjusted in your treatment cost if you go ahead). Our team will call you to confirm your appointment time
                   {selectedLocation ? <> at <strong className="text-brand-text">{selectedLocation.name}</strong>, {selectedLocation.address}</> : " for your online consultation"}.
                 </div>
 

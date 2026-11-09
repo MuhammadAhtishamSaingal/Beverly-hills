@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Calendar, Check, Clock, Sparkles, ArrowRight } from "lucide-react";
 import { trackContact, trackInitiateBooking } from "@/lib/metaPixel";
-import { CLINIC_WHATSAPP, CONSULTATION_FEE } from "@/data/locations";
+import { CLINIC_WHATSAPP, CONSULTATION_FEE, CONSULTATION_FEE_NOTE } from "@/data/locations";
 
 type Mode = "dental" | "aesthetic";
 
@@ -437,7 +437,7 @@ export default function TreatmentExplorer() {
             Meet our specialist. We check, explain your options and give you a clear plan and price.
           </p>
           <p className="inline-flex items-center gap-2 text-xs text-[#e8ceb1]">
-            <Clock className="w-3.5 h-3.5" /> Consultation {CONSULTATION_FEE} · DHA &amp; Bahadurabad
+            <Clock className="w-3.5 h-3.5" /> Consultation {CONSULTATION_FEE}, {CONSULTATION_FEE_NOTE}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-1">
             <button

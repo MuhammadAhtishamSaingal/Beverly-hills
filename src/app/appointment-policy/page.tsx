@@ -45,7 +45,8 @@ export default function AppointmentPolicyPage() {
           body: (
             <p>
               The consultation fee is <strong>{CONSULTATION_FEE}</strong>. It covers your assessment and a personalised
-              treatment plan, and is payable at the clinic (or in advance for online consultations).
+              treatment plan, and is payable at the clinic (or in advance for online consultations). If you go ahead with
+              treatment, the fee is adjusted in your treatment cost.
             </p>
           ),
         },
